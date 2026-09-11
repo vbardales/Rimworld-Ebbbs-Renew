@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Abstract="True" ParentName="AnimalThingBase" Name="EbbbBase">
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<ComfyTemperatureMax>35</ComfyTemperatureMax>
+		</statBases>
+		<race>
+			<fleshType>Ebbbish</fleshType>
+			<meatColor>(50,50,50)</meatColor>
+			<bloodDef>Filth_BloodEbbb</bloodDef>
+			<meatMarketValue>0.5</meatMarketValue>
+			<foodType>OmnivoreAnimal, AnimalProduct</foodType>
+			<manhunterOnDamageChance>0.25</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+		</race>
+	</ThingDef>
+
+</Defs>
