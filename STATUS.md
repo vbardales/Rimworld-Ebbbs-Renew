@@ -1,7 +1,7 @@
 ---
-localization: unchecked
-translation_en: unchecked
-translation_fr: unchecked
+localization: complete
+translation_en: complete
+translation_fr: complete
 mod:          Ebbbs Renew (unofficial)
 packageId:    nelim.ebbbsrenew
 repo:         Rimworld-Ebbbs-Renew
@@ -14,10 +14,11 @@ licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online
 dependencies: none
 showcase:     icon present; preview recomposed and visually verified; in-game review pending
 tested_on:
-automated:    PASS - 201 static checks, 6 XML files, 2026-09-13
-manual_tests: Tests/MANUAL.md - 8 scenarios, not executed
+automated:    PASS - 204 mod checks, 9 XML files; 104 translation entries and injection paths, 2026-09-13
+manual_tests: Tests/MANUAL.md - 9 scenarios, not executed
 workshop:
 remaining:
+  - unverified: English and French in-game display, anatomy, combat labels and generated meat/corpse text (M9)
   - unverified: RimWorld 1.6 functional scenarios and Core reference resolution not run
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Codex - responsible for this repository and STATUS.md
@@ -82,7 +83,7 @@ Run from the repository root:
 powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Mod.ps1
 ```
 
-Result on 2026-09-13: **PASS — 201 checks, six XML files, nine races**.
+Result on 2026-09-13: **PASS — 204 checks, nine XML files, nine races**.
 Checks cover XML parsing, metadata, duplicate typed defNames, nine PawnKind/race
 pairs, expected Wildness values under statBases, absence of obsolete wildness
 fields, local body/leather/meat/flesh/blood/effect/product references, local texture
@@ -90,9 +91,52 @@ paths and live directional sprites, plus presence of the icon and Preview.
 
 This is static validation, not a RimWorld schema validator or engine execution.
 Core inheritance, Core assets/references, DLC compatibility, graphics and actual
-behaviour still require the eight documented manual scenarios. `tested_on` stays
+behaviour still require the nine documented manual scenarios. `tested_on` stays
 empty until an actual run is recorded with game version and evidence.
 There is no C# assembly in this mod; C# unit tests are not applicable.
+
+## Translation audit — 2026-09-13
+
+Applied the new translation gate from the parent workspace's `PUBLISHING.md` and
+`TRANSLATIONS.md`. Audited all five files under `Mod/Defs`, including the abstract
+race base and nested fields. There are no assemblies, source UI, patches, optional
+integrations, version folders or LoadFolders in this mod. About metadata and
+repository documentation are outside the in-game translation scope.
+
+[Tests/Translation-inventory.json](Tests/Translation-inventory.json) records all
+104 owned texts with their typed injection paths, source files and reviewed EN/FR
+values: nine race descriptions and labels, pawn kinds and the named juvenile stage,
+five body definitions and their custom anatomy labels, attack tools, leather, horn,
+blood and the meat label. Species names intentionally retain their original spelling.
+English uses native Def values; French resources are in
+`Mod/Languages/French/DefInjected/{BodyDef,PawnKindDef,ThingDef}/Ebbbs.xml`.
+No duplicate English injection files or custom Keyed keys are needed.
+
+Validation performed:
+
+- `powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Mod.ps1`:
+  **PASS, 204 checks, nine XML files**.
+- `powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Translations.ps1`:
+  **PASS, 104 English texts and French entries**, no duplicate, empty or unexpected keys.
+- `powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-DefInjected.ps1 -TransMod Mod`:
+  **104 keys checked, zero errors, no UNVERIFIED findings**, against installed 1.6
+  assemblies and Core/DLC definitions (11,600 indexed definitions).
+- Inspected installed `Assembly-CSharp.dll` with ilspycmd: `PlayDataLoader` and
+  `LoadedLanguage.InjectIntoData_BeforeImpliedDefs` inject translations before
+  `ThingDefGenerator_Meat` reads `Ebbb.race.meatLabel`. The other eight races reuse
+  Ebbb meat. `ThingDefGenerator_Corpses` uses Core `CorpseLabel` and `CorpseDesc`;
+  meat descriptions use Core `MeatDesc`. All three keys were verified in Core's
+  English XML and French language archive, including their formatting tokens.
+  Inherited vanilla anatomy and unnamed bite attacks remain Core-owned.
+
+Rebuild resources with `pwsh -NoProfile -File _tools/Build-French.ps1`, review the
+inventory and translations, then rerun both local validators and the parent path
+checker whenever Defs or language resources change. Reset affected status fields to
+`unchecked` until that review passes. The generator rejects unreviewed text.
+
+The three `complete` fields certify static readiness for `preTest` only. Historical
+`stage: done` is preserved. English/French runtime checks remain **unverified** in M9;
+no game session or Workshop publication was performed for this audit.
 
 ## Assets and corrected issue
 

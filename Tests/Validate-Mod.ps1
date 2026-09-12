@@ -6,7 +6,7 @@ function Check($condition, [string]$message) {
     $script:checks++
 }
 $files = @(Get-ChildItem -LiteralPath $ModPath -Recurse -Filter '*.xml')
-Check ($files.Count -eq 6) 'Expected About.xml and five definition files'
+Check (@($files | Where-Object { $_.FullName -notmatch '[\\/]Languages[\\/]' }).Count -eq 6) 'Expected About.xml and five definition files outside Languages'
 $docs = @($files | ForEach-Object { [xml](Get-Content -LiteralPath $_.FullName -Raw) })
 $about = ($docs | Where-Object { $_.DocumentElement.LocalName -eq 'ModMetaData' }).ModMetaData
 $url = 'https://github.com/vbardales/Rimworld-Ebbbs-Renew'

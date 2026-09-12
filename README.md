@@ -64,4 +64,8 @@ See [ATTRIBUTION.md](ATTRIBUTION.md) for the licence check and the port in detai
 
 ## Validation
 
+English source text and French translations are included. Translation coverage and
+injection paths pass static checks; display in both languages still needs in-game
+validation. The translation audit is recorded in [STATUS.md](STATUS.md).
+
 See [Tests/MANUAL.md](Tests/MANUAL.md) for the manual scenarios and the command to run XML checks. Current results and remaining validation are tracked in [STATUS.md](STATUS.md).

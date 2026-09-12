@@ -1,0 +1,730 @@
+[
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.label",
+    "english": "ebbb",
+    "french": "ebbb",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel",
+    "english": "left eye",
+    "french": "œil gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel",
+    "english": "right eye",
+    "french": "œil droit",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.left_shoulder.customLabel",
+    "english": "left shoulder",
+    "french": "épaule gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.left_shoulder.parts.left_tentacle.customLabel",
+    "english": "left tentacle",
+    "french": "tentacule gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.left_shoulder.parts.left_tentacle.parts.left_appendage.customLabel",
+    "english": "left appendage",
+    "french": "appendice gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.right_shoulder.customLabel",
+    "english": "right shoulder",
+    "french": "épaule droite",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.right_shoulder.parts.right_tentacle.customLabel",
+    "english": "right tentacle",
+    "french": "tentacule droit",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.right_shoulder.parts.right_tentacle.parts.right_appendage.customLabel",
+    "english": "right appendage",
+    "french": "appendice droit",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.left_leg.customLabel",
+    "english": "left leg",
+    "french": "patte gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbb.corePart.parts.right_leg.customLabel",
+    "english": "right leg",
+    "french": "patte droite",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.label",
+    "english": "ebbbomination",
+    "french": "ebbbomination",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel",
+    "english": "left eye",
+    "french": "œil gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel",
+    "english": "right eye",
+    "french": "œil droit",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.left_shoulder.customLabel",
+    "english": "left shoulder",
+    "french": "épaule gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.left_shoulder.parts.left_tentacle.customLabel",
+    "english": "left tentacle",
+    "french": "tentacule gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.left_shoulder.parts.left_tentacle.parts.left_appendage.customLabel",
+    "english": "left appendage",
+    "french": "appendice gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.right_shoulder.customLabel",
+    "english": "right shoulder",
+    "french": "épaule droite",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.right_shoulder.parts.right_tentacle.customLabel",
+    "english": "right tentacle",
+    "french": "tentacule droit",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.right_shoulder.parts.right_tentacle.parts.right_appendage.customLabel",
+    "english": "right appendage",
+    "french": "appendice droit",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.left_tentacle_cluster.customLabel",
+    "english": "left tentacle cluster",
+    "french": "faisceau de tentacules gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbbomination.corePart.parts.right_tentacle_cluster.customLabel",
+    "english": "right tentacle cluster",
+    "french": "faisceau de tentacules droit",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.label",
+    "english": "ebbberration",
+    "french": "ebbberration",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.corePart.parts.Neck.parts.Head.parts.eye.customLabel",
+    "english": "eye",
+    "french": "œil",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.corePart.parts.left_shoulder.customLabel",
+    "english": "left shoulder",
+    "french": "épaule gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.corePart.parts.left_shoulder.parts.left_tentacle.customLabel",
+    "english": "left tentacle",
+    "french": "tentacule gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.corePart.parts.left_shoulder.parts.left_tentacle.parts.left_appendage.customLabel",
+    "english": "left appendage",
+    "french": "appendice gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.corePart.parts.right_shoulder.customLabel",
+    "english": "right shoulder",
+    "french": "épaule droite",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.corePart.parts.right_shoulder.parts.right_tentacle.customLabel",
+    "english": "right tentacle",
+    "french": "tentacule droit",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.corePart.parts.right_shoulder.parts.right_tentacle.parts.right_claw.customLabel",
+    "english": "right claw",
+    "french": "griffe droite",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.corePart.parts.left_leg.customLabel",
+    "english": "left leg",
+    "french": "patte gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Ebbberration.corePart.parts.right_leg.customLabel",
+    "english": "right leg",
+    "french": "patte droite",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Bebbbholder.label",
+    "english": "bebbbholder",
+    "french": "bebbbholder",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Bebbbholder.corePart.parts.Head.parts.eye.customLabel",
+    "english": "eye",
+    "french": "œil",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Bebbbholder.corePart.parts.left_tentacle_cluster.customLabel",
+    "english": "left tentacle cluster",
+    "french": "faisceau de tentacules gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Bebbbholder.corePart.parts.right_tentacle_cluster.customLabel",
+    "english": "right tentacle cluster",
+    "french": "faisceau de tentacules droit",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Crebbb.label",
+    "english": "crebbb",
+    "french": "crebbb",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Crebbb.corePart.parts.Neck.parts.Head.parts.eye.customLabel",
+    "english": "eye",
+    "french": "œil",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Crebbb.corePart.parts.left_leg.customLabel",
+    "english": "left leg",
+    "french": "patte gauche",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Crebbb.corePart.parts.right_leg.customLabel",
+    "english": "right leg",
+    "french": "patte droite",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "BodyDef",
+    "key": "Crebbb.corePart.parts.back_leg.customLabel",
+    "english": "back leg",
+    "french": "patte arrière",
+    "source": "Mod/Defs/Bodies/Bodies_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Filth_BloodEbbb.label",
+    "english": "blood",
+    "french": "sang",
+    "source": "Mod/Defs/FleshTypeDefs/FleshType.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Leather_Ebbb.label",
+    "english": "ebbb leather",
+    "french": "cuir d'ebbb",
+    "source": "Mod/Defs/ThingDefs_Items/Items_Resource_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Leather_Ebbb.description",
+    "english": "Tanned, dried, scraped ebbb leather. It feels wrong to touch this...",
+    "french": "Du cuir d'ebbb tanné, séché et raclé. Le toucher provoque une sensation de malaise...",
+    "source": "Mod/Defs/ThingDefs_Items/Items_Resource_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "ThrumebbbHorn.label",
+    "english": "thrumebbb horn",
+    "french": "corne de thrumebbb",
+    "source": "Mod/Defs/ThingDefs_Items/Items_Resource_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "ThrumebbbHorn.description",
+    "english": "A thrumebbb's horn. It's a gloopy mess, constantly oozing disgusting black goo. Useless for anything except for being a trophy.",
+    "french": "Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n'est de trophée.",
+    "source": "Mod/Defs/ThingDefs_Items/Items_Resource_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "ThrumebbbHorn.tools.point.label",
+    "english": "point",
+    "french": "pointe",
+    "source": "Mod/Defs/ThingDefs_Items/Items_Resource_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "ThrumebbbHorn.tools.base.label",
+    "english": "base",
+    "french": "base",
+    "source": "Mod/Defs/ThingDefs_Items/Items_Resource_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbb.label",
+    "english": "ebbb",
+    "french": "ebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbb.description",
+    "english": "Nobody knows what the Ebbbs are, or where they originate from. Scientists have been examining these things for decades. Are they a new species of rodent? Maybe they're a magical being brought to this plane via some greater power? It's a mystery, yet the only thing that's certain, is that they really, really like cheese.",
+    "french": "Personne ne sait ce que sont les ebbbs, ni d'où ils viennent. Les scientifiques étudient ces choses depuis des décennies. S'agit-il d'une nouvelle espèce de rongeur ? Peut-être sont-ils des êtres magiques amenés dans ce monde par une puissance supérieure ? Le mystère reste entier. Une seule chose est certaine : ils aiment vraiment, vraiment beaucoup le fromage.",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbb.tools.left_appendage.label",
+    "english": "left appendage",
+    "french": "appendice gauche",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbb.tools.right_appendage.label",
+    "english": "right appendage",
+    "french": "appendice droit",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbb.tools.head.label",
+    "english": "head",
+    "french": "tête",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbb.race.meatLabel",
+    "english": "ebbb meat",
+    "french": "viande d'ebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Ebbb.label",
+    "english": "ebbb",
+    "french": "ebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Beee.label",
+    "english": "beee",
+    "french": "beee",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Beee.description",
+    "english": "The Beees, natural predators of the Ebbbs. Their hats are cool.",
+    "french": "Les beees sont les prédateurs naturels des ebbbs. Leurs chapeaux sont chouettes.",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Beee.tools.left_appendage.label",
+    "english": "left appendage",
+    "french": "appendice gauche",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Beee.tools.right_appendage.label",
+    "english": "right appendage",
+    "french": "appendice droit",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Beee.tools.head.label",
+    "english": "head",
+    "french": "tête",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Beee.label",
+    "english": "beee",
+    "french": "beee",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbbomination.label",
+    "english": "ebbbomination",
+    "french": "ebbbomination",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbbomination.description",
+    "english": "A messy, chaotic amalgamation of ebbbs. It writhes and gurgles in a horrible tangle of tentacles and goo.",
+    "french": "Un amalgame informe et chaotique d'ebbbs. Il se tortille et gargouille dans un horrible enchevêtrement de tentacules et de glu.",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbbomination.tools.left_appendage.label",
+    "english": "left appendage",
+    "french": "appendice gauche",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbbomination.tools.right_appendage.label",
+    "english": "right appendage",
+    "french": "appendice droit",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbbomination.tools.head.label",
+    "english": "head",
+    "french": "tête",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Ebbbomination.label",
+    "english": "ebbbomination",
+    "french": "ebbbomination",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Goliebbb.label",
+    "english": "goliebbb",
+    "french": "goliebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Goliebbb.description",
+    "english": "A horrifying monstrosity, the Goliebbb is a terrifying, unstable colossus that devours everything in its path. If you see it, it most definitely has seen you.",
+    "french": "Monstruosité terrifiante, le goliebbb est un colosse instable qui dévore tout sur son passage. Si vous le voyez, il vous a très certainement déjà vu.",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Goliebbb.tools.left_appendage.label",
+    "english": "left appendage",
+    "french": "appendice gauche",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Goliebbb.tools.right_appendage.label",
+    "english": "right appendage",
+    "french": "appendice droit",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Goliebbb.tools.head.label",
+    "english": "head",
+    "french": "tête",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Goliebbb.label",
+    "english": "goliebbb",
+    "french": "goliebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbberration.label",
+    "english": "ebbberration",
+    "french": "ebbberration",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbberration.description",
+    "english": "The Ebbberration, a freak of nature mimicking humans. One of its appendages has turned into a strong scythe-like claw, able to cut through tough steel like butter. (Original design by ReineOfCloves)",
+    "french": "L'ebbberration est une aberration de la nature qui imite les humains. L'un de ses appendices s'est transformé en une puissante griffe en forme de faux, capable de trancher l'acier le plus résistant comme du beurre. (Concept original de ReineOfCloves)",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbberration.tools.left_appendage.label",
+    "english": "left appendage",
+    "french": "appendice gauche",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbberration.tools.right_claw.label",
+    "english": "right claw",
+    "french": "griffe droite",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Ebbberration.tools.head.label",
+    "english": "head",
+    "french": "tête",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Ebbberration.label",
+    "english": "ebbberration",
+    "french": "ebbberration",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Drebbbd.label",
+    "english": "drebbbd",
+    "french": "drebbbd",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Drebbbd.description",
+    "english": "When an Ebbb goes insane, it starts forcibly and violently assimilating with any other Ebbbs it comes across. This phenomenon is called a Drebbbd.",
+    "french": "Lorsqu'un ebbb devient fou, il se met à fusionner de force et avec violence avec tous les autres ebbbs qu'il croise. Ce phénomène est appelé drebbbd.",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Drebbbd.tools.left_appendage.label",
+    "english": "left appendage",
+    "french": "appendice gauche",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Drebbbd.tools.right_appendage.label",
+    "english": "right appendage",
+    "french": "appendice droit",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Drebbbd.tools.head.label",
+    "english": "head",
+    "french": "tête",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Drebbbd.label",
+    "english": "drebbbd",
+    "french": "drebbbd",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Bebbbholder.label",
+    "english": "bebbbholder",
+    "french": "bebbbholder",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Bebbbholder.description",
+    "english": "The Bebbbholder, named after the fictional Beholders due to their floating body and many eyes. These creatures emanate an aura of some kind, it is not sure what the purpose of this aura is, but those in close proximity for an extended amount of time to a Bebbbholder have described sensations of fear and dread.",
+    "french": "Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d'aura dont on ignore la fonction, mais ceux qui sont restés longtemps à proximité d'un bebbbholder ont décrit des sensations de peur et d'effroi.",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Bebbbholder.tools.tentacles.label",
+    "english": "tentacles",
+    "french": "tentacules",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Bebbbholder.tools.head.label",
+    "english": "head",
+    "french": "tête",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Bebbbholder.label",
+    "english": "bebbbholder",
+    "french": "bebbbholder",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Crebbb.label",
+    "english": "crebbb",
+    "french": "crebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Crebbb.description",
+    "english": "A 3-legged monster that is surprisingly friendly. As a herbivore, its main source of nutritian is plantlife, as such it rarely attacks people and is generally more docile than the other Ebbbs.",
+    "french": "Un monstre à trois pattes étonnamment amical. Herbivore, il se nourrit principalement de végétaux, si bien qu'il attaque rarement les gens et se montre généralement plus docile que les autres ebbbs.",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Crebbb.tools.front_legs.label",
+    "english": "front legs",
+    "french": "pattes avant",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Crebbb.tools.head.label",
+    "english": "head",
+    "french": "tête",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Crebbb.label",
+    "english": "crebbb",
+    "french": "crebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Thrumebbb.label",
+    "english": "thrumebbb",
+    "french": "thrumebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Thrumebbb.description",
+    "english": "A gross mockery of the Universe's most graceful creature, the Thrumebbb is an amalgamation of Ebbbs that has somehow gained a semblance of intelligence. It is foul, and reeks of death. Beware, for it does not eat trees.",
+    "french": "Parodie grotesque de la créature la plus gracieuse de l'univers, le thrumebbb est un amalgame d'ebbbs qui a acquis, on ne sait comment, un semblant d'intelligence. Il est répugnant et empeste la mort. Méfiez-vous : il ne mange pas les arbres.",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Thrumebbb.tools.horn.label",
+    "english": "horn",
+    "french": "corne",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Thrumebbb.tools.left_foot.label",
+    "english": "left foot",
+    "french": "pied gauche",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Thrumebbb.tools.right_foot.label",
+    "english": "right foot",
+    "french": "pied droit",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "ThingDef",
+    "key": "Thrumebbb.tools.head.label",
+    "english": "head",
+    "french": "tête",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Thrumebbb.label",
+    "english": "thrumebbb",
+    "french": "thrumebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Thrumebbb.lifeStages.thrumebbb_spawn.label",
+    "english": "thrumebbb spawn",
+    "french": "petit thrumebbb",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  },
+  {
+    "type": "PawnKindDef",
+    "key": "Thrumebbb.lifeStages.thrumebbb_spawn.labelPlural",
+    "english": "thrumebbb calves",
+    "french": "petits thrumebbbs",
+    "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
+  }
+]

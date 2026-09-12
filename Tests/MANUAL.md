@@ -18,3 +18,20 @@ Consigner version exacte, mods/DLC actifs, résultat par scénario et Player.log
 Tests automatisés : `powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Mod.ps1`.
 Ils contrôlent les XML et ressources locales ; ils ne remplacent pas le chargement,
 la résolution des références Core et les comportements dans le moteur du jeu.
+
+## M9 — English and French translation display
+
+Not executed. Run once in English and once in French, restarting after changing
+language. With Core and this mod, spawn all nine races and their available ages.
+Inspect species descriptions, juvenile Thrumebbb labels, health tabs for all five
+custom body plans, and melee tool labels. Inspect blood, leather and the horn,
+then butcher animals and inspect generated meat and corpses. Check leather item
+names when used as a material and battle log text containing body parts.
+
+Expected: readable localized text, preserved species names and attribution, no raw
+keys, unintended English fallback in French, broken accents, formatting or clipping.
+Record exact game version, language, screenshots and translation-related Player.log
+messages. Static checks do not establish success for this scenario.
+
+Resource coverage check:
+`powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Translations.ps1`.

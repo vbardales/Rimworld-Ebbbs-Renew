@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Filth_BloodEbbb.label>sang</Filth_BloodEbbb.label>
+  <Leather_Ebbb.label>cuir d&apos;ebbb</Leather_Ebbb.label>
+  <Leather_Ebbb.description>Du cuir d&apos;ebbb tanné, séché et raclé. Le toucher provoque une sensation de malaise...</Leather_Ebbb.description>
+  <ThrumebbbHorn.label>corne de thrumebbb</ThrumebbbHorn.label>
+  <ThrumebbbHorn.description>Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n&apos;est de trophée.</ThrumebbbHorn.description>
+  <ThrumebbbHorn.tools.point.label>pointe</ThrumebbbHorn.tools.point.label>
+  <ThrumebbbHorn.tools.base.label>base</ThrumebbbHorn.tools.base.label>
+  <Ebbb.label>ebbb</Ebbb.label>
+  <Ebbb.description>Personne ne sait ce que sont les ebbbs, ni d&apos;où ils viennent. Les scientifiques étudient ces choses depuis des décennies. S&apos;agit-il d&apos;une nouvelle espèce de rongeur ? Peut-être sont-ils des êtres magiques amenés dans ce monde par une puissance supérieure ? Le mystère reste entier. Une seule chose est certaine : ils aiment vraiment, vraiment beaucoup le fromage.</Ebbb.description>
+  <Ebbb.tools.left_appendage.label>appendice gauche</Ebbb.tools.left_appendage.label>
+  <Ebbb.tools.right_appendage.label>appendice droit</Ebbb.tools.right_appendage.label>
+  <Ebbb.tools.head.label>tête</Ebbb.tools.head.label>
+  <Ebbb.race.meatLabel>viande d&apos;ebbb</Ebbb.race.meatLabel>
+  <Beee.label>beee</Beee.label>
+  <Beee.description>Les beees sont les prédateurs naturels des ebbbs. Leurs chapeaux sont chouettes.</Beee.description>
+  <Beee.tools.left_appendage.label>appendice gauche</Beee.tools.left_appendage.label>
+  <Beee.tools.right_appendage.label>appendice droit</Beee.tools.right_appendage.label>
+  <Beee.tools.head.label>tête</Beee.tools.head.label>
+  <Ebbbomination.label>ebbbomination</Ebbbomination.label>
+  <Ebbbomination.description>Un amalgame informe et chaotique d&apos;ebbbs. Il se tortille et gargouille dans un horrible enchevêtrement de tentacules et de glu.</Ebbbomination.description>
+  <Ebbbomination.tools.left_appendage.label>appendice gauche</Ebbbomination.tools.left_appendage.label>
+  <Ebbbomination.tools.right_appendage.label>appendice droit</Ebbbomination.tools.right_appendage.label>
+  <Ebbbomination.tools.head.label>tête</Ebbbomination.tools.head.label>
+  <Goliebbb.label>goliebbb</Goliebbb.label>
+  <Goliebbb.description>Monstruosité terrifiante, le goliebbb est un colosse instable qui dévore tout sur son passage. Si vous le voyez, il vous a très certainement déjà vu.</Goliebbb.description>
+  <Goliebbb.tools.left_appendage.label>appendice gauche</Goliebbb.tools.left_appendage.label>
+  <Goliebbb.tools.right_appendage.label>appendice droit</Goliebbb.tools.right_appendage.label>
+  <Goliebbb.tools.head.label>tête</Goliebbb.tools.head.label>
+  <Ebbberration.label>ebbberration</Ebbberration.label>
+  <Ebbberration.description>L&apos;ebbberration est une aberration de la nature qui imite les humains. L&apos;un de ses appendices s&apos;est transformé en une puissante griffe en forme de faux, capable de trancher l&apos;acier le plus résistant comme du beurre. (Concept original de ReineOfCloves)</Ebbberration.description>
+  <Ebbberration.tools.left_appendage.label>appendice gauche</Ebbberration.tools.left_appendage.label>
+  <Ebbberration.tools.right_claw.label>griffe droite</Ebbberration.tools.right_claw.label>
+  <Ebbberration.tools.head.label>tête</Ebbberration.tools.head.label>
+  <Drebbbd.label>drebbbd</Drebbbd.label>
+  <Drebbbd.description>Lorsqu&apos;un ebbb devient fou, il se met à fusionner de force et avec violence avec tous les autres ebbbs qu&apos;il croise. Ce phénomène est appelé drebbbd.</Drebbbd.description>
+  <Drebbbd.tools.left_appendage.label>appendice gauche</Drebbbd.tools.left_appendage.label>
+  <Drebbbd.tools.right_appendage.label>appendice droit</Drebbbd.tools.right_appendage.label>
+  <Drebbbd.tools.head.label>tête</Drebbbd.tools.head.label>
+  <Bebbbholder.label>bebbbholder</Bebbbholder.label>
+  <Bebbbholder.description>Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d&apos;aura dont on ignore la fonction, mais ceux qui sont restés longtemps à proximité d&apos;un bebbbholder ont décrit des sensations de peur et d&apos;effroi.</Bebbbholder.description>
+  <Bebbbholder.tools.tentacles.label>tentacules</Bebbbholder.tools.tentacles.label>
+  <Bebbbholder.tools.head.label>tête</Bebbbholder.tools.head.label>
+  <Crebbb.label>crebbb</Crebbb.label>
+  <Crebbb.description>Un monstre à trois pattes étonnamment amical. Herbivore, il se nourrit principalement de végétaux, si bien qu&apos;il attaque rarement les gens et se montre généralement plus docile que les autres ebbbs.</Crebbb.description>
+  <Crebbb.tools.front_legs.label>pattes avant</Crebbb.tools.front_legs.label>
+  <Crebbb.tools.head.label>tête</Crebbb.tools.head.label>
+  <Thrumebbb.label>thrumebbb</Thrumebbb.label>
+  <Thrumebbb.description>Parodie grotesque de la créature la plus gracieuse de l&apos;univers, le thrumebbb est un amalgame d&apos;ebbbs qui a acquis, on ne sait comment, un semblant d&apos;intelligence. Il est répugnant et empeste la mort. Méfiez-vous : il ne mange pas les arbres.</Thrumebbb.description>
+  <Thrumebbb.tools.horn.label>corne</Thrumebbb.tools.horn.label>
+  <Thrumebbb.tools.left_foot.label>pied gauche</Thrumebbb.tools.left_foot.label>
+  <Thrumebbb.tools.right_foot.label>pied droit</Thrumebbb.tools.right_foot.label>
+  <Thrumebbb.tools.head.label>tête</Thrumebbb.tools.head.label>
+</LanguageData>
