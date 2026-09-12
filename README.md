@@ -41,10 +41,7 @@ go, which nothing referenced any more.
 
 No balance value was changed.
 
-**One thing inherited and left alone:** the goliebbb is called *ebbb* in game. Its `ThingDef` label
-says `ebbb` while its `PawnKindDef` says `goliebbb`, and the `ThingDef` is the one the game shows. That
-is upstream, it is a label rather than breakage, and it is recorded in
-[ATTRIBUTION.md](ATTRIBUTION.md) rather than quietly rewritten.
+**Inherited naming inconsistency fixed (2026-09-13):** Goliebbb now displays as *goliebbb* instead of *ebbb*. Its identifiers and balance are unchanged. See [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## Terms
 

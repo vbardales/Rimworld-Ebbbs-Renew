@@ -390,7 +390,7 @@
 
 	<ThingDef ParentName="EbbbBase">
 		<defName>Goliebbb</defName>
-		<label>ebbb</label>
+		<label>goliebbb</label>
 		<description>A horrifying monstrosity, the Goliebbb is a terrifying, unstable colossus that devours everything in its path. If you see it, it most definitely has seen you.</description>
 		<statBases>
 		  <Wildness>1</Wildness>

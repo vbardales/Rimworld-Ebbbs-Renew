@@ -50,22 +50,18 @@ One line, nine times.
   we can catch missing wildness stats on animals". Every one of the nine was taming for almost nothing,
   whether written at 0.4 or at 1.
 
-A diff against the original files shows those nine lines and nothing else.
+The definition changes are those nine Wildness lines and the Goliebbb label correction below.
 
 **One file was dropped**: `Textures/Things/Pawn/Animal/Ebbb/Ebbb_SkinSet.xml`, a leftover of the
 AnimalVariations system that nothing referenced any more. Coolie had already moved the ebbb's colour
 variants to vanilla `alternateGraphics` in their own 1.5 update, which is why there was nothing to
 convert here.
 
-## What was left alone, and why
+## Additional correction and preserved behaviour
 
 - **`EbbbBase`, the mod's own abstract parent**, inherits cleanly from vanilla `AnimalThingBase` and
   shadows no vanilla name. Untouched.
-- **The goliebbb is called "ebbb" in game.** Its `ThingDef` carries `<label>ebbb</label>` while its
-  `PawnKindDef` says `goliebbb`; the `ThingDef` label is the one the game shows, so the largest of the
-  nine is named after the smallest. That is upstream, in the 1.5 files as in the earlier ones, and it
-  is a label rather than breakage — so it is recorded here rather than quietly rewritten. One word
-  fixes it if its author, or you, would rather it were fixed.
+- **Goliebbb label corrected on 2026-09-13:** its ThingDef now says `goliebbb`, matching its PawnKindDef, instead of the inherited `ebbb`. DefNames and balance values are unchanged.
 - **No balance value was touched.**
 
 ## Where this came from

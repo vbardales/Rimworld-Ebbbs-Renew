@@ -1,11 +1,14 @@
 ---
+localization: unchecked
+translation_en: unchecked
+translation_fr: unchecked
 mod:          Ebbbs Renew (unofficial)
 packageId:    nelim.ebbbsrenew
 repo:         Rimworld-Ebbbs-Renew
 remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
 detached:     yes
-stage:        preTest
+stage:        done
 licence:      silent
 licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online in this session
 dependencies: none
@@ -17,7 +20,6 @@ workshop:
 remaining:
   - unverified: RimWorld 1.6 functional scenarios and Core reference resolution not run
   - unverified: Preview and icon appearance in the game UI
-  - defect: Goliebbb ThingDef label is ebbb, inherited and intentionally unchanged
 maintainer:   Codex - responsible for this repository and STATUS.md
 session:      01a09790-9f9b-7b92-8498-547182eb4f10
 updated:      2026-09-13
@@ -92,17 +94,19 @@ behaviour still require the eight documented manual scenarios. `tested_on` stays
 empty until an actual run is recorded with game version and evidence.
 There is no C# assembly in this mod; C# unit tests are not applicable.
 
-## Assets and known issue
+## Assets and corrected issue
 
 `Mod/About/ModIcon.png` and `Mod/About/Preview.png` both exist. The old claim that
 Preview was missing has been removed. `Art/ModIcon-source.png` is also present.
 Presence alone does not prove their appearance in the game UI.
 
-Goliebbb still has ThingDef label `ebbb`, while its PawnKindDef says `goliebbb`.
-This inherited discrepancy is documented in ATTRIBUTION.md and has not been changed.
+Goliebbb label corrected on 2026-09-13: ThingDef now displays `goliebbb`, matching PawnKindDef. Identifiers and balance remain unchanged; in-game confirmation is pending.
 
-Stage is **preTest**, not tested or published. Required gameplay verification is
-pending; the presence of showcase files does not close that gap.
+Stage is **done**: the port, metadata, showcase and static validation work are
+complete. Stage tracks preparation independently of in-game testing.
+`tested_on` and `manual_tests` track actual gameplay verification, which remains
+unexecuted; `workshop` tracks publication separately. No in-game success or
+Workshop publication is implied by `done`.
 
 ## Preview recomposed — 2026-09-12
 

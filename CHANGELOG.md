@@ -26,9 +26,8 @@ First release of the 1.6 update of **Ebbbs**, by Coolie.
 
 ### Notes
 
-Those nine lines are the entire difference from the original defs. The defs come from the mod's `1.5`
-folder, identical to `1.4` bar one file. No balance value was changed.
+The defs come from the original mod's `1.5` folder. No balance value was changed.
 
-**One inherited oddity is left in place and documented:** the goliebbb's `ThingDef` label reads `ebbb`
-while its `PawnKindDef` reads `goliebbb`, so the largest of the nine shows in game under the name of the
-smallest. Upstream, present in the 1.5 files as in the earlier ones, and a label rather than breakage.
+### Fixed
+
+- Goliebbb ThingDef label corrected from `ebbb` to `goliebbb` on 2026-09-13, matching its PawnKindDef. DefNames are unchanged.
