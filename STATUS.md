@@ -1,80 +1,132 @@
 ---
-mod:          Ebbbs Renew
+mod:          Ebbbs Renew (unofficial)
 packageId:    nelim.ebbbsrenew
 repo:         Rimworld-Ebbbs-Renew
+remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
 detached:     yes
-stage:        showcase
+stage:        preTest
 licence:      silent
-licence_at:   five places, the About, the README the mod ships and the Steam page among them; none states a licence and none states a refusal
+licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online in this session
 dependencies: none
-showcase:     icon
+showcase:     icon present; preview recomposed and visually verified; in-game review pending
 tested_on:
+automated:    PASS - 201 static checks, 6 XML files, 2026-09-13
+manual_tests: Tests/MANUAL.md - 8 scenarios, not executed
 workshop:
 remaining:
-  - unverified: never seen running in game
-  - feature: no `Mod/About/Preview.png`, which the first release needs
-  - defect: the goliebbb shows in game as `ebbb`, upstream and left alone on purpose
-session:      local_8fb9b3b3-6745-46f1-93b9-0dc96c4c4ced
-updated:      2026-09-12, by the session that holds this mod
+  - unverified: RimWorld 1.6 functional scenarios and Core reference resolution not run
+  - unverified: Preview and icon appearance in the game UI
+  - defect: Goliebbb ThingDef label is ebbb, inherited and intentionally unchanged
+maintainer:   Codex - responsible for this repository and STATUS.md
+session:      01a09790-9f9b-7b92-8498-547182eb4f10
+updated:      2026-09-13
 ---
 
 # Ebbbs Renew — status
 
-A status sheet, read by a sweep over every mod rather than by asking each thread one at a time.
-It lives at the root, never inside `Mod/`, so Steam never receives it.
+Codex takes responsibility for this local repository and this status file from
+2026-09-12 onward. Update it with each material change, test result or publication.
+This file stays at the root, outside the distributable `Mod/` folder.
 
-The sweep deduces from disk what disk can tell it. The fields it cannot are filled in here by the
-session that holds this mod:
+## Identity and scope
 
-- **`stage: showcase`** — the port itself is finished. Nine creatures, five def files, no C#, no
-  patch, no dependency, and the one 1.6 change made nine times over: `<Wildness>` now sits under
-  `statBases` on all nine, with no `wildness` field left anywhere under `Defs/`. What the mod
-  still lacks is its showcase: the icon arrived on 2026-09-12, the Workshop banner has not.
-- **`tested_on`** — empty, and that is the honest state: this mod has never been loaded by
-  RimWorld. The taming change is exactly the kind that a log will not show. A wildness read at
-  `-1` produces no error, so the only proof is a colonist taming a goliebbb at a plausible rate
-  rather than instantly.
-- **`dependencies: none`** — literal here. The About declares no `modDependencies`, and its six
-  `loadAfter` entries are Core and the five DLCs, nothing else. No DLC is required. The value
-  means the mod needs nothing, as against `declared` when every mod it needs is named in the
-  About's `modDependencies`, and `to check` when a non-vanilla `loadAfter` suggests one that is
-  not. An undeclared dependency is not cosmetic: on 2026-09-11 Reequilibrage animaux took 47
-  vanilla animals down with it, Muffalo included, because the class it injects belongs to a mod
-  that was neither declared nor loaded.
-- **`remaining`** — three entries. The `unverified` one is the never-run state above. The
-  `feature` one is the missing Workshop banner. The `defect` one is inherited rather than
-  introduced: the goliebbb's `ThingDef` carries `<label>ebbb</label>` while its `PawnKindDef`
-  says `goliebbb`, and the `ThingDef` label is the one the game shows, so the largest of the nine
-  is named after the smallest. It is upstream, present in the 1.5 files as in the earlier ones,
-  and a label rather than breakage, so `ATTRIBUTION.md` records it instead of quietly rewriting
-  it. One word fixes it the day that is the right call.
+- Folder: `C:\Users\nelim\Documents\rimworld\EbbbsRenew`.
+- Mod title: **Ebbbs Renew (unofficial)**; packageId: `nelim.ebbbsrenew`.
+- Remote: https://github.com/vbardales/Rimworld-Ebbbs-Renew.git.
+- Independent local Git repository, with its own `.git` directory, branch `main`.
+  `git rev-parse --show-toplevel` resolves to this folder. The parent repository
+  tracks no files under EbbbsRenew and `git check-ignore EbbbsRenew` confirms exclusion.
+  This task maintains this repository only.
+- **Public**: GitHub REST API `/repos/vbardales/Rimworld-Ebbbs-Renew` returned
+  `private: false`, `visibility: public` on 2026-09-12.
+- No Workshop publication recorded; `workshop` remains empty.
 
-`detached: yes` since 2026-09-12: this folder is its own git repository, on `main`, with one
-remote pointing at the public repository above. The monorepo ignores it and tracks none of its
-files.
+## Mod title, description and licence
 
-`licence: silent` — Coolie's original states no licence anywhere, and each of the five places was
-read looking for a refusal rather than for a permission, in English and in the Japanese and
-Chinese forms a refusal usually takes. `ATTRIBUTION.md` lists them one by one. Silence grants
-nothing and forbids nothing, so this port rests on the Workshop's own custom for abandoned mods:
-named credit, and a takedown on request. The source last supported 1.5 and was last updated in
-July 2024. Abandoned, not withdrawn.
+The suffix **(unofficial)** is already present in About.xml and README.md. Keep it:
+this is a continuation of Coolie's work without recorded explicit approval.
+No additional suffix is needed for this identification purpose.
+The GitHub URL is present both in `<url>` and in the actual `<description>`.
 
-`showcase: icon` since 2026-09-12: `Mod/About/ModIcon.png` at 128 × 128 and 14,5 Ko, reduced from
-the full-resolution generation kept in `Art/ModIcon-source.png`. It reads at 32 × 32 — a black
-blob, two white eyes, the mascot's orange ponytail. `Mod/About/Preview.png` is still missing, and
-it is the one thing standing between this mod and `stage: done`.
+**Mod classification: `licence: silent`; repository visibility: `public`.**
+These are separate facts: public access does not establish an open licence.
+The attribution audit in [ATTRIBUTION.md](ATTRIBUTION.md) reports no licence or
+redistribution refusal in five locations: licence files, upstream About.xml,
+upstream README, linked repository (none found), and Workshop description.
+That historical audit is the basis for `silent`; the upstream materials were not
+rechecked online during this takeover. No new permission is asserted here.
 
-`workshop` is empty because nothing has been uploaded. The name, the description and the
-`packageId` are frozen when a Workshop item is created, so they are worth a last reading before
-the upload rather than after it.
+Classification rationale:
 
-Vocabulary for `licence`: `open` an explicit licence, `silent` no licence and a dead source,
-`alive` no licence but a living source, `forbidden` a written refusal, `original` owing nothing
-to anyone — not a name, not an idea traceable to one mod, not a value derived from its assets.
+- `silent`: selected because the recorded upstream audit found neither an explicit
+  licence nor an explicit refusal.
+- `open`: not supported by an explicit upstream licence in the recorded evidence.
+- `forbidden`: no written refusal recorded in that audit.
+- `original`: not applicable; creatures, textures and definitions derive from Coolie.
 
-Vocabulary for `stage`: `port`, `showcase`, `preTest`, `done`, `tested`, `published`.
+Credit, the unofficial notice and the stated removal-on-request commitment remain
+in place. They are not evidence of permission from the original author.
 
-Vocabulary for `remaining`: `feature` for something missing from a first release, `defect` for a
-known fault left unfixed, `unverified` for what could not be checked.
+## Verification
+
+No reproducible automated suite or manual scenario document existed at takeover.
+Added [Tests/Validate-Mod.ps1](Tests/Validate-Mod.ps1) and
+[Tests/MANUAL.md](Tests/MANUAL.md).
+
+Run from the repository root:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Mod.ps1
+```
+
+Result on 2026-09-13: **PASS — 201 checks, six XML files, nine races**.
+Checks cover XML parsing, metadata, duplicate typed defNames, nine PawnKind/race
+pairs, expected Wildness values under statBases, absence of obsolete wildness
+fields, local body/leather/meat/flesh/blood/effect/product references, local texture
+paths and live directional sprites, plus presence of the icon and Preview.
+
+This is static validation, not a RimWorld schema validator or engine execution.
+Core inheritance, Core assets/references, DLC compatibility, graphics and actual
+behaviour still require the eight documented manual scenarios. `tested_on` stays
+empty until an actual run is recorded with game version and evidence.
+There is no C# assembly in this mod; C# unit tests are not applicable.
+
+## Assets and known issue
+
+`Mod/About/ModIcon.png` and `Mod/About/Preview.png` both exist. The old claim that
+Preview was missing has been removed. `Art/ModIcon-source.png` is also present.
+Presence alone does not prove their appearance in the game UI.
+
+Goliebbb still has ThingDef label `ebbb`, while its PawnKindDef says `goliebbb`.
+This inherited discrepancy is documented in ATTRIBUTION.md and has not been changed.
+
+Stage is **preTest**, not tested or published. Required gameplay verification is
+pending; the presence of showcase files does not close that gap.
+
+## Preview recomposed — 2026-09-12
+
+The delivered illustration had no text. It was preserved intact as
+`Art/Preview.png` before recomposition; no illustration was replaced, so no
+separate old-source archive was needed. The existing title and the exact summary
+from `_tools/preview.html` were retained. `(unofficial)` is on its own line;
+`Renew` is 65% of the title size. Badge version `1.6` is derived from About.xml.
+
+Composition and parameters: `Art/preview.html`; sole colour reference:
+`Art/preview-palette.json`; reproducible renderer: `Art/render-preview.cjs`;
+instructions: `Art/PREVIEW.md`. Final output: `Mod/About/Preview.png`.
+
+The dominant chromatic family is the ochre/brown of the wooden floor, crates and
+lamp pool. The veil uses dark wood; the secondary ink uses a lighter wood ochre.
+Accent revised on 2026-09-13 after the amber was judged too close to the secondary ink. The new copper-orange accent extends the warm lamp palette:
+its redder hue, stronger saturation and different lightness distinguish it from the
+secondary ink. No HEX values are duplicated here.
+
+Verified at 896 × 504 and 268 px wide: title, reduced suffix and badge readable,
+rule visible, accent distinct, no text overlap or clipping. Chrome confirms actual
+Segoe UI (Semibold title, regular tag/summary, Bold badge), with no fallback;
+capture waited for document.fonts.ready. Output is 540,016 bytes, below 900 KB.
+Minimum contrast on rendered backgrounds: title 12.05:1, suffix 8.11:1,
+tag 7.73:1, summary 6.21:1, badge 6.67:1. Entire text rectangles were sampled,
+not only their corners. Evidence: `Art/preview-qa.json`, `Art/preview-background.png`
+and `Art/preview-268.png`. In-game UI review remains pending. No Workshop publication.

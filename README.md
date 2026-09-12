@@ -1,4 +1,6 @@
-# Ebbbs Renew
+# Ebbbs Renew (unofficial)
+
+UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
 Nine forms of goo, brought forward to RimWorld 1.6.
 
@@ -62,3 +64,7 @@ any other of my mods, including publishing a continuation of it. All credit must
 - 1.6 update by nelim. Written with the help of Claude (Anthropic).
 
 See [ATTRIBUTION.md](ATTRIBUTION.md) for the licence check and the port in detail.
+
+## Validation
+
+See [Tests/MANUAL.md](Tests/MANUAL.md) for the manual scenarios and the command to run XML checks. Current results and remaining validation are tracked in [STATUS.md](STATUS.md).
