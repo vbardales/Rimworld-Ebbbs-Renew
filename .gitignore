@@ -9,3 +9,8 @@
 Thumbs.db
 desktop.ini
 .DS_Store
+# Showcase notes: French working notes, deleted once Preview.png and ModIcon.png are done.
+PROMPT_*.md
+
+# Claude Code session worktrees and local settings.
+.claude/

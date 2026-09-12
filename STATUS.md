@@ -8,12 +8,12 @@ stage:        showcase
 licence:      silent
 licence_at:   five places, the About, the README the mod ships and the Steam page among them; none states a licence and none states a refusal
 dependencies: none
-showcase:     none
+showcase:     icon
 tested_on:
 workshop:
 remaining:
   - unverified: never seen running in game
-  - feature: no `Mod/About/ModIcon.png` and no `Mod/About/Preview.png`, which the first release needs
+  - feature: no `Mod/About/Preview.png`, which the first release needs
   - defect: the goliebbb shows in game as `ebbb`, upstream and left alone on purpose
 session:      local_8fb9b3b3-6745-46f1-93b9-0dc96c4c4ced
 updated:      2026-09-12, by the session that holds this mod
@@ -30,7 +30,7 @@ session that holds this mod:
 - **`stage: showcase`** — the port itself is finished. Nine creatures, five def files, no C#, no
   patch, no dependency, and the one 1.6 change made nine times over: `<Wildness>` now sits under
   `statBases` on all nine, with no `wildness` field left anywhere under `Defs/`. What the mod
-  still lacks is its two images, which is the stage it is now at.
+  still lacks is its showcase: the icon arrived on 2026-09-12, the Workshop banner has not.
 - **`tested_on`** — empty, and that is the honest state: this mod has never been loaded by
   RimWorld. The taming change is exactly the kind that a log will not show. A wildness read at
   `-1` produces no error, so the only proof is a colonist taming a goliebbb at a plausible rate
@@ -43,7 +43,7 @@ session that holds this mod:
   vanilla animals down with it, Muffalo included, because the class it injects belongs to a mod
   that was neither declared nor loaded.
 - **`remaining`** — three entries. The `unverified` one is the never-run state above. The
-  `feature` one is the missing pair of images. The `defect` one is inherited rather than
+  `feature` one is the missing Workshop banner. The `defect` one is inherited rather than
   introduced: the goliebbb's `ThingDef` carries `<label>ebbb</label>` while its `PawnKindDef`
   says `goliebbb`, and the `ThingDef` label is the one the game shows, so the largest of the nine
   is named after the smallest. It is upstream, present in the 1.5 files as in the earlier ones,
@@ -61,8 +61,10 @@ nothing and forbids nothing, so this port rests on the Workshop's own custom for
 named credit, and a takedown on request. The source last supported 1.5 and was last updated in
 July 2024. Abandoned, not withdrawn.
 
-`showcase: none` — `Mod/About/` holds `About.xml` and nothing else. No `Art/` directory and no
-build script either, so the two images have to be made before a first release, not just exported.
+`showcase: icon` since 2026-09-12: `Mod/About/ModIcon.png` at 128 × 128 and 14,5 Ko, reduced from
+the full-resolution generation kept in `Art/ModIcon-source.png`. It reads at 32 × 32 — a black
+blob, two white eyes, the mascot's orange ponytail. `Mod/About/Preview.png` is still missing, and
+it is the one thing standing between this mod and `stage: done`.
 
 `workshop` is empty because nothing has been uploaded. The name, the description and the
 `packageId` are frozen when a Workshop item is created, so they are worth a last reading before
