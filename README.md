@@ -12,9 +12,9 @@ last updated in July 2024. Abandoned, not withdrawn.
 
 ## What the mod does
 
-Nine creatures, smallest to largest: **ebbb**, **beee**, **crebbb**, **drebbbd**, **ebbberration**,
-**ebbbomination**, **goliebbb**, **thrumebbb**, **bebbbholder**. Body sizes from 0.2 to 2, market
-values from 10 to 360, trainability from Intermediate to Advanced.
+Nine creatures: **ebbb**, **beee**, **crebbb**, **drebbbd**, **ebbberration**,
+**ebbbomination**, **goliebbb**, **thrumebbb**, **bebbbholder**. Body sizes from 0.2 to 4, market
+values from 10 to 2000, trainability from Intermediate to Advanced.
 
 They bring a **flesh type of their own**, their own body plan, their own blood, **ebbb leather**, and a
 **horn** off the thrumebbb.
@@ -35,7 +35,7 @@ One line, nine times.
   and the stat's default is `-1` — outside the range the game uses, so every one of them tamed for
   almost nothing, whether written at 0.4 or at 1.
 
-Nothing else needed touching. Coolie had already moved the ebbb's colour variants to vanilla
+Coolie had already moved the ebbb's colour variants to vanilla
 `alternateGraphics` in their own 1.5 update, so only the leftover SkinSet file of the old system had to
 go, which nothing referenced any more.
 

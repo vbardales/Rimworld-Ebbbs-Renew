@@ -2,6 +2,7 @@
 localization: complete
 translation_en: complete
 translation_fr: complete
+settings_audit: not_applicable
 mod:          Ebbbs Renew (unofficial)
 packageId:    nelim.ebbbsrenew
 repo:         Rimworld-Ebbbs-Renew
@@ -27,6 +28,185 @@ updated:      2026-09-13
 ---
 
 # Ebbbs Renew — status
+
+## Description correction follow-up — 2026-09-13
+
+**Current cumulative stage: `done` (previously `Preview générée`).** The user
+requested continuation after the documentation translation. Corrected About.xml
+and README.md to state the actual body-size range 0.2-4 and market-value range
+10-2000. Removed the incorrect assertion that the species list was sorted by size.
+About.xml now ends with the required Steam-formatted Source code on GitHub link.
+Removed the redundant raw source-link paragraph and clarified the existing Goliebbb
+label fix. CHANGELOG.md records the corrections and no longer lists existing images
+as missing release work. No balance values or gameplay definitions were changed.
+
+Gate 4 now passes. Gates 5-8 retain their independently established passes from
+the audit, so the cumulative stage advances through preOptions, options, l10n and
+preTest to done. This means ready for final functional validation, not tested in game.
+The earlier stage statements below are historical results before these corrections.
+
+Verification on base revision `f8ade1e2288fa862a0d404131bbcd17186b03313` plus the
+documented local translations, audit records and these description changes:
+
+- Reran Tests/Validate-Mod.ps1: **PASS, 204 checks, nine XML files, nine races**.
+- Parsed About.xml and checked the exact final Steam link; checked the two ranges
+  directly against all nine ThingDefs: **body 0.2-4; market 10-2000**.
+- Compared the other **54 delivered files** against the SHA256 fingerprints in
+  Tests/Audit-2026-09-13.json: all unchanged. Thus the earlier translation, settings,
+  dependency and image checks remain applicable; About metadata is outside the
+  in-game localization scope. The historical manifest is preserved, not overwritten.
+- Reviewed the description/documentation diff; git diff --check passed.
+
+Only final in-game checks remain for `done -> tested`: M1-M9, Player.log, FR/EN UI,
+new-game and existing-save behavior. No game run, publication or commit was made.
+
+## Documentation translation follow-up — 2026-09-13
+
+**Current cumulative stage: `Preview générée` (previously `dansMonoRepo`).**
+Translated Tests/MANUAL.md and Art/PREVIEW.md into English at the user's request.
+Reviewed the translations against the preceding text: all nine scenarios, dates,
+expected values, commands, paths and unexecuted test statuses are preserved.
+Gate 1's documentation language defect is resolved. The independent validations
+of gates 2 and 3 from the audit below remain applicable, so the cumulative stage
+advances to `Preview générée`. Gate 4 remains blocked by the recorded description
+defects; no description or balance change was part of this translation request.
+
+Only these two documents and STATUS.md changed in this follow-up. The existing
+Tests/Audit-2026-09-13.json is preserved as the historical audit snapshot; its
+hashes for the two translated documents now describe their pre-translation versions.
+The delivered Mod files and executable validators are unchanged. Documentation
+review and git diff --check apply to this change; gameplay tests remain unexecuted.
+
+## Workflow audit before documentation translation — 2026-09-13
+
+**Previous stage: `done`; retained cumulative stage: `dansMonoRepo`.** The first
+transition is blocked by the English documentation requirement. This is the initial
+workflow checkpoint, not a claim that the repository is physically in the monorepo:
+`detached: yes` remains correct. Do not move the repository or restore a parent remote.
+The later historical entries below remain evidence of earlier work, not overrides
+of this audit. The user-provided workflow takes precedence over the parent protocols,
+in particular for settings and the cumulative interpretation of stage.
+
+The stage names used here map literally to the requested chain:
+`dansMonoRepo -> horsMonoRepo -> ModIcon générée -> Preview générée -> preOptions -> options -> l10n -> preTest -> done -> tested`.
+Independent passes below are retained even though gate 1 prevents their cumulative award.
+
+### Revision, scope and preservation
+
+- Actual autonomous repository: `C:\Users\nelim\Documents\rimworld\EbbbsRenew`;
+  actual distributable: its `Mod/` directory (55 files: 45 PNG, nine XML, attribution).
+- Initial HEAD: `c21b5729212598689f0ed150964ceb3d98f6e60d`.
+  Initial modifications: CHANGELOG.md, README.md, STATUS.md, Tests/MANUAL.md,
+  Tests/Validate-Mod.ps1. Initial untracked content: Mod/Languages/,
+  Tests/Translation-inventory.json, Tests/Validate-Translations.ps1,
+  _tools/Build-French.ps1. These were included in the audit, not discarded.
+- During the audit another operation committed that translation work as
+  `f8ade1e2288fa862a0d404131bbcd17186b03313`; the worktree was then clean.
+  This audit did not commit, push, regenerate art, or change mod implementation.
+  Final checks were rerun against that revision; see the file fingerprints in
+  `Tests/Audit-2026-09-13.json`. Audit changes are this status and that evidence file.
+- Read the parent AGENTS.md, PUBLISHING.md, STYLE_RIMWORLD.md, MOD_SETTINGS.md and
+  TRANSLATIONS.md. All findings below concern present artifacts, not only declarations.
+
+### Ordered transition decisions
+
+| Gate | Independent result | Evidence and limits |
+| --- | --- | --- |
+| 1: dansMonoRepo -> horsMonoRepo | **Defect observed** | Own .git and correct Git top level; parent tracks no files here and ignores EbbbsRenew. Live GitHub API reports public repository; ls-remote returned c21b572 on main, proving a pushed commit. Identity conventions, English root README/attribution/changelog and matching distributed attribution pass. However Tests/MANUAL.md (M1-M8) and Art/PREVIEW.md are French repository documentation, contrary to PUBLISHING.md and gate 1. |
+| 2: horsMonoRepo -> ModIcon générée | **Validated independently** | Content implementation is present; 204 static checks pass. Build/compiled artifact freshness is not applicable: no source assembly, project or DLL, only native XML content and textures. Installed ModIcon is a valid 128 x 128 PNG, 14,482 bytes, visually inspected. |
+| 3: ModIcon générée -> Preview générée | **Validated independently** | Installed PNG inspected directly: 896 x 504, 540,016 bytes, below 1 MB and the recommended 900 KB. No camera defect observed; no historical generation report or recorded game-screenshot comparison required. |
+| 4: Preview générée -> preOptions | **Visual/naming criteria validated; description defect observed** | Copper-orange rule/badge visibly distinct from lighter ochre secondary ink at full size and 268 px. English description; Renew reduced to 65% and secondary ink; unofficial tag on its own line. No linking words or additional prefix apply. Required final Steam-formatted GitHub source link is absent. Advertised numeric ranges also disagree with delivered Defs. |
+| 5: preOptions -> options | **Not applicable, justified** | Settings inventory and absence checks below pass. No in-game settings run required for this source-established absence under the user's clarification. |
+| 6: options -> l10n | **Validated independently** | All 104 owned EN source texts and FR entries pass; reflected injection checker reports 104 keys, zero errors, no UNVERIFIED finding. Native English Def values are sufficient. Display in game is not certified. |
+| 7: l10n -> preTest | **Validated independently, static scope** | Only local/Core content references found. 554 parent, definition, stat and biome references checked against local/Core XML names, none unresolved. No external framework class, patch, LoadFolders, version folder or conditional integration. About declares 1.6 and the upstream incompatibility; Core/DLC loadAfter entries impose order, not a DLC dependency. No third-party version constraint applies. This is not engine reference resolution. |
+| 8: preTest -> done | **Test artifacts and automated/XML results validated independently** | M1-M9 provide shared preconditions, actions and expected results. Both local validators and the reflected path checker ran successfully on delivered files. C# unit/build tests are not applicable to this data-only mod. Gate 1's documentation language defect still blocks the cumulative stage. |
+| 9: done -> tested | **Unverified** | No M1-M9 gameplay execution, FR/EN UI inspection or Player.log validation was performed. New-game and existing-save behavior remain unverified. No successful RIMMSQOL or other integration test is claimed. |
+
+### Settings audit
+
+Inventory: nine species with fixed balance/spawn/food/training/life-stage data,
+five custom bodies, blood/effects, leather and horn. These are content definitions;
+no configurable feature, documented XML-only user setting, optional settings
+integration, or concrete player setting requirement was found. Exposing balance
+constants solely to fill this gate would create new scope rather than complete this port.
+All files under Mod were inventoried; there is no executable assembly or UI source,
+MainButtonDef, settings class, custom UI or configuration patch. The only explicit
+comp class is vanilla CompProperties_Styleable on the horn, not a settings interface.
+Thus no empty mod-options page or settings shortcut is registered by this mod.
+`settings_audit: not_applicable` is justified by content and access inventory, not
+merely by the absence of C#. Defaults/input boundaries/application timing/persistence,
+shortcut visibility and RIMMSQOL integration tests are not applicable to absent settings.
+No integrations were executed in game; ordinary animal save persistence is still M6.
+
+### Executed checks and artifact review
+
+Commands run from the autonomous repository:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Mod.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Translations.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-DefInjected.ps1 -TransMod Mod
+gh api repos/vbardales/Rimworld-Ebbbs-Renew --jq '{full_name,private,visibility,default_branch}'
+git ls-remote origin refs/heads/main
+git rev-parse --show-toplevel
+git -c safe.directory=C:/Users/nelim/Documents/rimworld -C .. ls-files EbbbsRenew
+git -c safe.directory=C:/Users/nelim/Documents/rimworld -C .. check-ignore EbbbsRenew
+```
+
+Observed validator results: **204 checks / nine XML files / nine races**;
+**104 English texts and French entries**; **104 injection keys / zero errors**
+against installed assemblies and 11,600 indexed definitions (29 installed patch
+operations applied by the checker). Exit codes were zero. The separate 554-reference
+inspection checks name existence, not a complete typed engine/schema validation.
+An initial shell invocation of that extra inspection failed without results;
+the corrected invocation completed with zero unresolved names.
+
+Reviewed French descriptions, labels, nested anatomy and tools against source and
+inventory. No placeholders, missing owned text or custom formatting parameters found.
+Core English Misc.xml and French archive Keyed/Misc.xml directly confirm MeatDesc,
+CorpseLabel and CorpseDesc coverage; French CorpseDesc uses native 0_gender grammar.
+The earlier documented engine injection-order review is retained as historical
+evidence; it was not repeated by decompilation in this audit.
+
+Direct visual inspection covered delivered Preview and ModIcon plus Art/preview-268.png.
+Title, tag, accent, badge and subject are identifiable; no clipping, text overlap or
+concrete camera concern was observed. Historical font/contrast measurements are
+retained separately below and were not presented as newly measured values.
+PNG format/dimensions/bytes were read directly with System.Drawing; hashes are in
+the evidence manifest. Root and distributed ATTRIBUTION.md have identical SHA256
+3348ABB809FFCF2E75758EF96B2B132A38509FF2509BDB0C18B94943F7C4EA23.
+
+The live GitHub checks initially hit sandbox network/config restrictions, then
+succeeded through authorized read-only execution. No GitHub access blocker remains.
+The recorded five-source upstream rights review is retained for `silent`; no new
+upstream licence/permission is asserted and that historical review was not refreshed.
+The missing LICENSE is justified by the absence of a granted upstream licence;
+inventing a licence for Coolie's content would not satisfy this workflow.
+
+### Defects, next transition and remaining verification
+
+**Strict next transition (gate 1):** translate the French repository documentation
+in Tests/MANUAL.md and Art/PREVIEW.md to English, preserving scenarios and historical
+results, then recheck documentation. The repository is already autonomous/public
+with a pushed commit; no relocation, remote restoration or image generation is needed.
+
+**Other observed description defects:** About.xml does not end with
+`[url=https://github.com/vbardales/Rimworld-Ebbbs-Renew]Source code on GitHub[/url]`.
+README.md and About.xml claim body sizes 0.2-2 and market values 10-360, whereas
+Thrumebbb explicitly has baseBodySize 4 and MarketValue 2000. Correct the claims,
+not the balance. These were recorded, not silently fixed during an audit-only request.
+
+**Unverified mandatory final checks:** execute M1-M9 in RimWorld 1.6, check logs
+and both languages, and record exact version/configuration and outcomes. M6 covers
+reloading a save containing mod content; explicitly include adding the mod to a
+pre-existing save when checking that supported use. No interactive game surface was
+used; installed assemblies suffice for static tests, not for claiming gameplay success.
+
+**Optional documentation cleanup:** CHANGELOG.md still tells a future release to add
+both images even though they exist. This stale checklist is not evidence of missing
+artifacts and does not invalidate their direct inspection. No optional visual reservation.
+
+## Historical records (superseded stage statements)
 
 Codex takes responsibility for this local repository and this status file from
 2026-09-12 onward. Update it with each material change, test result or publication.

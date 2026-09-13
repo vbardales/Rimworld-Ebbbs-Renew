@@ -1,0 +1,379 @@
+{
+  "date": "2026-09-13T01:56:23.8183656+02:00",
+  "revision": "f8ade1e2288fa862a0d404131bbcd17186b03313",
+  "scope": "Working-tree Mod payload and existing audit/test/art sources. STATUS.md is the audit report and is excluded from this manifest.",
+  "tests": [
+    {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Mod.ps1",
+      "exitCode": 0,
+      "output": "PASS: 204 checks; 9 XML files; nine races. Static validation only; RimWorld execution still required."
+    },
+    {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Translations.ps1",
+      "exitCode": 0,
+      "output": "PASS: 104 owned English texts and French entries; no duplicate, empty or unexpected keys. Run Check-DefInjected.ps1 for reflected path validation."
+    },
+    {
+      "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-DefInjected.ps1 -TransMod Mod",
+      "exitCode": 0,
+      "output": "Patch operations applied: 29\nDefs indexed: 11600\n\nKeys checked: 104 - errors: 0"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "Mod/ATTRIBUTION.md",
+      "sha256": "3348ABB809FFCF2E75758EF96B2B132A38509FF2509BDB0C18B94943F7C4EA23",
+      "bytes": 3627
+    },
+    {
+      "path": "Mod/About/About.xml",
+      "sha256": "5597BC87B4A3DADCC0CE1498C527201EC06C2021F4C80BFA48C39D941E339CA4",
+      "bytes": 3432
+    },
+    {
+      "path": "Mod/About/ModIcon.png",
+      "sha256": "14EADA5E82E5E30FC71E2370BA8571F8C991B3B40B3F813B1B8C26007F77D213",
+      "bytes": 14482
+    },
+    {
+      "path": "Mod/About/Preview.png",
+      "sha256": "D1CD6C8868625B683EDE052E7AB0EFE839490EB4A107EB5EBBA710226DA85C7B",
+      "bytes": 540016
+    },
+    {
+      "path": "Mod/Defs/Bodies/Bodies_Ebbb.xml",
+      "sha256": "8797044BC2F7CDA928EEB65AE393F7081520DDD547C75D176EAB5E4F39A27666",
+      "bytes": 15231
+    },
+    {
+      "path": "Mod/Defs/FleshTypeDefs/FleshType.xml",
+      "sha256": "18AEFA533B4B036FEABB013920ACE5E80AADC3CA354A895082A03F6F90C8C109",
+      "bytes": 2263
+    },
+    {
+      "path": "Mod/Defs/ThingDefs_Items/Items_Resource_Ebbb.xml",
+      "sha256": "8FFF0F91315A06642F98DF1FCEE0FA1B8B34951151B7541F2BB07F25BD1BD702",
+      "bytes": 2023
+    },
+    {
+      "path": "Mod/Defs/ThingDefs_Races/Bases.xml",
+      "sha256": "D68B181AE9215E7C6F2C24F46029B9DBF29B9C469C0798C17D457E4D19134502",
+      "bytes": 608
+    },
+    {
+      "path": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml",
+      "sha256": "75B1C16626BA783D9BB60546D8CFD6EED669035231DDB419972B4899648E815E",
+      "bytes": 36932
+    },
+    {
+      "path": "Mod/Languages/French/DefInjected/BodyDef/Ebbbs.xml",
+      "sha256": "AA2FD5910180EB82F23A735F5C157D43F99B3E711D43BB5967DA32971E7ED861",
+      "bytes": 5736
+    },
+    {
+      "path": "Mod/Languages/French/DefInjected/PawnKindDef/Ebbbs.xml",
+      "sha256": "5F5CA6CD7B88358F07851486120F17F797B67F1617A89D01BAC3558077580851",
+      "bytes": 714
+    },
+    {
+      "path": "Mod/Languages/French/DefInjected/ThingDef/Ebbbs.xml",
+      "sha256": "99AC821B70F3995B7FE77984C7FB902AF8CAF231965E72AC09491FCDAFA809B1",
+      "bytes": 5766
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Bebbbholder/Bebbbholder_Dessicated_south.png",
+      "sha256": "D7DBA9F1D63482EFF5A6C9742E1137EAF5D9587BBDA1E04D4C0F22F5F7B8AB98",
+      "bytes": 7183
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Bebbbholder/Bebbbholder_east.png",
+      "sha256": "9B84421268D67EFC35154750F50A92C3546411AA7FA8763302C76D827F7DAD04",
+      "bytes": 41007
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Bebbbholder/Bebbbholder_north.png",
+      "sha256": "A4309BAB62A4EF82D32B547C5747E23D0E32D6ED460D1426BB1A2A6A72F86CC0",
+      "bytes": 31673
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Bebbbholder/Bebbbholder_south.png",
+      "sha256": "17F7B41392559F0B2E6AEFBF106467FD7B890D3FEAA9DCFD8BE0D375E0208E02",
+      "bytes": 42679
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Beee/Beee_Dessicated_south.png",
+      "sha256": "D7C08210BEBBE9057DC5D473C75D2A8113027EDEB185E85731A80749365C1A36",
+      "bytes": 14073
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Beee/Beee_east.png",
+      "sha256": "EE477D1A4E03CA7B83D2C912519FF561EA635F835570CAE5FEEF37B40C561063",
+      "bytes": 13516
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Beee/Beee_north.png",
+      "sha256": "D7C08210BEBBE9057DC5D473C75D2A8113027EDEB185E85731A80749365C1A36",
+      "bytes": 14073
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Beee/Beee_south.png",
+      "sha256": "8CE1877F1019BE5A2ECAE944FDE016C083C69F2196D800D28F0DC0706104F30B",
+      "bytes": 17539
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Crebbb/Crebbb_Dessicated_south.png",
+      "sha256": "6D8D95DC8BE0BABCCCBE0CB9181D16DBE4CEA58B03746C88ED5F285DAF51E43A",
+      "bytes": 14147
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Crebbb/Crebbb_east.png",
+      "sha256": "35D1255C127F23F3BB7199D0BBA0D1FFBC9F407D3BEC9FA91FB834B316CB58BC",
+      "bytes": 20615
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Crebbb/Crebbb_north.png",
+      "sha256": "7A8027D154DEAD104406F81B3EBD43CBB32E3E6A7B4EA7A5370B1E74BA47E808",
+      "bytes": 12226
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Crebbb/Crebbb_south.png",
+      "sha256": "AA18DCC4BF4F5248FCCF5CF32C15D6EF29BA0927639862B703A4E253EE613C41",
+      "bytes": 18039
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Drebbbd/Drebbbd_Dessicated_south.png",
+      "sha256": "E8D93C630DA28DEF4CC8B582D0FECC0F02E9F966A8F2627461EBA55BA84299F4",
+      "bytes": 3888
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Drebbbd/Drebbbd_east.png",
+      "sha256": "22CFAEE11390D18252CDBA70AF112CE2453CF49158A611FAE904C4FDCF4108BF",
+      "bytes": 7015
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Drebbbd/Drebbbd_north.png",
+      "sha256": "35C8A0ED9D872E0BA2A24C52DB9883C58E455991AE8BF97631B0D35C7FEEF505",
+      "bytes": 5319
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Drebbbd/Drebbbd_south.png",
+      "sha256": "8A963F23B7084514886FC264C38F928B59A51BC67F7326DE46349F7C9E919919",
+      "bytes": 8028
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_1_east.png",
+      "sha256": "5F6ACFC7BC5EC996EFEEFD49C5345758991A69D733BD5AD0C81E8710B634FD99",
+      "bytes": 2792
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_1_north.png",
+      "sha256": "5747779524775B95A3D18A448012328774C555C6A91CA830D26D3A1840D0AE0A",
+      "bytes": 2120
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_1_south.png",
+      "sha256": "8707603D809B92BBA3A512AC7C9B85635F147E560C9B98BEB5DFF2E5CB8C1755",
+      "bytes": 3414
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_2_east.png",
+      "sha256": "6D9CE4B407186B805FD7C78A6006125560539EDD0499D0381CDB9369F3A0F438",
+      "bytes": 2875
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_2_north.png",
+      "sha256": "5747779524775B95A3D18A448012328774C555C6A91CA830D26D3A1840D0AE0A",
+      "bytes": 2120
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_2_south.png",
+      "sha256": "C9C68A94FE4D19EB83431F8E9B80732DCE50A08EFB647AFC4B5914C148B7C083",
+      "bytes": 3345
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_3_east.png",
+      "sha256": "13E72E4D90BEE7C340D940C8B85327AAF62DFB09AEEC787BB789E72D313352CB",
+      "bytes": 2857
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_3_north.png",
+      "sha256": "5747779524775B95A3D18A448012328774C555C6A91CA830D26D3A1840D0AE0A",
+      "bytes": 2120
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_3_south.png",
+      "sha256": "40AC1455155A205534072E70F457B05C3752F6523DDFA8B07973DDF18193BBD1",
+      "bytes": 3476
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbb/Ebbb_Dessicated_south.png",
+      "sha256": "64FB62EB3D07D892137C4A43226612173246AEBC42012E972CB570766F02C243",
+      "bytes": 2142
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbberration/Ebbberration_Dessicated_south.png",
+      "sha256": "353AA6C6C92F0A013F4A0BE3884AC5FC42ECF1336316F46D7F1FEB04FFD9FE23",
+      "bytes": 5678
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbberration/Ebbberration_east.png",
+      "sha256": "16FF6285AF03CED81DC3D0732F7EDEA74F044739C81A4B4A470D54AC815B07AA",
+      "bytes": 6379
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbberration/Ebbberration_north.png",
+      "sha256": "CF532B81254BF33AD6D63B72C7E4D5F0714595BB9E873E5F7B98F778AD588D51",
+      "bytes": 5632
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbberration/Ebbberration_south.png",
+      "sha256": "6597F39465F88E6067CDA71C524A362FF60F9BE9E13DD8EE28B8151BEA7C25EF",
+      "bytes": 7009
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbbomination/Ebbbomination_Dessicated_south.png",
+      "sha256": "2EC4C174CE2F932856B65C3207B2C4F8CA0E1CAF300733BF2B9DD78A33B3F2A4",
+      "bytes": 6852
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbbomination/Ebbbomination_east.png",
+      "sha256": "3AB4C876C788D3FD7B2291B8CBBBDC77BAD9E1B0D9E878F6802A2BD32B0CDF1A",
+      "bytes": 10594
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbbomination/Ebbbomination_north.png",
+      "sha256": "1104E8ED06A75644A2DB049B7EEF34E1FEF93611B52227788AF5BBD0569D9386",
+      "bytes": 6498
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Ebbbomination/Ebbbomination_south.png",
+      "sha256": "A9F119F632A99DF14F00E6C8F9C28116E595E2D9CE884860FD56E34D8398AF90",
+      "bytes": 9292
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Goliebbb/Goliebbb_Dessicated_south.png",
+      "sha256": "1EA9FFCD72DB92292DADA70385ADA8564949E942BEB5ECCCE19EF1CFC0D36B05",
+      "bytes": 9437
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Goliebbb/Goliebbb_east.png",
+      "sha256": "A379376D40051B69ACA42A9C3924FA12BB65745E5A79755E238B045484A0FCD5",
+      "bytes": 17078
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Goliebbb/Goliebbb_north.png",
+      "sha256": "E43BE5881CB39B3D6A65045D531B357D19E797BFBFFB591C91FCCFC36A3E2E81",
+      "bytes": 11824
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Goliebbb/Goliebbb_south.png",
+      "sha256": "0A57D09153E3BCF8CEF55D1B58A863C3BC5D196F7CCC99A5E610EC7E8CD7820F",
+      "bytes": 15076
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Thrumebbb/Dessicated_Thrumebbb_east.png",
+      "sha256": "319403D96F5EC626EC4D05D1DE14A3959BFD6DBF38E683D3596904E4955886D3",
+      "bytes": 4880
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Thrumebbb/Thrumebbb_east.png",
+      "sha256": "1CA576159E304D6F849DAC4F4492DCB49AD8A5D631F234780B83EF1642C1F375",
+      "bytes": 10921
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Thrumebbb/Thrumebbb_north.png",
+      "sha256": "769E48C44B2733BFC3501990D841B5C2BC31AC3DCA2626E004D465A0F4F4EA09",
+      "bytes": 9384
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Thrumebbb/Thrumebbb_south.png",
+      "sha256": "F5AFC5925A7FC9A33AD00968F688A460BFE8782A79E1A2033083EE3BDA5BD682",
+      "bytes": 8140
+    },
+    {
+      "path": "Mod/Textures/Things/Pawn/Animal/Thrumebbb/ThrumebbbHorn.png",
+      "sha256": "9D3F63692DC6641CA2D9E757B0CE1B2A19A8C925B9E259E2EEFB37227FD61A28",
+      "bytes": 671
+    },
+    {
+      "path": "Tests/MANUAL.md",
+      "sha256": "FBA9915C6E4467727D49FE1920B67873A93DB7AD69D8BB0AE3340994C5A73E96",
+      "bytes": 3643
+    },
+    {
+      "path": "Tests/Translation-inventory.json",
+      "sha256": "99BABAC3FC22D6A412965E22F29BC64274C268B1527C58E53A658DCBB38FB52D",
+      "bytes": 25052
+    },
+    {
+      "path": "Tests/Validate-Mod.ps1",
+      "sha256": "655F4B80AA444CB6F3DA90E4617F5613994A284051F25E78045B4941AAE9AB51",
+      "bytes": 4670
+    },
+    {
+      "path": "Tests/Validate-Translations.ps1",
+      "sha256": "0921574F66B6E5F98A8318A524C96B0323276DBBF2052C9629ADE738AFA354D4",
+      "bytes": 1844
+    },
+    {
+      "path": "Art/ModIcon-source.png",
+      "sha256": "1FE9266112421C3BD28DC22318845966CEAE564B2BE035000678A6D8382195E6",
+      "bytes": 1031960
+    },
+    {
+      "path": "Art/preview-268.png",
+      "sha256": "BCD5D06136A94C7C4E4B1C2500BE99762243258FDAB228DCC28812067E4E4B69",
+      "bytes": 64809
+    },
+    {
+      "path": "Art/preview-background.png",
+      "sha256": "776A6C0AE02B0DA6838A8C9362A10EA8D72D003B390D998C4D7D956F981C64FE",
+      "bytes": 417116
+    },
+    {
+      "path": "Art/preview-palette.json",
+      "sha256": "BA8E22DEDF7774CCA1CA2258C7FBAE175581D6DC955562A00966C1CF2F488AAF",
+      "bytes": 128
+    },
+    {
+      "path": "Art/preview-qa.json",
+      "sha256": "1977EAC8B4C164210859B3A18186FECA819EE75BAD20B4217A1AD4AF338C2A83",
+      "bytes": 1737
+    },
+    {
+      "path": "Art/preview.html",
+      "sha256": "EDDE832B031457C763763E2A7DBEB4AE9B12E7D58FC85FFAC233AC03E8B45A62",
+      "bytes": 2809
+    },
+    {
+      "path": "Art/PREVIEW.md",
+      "sha256": "00E3082F08FF1E236211773DF9A356DE6804F03EBE85BC7CE886FB34590E2294",
+      "bytes": 2011
+    },
+    {
+      "path": "Art/Preview.png",
+      "sha256": "D2AD238BF806C96F17869983932B66990E06D73F826F9C38357F01F42303315F",
+      "bytes": 1938646
+    },
+    {
+      "path": "Art/render-preview.cjs",
+      "sha256": "91E5317D40DCBEC8DFD4DB361E9A838E3B0D1FF24CC2B0DB90084800D5DD9466",
+      "bytes": 3843
+    },
+    {
+      "path": "_tools/Build-French.ps1",
+      "sha256": "98526425BFA759B7419868351DE1792F996A4977271C23FB0AE571171CDFF7CD",
+      "bytes": 5912
+    },
+    {
+      "path": "_tools/preview-raw.png",
+      "sha256": "B4D2E84AFB33A95533A7717B8233B71434D19FF247E34509D551ACD52F9A588A",
+      "bytes": 353455
+    },
+    {
+      "path": "_tools/preview.html",
+      "sha256": "7E76CACC89039081BBC82F4F5A5D61B0CE26D06EF8B6F575A56D606F9B26BE5E",
+      "bytes": 7521
+    }
+  ]
+}

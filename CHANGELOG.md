@@ -6,7 +6,7 @@ in game.
 
 ## [1.0.0] — unreleased
 
-On release: add `Mod/About/ModIcon.png` and `Mod/About/Preview.png`, create the `v1.0.0` tag and
+The icon and Preview are already installed. After final in-game validation, create the `v1.0.0` tag and
 the matching GitHub release, then publish to the Workshop.
 
 First release of the 1.6 update of **Ebbbs**, by Coolie.
@@ -33,5 +33,7 @@ First release of the 1.6 update of **Ebbbs**, by Coolie.
 The defs come from the original mod's `1.5` folder. No balance value was changed.
 
 ### Fixed
+
+- Corrected the description's body-size and market-value ranges to include Thrumebbb, removed the incorrect size-order claim, and added the required GitHub source footer. Balance is unchanged.
 
 - Goliebbb ThingDef label corrected from `ebbb` to `goliebbb` on 2026-09-13, matching its PawnKindDef. DefNames are unchanged.
