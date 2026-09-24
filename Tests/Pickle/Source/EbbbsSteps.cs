@@ -25,11 +25,22 @@ namespace EbbbsRenew.PickleSteps
     {
         // ---------------------------------------------------------------- the log
 
+        /// <summary>
+        /// The test companion's own name. It is "Ebbbs Renew - Pickle tests", so any message the game logs
+        /// about the companion contains "ebbb" and, when it quotes a dependency, this mod's packageId. Two
+        /// such messages are normal for a companion that only holds features: one warning that a dependency
+        /// declares no download URL, and one error that the mod "did not load any content". The first run
+        /// of this suite failed two scenarios on exactly those. They are about the harness, not about the
+        /// mod under test, so they are left out of what these steps read.
+        /// </summary>
+        private const string Companion = "Ebbbs Renew - Pickle tests";
+
         private static List<string> ErrorsAndWarnings()
         {
             return Log.Messages
                 .Where(m => m.type == LogMessageType.Error || m.type == LogMessageType.Warning)
                 .Select(m => m.text ?? string.Empty)
+                .Where(text => text.IndexOf(Companion, StringComparison.OrdinalIgnoreCase) < 0)
                 .ToList();
         }
 

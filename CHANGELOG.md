@@ -22,7 +22,7 @@ First release of the 1.6 update of **Ebbbs**, by Coolie.
   mod, and `About.xml` declares `loadBefore` for it, because that mod copies its category lists into its real
   recipes in its own last patch and a name added afterwards is never read. It is an order, not a dependency.
   The Steam page text is not re-sent by an update: the paragraph `About.xml` gained has to be added by hand.
-- A Pickle suite in `Tests/Pickle`, eight features and twenty-five scenarios, none of them run yet, and the
+- A Pickle suite in `Tests/Pickle`, eight features and twenty-five scenarios, two passes played once on 2026-09-24 and the others not yet, and the
   written scope of the in-game checks in `TESTING.md`. Nothing in `Mod/` depends on it.
 
 ### Changed

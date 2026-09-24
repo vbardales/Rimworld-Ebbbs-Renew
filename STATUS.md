@@ -16,12 +16,12 @@ dependencies: none
 showcase:     icon and Preview present, both inspected directly on 2026-09-24; in-game review pending
 tested_on:
 automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and injection paths; Pickle step check, 377 step lines all resolved; all rerun 2026-09-24
-manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (25 written in 8 features, none run) or a justified not-applicable
+manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (25 written in 8 features; P1 and P2 played once, 2 failed on the companion's log lines, fix requested) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The four passes, P1 English, P2 French, P3 incompatibility and P4 A Dog Said 2, are in TESTING.md. Each is one request to the TicketDispatcher. P1 and P2 were submitted on 2026-09-24 (requests 20260924-165445-869-45b5 and 20260924-165446-343-e6e4, evidence under Tests/Pickle/Evidence/p1-english and p2-french), waiting behind the queue; P3 and P4 wait for their mods to be downloaded into the WSL Workshop cache
+  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The four passes, P1 English, P2 French, P3 incompatibility and P4 A Dog Said 2, are in TESTING.md. Each is one request to the TicketDispatcher. P1 and P2 ran on 2026-09-24 (requests 20260924-165445-869-45b5 and 20260924-165446-343-e6e4, evidence cut to text under Tests/Pickle/Evidence/p1-english and p2-french, record in docs/runs/2026-09-24.md); P3 and P4 wait for their mods to be downloaded into the WSL Workshop cache
   - unverified: the native support for A Dog Said 2 in a running game. Offline the patch was applied to that mod's own category file and the lists come out right, but the order of two mods in a mod list and the game's reading of the result were not exercised, and its four recipe names were read from its repository, not from an installed copy
-  - unverified: the local Pickle steps were compiled and their patterns checked, never played. The species cells, the adult-age setter used by the butchering step and the way Pickle counts an animal as existing are read from source, not seen running
+  - unverified: the fix to the two log scenarios, requested as 20260924-235620-812-a03b. P1 and P2 played once on 2026-09-24: 13 of 15 and 7 of 9 scenarios passed, and the two that failed did so on two log lines about the test companion, not about the mod. No pass has been green as a whole. P3 and P4 have not been played
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
   - unverified: the Coolie.Ebbbs packageId in incompatibleWith was not checked against the source mod, which is not installed here. The incompatibility itself is what pass P3 is for

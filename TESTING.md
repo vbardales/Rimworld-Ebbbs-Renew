@@ -65,7 +65,7 @@ category lists, which is what its update would change, and it too has to be fetc
 ## What only a running game can show
 
 Written on 2026-09-24. Each scenario of `Tests/MANUAL.md` is either a Pickle scenario, replaced by another,
-or not applicable with its reason. **None has been run.**
+or not applicable with its reason. **P1 and P2 were played once on 2026-09-24 (`docs/runs/2026-09-24.md`): everything passed except two scenarios that failed on the test companion's own log lines, which are fixed and requested again. P3 and P4 have not been played.**
 
 | Scenario | Verdict |
 |---|---|

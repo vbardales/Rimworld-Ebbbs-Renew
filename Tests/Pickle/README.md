@@ -1,7 +1,7 @@
 # Pickle suite for Ebbbs Renew
 
 In-game scenarios for a mod that ships nine species, five body plans, a flesh type, leather and a horn, with
-no code and one patch that only acts when A Dog Said 2 is loaded. They are **written and statically checked; none has been run.** `../../TESTING.md`
+no code and one patch that only acts when A Dog Said 2 is loaded. They are **written and statically checked; P1 and P2 have been played once, see "Not verified" below, and no pass is green as a whole yet.** `../../TESTING.md`
 says what belongs here, what stays out and why. Nothing in this folder is part of `Mod/`, which is what
 Steam receives whole.
 
@@ -99,14 +99,14 @@ deliberately wrong line was reported as undefined, so the check does bite.
 
 ## Not verified
 
-- **Nothing has been run.** Every scenario, including its expected values, is unverified until a pass plays it.
-- The species cells `(140..156, 155)` come from other suites of this collection on the same fixture. Whether
-  each is free on `test-colony` is not known, and Pickle's spawn step places the pawn exactly there.
-- The butchering step sets an adult's age with `ageTracker.AgeBiologicalTicks` and checks the life stage it
-  landed in. That the setter recomputes the stage is read from the API, not from a run; the step fails
-  saying so when it does not.
-- `Then a "X" exists` waits for a thing of that def on the map. That it counts an animal is read from the
-  step's description, not from a run.
+- **Played once, on 2026-09-24, and not yet green.** P1 and P2 ran (`../../docs/runs/2026-09-24.md`): every
+  scenario that plays passed except two, which failed on lines the game logged about the test companion and
+  not about the mod. The steps and the companion were fixed and the two scenarios are requested again. The
+  passes P3 and P4, and their features `05` and `08`, have not been played at all, and no pass has yet been
+  green as a whole.
+- **Settled by that run, and no longer open:** the species cells `(140..156, 155)` on `test-colony` take a
+  pawn each, the butchering step's age setter does reach the last life stage (the thrumebbb left its horn),
+  and `Then a "X" exists` counts an animal.
 - Whether `Coolie.Ebbbs` is the original's packageId is not known: the original is not installed here, and it
   has not been downloaded into the WSL install's Workshop cache.
 - `Mod/About/About.xml` carried an XML comment saying a duplicate defName "logs nothing". The game's source
