@@ -14,3 +14,16 @@ PROMPT_*.md
 
 # Claude Code session worktrees and local settings.
 .claude/
+
+# Generated DDS copies of the textures. Each has a tracked .png twin in the same folder, which is
+# what the game loads, so the .dds add nothing to the source. Forty-three of them sat in Mod/ when
+# the 0.1.0 prepublication of 2026-09-23 was uploaded; they never were tracked, and this keeps them
+# from ever being committed. They stay on disk locally.
+*.dds
+
+# Test evidence lives on disk and is ignored. The record that is versioned is the text summary in
+# docs/runs/. What to keep, and how to cut it down, is written in docs/runs/README.md.
+Tests/Pickle/Evidence/
+Tests/Pickle/evidence/
+Tests/Manual/evidence/
+evidence/

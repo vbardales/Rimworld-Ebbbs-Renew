@@ -6,8 +6,9 @@ in game.
 
 ## [1.0.0] — unreleased
 
-The icon and Preview are already installed. After final in-game validation, create the `v1.0.0` tag and
-the matching GitHub release, then publish to the Workshop.
+The icon and Preview are already installed. The Workshop item exists since 0.1.0, so 1.0.0 is an
+update: after final in-game validation it goes out through the CI, which tags `v1.0.0` and creates
+the GitHub release only once Steam has received the upload.
 
 First release of the 1.6 update of **Ebbbs**, by Coolie.
 
@@ -37,3 +38,16 @@ The defs come from the original mod's `1.5` folder. No balance value was changed
 - Corrected the description's body-size and market-value ranges to include Thrumebbb, removed the incorrect size-order claim, and added the required GitHub source footer. Balance is unchanged.
 
 - Goliebbb ThingDef label corrected from `ebbb` to `goliebbb` on 2026-09-13, matching its PawnKindDef. DefNames are unchanged.
+
+## [0.1.0] — 2026-09-23
+
+- Creation of a `publishIdFile` (`About/PublishedFileId.txt`). This first upload exists only to
+  create the Workshop item, which Steam creates private, and to obtain that file. It does not make
+  the mod public and does not say it is tested.
+
+### Notes
+
+The upload contained `Mod/` as it was at commit `0fe6c02`, the head of `main` when it was sent.
+Nothing in `Mod/` has changed since, apart from the ID file itself, added in the commit that goes
+with this version. The folder also held 43 generated `.dds` copies of the textures, written on the
+day of the upload; they were never versioned and are now ignored.

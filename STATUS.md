@@ -9,29 +9,105 @@ repo:         Rimworld-Ebbbs-Renew
 remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
 detached:     yes
-stage:        done
+stage:        preTest
 licence:      silent
 licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online in this session
 dependencies: none
-showcase:     icon present; preview recomposed and visually verified; in-game review pending
+showcase:     icon and Preview present, both inspected directly on 2026-09-24; in-game review pending
 tested_on:
-automated:    PASS - 204 mod checks, 9 XML files; 104 translation entries and injection paths, 2026-09-13
-manual_tests: Tests/MANUAL.md - 9 scenarios, not executed
-workshop:
+automated:    PASS - 204 mod checks, 9 XML files; 104 translation entries and injection paths; rerun 2026-09-24 on 0fe6c02
+manual_tests: Tests/MANUAL.md - 9 scenarios, none executed; TESTING.md maps each to a Pickle scenario or a justified not-applicable, none written yet
+workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
+  - feature: no Pickle suite written for what only a running game can show. The scope is proposed in TESTING.md and waits for the owner's confirmation. This is what holds the mod at preTest
+  - unverified: never seen running in game, so every in-game check (M1 to M9) is open
   - unverified: English and French in-game display, anatomy, combat labels and generated meat/corpse text (M9)
-  - unverified: RimWorld 1.6 functional scenarios and Core reference resolution not run
   - unverified: Preview and icon appearance in the game UI
-maintainer:   Codex - responsible for this repository and STATUS.md
-session:      01a09790-9f9b-7b92-8498-547182eb4f10
-updated:      2026-09-13
+  - unverified: the Coolie.Ebbbs packageId in incompatibleWith was not checked against the source mod, which is not installed here. The incompatibility itself is what pass P3 is for
+maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
+session:      local_8fb9b3b3-6745-46f1-93b9-0dc96c4c4ced
+updated:      2026-09-24, audit against AUDIT.md
 ---
 
 # Ebbbs Renew — status
 
+## Audit against AUDIT.md — 2026-09-24
+
+**Previous stage: `done`. Retained stage: `preTest`.** The stage names are the chain's own, read
+literally: `dansMonoRepo`, `horsMonoRepo`, `ModIcon générée`, `Preview générée`, `preOptions`,
+`options`, `l10n`, `preTest`, `done`, `tested`, `prepublished`, `published`. The one gate that fails
+is `preTest -> done`, and it fails on a criterion not established, not on a defect.
+
+### Revision and preservation
+
+- Audited revision: `0fe6c02`, equal to `origin/main` (fetched) and to the local `main` head.
+- Working tree at the start: clean except for the untracked `Mod/About/PublishedFileId.txt`, written by
+  the 0.1.0 pre-publication of 2026-09-23, and 43 untracked `.dds` copies of the textures, written
+  the same day at 14:13. Nothing tracked was modified.
+- Changes of this session, all documentation or repository hygiene, and the only file added under `Mod/` is the Workshop ID: `04756dd` commits
+  the Workshop file ID; the CHANGELOG opens on `## [0.1.0]`; `.gitignore` ignores `*.dds` and the
+  evidence folders (no `.dds` was ever tracked, so nothing had to be removed from the index);
+  `TESTING.md` and `docs/runs/README.md` are new; this file is updated.
+- No game was launched, nothing was published, no image was generated, nothing was pushed.
+
+### Ordered transition decisions
+
+| Gate | Result | Evidence and limits |
+| --- | --- | --- |
+| 1: dansMonoRepo -> horsMonoRepo | **Validated** | Own `.git`, top level is this folder, `origin` set. GitHub API reports the repository public; `git ls-remote` returns `0fe6c02` on `main`, equal to the local head. The parent repository tracks no file here and ignores the folder. Documentation is English (README, ATTRIBUTION, CHANGELOG, TESTING, MANUAL, PREVIEW); the only accented text in scripts is the French translation data of `_tools/Build-French.ps1`. No LICENSE, justified: nothing here is licensed to grant. Root and distributed `ATTRIBUTION.md` are identical. |
+| 2: -> ModIcon générée | **Validated** | 128 x 128, 14,482 bytes, byte-identical to the 2026-09-13 manifest. No assembly or project, so no build. Not generated or modified. |
+| 3: -> Preview générée | **Validated** | 896 x 504, 540,016 bytes, under 1 MB. Opened and inspected: title, reduced "Renew", "(unofficial)", rule, summary and 1.6 badge are readable, nothing clipped, no camera concern. |
+| 4: -> preOptions | **Validated** | Copper-orange rule and badge against the lighter ochre secondary ink, distinct at full size. The measured contrast values of 2026-09-13 are retained, not remeasured. English description ending on the Steam-formatted GitHub link. `About.xml` changed after that manifest (description corrections, then the credit wording of 2026-09-19) and was re-read in full. Naming follows the convention: `Renew` plus `(unofficial)`. |
+| 5: -> options | **Not applicable, justified** | `Mod/` holds nine XML files, 45 PNG, one attribution, the ID file and the ignored `.dds`. No assembly, settings class, `MainButtonDef` or custom UI, so no options page and no shortcut exist. |
+| 6: -> l10n | **Validated** | `Validate-Translations.ps1`: 104 English texts and French entries. `Check-DefInjected.ps1`: 104 keys, zero errors, 11,600 definitions, 29 patch operations. Of the 71 files fingerprinted on 2026-09-13, only `About.xml`, `Tests/MANUAL.md` and `Art/PREVIEW.md` differ, all three edited after it; Defs, languages, textures, icon and Preview are unchanged. Display in the game is unverified. |
+| 7: -> preTest | **Validated, one point unverified** | No dependency is needed or declared. `loadAfter` names Core and the five official expansions, which is order, not a requirement. `Validate-Mod.ps1` checks the local references; the 554 parent, definition, stat and biome references resolved against local and Core names in the 2026-09-13 inspection, which was not rerun. The `Coolie.Ebbbs` packageId in `incompatibleWith` cannot be checked here because the source is not installed: not verified, not a defect. |
+| 8: -> done | **Criterion not established** | Written scenarios with preconditions, actions and expected results (M1 to M9): met. Automated tests written, run and green (three checkers): met. XML tests: met. C# unit tests: not applicable, no assembly. **Pickle (Gherkin) tests written, with their scope justified: none exist.** `Tests/` holds no Pickle suite and no file records why one is not needed, whereas M1, M2, M5, M6 and M9 need a running game. The `done` of 2026-09-13 records no Pickle criterion. No in-game run is required for `done`, only the written suite and its scope. |
+| 9: done -> tested | **Unverified** | Nothing has run in the game. The criteria are in `TESTING.md`. |
+| 10 to 11 | **Not reached** | The 0.1.0 pre-publication is an act, not a state: it crossed no gate. Item 3806760667 exists, private, and its ID is committed. |
+
+### Checks run
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Mod.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Translations.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-DefInjected.ps1 -TransMod Mod
+gh api repos/vbardales/Rimworld-Ebbbs-Renew --jq '{full_name,private,visibility,default_branch}'
+git ls-remote origin refs/heads/main
+```
+
+All three checkers exited zero: **204 checks**, **104 texts**, **104 keys and zero errors**. The
+SHA256 of the 71 inputs of `Tests/Audit-2026-09-13.json` were recomputed and compared. The historical
+manifest is preserved, not overwritten.
+
+### Defects observed
+
+None.
+
+### Strict next transition, `preTest -> done`
+
+Write the Pickle suite for what only a running game can show, or record a justified non-applicability.
+The scope proposed in `TESTING.md` is M1, M2, M5, M6 and M9 plus the incompatibility symptom of pass P3,
+with M3 partly and M4 and M7 set aside for stated reasons. It waits for the owner's confirmation before
+any Gherkin is committed. No run is needed for this transition.
+
+### After that, `done -> tested`
+
+The exit criteria are in `TESTING.md`. Three are new: no scenario left in `@wip`, every conditional
+scenario has run (here the set that mounts `Coolie.Ebbbs`), and no manual test is left to validate,
+each of M1 to M9 being green as an automated scenario or listed as not applicable with its reason.
+Which proofs to keep and how to cut them down is in `docs/runs/README.md`.
+
+### Optional recommendations, not blockers
+
+- `_tools/preview.html` and `_tools/preview-raw.png` are tracked leftovers of an earlier composition,
+  superseded by `Art/render-preview.cjs`. Removing them is a cleanup, not a requirement.
+- The 43 `.dds` were uploaded with 0.1.0 but are not versioned, so an upload made from a checkout would
+  not carry them. The game loads the PNG when no `.dds` exists, so this changes nothing visible.
+- Check the `Coolie.Ebbbs` packageId when the source mod is at hand.
+
 ## Description correction follow-up — 2026-09-13
 
-**Current cumulative stage: `done` (previously `Preview générée`).** The user
+**Cumulative stage then: `done` (previously `Preview générée`), superseded by the audit of 2026-09-24 above.** The user
 requested continuation after the documentation translation. Corrected About.xml
 and README.md to state the actual body-size range 0.2-4 and market-value range
 10-2000. Removed the incorrect assertion that the species list was sorted by size.
