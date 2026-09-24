@@ -2,7 +2,8 @@
 
 Unmodified illustration: `Preview.png`, recovered on 2026-09-12 from the delivered
 file, which did not yet contain any overlay. The illustration was not replaced.
-The old HTML in `_tools/preview.html` supplied the summary, preserved exactly.
+The old HTML in `_tools/preview.html` supplied the summary, preserved exactly. That file was removed
+on 2026-09-24 as superseded; it remains in the git history.
 
 Composition: `preview.html`, 896 × 504; single palette: `preview-palette.json`.
 The version is read from the delivered About.xml and sorted numerically.

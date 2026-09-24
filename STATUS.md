@@ -99,8 +99,9 @@ Which proofs to keep and how to cut them down is in `docs/runs/README.md`.
 
 ### Optional recommendations, not blockers
 
-- `_tools/preview.html` and `_tools/preview-raw.png` are tracked leftovers of an earlier composition,
-  superseded by `Art/render-preview.cjs`. Removing them is a cleanup, not a requirement.
+- `_tools/preview.html` and `_tools/preview-raw.png`, tracked leftovers of an earlier composition
+  superseded by `Art/render-preview.cjs`, were removed on 2026-09-24. `Tests/Audit-2026-09-13.json`
+  still lists them, as the historical manifest it is.
 - The 43 `.dds` were uploaded with 0.1.0 but are not versioned, so an upload made from a checkout would
   not carry them. The game loads the PNG when no `.dds` exists, so this changes nothing visible.
 - Check the `Coolie.Ebbbs` packageId when the source mod is at hand.
