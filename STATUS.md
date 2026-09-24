@@ -19,7 +19,7 @@ automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and i
 manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (25 written in 8 features, none run) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The four passes, P1 English, P2 French, P3 incompatibility and P4 A Dog Said 2, are in TESTING.md. Each is one request to the TicketDispatcher, none submitted
+  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The four passes, P1 English, P2 French, P3 incompatibility and P4 A Dog Said 2, are in TESTING.md. Each is one request to the TicketDispatcher. P1 and P2 were submitted on 2026-09-24 (requests 20260924-165445-869-45b5 and 20260924-165446-343-e6e4, evidence under Tests/Pickle/Evidence/p1-english and p2-french), waiting behind the queue; P3 and P4 wait for their mods to be downloaded into the WSL Workshop cache
   - unverified: the native support for A Dog Said 2 in a running game. Offline the patch was applied to that mod's own category file and the lists come out right, but the order of two mods in a mod list and the game's reading of the result were not exercised, and its four recipe names were read from its repository, not from an installed copy
   - unverified: the local Pickle steps were compiled and their patterns checked, never played. The species cells, the adult-age setter used by the butchering step and the way Pickle counts an animal as existing are read from source, not seen running
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
@@ -64,8 +64,8 @@ of them was rerun.
   defName logs nothing, went in with this change.
 - **The dispatcher.** The session registered with the TicketDispatcher, which now owns every run: one request
   per pass, no watcher, no follow-up task. A fix or an exploration plays one scenario, a first or a final
-  validation plays every scenario of its pass. `Tests/Pickle/README.md` has the commands. No request was
-  submitted.
+  validation plays every scenario of its pass. `Tests/Pickle/README.md` has the commands. P1 and P2 were
+  submitted afterwards, on request; nothing is known of their result yet.
 - **The session field was wrong** since the 2026-09-24 audit: it named the folder of this session's
   scratch space and not the session. It now reads `local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92`.
 
