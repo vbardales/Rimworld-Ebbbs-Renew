@@ -23,6 +23,7 @@ PROMPT_*.md
 
 # Test evidence lives on disk and is ignored. The record that is versioned is the text summary in
 # docs/runs/. What to keep, and how to cut it down, is written in docs/runs/README.md.
+# Both spellings on purpose: Windows treats them as one folder, a case-sensitive CI runner does not.
 Tests/Pickle/Evidence/
 Tests/Pickle/evidence/
 Tests/Manual/evidence/

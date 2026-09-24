@@ -47,7 +47,10 @@ The defs come from the original mod's `1.5` folder. No balance value was changed
 
 ### Notes
 
-The upload contained `Mod/` as it was at commit `0fe6c02`, the head of `main` when it was sent.
+As far as can be established, the upload contained `Mod/` as it was at commit `0fe6c02`, the head of
+`main` when it was sent: the ID file was written on 2026-09-23 at 16:32, no commit was made after
+`0fe6c02` of 2026-09-19, and the working tree held nothing tracked that differed from it. The upload itself
+left no record of its contents.
 Nothing in `Mod/` has changed since, apart from the ID file itself, added in the commit that goes
 with this version. The folder also held 43 generated `.dds` copies of the textures, written on the
 day of the upload; they were never versioned and are now ignored.

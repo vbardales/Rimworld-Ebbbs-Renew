@@ -48,7 +48,7 @@ is `preTest -> done`, and it fails on a criterion not established, not on a defe
   the Workshop file ID; the CHANGELOG opens on `## [0.1.0]`; `.gitignore` ignores `*.dds` and the
   evidence folders (no `.dds` was ever tracked, so nothing had to be removed from the index);
   `TESTING.md` and `docs/runs/README.md` are new; this file is updated.
-- No game was launched, nothing was published, no image was generated, nothing was pushed.
+- No game was launched, nothing was published, no image was generated. The commits were pushed afterwards, on the owner's request, once the four findings of the review were fixed.
 
 ### Ordered transition decisions
 
@@ -138,7 +138,7 @@ new-game and existing-save behavior. No game run, publication or commit was made
 
 ## Documentation translation follow-up — 2026-09-13
 
-**Current cumulative stage: `Preview générée` (previously `dansMonoRepo`).**
+**Cumulative stage then: `Preview générée` (previously `dansMonoRepo`), historical, superseded by the audit of 2026-09-24 above.**
 Translated Tests/MANUAL.md and Art/PREVIEW.md into English at the user's request.
 Reviewed the translations against the preceding text: all nine scenarios, dates,
 expected values, commands, paths and unexecuted test statuses are preserved.
@@ -155,7 +155,7 @@ review and git diff --check apply to this change; gameplay tests remain unexecut
 
 ## Workflow audit before documentation translation — 2026-09-13
 
-**Previous stage: `done`; retained cumulative stage: `dansMonoRepo`.** The first
+**Then: previous stage `done`, retained cumulative stage `dansMonoRepo`, historical, superseded by the audit of 2026-09-24 above.** The first
 transition is blocked by the English documentation requirement. This is the initial
 workflow checkpoint, not a claim that the repository is physically in the monorepo:
 `detached: yes` remains correct. Do not move the repository or restore a parent remote.
@@ -402,7 +402,7 @@ Presence alone does not prove their appearance in the game UI.
 
 Goliebbb label corrected on 2026-09-13: ThingDef now displays `goliebbb`, matching PawnKindDef. Identifiers and balance remain unchanged; in-game confirmation is pending.
 
-Stage is **done**: the port, metadata, showcase and static validation work are
+As of 2026-09-13 the stage was **done** (historical, since set back to `preTest`, see the audit at the top): the port, metadata, showcase and static validation work are
 complete. Stage tracks preparation independently of in-game testing.
 `tested_on` and `manual_tests` track actual gameplay verification, which remains
 unexecuted; `workshop` tracks publication separately. No in-game success or

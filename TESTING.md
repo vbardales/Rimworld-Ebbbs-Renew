@@ -16,6 +16,8 @@ change to `Mod/Defs` or `Mod/Languages`:
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Mod.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Translations.ps1
+# Check-DefInjected.ps1 lives in the monorepo's scripts/ folder, not in this repository:
+# run it from this folder while it sits inside the monorepo checkout, where ../scripts resolves.
 powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-DefInjected.ps1 -TransMod Mod
 ```
 
