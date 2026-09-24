@@ -1,6 +1,6 @@
 # Testing — Ebbbs Renew
 
-Nine species, five def files, no assembly, no patch. Everything a file checker can settle is settled
+Nine species, five def files, no assembly, and one patch that only acts beside A Dog Said 2. Everything a file checker can settle is settled
 offline; what remains needs a running game. [`Tests/MANUAL.md`](Tests/MANUAL.md) holds the scenarios
 M1 to M9 as written, and [`Tests/Pickle/`](Tests/Pickle/README.md) holds the ones a running game plays for
 itself. This file says how they get run, and when the mod counts as tested.
