@@ -2,7 +2,8 @@
 
 Nine species, five def files, no assembly, no patch. Everything a file checker can settle is settled
 offline; what remains needs a running game. [`Tests/MANUAL.md`](Tests/MANUAL.md) holds the scenarios
-M1 to M9 as written. This file says how they get run, and when the mod counts as tested.
+M1 to M9 as written, and [`Tests/Pickle/`](Tests/Pickle/README.md) holds the ones a running game plays for
+itself. This file says how they get run, and when the mod counts as tested.
 
 **An empty log is not a pass.** The original fault, a `wildness` field that 1.6 no longer reads, made
 no error at all: every species loaded and looked normal, and tamed for almost nothing. Only the
@@ -10,8 +11,8 @@ information card of each species settles it.
 
 ## Settled without the game
 
-From the repository root. All three passed on 2026-09-24, revision `0fe6c02`, and are rerun after any
-change to `Mod/Defs` or `Mod/Languages`:
+From the repository root. All of them passed on 2026-09-24, revision `0fe6c02`, and are rerun after any
+change to `Mod/Defs`, `Mod/Languages` or the inventory:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Validate-Mod.ps1
@@ -25,15 +26,25 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-DefInjected
 errors. None of it loads a def through the engine: Core inheritance, texture loading and behaviour
 still need the passes below.
 
+For the Pickle suite, before a ticket is taken (details in [`Tests/Pickle/README.md`](Tests/Pickle/README.md)):
+
+```powershell
+dotnet build Tests/Pickle/Source/EbbbsRenew.PickleSteps.csproj -c Release
+powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1
+```
+
+The step checker passed on 2026-09-24: 347 step lines, each resolving to exactly one step. It proves that
+the text of a step exists, not that the step does what the scenario hopes.
+
 ## Passes
 
 The mod is validated by three passes, and a report has to say which one it is.
 
 | Pass | Mod set | Language | What it proves |
 |---|---|---|---|
-| **P1** | Core, the five expansions, Harmony, RimLogging, Pickle and this mod | English | The mod stands alone, with every expansion present. M1, M2, M3, M5, M6 |
-| **P2** | The same set | French, by `-Language French` at staging | What the mod displays in French, and that no key falls back to accented developer-mode gibberish. M9 |
-| **P3** | P1 plus the original, `Coolie.Ebbbs` | English | Whether the declared incompatibility is still true. The documented symptom is **asserted**, so a green pass means the incompatibility behaves as declared |
+| **P1** | Core, the five expansions, Harmony, RimLogging, Pickle and this mod | English | The mod stands alone, with every expansion present. Features `01` to `04` and `06`. 15 scenarios |
+| **P2** | The same set | French, by `-Language French` at staging | What the game holds in French, and that no key falls back to accented developer-mode gibberish. Features `01` and `07`. 9 scenarios |
+| **P3** | P1 plus the original, `Coolie.Ebbbs` | English | Whether the declared incompatibility is still true. The documented symptom is **asserted**, so a green pass means the incompatibility behaves as declared. Feature `05`. 1 scenario |
 
 There is no pass "with the optional mods": `loadAfter` names Core and the five official expansions,
 which the minimal set already carries, and the mod has no dependency map. If one is ever added, its
@@ -42,24 +53,25 @@ same reason.
 
 P3 is replayed when the original mod moves, not at every publication: its update is what ages the
 verdict. The original is not in the Steam workshop folder of this machine (checked 2026-09-24), so it
-has to be fetched before P3 can be staged.
+has to be fetched before P3 can be staged. Its packageId, `Coolie.Ebbbs`, is the one `About.xml` names
+and has not been checked against the original.
 
 ## What only a running game can show
 
-Proposed scope, **not yet written**: each line is a scenario to write or a reason not to. It waits for
-the owner's confirmation before any Gherkin is committed.
+Written on 2026-09-24. Each scenario of `Tests/MANUAL.md` is either a Pickle scenario, replaced by another,
+or not applicable with its reason. **None has been run.**
 
 | Scenario | Verdict |
 |---|---|
-| M1 clean load, title, icon | Gherkin: no error logged from this mod. The icon and Preview in the mod list are a `@review` capture |
-| M2 nine species spawn, textures | Gherkin: spawn each species, no `Could not load UnityEngine.Texture2D` in the log. One `@review` capture of the nine together |
-| M3 wildness, taming | The nine values are asserted offline. In game: the information card of each species reads them, by a step that reads the stat or by a `@review` capture. The taming success rate is the engine's arithmetic and one success proves nothing, so it is **not automated**, with that reason |
+| M1 clean load, title, icon | **Pickle `01`**: nothing logged as an error or a warning names the mod's defs or its identifier, read from the game's own log because Pickle's step cannot see load-time errors. The title, icon and Preview in the mod list are what the game draws from `About.xml`, which the offline checker validates: **not applicable** as a scenario |
+| M2 nine species spawn, textures | **Pickle `02`**: each species is generated on the colony map and nothing is logged, plus one `@review` capture of the nine. A missing texture is logged, so `01` and `02` both see it |
+| M3 wildness, taming | **Pickle `01`**: the `Wildness` entry the game loaded, for each of the nine. That the stat is read is what the original fault broke. The taming success rate is the engine's arithmetic and one success proves nothing, so it is **not automated** |
 | M4 diet, hunger, training | **Not applicable as a scenario**: it exercises what the game does with fields the defs merely declare |
-| M5 injure, butcher, corpse | Gherkin: butcher one of each species, assert meat, leather and the thrumebbb horn. Anatomy display is a `@review` capture, one per body plan |
-| M6 save and reload | Gherkin: the animals survive a reload |
-| M7 original enabled alongside | **Replaced by P3**: the mod-list warning is the game's own behaviour, and what is worth asserting is the symptom |
+| M5 injure, butcher, corpse | **Pickle `03`**: butchering an adult of each species leaves ebbb meat and leather, and the thrumebbb leaves its horn. The anatomy labels are asserted in `06` and `07`. Injury and treatment are the game's health system acting on body plans whose references load-time errors already cover: **not applicable** |
+| M6 save and reload | **Pickle `04`**: the nine species come back from a save and a reload. Loading `test-colony`, written without this mod, is also the "mod added to an existing save" case |
+| M7 original enabled alongside | **Replaced by P3, `05`**: the mod-list warning is the game's own behaviour, and what is worth asserting is the symptom |
 | M8 expansions | Covered by every pass, see above |
-| M9 English and French | P1 and P2, one language each, `@review` captures of labels and health tabs |
+| M9 English and French | **Pickle `06` and `07`**: the 104 texts this mod owns, read off the loaded definitions in each language. **Not asserted, and not applicable to automation:** whether a long French text fits or clips in a window, which is the game's layout and needs a person; and the generated corpse and meat descriptions, which come from Core keys and were checked in the 2026-09-13 audit against Core's own files |
 
 ## Exit criteria, `done` to `tested`
 
@@ -75,7 +87,7 @@ All of them, on the revision that is delivered:
 4. **Every conditional scenario ran.** Each `@requires:<packageId>` had its pass, with the map that
    mounts that mod, and its report was read: suite name and scenario names checked before it is cited,
    because the report folder is shared by the whole machine. A scenario skipped for want of its condition
-   is not a scenario passed. Today the only conditional set is P3's, on `Coolie.Ebbbs`.
+   is not a scenario passed. Today the only conditional set is `05`, on `Coolie.Ebbbs`.
 5. **No manual test left to validate.** Each of M1 to M9 is green as an automated scenario, or is
    listed above as not applicable with its reason. The `@review` captures still get looked at, but that
    is reading an image a scenario already proved to be in the wanted state, not one more manual test.

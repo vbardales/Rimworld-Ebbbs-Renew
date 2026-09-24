@@ -4,6 +4,10 @@ Status as of 2026-09-12: **not executed**. Use a new test save with
 Core + this mod only, without the original. Enable development mode.
 Record the exact version, active mods/DLCs, each scenario's result and Player.log.
 
+Since 2026-09-24 most of these are played by Pickle instead of by a person: [`../TESTING.md`](../TESTING.md)
+says, for each of M1 to M9, which Pickle scenario replaces it or why it is not applicable. This table
+stays as the written description of what each one is for.
+
 | ID | Actions | Expected result |
 |---|---|---|
 | M1 | Enable the mod, restart, and create a colony without DLC. Open its description. | No mod XML/reference errors in the log; unofficial title, GitHub link, icon and Preview visible. |

@@ -9,31 +9,58 @@ repo:         Rimworld-Ebbbs-Renew
 remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
 detached:     yes
-stage:        preTest
+stage:        done
 licence:      silent
 licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online in this session
 dependencies: none
 showcase:     icon and Preview present, both inspected directly on 2026-09-24; in-game review pending
 tested_on:
-automated:    PASS - 204 mod checks, 9 XML files; 104 translation entries and injection paths; rerun 2026-09-24 on 0fe6c02
-manual_tests: Tests/MANUAL.md - 9 scenarios, none executed; TESTING.md maps each to a Pickle scenario or a justified not-applicable, none written yet
+automated:    PASS - 204 mod checks, 9 XML files; 104 translation entries and injection paths; Pickle step check, 347 step lines all resolved; all rerun 2026-09-24
+manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (21 written, none run) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - feature: no Pickle suite written for what only a running game can show. The scope is proposed in TESTING.md and waits for the owner's confirmation. This is what holds the mod at preTest
-  - unverified: never seen running in game, so every in-game check (M1 to M9) is open
-  - unverified: English and French in-game display, anatomy, combat labels and generated meat/corpse text (M9)
+  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The three passes, P1 English, P2 French and P3 incompatibility, are in TESTING.md
+  - unverified: the local Pickle steps were compiled and their patterns checked, never played. The species cells, the adult-age setter used by the butchering step and the way Pickle counts an animal as existing are read from source, not seen running
+  - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
   - unverified: the Coolie.Ebbbs packageId in incompatibleWith was not checked against the source mod, which is not installed here. The incompatibility itself is what pass P3 is for
+  - defect: the XML comment above incompatibleWith in Mod/About/About.xml says a duplicate defName "logs nothing". The game's source logs an error and renames the later def. The comment is not shown to players and is left for the next change to Mod/
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_8fb9b3b3-6745-46f1-93b9-0dc96c4c4ced
-updated:      2026-09-24, audit against AUDIT.md
+updated:      2026-09-24, Pickle suite written, back to done
 ---
 
 # Ebbbs Renew — status
 
+## Pickle suite written — 2026-09-24
+
+**Previous stage: `preTest`. Retained stage: `done`.** The one criterion that held the mod at `preTest`,
+Pickle tests written with their scope justified, is now met. Nothing else in the chain changed: the
+audit below still stands for every other gate.
+
+- **Written:** seven features and twenty-one scenarios in `Tests/Pickle/`, with a companion mod, eight
+  local steps and a static step checker. `06` and `07` are generated from the translation inventory by
+  `Tests/Pickle/New-LabelFeatures.ps1`, which stops on any key it has no shape for. Their scope is written
+  in `TESTING.md`: each of M1 to M9 is a Pickle scenario, replaced by another, or not applicable with its reason.
+- **Checked, offline:** the local steps compile against the reference stubs; `Check-Steps.ps1` resolves all
+  347 step lines to exactly one step and rejects a deliberately undefined one; the two validators and the
+  path checker pass again. No file under `Mod/` changed.
+- **A fault found before any run:** every species is a ThingDef and a PawnKindDef of one name, and Pickle's
+  own `def X field` and `def X raw stat` steps throw on a name held by two def databases. Using them would
+  have cost a run. The suite's steps name the def type.
+- **A second, in a shipped file:** the XML comment in `About.xml` says the game logs nothing on a duplicate
+  defName. `Verse.DefDatabase.Add` logs an error and renames the later def. Recorded as a defect above;
+  feature `05` is what settles it in a running game.
+- **Not run.** No game was launched and no ticket was taken. `done` asks for the suites to be written, not
+  played. Playing them, and reading their captures, is `done -> tested`.
+
+**Strict next transition, `done -> tested`:** the three passes of `TESTING.md` played and green, `@review`
+captures opened and looked at, no `@wip`, the conditional `05` run in its own pass, and no manual test left to
+validate. Fetch the original into the WSL Workshop cache first, through `Use-Wsl.ps1`.
+
 ## Audit against AUDIT.md — 2026-09-24
 
-**Previous stage: `done`. Retained stage: `preTest`.** The stage names are the chain's own, read
+**Previous stage: `done`. Retained stage then: `preTest`, superseded by the section above.** The stage names are the chain's own, read
 literally: `dansMonoRepo`, `horsMonoRepo`, `ModIcon générée`, `Preview générée`, `preOptions`,
 `options`, `l10n`, `preTest`, `done`, `tested`, `prepublished`, `published`. The one gate that fails
 is `preTest -> done`, and it fails on a criterion not established, not on a defect.
