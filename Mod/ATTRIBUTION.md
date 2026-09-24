@@ -64,6 +64,15 @@ convert here.
 - **Goliebbb label corrected on 2026-09-13:** its ThingDef now says `goliebbb`, matching its PawnKindDef, instead of the inherited `ebbb`. DefNames and balance values are unchanged.
 - **No balance value was touched.**
 
+## Added by this port, not by Coolie
+
+**Support for A Dog Said... Animal Prosthetics 2**, in `Patches/AnimalProsthetics2.xml`. That mod is
+SamBucher's ([Workshop 3238353862](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862)), a
+continuation of A Dog Said... Animal Prosthetics. The patch is written from scratch. It uses the names of that
+mod's three category recipes, `ADS_Cat1` to `ADS_Cat3`, and follows the convention its Workshop page asks other
+mods to follow; nothing from its files is copied. Which species go in which category is this port's decision,
+not Coolie's, and the three lists it adds to are the only thing it touches there.
+
 ## Where this came from
 
 The port was done inside a private pack that had gathered two dozen abandoned animal mods, where these

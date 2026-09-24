@@ -12,6 +12,19 @@ the GitHub release only once Steam has received the upload.
 
 First release of the 1.6 update of **Ebbbs**, by Coolie.
 
+### Added
+
+- **Native support for A Dog Said... Animal Prosthetics 2** (`SamBucher.ADogSaidAnimalProsthetics2`). The
+  nine species are added to its three cumulative animal categories, so they can receive prosthetics and
+  bionics: the ebbb and the bebbbholder get the basic replacements, the crebbb, the ebbberration, the drebbbd
+  and the goliebbb the simple prosthetics as well, and the beee, the ebbbomination and the thrumebbb the
+  bionics too. It is one guarded patch, `Patches/AnimalProsthetics2.xml`, which does nothing without that
+  mod, and `About.xml` declares `loadBefore` for it, because that mod copies its category lists into its real
+  recipes in its own last patch and a name added afterwards is never read. It is an order, not a dependency.
+  The Steam page text is not re-sent by an update: the paragraph `About.xml` gained has to be added by hand.
+- A Pickle suite in `Tests/Pickle`, eight features and twenty-five scenarios, none of them run yet, and the
+  written scope of the in-game checks in `TESTING.md`. Nothing in `Mod/` depends on it.
+
 ### Changed
 
 - Added French translations for all 104 owned text fields, including descriptions,

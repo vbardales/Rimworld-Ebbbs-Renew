@@ -15,22 +15,59 @@ licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online
 dependencies: none
 showcase:     icon and Preview present, both inspected directly on 2026-09-24; in-game review pending
 tested_on:
-automated:    PASS - 204 mod checks, 9 XML files; 104 translation entries and injection paths; Pickle step check, 347 step lines all resolved; all rerun 2026-09-24
-manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (21 written, none run) or a justified not-applicable
+automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and injection paths; Pickle step check, 377 step lines all resolved; all rerun 2026-09-24
+manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (25 written in 8 features, none run) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The three passes, P1 English, P2 French and P3 incompatibility, are in TESTING.md
+  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The four passes, P1 English, P2 French, P3 incompatibility and P4 A Dog Said 2, are in TESTING.md. Each is one request to the TicketDispatcher, none submitted
+  - unverified: the native support for A Dog Said 2 in a running game. Offline the patch was applied to that mod's own category file and the lists come out right, but the order of two mods in a mod list and the game's reading of the result were not exercised, and its four recipe names were read from its repository, not from an installed copy
   - unverified: the local Pickle steps were compiled and their patterns checked, never played. The species cells, the adult-age setter used by the butchering step and the way Pickle counts an animal as existing are read from source, not seen running
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
   - unverified: the Coolie.Ebbbs packageId in incompatibleWith was not checked against the source mod, which is not installed here. The incompatibility itself is what pass P3 is for
-  - defect: the XML comment above incompatibleWith in Mod/About/About.xml says a duplicate defName "logs nothing". The game's source logs an error and renames the later def. The comment is not shown to players and is left for the next change to Mod/
+  - feature: the Steam page text is fixed at creation and an update does not resend it, so the paragraph About.xml gained for A Dog Said 2 has to be added to the page by hand
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
-session:      local_8fb9b3b3-6745-46f1-93b9-0dc96c4c4ced
-updated:      2026-09-24, Pickle suite written, back to done
+session:      local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92
+updated:      2026-09-24, native support for A Dog Said 2, registered with the TicketDispatcher
 ---
 
 # Ebbbs Renew — status
+
+## Native support for A Dog Said 2, and the dispatcher — 2026-09-24
+
+**Stage unchanged: `done`.** A change to `Mod/` invalidates the controls it touches, not the others, and each
+of them was rerun.
+
+- **Added.** `Mod/Patches/AnimalProsthetics2.xml` puts the nine species in the three cumulative animal
+  categories of A Dog Said... Animal Prosthetics 2 (`SamBucher.ADogSaidAnimalProsthetics2`, Workshop
+  3238353862): category 1 for the ebbb and the bebbbholder, 2 for the crebbb, the ebbberration, the drebbbd
+  and the goliebbb, 3 for the beee, the ebbbomination and the thrumebbb. The placement is a decision, made
+  from body size and trainability the way that mod's own lists place vanilla animals, and it is one file to
+  change. `About.xml` declares `loadBefore` for it, because that mod copies its lists into its real recipes in
+  its own last patch and a name added afterwards is never read. That is an order, not a dependency, so
+  `dependencies` stays `none` and `modDependencies` stays absent.
+- **Guard.** One `PatchOperationConditional` on `ADS_Cat1`, with no `nomatch`: without that mod the patch
+  succeeds and does nothing. `MayRequire` is not used, since nothing reads it on an operation.
+- **Offline, real data.** The patch was applied to that mod's own `Animal_Categories.xml`, taken from its
+  public repository: each xpath matches exactly once, each species ends up in the right lists, and the copy
+  its last patch makes then hands the recipes the right users. The one duplicate in the result is its own,
+  `MonitorLizard` in category 2.
+- **Offline, in the repository.** `Tests/Validate-Mod.ps1` grew from 204 to 257 checks: the order
+  declaration, no `loadAfter` for it, one guarded patch with three additions, no `MayRequire`, every user a
+  species of this mod, and each species in exactly the lists of its category. Four broken copies, one per
+  rule, each fail with the intended message. `Check-XmlFields`, `Check-TypeRefs` and `Check-DefRefs` pass with
+  the patch. `Check-XmlClasses` was not run: it needs a type list this session did not have.
+- **Tests.** Feature `08-animal-prosthetics-2` and pass P4, with two more local steps, twenty-five scenarios
+  in eight features. Not run.
+- **Documentation.** README, CHANGELOG under 1.0.0, both `ATTRIBUTION.md` copies (identical), `About.xml`
+  description and `TESTING.md`. The corrected XML comment in `About.xml`, the one that said a duplicate
+  defName logs nothing, went in with this change.
+- **The dispatcher.** The session registered with the TicketDispatcher, which now owns every run: one request
+  per pass, no watcher, no follow-up task. A fix or an exploration plays one scenario, a first or a final
+  validation plays every scenario of its pass. `Tests/Pickle/README.md` has the commands. No request was
+  submitted.
+- **The session field was wrong** since the 2026-09-24 audit: it named the folder of this session's
+  scratch space and not the session. It now reads `local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92`.
 
 ## Pickle suite written — 2026-09-24
 
@@ -49,8 +86,8 @@ audit below still stands for every other gate.
   own `def X field` and `def X raw stat` steps throw on a name held by two def databases. Using them would
   have cost a run. The suite's steps name the def type.
 - **A second, in a shipped file:** the XML comment in `About.xml` says the game logs nothing on a duplicate
-  defName. `Verse.DefDatabase.Add` logs an error and renames the later def. Recorded as a defect above;
-  feature `05` is what settles it in a running game.
+  defName. `Verse.DefDatabase.Add` logs an error and renames the later def. Recorded as a defect then and
+  corrected later the same day, see the section above; feature `05` is what settles it in a running game.
 - **Not run.** No game was launched and no ticket was taken. `done` asks for the suites to be written, not
   played. Playing them, and reading their captures, is `done -> tested`.
 

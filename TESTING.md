@@ -33,28 +33,34 @@ dotnet build Tests/Pickle/Source/EbbbsRenew.PickleSteps.csproj -c Release
 powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1
 ```
 
-The step checker passed on 2026-09-24: 347 step lines, each resolving to exactly one step. It proves that
+The step checker passed on 2026-09-24: 377 step lines, each resolving to exactly one step. It proves that
 the text of a step exists, not that the step does what the scenario hopes.
+
+A run is a request to the TicketDispatcher, one per pass, never a process of the session and never watched:
+the commands, the three-small-requests rule and what each request should play are in
+[`Tests/Pickle/README.md`](Tests/Pickle/README.md).
 
 ## Passes
 
-The mod is validated by three passes, and a report has to say which one it is.
+The mod is validated by four passes, and a report has to say which one it is.
 
 | Pass | Mod set | Language | What it proves |
 |---|---|---|---|
 | **P1** | Core, the five expansions, Harmony, RimLogging, Pickle and this mod | English | The mod stands alone, with every expansion present. Features `01` to `04` and `06`. 15 scenarios |
 | **P2** | The same set | French, by `-Language French` at staging | What the game holds in French, and that no key falls back to accented developer-mode gibberish. Features `01` and `07`. 9 scenarios |
 | **P3** | P1 plus the original, `Coolie.Ebbbs` | English | Whether the declared incompatibility is still true. The documented symptom is **asserted**, so a green pass means the incompatibility behaves as declared. Feature `05`. 1 scenario |
+| **P4** | P1 plus A Dog Said... Animal Prosthetics 2, `SamBucher.ADogSaidAnimalProsthetics2` | English | The one optional integration this mod claims: it loads before that mod, and each species is offered the surgeries of its category and none of a higher one. Features `01` and `08`. 8 scenarios |
 
-There is no pass "with the optional mods": `loadAfter` names Core and the five official expansions,
-which the minimal set already carries, and the mod has no dependency map. If one is ever added, its
-passes are added here. M8, "repeat with the available expansions", is covered by every pass for the
-same reason.
+`loadAfter` names Core and the five official expansions, which the minimal set already carries, so there is
+no pass that stages all of them apart from P1. The one optional mod this mod integrates with is A Dog Said 2,
+and that is P4. M8, "repeat with the available expansions", is covered by every pass, since the minimal set
+carries every expansion.
 
 P3 is replayed when the original mod moves, not at every publication: its update is what ages the
 verdict. The original is not in the Steam workshop folder of this machine (checked 2026-09-24), so it
 has to be fetched before P3 can be staged. Its packageId, `Coolie.Ebbbs`, is the one `About.xml` names
-and has not been checked against the original.
+and has not been checked against the original. P4 is replayed when A Dog Said 2 renames its recipes or its
+category lists, which is what its update would change, and it too has to be fetched first.
 
 ## What only a running game can show
 
@@ -71,6 +77,7 @@ or not applicable with its reason. **None has been run.**
 | M6 save and reload | **Pickle `04`**: the nine species come back from a save and a reload. Loading `test-colony`, written without this mod, is also the "mod added to an existing save" case |
 | M7 original enabled alongside | **Replaced by P3, `05`**: the mod-list warning is the game's own behaviour, and what is worth asserting is the symptom |
 | M8 expansions | Covered by every pass, see above |
+| A Dog Said 2 support, added after M1 to M9 were written | **Pickle `08`, pass P4**: `loadBefore` in the running game, then the surgeries each species is offered through `ThingDef.AllRecipes`. Offline, `Tests/Validate-Mod.ps1` asserts the patch, the category of each species and the order declaration, and the patch was applied to that mod's own category file. The order of two mods in a mod list and the game's reading of the result need the pass |
 | M9 English and French | **Pickle `06` and `07`**: the 104 texts this mod owns, read off the loaded definitions in each language. **Not asserted, and not applicable to automation:** whether a long French text fits or clips in a window, which is the game's layout and needs a person; and the generated corpse and meat descriptions, which come from Core keys and were checked in the 2026-09-13 audit against Core's own files |
 
 ## Exit criteria, `done` to `tested`
@@ -87,7 +94,8 @@ All of them, on the revision that is delivered:
 4. **Every conditional scenario ran.** Each `@requires:<packageId>` had its pass, with the map that
    mounts that mod, and its report was read: suite name and scenario names checked before it is cited,
    because the report folder is shared by the whole machine. A scenario skipped for want of its condition
-   is not a scenario passed. Today the only conditional set is `05`, on `Coolie.Ebbbs`.
+   is not a scenario passed. Today the conditional sets are `05`, on `Coolie.Ebbbs`, and `08`, on
+   `SamBucher.ADogSaidAnimalProsthetics2`.
 5. **No manual test left to validate.** Each of M1 to M9 is green as an automated scenario, or is
    listed above as not applicable with its reason. The `@review` captures still get looked at, but that
    is reading an image a scenario already proved to be in the wanted state, not one more manual test.

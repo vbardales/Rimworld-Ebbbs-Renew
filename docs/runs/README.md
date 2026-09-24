@@ -8,8 +8,9 @@ history goes here the day a pass of [`TESTING.md`](../../TESTING.md) is executed
 
 The evidence itself - `Player.log`, reports, screenshots - stays **on disk**: Pickle reports under
 `Tests/Pickle/Evidence/<pass>/`, anything played by hand under
-`Tests/Manual/evidence/<date>/<check>/`. Both are ignored by git. `<pass>` is `p1`, `p2` or `p3`, and
-`<check>` is `load`, `spawn`, `butcher`, `save`, `l10n` or `incompat`. None of it is backed up: if the
+`Tests/Manual/evidence/<date>/<check>/`. Both are ignored by git. `<pass>` is `p1-english`, `p2-french`,
+`p3-incompat` or `p4-ads2`, the folders the dispatcher's requests copy into, and `<check>` is `load`,
+`spawn`, `butcher`, `save`, `l10n`, `incompat` or `ads2`. None of it is backed up: if the
 machine is lost, the summaries here and the history are what remains.
 
 A summary must carry, since the media are not beside it:
@@ -39,6 +40,7 @@ one. So a run's evidence is cut down as soon as a newer one replaces it.
 | Save and reload | the counts before and after as text, and the load log |
 | English and French | per language, one capture of one species description and one health tab: four in all, not one per action |
 | The original enabled alongside (P3) | the `Player.log` of the pass as text, and the lines that assert the documented symptom |
+| A Dog Said 2 beside it (P4) | the `Player.log` of the pass as text, and the summary lines of the four `08` scenarios, which name the recipe each species was or was not offered. No capture: nothing there is visual |
 | Every Pickle pass | the four text files of its report (`summary.json`, `summary.md`, `junit.xml`, `Player.log`), copied by the launcher's `-EvidenceDir` under `Tests/Pickle/Evidence/<pass>/`, with `exitReason` and the played and discovered counts read before anything else. `report.html` and `messages.ndjson` are deleted: they are large and add nothing the four files do not carry |
 
 **Keep an older report only** when it is the sole proof of a check the latest run did not repeat.

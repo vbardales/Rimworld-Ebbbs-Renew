@@ -26,6 +26,23 @@ No DLC required. No Harmony, no framework, no dependency of any kind.
 
 Content mod: removing it mid-save will lose any ebbb already in play, of any size.
 
+## Compatibility
+
+**A Dog Said... Animal Prosthetics 2** is supported natively, with nothing to install or configure. That mod
+sorts animals into three cumulative categories, and this one places the nine species in them the way its
+own lists place vanilla animals:
+
+| Category | Species | Surgeries offered |
+|---|---|---|
+| 1 | ebbb, bebbbholder, the two smallest | basic replacements |
+| 2 | crebbb, ebbberration, drebbbd, goliebbb, trainable to Intermediate | plus simple prosthetics |
+| 3 | beee, ebbbomination, thrumebbb, trainable to Advanced | plus bionics |
+
+The assignment is a decision and easy to change: it is one file, `Patches/AnimalProsthetics2.xml`. Without
+that mod the patch does nothing. It only works because `About.xml` declares `loadBefore` for it: that mod
+copies its category lists into its real recipes in its own last patch, so a name added after that is never
+read. It is an order, not a dependency.
+
 ## What changed in the 1.6 update
 
 One line, nine times.

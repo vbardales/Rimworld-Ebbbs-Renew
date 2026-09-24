@@ -201,6 +201,42 @@ namespace EbbbsRenew.PickleSteps
                 + string.Join(", ", values));
         }
 
+        // ---------------------------------------------------------------- surgery recipes
+
+        private static List<string> RecipesOf(PickleContext ctx, string defName, string recipeName)
+        {
+            ThingDef def = (ThingDef)FindDef(ctx, "ThingDef", defName);
+            ctx.Require(
+                DefDatabase<RecipeDef>.GetNamedSilentFail(recipeName) != null,
+                "no RecipeDef named '" + recipeName + "' is loaded: is the mod that defines it staged in this pass?");
+            return def.AllRecipes.Select(r => r.defName).ToList();
+        }
+
+        /// <summary>
+        /// The species is a user of the recipe, the way the health tab offers it: through ThingDef.AllRecipes,
+        /// which is built from every recipe's recipeUsers once the defs have resolved. This is what the
+        /// compatibility patch for A Dog Said 2 has to end up doing, and it only does when the patch ran
+        /// before that mod copied its category lists into its real recipes.
+        /// </summary>
+        [Then("Ebbbs Renew: the ThingDef {string} can be operated on with {string}")]
+        public void CanBeOperatedOnWith(PickleContext ctx, string defName, string recipeName)
+        {
+            List<string> recipes = RecipesOf(ctx, defName, recipeName);
+            ctx.Assert(
+                recipes.Contains(recipeName),
+                "ThingDef '" + defName + "' cannot be operated on with '" + recipeName + "'; it has " + recipes.Count + " recipes");
+        }
+
+        /// <summary>The other half: a species below the category of a recipe must not be offered it.</summary>
+        [Then("Ebbbs Renew: the ThingDef {string} cannot be operated on with {string}")]
+        public void CannotBeOperatedOnWith(PickleContext ctx, string defName, string recipeName)
+        {
+            List<string> recipes = RecipesOf(ctx, defName, recipeName);
+            ctx.Assert(
+                !recipes.Contains(recipeName),
+                "ThingDef '" + defName + "' can be operated on with '" + recipeName + "', which its category should not offer");
+        }
+
         // ---------------------------------------------------------------- butchering
 
         /// <summary>

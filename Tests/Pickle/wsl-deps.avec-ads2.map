@@ -1,0 +1,15 @@
+# Pass "avec-ads2": A Dog Said... Animal Prosthetics 2 beside this mod, and nothing else optional.
+#
+# SamBucher.ADogSaidAnimalProsthetics2, Workshop 3238353862, supports 1.4, 1.5 and 1.6, declares no hard
+# dependency and lists a long series of optional mods in its own loadAfter, none of which is staged here.
+# XML Extensions is deliberately left out: with it, ADS 2 turns its category system into a setting and does
+# not copy the category lists the way this pass reads them.
+#
+# This mod claims the integration, so the pass is applicable (Tests/Pickle/README.md). It plays
+# 08-animal-prosthetics-2, which asserts that the nine species end up offered the surgeries of their category,
+# and 01-the-mod-loads, which asserts nothing logged names the mod's defs with ADS 2 loaded.
+#
+# The item has to be in the WSL install's Workshop cache before this pass can stage it. That is a download,
+# so it goes through Use-Wsl.ps1 like any other work on the machine (PickleTools/Headless/README.md, "The
+# lock is about the machine"). It has not been downloaded.
+SamBucher.ADogSaidAnimalProsthetics2   3238353862

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--
+    Native support for A Dog Said... Animal Prosthetics 2 (SamBucher.ADogSaidAnimalProsthetics2).
+
+    That mod decides which animals may receive which prosthetics with three abstract recipes that only
+    carry a recipeUsers list: ADS_Cat1 (basic replacements), ADS_Cat2 (simple prosthetics) and ADS_Cat3
+    (bionics). The lists are cumulative: an animal of category 3 is in all three, one of category 2 in
+    categories 2 and 1, one of category 1 in category 1 only. This is the convention its own ModCompat
+    patches follow, and the one it asks other mods to follow.
+
+    The species are placed by what they are and by how they can be trained, the same way its lists place
+    vanilla animals:
+      category 1  the ebbb and the bebbbholder, the two smallest (body size 0.2), critters
+      category 2  the crebbb, the ebbberration, the drebbbd and the goliebbb, trainable to Intermediate
+      category 3  the beee, the ebbbomination and the thrumebbb, trainable to Advanced
+
+    Two things make this work, and both are needed.
+
+    The guard. The operation runs only when ADS_Cat1 exists, that is when the mod is loaded. A
+    PatchOperationConditional with no nomatch succeeds without doing anything when it is not. The
+    MayRequire attribute cannot be used here: nothing reads it on an operation, only on a def node or a
+    field element.
+
+    The load order. ADS 2 copies these three lists into its real surgery recipes in its own last patch,
+    z_Category_Patches.xml, and it copies them as they are at that moment. A name added afterwards lands in
+    a list nobody reads. Patches run in mod-list order, so About.xml declares loadBefore for it.
+  -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/RecipeDef[@Name="ADS_Cat1"]</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[@Name="ADS_Cat1"]/recipeUsers</xpath>
+          <value>
+            <li>Ebbb</li>
+            <li>Bebbbholder</li>
+            <li>Crebbb</li>
+            <li>Ebbberration</li>
+            <li>Drebbbd</li>
+            <li>Goliebbb</li>
+            <li>Beee</li>
+            <li>Ebbbomination</li>
+            <li>Thrumebbb</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[@Name="ADS_Cat2"]/recipeUsers</xpath>
+          <value>
+            <li>Crebbb</li>
+            <li>Ebbberration</li>
+            <li>Drebbbd</li>
+            <li>Goliebbb</li>
+            <li>Beee</li>
+            <li>Ebbbomination</li>
+            <li>Thrumebbb</li>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[@Name="ADS_Cat3"]/recipeUsers</xpath>
+          <value>
+            <li>Beee</li>
+            <li>Ebbbomination</li>
+            <li>Thrumebbb</li>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>
