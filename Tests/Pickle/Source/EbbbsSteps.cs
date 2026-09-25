@@ -27,19 +27,21 @@ namespace EbbbsRenew.PickleSteps
         // ---------------------------------------------------------------- starting up
 
         /// <summary>
-        /// Waits until the game has finished starting: back at the menu, with no long event running. Pickle's
-        /// own "the main menu is open" gives a step five seconds, and the first scenario of a pass sits
-        /// right at that limit: it took 4.4 s in a plain pass, and 5.2 s with the original mod beside this
-        /// one, whose extra defs and load errors slow the start, which failed the incompatibility pass on its
-        /// first step. Every scenario that starts from the menu says this first, with a deadline that a slow
-        /// start cannot reach.
+        /// Waits until the game has finished loading: no long event is running or queued. Pickle's own "the
+        /// main menu is open" gives a step five seconds, and the first scenario of a pass sits right at that
+        /// limit: it took 4.4 s in a plain pass, and 5.2 s with the original mod beside this one, whose extra
+        /// defs and load errors slow the start, which failed the incompatibility pass on its first step. Every
+        /// scenario that starts from the menu says this first, with a deadline that a slow start cannot reach.
+        ///
+        /// It must NOT wait for the menu itself. The first version waited for ProgramState.Entry, and a
+        /// scenario that follows one which loaded a save finds the game still in Playing: the menu only comes
+        /// from the step after this one, so the wait never ended, and Pickle's watchdog killed the whole run
+        /// after 120 s (2026-09-25, request e147). What is asked here is only that nothing is still loading.
         /// </summary>
         [Given("Ebbbs Renew: the game has finished starting", TimeoutSeconds = 125f)]
         public async Task GameHasFinishedStarting(PickleContext ctx)
         {
-            await ctx.WaitUntil(
-                () => Current.ProgramState == ProgramState.Entry && !LongEventHandler.AnyEventNowOrWaiting,
-                120f);
+            await ctx.WaitUntil(() => !LongEventHandler.AnyEventNowOrWaiting, 120f);
         }
 
         // ---------------------------------------------------------------- the log
