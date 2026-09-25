@@ -60,8 +60,8 @@ of them was rerun.
 - **Tests.** Feature `08-animal-prosthetics-2` and pass P4, with two more local steps, twenty-five scenarios
   in eight features. Not run.
 - **Documentation.** README, CHANGELOG under 1.0.0, both `ATTRIBUTION.md` copies (identical), `About.xml`
-  description and `TESTING.md`. The corrected XML comment in `About.xml`, the one that said a duplicate
-  defName logs nothing, went in with this change.
+  description and `TESTING.md`. The XML comment in `About.xml` about duplicate
+  defNames was rewritten in this change, **wrongly**: see the correction of 2026-09-25 below.
 - **The dispatcher.** The session registered with the TicketDispatcher, which now owns every run: one request
   per pass, no watcher, no follow-up task. A fix or an exploration plays one scenario, a first or a final
   validation plays every scenario of its pass. `Tests/Pickle/README.md` has the commands. P1 and P2 were
@@ -85,9 +85,11 @@ audit below still stands for every other gate.
 - **A fault found before any run:** every species is a ThingDef and a PawnKindDef of one name, and Pickle's
   own `def X field` and `def X raw stat` steps throw on a name held by two def databases. Using them would
   have cost a run. The suite's steps name the def type.
-- **A second, in a shipped file:** the XML comment in `About.xml` says the game logs nothing on a duplicate
-  defName. `Verse.DefDatabase.Add` logs an error and renames the later def. Recorded as a defect then and
-  corrected later the same day, see the section above; feature `05` is what settles it in a running game.
+- **WITHDRAWN on 2026-09-25.** This bullet claimed the XML comment in `About.xml` was wrong to say a duplicate
+  defName logs nothing, and that `Verse.DefDatabase.Add` logs an error and renames the later def. It was read from
+  `Add` alone. The caller, `AddAllInMods`, removes the earlier def silently when a later mod defines the same
+  defName, and only a duplicate inside one mod is an error. The original comment was right, and a running game
+  confirmed it (see `docs/runs/2026-09-25.md`).
 - **Not run.** No game was launched and no ticket was taken. `done` asks for the suites to be written, not
   played. Playing them, and reading their captures, is `done -> tested`.
 

@@ -2,7 +2,8 @@
 #
 # Ebbbs by Coolie, Workshop 2817264755, which declares 1.5 and nothing further. About.xml names it in
 # incompatibleWith because the two define the same nine defNames. RimWorld does not refuse two mods that do:
-# Verse.DefDatabase.Add logs an error for each duplicate and renames the later def. This pass stages both and
+# the game keeps the def of the later mod and drops the earlier one without logging it (DefDatabase.AddAllInMods;
+# only a duplicate inside one mod is an error). This pass stages both and
 # plays 05-original-mod-incompatibility, which asserts that symptom, so a green run says the
 # incompatibility is still true.
 #

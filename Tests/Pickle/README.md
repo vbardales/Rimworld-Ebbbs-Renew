@@ -13,7 +13,7 @@ Steam receives whole.
 | `02-the-species-spawn` | minimal, English | each species is generated on the colony map and nothing is logged; one `@review` capture of the nine together |
 | `03-butchering` | minimal, English | butchering an adult of each species leaves the ebbb's meat and leather, and the thrumebbb leaves its horn |
 | `04-save-and-reload` | minimal, English | the nine species come back from a save and a reload, and nothing is logged |
-| `05-original-mod-incompatibility` | `incompat-original` | with `Coolie.Ebbbs` beside it, the game logs `Adding duplicate ThingDef name` and `Adding duplicate PawnKindDef name` |
+| `05-original-mod-incompatibility` | `incompat-original` | with `Coolie.Ebbbs` beside it, both mods define the species and the game silently keeps the later one (**being rewritten**: the first version asserted a log line the game does not write, see `docs/runs/2026-09-25.md`) |
 | `06-labels-en`, `07-labels-fr` | English pass, French pass | the 104 texts this mod owns, as the loaded definitions hold them in the language the game started in |
 | `08-animal-prosthetics-2` | `avec-ads2` | with A Dog Said 2 beside it, the mod loads before it, and each species is offered the surgeries of its category and none of a higher one |
 
@@ -130,9 +130,11 @@ deliberately wrong line was reported as undefined, so the check does bite.
   and `Then a "X" exists` counts an animal.
 - `Coolie.Ebbbs` is the original's packageId: read from the item's own `About.xml` after it was downloaded into
   the WSL Workshop cache on 2026-09-25 (Workshop 2817264755). The incompatibility itself is what P3 is for.
-- `Mod/About/About.xml` carried an XML comment saying a duplicate defName "logs nothing". The game's source
-  says it logs an error and renames the later def, and the comment was corrected on 2026-09-24 when the
-  file was edited for A Dog Said 2. `05` is what settles it in a running game.
+- **What the game does with a defName that two mods define** was first read wrongly from `DefDatabase.Add`, which logs
+  an error for a duplicate. Its caller, `AddAllInMods`, first removes the earlier def, so a later mod silently
+  replaces an earlier one and only a duplicate inside one mod is logged. The first run of `05` showed it: no such line
+  in the log. The comment in `About.xml`, "logs nothing", was right, and it was rewritten wrongly on 2026-09-24. Both
+  are put back once the queued passes are done, and `05` asserts the silent replacement instead.
 - **A Dog Said 2, feature `08`.** That the recipes end up in `ThingDef.AllRecipes` of each species is read
   from the way the game builds that list from `recipeUsers`, not from a run. That a concrete recipe such as
   `InstallBionicLegAnimal` inherits its `recipeUsers` from the abstract recipe the category lists are copied
