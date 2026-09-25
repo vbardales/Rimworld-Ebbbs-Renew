@@ -44,17 +44,19 @@ returns at once (`submitted <id>`); a detached worker plays the pass and copies 
 and the dispatcher wakes the session by message at `START`, `END` and `RUN_DONE`.
 
 ```powershell
+$sha = git -C EbbbsRenew rev-parse --short HEAD   # goes in every label: a request carries no SHA of its own
+
 # P1, minimal, English
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 P1 minimal English" -Language English -Filter 'Ebbbs Renew - Pickle tests,!@fr-only' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p1-english
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P1 minimal English" -Language English -Filter 'Ebbbs Renew - Pickle tests,!@fr-only' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p1-english
 
 # P2, minimal, French: no map to load, so no @save
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 P2 minimal French" -Language French -Filter 'Ebbbs Renew - Pickle tests,!@en-only,!@save' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p2-french
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P2 minimal French" -Language French -Filter 'Ebbbs Renew - Pickle tests,!@en-only,!@save' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p2-french
 
 # P3, the original mod beside it
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 P3 incompatibility" -Language English -DepMap wsl-deps.incompat-original.map -Filter '05-original-mod-incompatibility' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p3-incompat
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P3 incompatibility" -Language English -DepMap wsl-deps.incompat-original.map -Filter '05-original-mod-incompatibility' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p3-incompat
 
 # P4, A Dog Said 2 beside it
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 P4 A Dog Said 2" -Language English -DepMap wsl-deps.avec-ads2.map -Filter '01-the-mod-loads,08-animal-prosthetics-2' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p4-ads2
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P4 A Dog Said 2" -Language English -DepMap wsl-deps.avec-ads2.map -Filter '01-the-mod-loads,08-animal-prosthetics-2' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p4-ads2
 ```
 
 | Pass | Scenarios it should play | Skipped by requirement |
@@ -73,6 +75,15 @@ plays as few scenarios as it can, one scenario named with `-Filter '::<scenario 
 for a correction: it holds the machine for nothing and makes the others wait. A first or a final validation
 plays every scenario of its pass, that is the filters above, which only leave out what belongs to another
 language or another pass. One pass is one request.
+
+**The tree is frozen until the request is done.** A request carries no SHA: the mod and this companion are
+staged when the request is played, from the working tree of that moment, sometimes hours after it was
+submitted, and the queue is long. So nothing under `Mod/` or `Tests/Pickle/Mod/` changes, for this work or for
+any other, between the submission and `RUN_DONE`, and the SHA goes in the label to find the revision again in
+the report. Documents outside those two folders can change. Evidence is emptied with `robocopy`, from an empty
+folder onto the target, in mirror mode, and then the shell that is left is removed: a plain removal stalls on
+capture names longer than MAX_PATH. A `report.html` or a `messages.ndjson` is not kept, `summary.json` and
+`junit.xml` are enough.
 
 There is nothing to watch. No `Monitor`, no heartbeat, no cron, no loop and no script left running in the
 background: the dispatcher sends `START`, `END` (the lock returned, not the verdict) and `RUN_DONE` (the
