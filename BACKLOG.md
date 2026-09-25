@@ -61,11 +61,21 @@ copies of the mods, and neither needs C#: each is one guarded XML patch file, li
   defs, which would change what the species do **without** Better Crossbreeding, or in the guarded patch only, is the
   first decision. The guarded patch is the safer one, and it is the one this file assumes.
 - **Confirmed by the owner (2026-09-25):** it is `Better Crossbreeding` that is meant.
-- **Still to decide, by the owner:** which species cross with which, and with vanilla animals or only among themselves,
-  and what each pairing gives (`Maternal`, `Paternal`, `Random`, `Other`). The nine are a family, so pairings among
-  them are the obvious start; anything with a vanilla animal is a design choice of its own and touches balance, which
-  this port has so far refused to do.
-- **Tests:** a pass with the mod staged, a local step reading `race.canCrossBreedWith` and the outcomes off the
+- **Decided, by the owner's delegation (2026-09-25):** the pairs are mine to choose, **among the family only, no
+  vanilla animal**, so the balance of the game is not touched. The rule is the creatures' own texts: only those that
+  breed are paired. The Beee is the ebbbs' predator, and the ebbbomination, the thrumebbb and the goliebbb are
+  amalgams and a colossus, not animals that mate, so none of the four is paired. Each pair is written for both
+  mothers, since only the mother's kind is read, and `mateMtbHours` is left alone.
+
+  | Pair | Outcome | Why |
+  |---|---|---|
+  | Ebbb x Crebbb | `Random`, a coin flip per child | the crebbb is the "friendly, more docile" ebbb: the closest kin |
+  | Ebbb x Bebbbholder | `Random` | both are the smallest of the nine, size 0.2 |
+  | Crebbb x Ebbberration | `Random` | both are size 1 and neither is a predator |
+  | Ebbb x Drebbbd | `Other`, weighted 3 ebbb to 1 drebbbd | a drebbbd is an ebbb gone mad, so a mixed litter is mostly ebbbs, and the fierce form stays the rarer one |
+
+  That is four pairs and eight outcome entries, and eight `canCrossBreedWith` entries in the guarded patch. It is one
+  file to change afterwards.- **Tests:** a pass with the mod staged, a local step reading `race.canCrossBreedWith` and the outcomes off the
   defs, and a scenario that breeds a pair and reads the kind of the child, if the game can be made to do it in a
   reasonable time (`mateMtbHours` is long). If it cannot, the def-level assertions are what the pass proves and the
   breeding itself stays a manual check, written down as such.
