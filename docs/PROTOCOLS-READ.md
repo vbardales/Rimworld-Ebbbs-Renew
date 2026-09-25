@@ -41,7 +41,7 @@ I only searched the latter, for the two Workshop items this mod names, and neith
 | `STATUS.md`, `README.md`, `CHANGELOG.md`, `ATTRIBUTION.md`, `TESTING.md`, `docs/runs/`, `Tests/Pickle/`, `Mod/About/About.xml` | present, written and kept by this session | The status sheet is the record. `Mod/ATTRIBUTION.md` is a byte-identical copy of the root one, checked by hash |
 | `LICENSE` | present at the root (2026-09-25); the copy in `Mod/` follows once the queued passes are done | MIT for the port's own work, with a scope clause that excludes Coolie's content, as the sibling ports do. My first reading, "no LICENSE because Coolie states none", confused the two: the audit forbids inventing a licence for the original's content, not licensing one's own work |
 | `PUBLICATION.md` | **absent, needed at `prepublished`** | The page's images in order, the thank-you comments (the registry has neither Coolie's item 2817264755 nor A Dog Said 2, 3238353862), the dependencies and DLC, the answer to the adult-content boxes, and the Steam change note under `### <version>` |
-| `BACKLOG.md`, `NOTES.md`, `BUGS.md` | absent | Nothing to put in them: open work is in `STATUS.md` |
+| `BACKLOG.md` | present (2026-09-25) | Nocturnal Animals and Better Crossbreeding support, looked at and not started |`n| `NOTES.md`, `BUGS.md` | absent | Nothing to put in them: open work is in `STATUS.md` |
 | `docs/PROTOCOLS-READ.md` | this file | |
 
 ## What reading changed
