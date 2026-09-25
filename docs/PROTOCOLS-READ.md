@@ -53,3 +53,11 @@ I only searched the latter, for the two Workshop items this mod names, and neith
 - At `prepublished` the description has to name Codex as well as Claude among the AI tools, thank Pickle and
   RimLogging as development-only, thank SamBucher for A Dog Said 2 and Coolie for the original, and end on the
   GitHub link. It cannot be resent by an update: it is written by hand on the Steam page.
+
+## Notices received, no action yet
+
+- **2026-09-25, from the CI/CD setup session** (Release-Admin `f196148`, `docs/OPERATIONS.md`, "Changing where the Steam
+  description comes from"; PUBLISHING.md in Rimworld-protocols `16f3c59`): the Steam description is to be written once, in
+  Markdown, in a fenced block under `## Steam description` of `PUBLICATION.md`; the CI generates the `<description>` of
+  `About.xml` from it and stops if they differ. Adopt it when `PUBLICATION.md` is written at `prepublished`, not before.
+  `.github/` is not edited by hand. Nothing is forced.
