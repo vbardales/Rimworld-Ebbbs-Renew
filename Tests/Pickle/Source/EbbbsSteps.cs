@@ -91,8 +91,8 @@ namespace EbbbsRenew.PickleSteps
 
         /// <summary>
         /// Passes when something logged as an error or a warning contains both texts. It is here for the
-        /// declared incompatibility: whatever the game logs when two mods define the same def is the symptom
-        /// the About.xml declaration is about.
+        /// declared incompatibility, to show the original mod's own fault in the running game: the wildness it
+        /// still writes in RaceProperties. (Two defs of one name are NOT logged, only a duplicate inside one mod.)
         /// </summary>
         [Then("Ebbbs Renew: an error or a warning was logged naming {string} and {string}")]
         public void SomethingNamesBoth(PickleContext ctx, string first, string second)
@@ -124,6 +124,43 @@ namespace EbbbsRenew.PickleSteps
             }
 
             throw new InvalidOperationException("no def database for type '" + typeName + "'");
+        }
+
+        // ---------------------------------------------------------------- who owns a def
+
+        private static ModContentPack RunningMod(PickleContext ctx, string packageId)
+        {
+            ModContentPack pack = LoadedModManager.RunningModsListForReading.FirstOrDefault(
+                m => string.Equals(m.PackageId, packageId, StringComparison.OrdinalIgnoreCase)
+                     || string.Equals(m.PackageIdPlayerFacing, packageId, StringComparison.OrdinalIgnoreCase));
+            ctx.Require(pack != null, "no running mod has the packageId '" + packageId + "'");
+            return pack;
+        }
+
+        /// <summary>
+        /// Whether a mod carries a def of this type and name in its own list, whatever became of it in the
+        /// game's database. Two mods defining one name are not refused and not logged: the database keeps the
+        /// later one, and the earlier mod still lists its own copy, which is what this reads.
+        /// </summary>
+        [Then("Ebbbs Renew: the mod {string} defines a {word} named {string}")]
+        public void ModDefines(PickleContext ctx, string packageId, string typeName, string defName)
+        {
+            ModContentPack pack = RunningMod(ctx, packageId);
+            bool found = pack.AllDefs.Any(
+                d => d.defName == defName && string.Equals(d.GetType().Name, typeName, StringComparison.OrdinalIgnoreCase));
+            ctx.Assert(found, "the mod '" + packageId + "' does not define a " + typeName + " named '" + defName + "'");
+        }
+
+        /// <summary>The def the game runs under this name: which mod does it come from.</summary>
+        [Then("Ebbbs Renew: the {word} {string} that the game runs comes from the mod {string}")]
+        public void RunningDefComesFrom(PickleContext ctx, string typeName, string defName, string packageId)
+        {
+            Def def = FindDef(ctx, typeName, defName);
+            string owner = def.modContentPack == null ? "(no mod)" : def.modContentPack.PackageId;
+            ModContentPack expected = RunningMod(ctx, packageId);
+            ctx.Assert(
+                def.modContentPack == expected,
+                typeName + " '" + defName + "' that the game runs comes from '" + owner + "', expected '" + expected.PackageId + "'");
         }
 
         /// <summary>Walks a dotted path of public fields and properties. Null when any link is null.</summary>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Ebbbs Renew (unofficial)</name>
   <author>Coolie - 1.6 adapted by Nelim</author>
@@ -42,9 +42,10 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 The update work was done with the help of an AI assistant (Claude, by Anthropic).
 
 [url=https://github.com/vbardales/Rimworld-Ebbbs-Renew]Source code on GitHub[/url]</description>
-  <!-- The source mod defines the same defNames as this port. RimWorld logs an error for each duplicate
-       defName ("Adding duplicate ThingDef name") and renames the later def by appending a random number,
-       so with both enabled the species are defined twice, the second copy under a mangled defName. -->
+  <!-- The source mod defines the same defNames as this port. RimWorld does not refuse two mods that do and
+       logs nothing (only a duplicate inside one mod is an error): the def of the mod loaded later silently
+       replaces the earlier one, so which species you get depends on load order, and the source mod still
+       writes the wildness that 1.6 rejects. -->
   <incompatibleWith>
     <li>Coolie.Ebbbs</li>
   </incompatibleWith>

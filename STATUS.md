@@ -15,20 +15,19 @@ licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online
 dependencies: none
 showcase:     icon and Preview present, both inspected directly on 2026-09-24; in-game review pending
 tested_on:
-automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and injection paths; Pickle step check, 377 step lines all resolved; all rerun 2026-09-24
-manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (25 written in 8 features; P1 and P2 played once, 2 failed on the companion's log lines, fix requested) or a justified not-applicable
+automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and injection paths; Pickle step check, 405 step lines all resolved; all rerun 2026-09-25
+manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (26 written in 8 features; P2 and P4 green in their final pass, P1 and P3 to replay) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The four passes, P1 English, P2 French, P3 incompatibility and P4 A Dog Said 2, are in TESTING.md. Each is one request to the TicketDispatcher. the four final passes ran on 2026-09-25 from ff6b205 (record in docs/runs/2026-09-25.md): P2 French is green, 9 of 9. P1 English failed 6 map scenarios on "Accessing map pawns off main thread", which looks environmental and is being reproduced with one scenario (request 20260925-153756-781-c5c6). P4 failed because the staging loaded A Dog Said 2 before this mod; the pass map now corrects that and the four scenarios of feature 08 passed 4 of 4 in a running game (request 20260925-153755-054-9822), so the native support for A Dog Said 2 works. P3 timed out on its first step, and every menu scenario now waits for the game to finish starting (request 20260925-153753-095-0959). No pass has yet been green apart from P2, and the full P1, P3 and P4 come again after these three small requests, from e81ba40. Nothing under Mod/ or Tests/Pickle/Mod/ may change until the three are done
+  - unverified: the final P1 and P3. Final passes of 2026-09-25 (record in docs/runs/2026-09-25.md): P2 French green 9 of 9 (a4d0), P4 A Dog Said 2 green 8 of 8 (d05f), which also proves the native support in a running game. The final P1 (e147) hung: the start-up step waited for the menu, which never comes after a scenario that loaded a save; the step was fixed and the DLL rebuilt. P1 also failed once on an intermittent "Accessing map pawns off main thread" (Pickle defect, six scenarios, all six pass on replay). The first P3 asserted a log line the game does not write; feature 05 now asserts who owns the defs and the original's wildness errors. Both are replayed from the commit that carries this correction, one request each
   - unverified: how the game's own mod sorting places this mod relative to A Dog Said 2 in a real mod list. The native support itself passed in a running game on 2026-09-25 with this mod staged first (feature 08, 4 of 4), and the staging does not sort by loadBefore, so that part is the game's and is not tested
-  - unverified: the fix to the two log scenarios, requested as 20260924-235620-812-a03b. P1 and P2 played once on 2026-09-24: 13 of 15 and 7 of 9 scenarios passed, and the two that failed did so on two log lines about the test companion, not about the mod. No pass has been green as a whole. P3 and P4 have not been played
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
-  - unverified: the incompatibility with the original in a running game, which is what pass P3 is for. The original is now in the WSL cache and its packageId, Coolie.Ebbbs, matches the one incompatibleWith names
+  - unverified: the incompatibility with the original in a running game (P3, rewritten scenarios, not yet played). The game was seen to log nothing about the two defs of one name and to keep the later mod's copy; the original's wildness errors were seen (nine, in the first P3 log)
   - feature: the Steam page text is fixed at creation and an update does not resend it, so the paragraph About.xml gained for A Dog Said 2 has to be added to the page by hand
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92
-updated:      2026-09-25, four final passes read, three small requests submitted, tree frozen
+updated:      2026-09-25, P2 and P4 final green, feature 05 rewritten, P1 and P3 to replay
 ---
 
 # Ebbbs Renew — status

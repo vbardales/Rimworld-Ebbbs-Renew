@@ -61,9 +61,9 @@ powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/
 
 | Pass | Scenarios it should play | Skipped by requirement |
 |---|---|---|
-| P1, minimal, English | 15: `01` x4, `02` x2, `03` x3, `04`, `06` x5 | `05` (1), `08` (4) |
-| P2, minimal, French | 9: `01` x4, `07` x5 | `05` (1), `08` (4) |
-| P3, incompat-original | 1: `05` | none |
+| P1, minimal, English | 15: `01` x4, `02` x2, `03` x3, `04`, `06` x5 | `05` (2), `08` (4) |
+| P2, minimal, French | 9: `01` x4, `07` x5 | `05` (2), `08` (4) |
+| P3, incompat-original | 2: `05` x2 | none |
 | P4, avec-ads2 | 8: `01` x4, `08` x4 | none |
 
 Compare those numbers with what a report says it discovered and played, and read `exitReason` before the
@@ -113,9 +113,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1
 
 The build writes the step DLL into `Mod/Pickle/Assemblies/`, which git ignores: rebuild before every run,
 because Pickle loads step DLLs when the game starts. `Check-Steps.ps1` matches every step line against
-Pickle's own vocabulary read from the installed assemblies and against this suite's ten steps, and fails
+Pickle's own vocabulary read from the installed assemblies and against this suite's thirteen steps, and fails
 on an undefined or ambiguous one before a ticket is taken. It is static: it proves the text of a step exists,
-not that the step does what the scenario hopes. Checked on 2026-09-24: 377 step lines, all resolved. A
+not that the step does what the scenario hopes. Checked on 2026-09-25: 405 step lines, all resolved. A
 deliberately wrong line was reported as undefined, so the check does bite.
 
 ## Not verified
@@ -133,8 +133,9 @@ deliberately wrong line was reported as undefined, so the check does bite.
 - **What the game does with a defName that two mods define** was first read wrongly from `DefDatabase.Add`, which logs
   an error for a duplicate. Its caller, `AddAllInMods`, first removes the earlier def, so a later mod silently
   replaces an earlier one and only a duplicate inside one mod is logged. The first run of `05` showed it: no such line
-  in the log. The comment in `About.xml`, "logs nothing", was right, and it was rewritten wrongly on 2026-09-24. Both
-  are put back once the queued passes are done, and `05` asserts the silent replacement instead.
+  in the log. The comment in `About.xml` was rewritten wrongly on 2026-09-24. It is corrected (2026-09-25, after the final
+  passes were done) and `05` now asserts the silent replacement: both mods define the species, the game runs the later
+  one's copy, and the original's `wildness` errors are logged.
 - **A Dog Said 2, feature `08`.** That the recipes end up in `ThingDef.AllRecipes` of each species is read
   from the way the game builds that list from `recipeUsers`, not from a run. That a concrete recipe such as
   `InstallBionicLegAnimal` inherits its `recipeUsers` from the abstract recipe the category lists are copied

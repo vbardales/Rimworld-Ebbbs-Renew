@@ -48,7 +48,7 @@ The mod is validated by four passes, and a report has to say which one it is.
 |---|---|---|---|
 | **P1** | Core, the five expansions, Harmony, RimLogging, Pickle and this mod | English | The mod stands alone, with every expansion present. Features `01` to `04` and `06`. 15 scenarios |
 | **P2** | The same set | French, by `-Language French` at staging | What the game holds in French, and that no key falls back to accented developer-mode gibberish. Features `01` and `07`. 9 scenarios |
-| **P3** | P1 plus the original, `Coolie.Ebbbs` | English | Whether the declared incompatibility is still true. The documented symptom is **asserted**, so a green pass means the incompatibility behaves as declared. Feature `05`. 1 scenario |
+| **P3** | P1 plus the original, `Coolie.Ebbbs` | English | Whether the declared incompatibility is still true. The documented symptom is **asserted**, so a green pass means the incompatibility behaves as declared: both mods define the species, the game runs the later mod's copy, and the original still writes the `wildness` that 1.6 rejects (the game logs nothing about the duplicate itself). Feature `05`. 2 scenarios |
 | **P4** | P1 plus A Dog Said... Animal Prosthetics 2, `SamBucher.ADogSaidAnimalProsthetics2`, staged after this mod by the pass map | English | The one optional integration this mod claims: it loads before that mod, and each species is offered the surgeries of its category and none of a higher one. Features `01` and `08`. 8 scenarios |
 
 `loadAfter` names Core and the five official expansions, which the minimal set already carries, so there is
