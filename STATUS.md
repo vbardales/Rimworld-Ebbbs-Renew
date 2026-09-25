@@ -24,7 +24,7 @@ remaining:
   - unverified: the fix to the two log scenarios, requested as 20260924-235620-812-a03b. P1 and P2 played once on 2026-09-24: 13 of 15 and 7 of 9 scenarios passed, and the two that failed did so on two log lines about the test companion, not about the mod. No pass has been green as a whole. P3 and P4 have not been played
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
-  - unverified: the Coolie.Ebbbs packageId in incompatibleWith was not checked against the source mod, which is not installed here. The incompatibility itself is what pass P3 is for
+  - unverified: the incompatibility with the original in a running game, which is what pass P3 is for. The original is now in the WSL cache and its packageId, Coolie.Ebbbs, matches the one incompatibleWith names
   - feature: the Steam page text is fixed at creation and an update does not resend it, so the paragraph About.xml gained for A Dog Said 2 has to be added to the page by hand
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92

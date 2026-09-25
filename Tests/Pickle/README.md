@@ -118,8 +118,8 @@ deliberately wrong line was reported as undefined, so the check does bite.
 - **Settled by that run, and no longer open:** the species cells `(140..156, 155)` on `test-colony` take a
   pawn each, the butchering step's age setter does reach the last life stage (the thrumebbb left its horn),
   and `Then a "X" exists` counts an animal.
-- Whether `Coolie.Ebbbs` is the original's packageId is not known: the original is not installed here, and it
-  has not been downloaded into the WSL install's Workshop cache.
+- `Coolie.Ebbbs` is the original's packageId: read from the item's own `About.xml` after it was downloaded into
+  the WSL Workshop cache on 2026-09-25 (Workshop 2817264755). The incompatibility itself is what P3 is for.
 - `Mod/About/About.xml` carried an XML comment saying a duplicate defName "logs nothing". The game's source
   says it logs an error and renames the later def, and the comment was corrected on 2026-09-24 when the
   file was edited for A Dog Said 2. `05` is what settles it in a running game.

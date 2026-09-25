@@ -57,9 +57,9 @@ and that is P4. M8, "repeat with the available expansions", is covered by every 
 carries every expansion.
 
 P3 is replayed when the original mod moves, not at every publication: its update is what ages the
-verdict. The original is not in the Steam workshop folder of this machine (checked 2026-09-24), so it
-has to be fetched before P3 can be staged. Its packageId, `Coolie.Ebbbs`, is the one `About.xml` names
-and has not been checked against the original. P4 is replayed when A Dog Said 2 renames its recipes or its
+verdict. The original is not in the Windows Workshop folder of this machine, and it was downloaded into the WSL
+cache on 2026-09-25, which is where P3 stages it from. Its packageId, `Coolie.Ebbbs`, is the one `About.xml`
+names, and it matches the `About.xml` of the downloaded item. P4 is replayed when A Dog Said 2 renames its recipes or its
 category lists, which is what its update would change. It is installed here (version 1.3.7, checked 2026-09-25).
 
 ## What only a running game can show
