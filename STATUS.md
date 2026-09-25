@@ -19,7 +19,7 @@ automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and i
 manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (25 written in 8 features; P1 and P2 played once, 2 failed on the companion's log lines, fix requested) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The four passes, P1 English, P2 French, P3 incompatibility and P4 A Dog Said 2, are in TESTING.md. Each is one request to the TicketDispatcher. P1 and P2 ran once on 2026-09-24 (two scenarios failed on the companion's log lines; record in docs/runs/2026-09-24.md), the fix was requested and passed 2 of 2 on 2026-09-25, and the four final passes were submitted on 2026-09-25 from ff6b205: P1 e99a, P2 243f, P4 dca3 and P3 add9 (request ids 20260925-1310..), evidence under Tests/Pickle/Evidence/p1-english, p2-french, p4-ads2 and p3-incompat. Nothing under Mod/ or Tests/Pickle/Mod/ may change until the four are done
+  - unverified: never seen running in game, so every Pickle scenario and every in-game check is open. The four passes, P1 English, P2 French, P3 incompatibility and P4 A Dog Said 2, are in TESTING.md. Each is one request to the TicketDispatcher. the four final passes ran on 2026-09-25 from ff6b205 (record in docs/runs/2026-09-25.md): P2 French is green, 9 of 9. P1 English failed 6 map scenarios on "Accessing map pawns off main thread", which looks environmental and is being reproduced with one scenario (request 20260925-153756-781-c5c6). P4 failed because the staging loaded A Dog Said 2 before this mod, which the pass map now corrects (request 20260925-153755-054-9822). P3 timed out on its first step, and every menu scenario now waits for the game to finish starting (request 20260925-153753-095-0959). No pass has yet been green apart from P2, and the full P1, P3 and P4 come again after these three small requests, from e81ba40. Nothing under Mod/ or Tests/Pickle/Mod/ may change until the three are done
   - unverified: the native support for A Dog Said 2 in a running game. Offline the patch was applied to that mod's own category file and the lists come out right, but the order of two mods in a mod list and the game's reading of the result were not exercised, and its recipe names and category file were checked on 2026-09-25 against the installed copy, version 1.3.7
   - unverified: the fix to the two log scenarios, requested as 20260924-235620-812-a03b. P1 and P2 played once on 2026-09-24: 13 of 15 and 7 of 9 scenarios passed, and the two that failed did so on two log lines about the test companion, not about the mod. No pass has been green as a whole. P3 and P4 have not been played
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
@@ -28,7 +28,7 @@ remaining:
   - feature: the Steam page text is fixed at creation and an update does not resend it, so the paragraph About.xml gained for A Dog Said 2 has to be added to the page by hand
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92
-updated:      2026-09-25, four final Pickle passes submitted, tree frozen
+updated:      2026-09-25, four final passes read, three small requests submitted, tree frozen
 ---
 
 # Ebbbs Renew — status

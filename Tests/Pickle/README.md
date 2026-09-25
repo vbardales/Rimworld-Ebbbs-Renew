@@ -70,6 +70,16 @@ Compare those numbers with what a report says it discovered and played, and read
 counts. A skipped scenario is not a passed one: `05` and `08` are skipped in every pass but their own, and
 have to have run in the pass that gives them their condition.
 
+**The order in P4.** The staging script activates the mods a pass map names in the order of the map, before the mod under
+test, and does not sort by `loadBefore`. The first run of P4 loaded A Dog Said 2 first and no species was offered a
+surgery. The map now names this mod's own folder on its first line, which the staging treats as an overlay of the mod
+under test, so the pass stages the order `About.xml` declares. Any future map for an integration that depends on
+order does the same.
+
+**Every scenario that starts from the menu waits for the game first.** Pickle gives the step "the main menu is open"
+five seconds, and it took 4.4 s in a plain pass and 5.2 s with the original mod beside this one. The local step "the
+game has finished starting" waits up to two minutes and comes first.
+
 **Three small requests rather than one big one, and the right size for each.** A ticket to explore or to fix
 plays as few scenarios as it can, one scenario named with `-Filter '::<scenario name>'`, never the whole suite
 for a correction: it holds the machine for nothing and makes the others wait. A first or a final validation
