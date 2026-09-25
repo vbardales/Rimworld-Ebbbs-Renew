@@ -19,10 +19,26 @@ copies of the mods, and neither needs C#: each is one guarded XML patch file, li
 - **The plan:** `Mod/Patches/NocturnalAnimals.xml`, one `PatchOperationAddModExtension` per species, nine in all.
   It has to be guarded: an extension of a class that does not exist logs an XML error when the mod is absent. There is no
   marker def to test here, unlike A Dog Said 2's `ADS_Cat1`, so the guard is a `PatchOperationFindMod` on the mod's name,
-  and **how 1.6 matches that name has to be checked in the game's own assembly before the file is written**.
+  and **checked in the game's assembly (2026-09-25):** `PatchOperationFindMod` calls
+  `ModLister.HasActiveModWithName`, which compares `ModMetaData.Name` to the given text with `==`, so the name must be
+  written exactly as the mod's `About.xml` has it, `[XND] Nocturnal Animals (Continued)`, brackets included, and a
+  rename by its author silently turns the patch off. Say so in a comment next to it, and let the pass with the mod catch it.
   No `loadBefore` or `loadAfter` is needed: the extension is read at runtime, not copied by a later patch.
-- **To decide, by the owner:** the clock of each of the nine. It is a judgment about the creatures, as the
-  A Dog Said 2 categories were, and it is one file to change afterwards.
+- **Decided, by the owner's delegation (2026-09-25):** the clocks are mine to choose, as the A Dog Said 2 categories
+  were, and it is one file to change afterwards. They follow that mod's own choices for vanilla animals (rodent-likes
+  and ambushing predators nocturnal, grazing herds crepuscular, animals that fit nothing cathemeral) and each species' own text:
+
+  | Species | Clock | Why |
+  |---|---|---|
+  | Ebbb | Nocturnal | the small rodent-like one; rats, boomrats and alphabeavers are nocturnal there |
+  | Beee | Nocturnal | the ebbbs' natural predator, small, hunts them; the lynx is nocturnal there |
+  | Crebbb | Crepuscular | a herd herbivore; deer and elk are crepuscular there |
+  | Ebbbomination | Nocturnal | a mass of ebbbs, it keeps their habits |
+  | Thrumebbb | Nocturnal | the same, grown huge; the megasloth, the other giant, is nocturnal there |
+  | Ebbberration | Diurnal | it mimics humans, so it keeps theirs, which is also the default |
+  | Bebbbholder | Cathemeral | a floating mass of eyes: the mod's own "fits nothing" clock |
+  | Drebbbd | Cathemeral | a frenzy, with no rhythm to speak of |
+  | Goliebbb | Cathemeral | a colossus that devours everything on its way, without a schedule |
 - **Tests:** a pass with the mod staged (`wsl-deps.avec-na.map`), with a local step that reads the extension off
   the ThingDef, and the same "nothing logged names this mod" checks the other passes have. Without the mod, the
   existing passes already show that the patch does nothing.
@@ -44,7 +60,8 @@ copies of the mods, and neither needs C#: each is one guarded XML patch file, li
   class does not exist without the mod). The `canCrossBreedWith` part is vanilla: whether to put it in the mod's own
   defs, which would change what the species do **without** Better Crossbreeding, or in the guarded patch only, is the
   first decision. The guarded patch is the safer one, and it is the one this file assumes.
-- **To decide, by the owner:** which species cross with which, and with vanilla animals or only among themselves,
+- **Confirmed by the owner (2026-09-25):** it is `Better Crossbreeding` that is meant.
+- **Still to decide, by the owner:** which species cross with which, and with vanilla animals or only among themselves,
   and what each pairing gives (`Maternal`, `Paternal`, `Random`, `Other`). The nine are a family, so pairings among
   them are the obvious start; anything with a vanilla animal is a design choice of its own and touches balance, which
   this port has so far refused to do.
