@@ -79,7 +79,8 @@ foreach ($language in 'english', 'french') {
         if ($entries.Count -eq 0) { throw "The group '$($group.Title)' matches nothing." }
         [void]$body.AppendLine('')
         [void]$body.AppendLine("  Scenario: $($group.Title)")
-        [void]$body.AppendLine('    Given the main menu is open')
+        [void]$body.AppendLine('    Given Ebbbs Renew: the game has finished starting')
+        [void]$body.AppendLine('    And the main menu is open')
         foreach ($entry in $entries) {
             $seen[$entry.key + '|' + $entry.type] = $true
             $text = $entry.$language

@@ -14,7 +14,8 @@
 Feature: the mod loads clean and defines its nine species
 
   Scenario: the mod is loaded and its defs exist
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then mod "nelim.ebbbsrenew" is loaded
     And def "Ebbb" of type "ThingDef" exists
     And def "Beee" of type "ThingDef" exists
@@ -50,12 +51,14 @@ Feature: the mod loads clean and defines its nine species
   # texture, an unresolved reference or a def that failed to load is logged naming one of them. In the French
   # pass this is also where a translation key the game cannot resolve would show up.
   Scenario: nothing logged while the defs loaded names one of them
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then Ebbbs Renew: nothing logged as an error or a warning names "ebbb"
     And Ebbbs Renew: nothing logged as an error or a warning names "beee"
 
   Scenario: the mod's own identifier appears in no error or warning
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then Ebbbs Renew: nothing logged as an error or a warning names "nelim.ebbbsrenew"
     And no warnings from mod "nelim.ebbbsrenew"
 
@@ -67,7 +70,8 @@ Feature: the mod loads clean and defines its nine species
   # game can say is that it read them. The taming success rate itself is the engine's arithmetic and is not
   # asserted here, see TESTING.md.
   Scenario: every species carries the wildness the game loaded
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then Ebbbs Renew: the ThingDef "Ebbb" has the stat "Wildness" at 0.7
     And Ebbbs Renew: the ThingDef "Beee" has the stat "Wildness" at 0.8
     And Ebbbs Renew: the ThingDef "Ebbbomination" has the stat "Wildness" at 1

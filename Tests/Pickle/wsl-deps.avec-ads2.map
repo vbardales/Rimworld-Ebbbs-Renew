@@ -9,6 +9,15 @@
 # 08-animal-prosthetics-2, which asserts that the nine species end up offered the surgeries of their category,
 # and 01-the-mod-loads, which asserts nothing logged names the mod's defs with ADS 2 loaded.
 #
+# THE ORDER OF THE TWO LINES BELOW IS THE POINT. The staging script activates the mods a map names in the
+# order of the map, and only then adds the mod under test, and it does not sort by loadBefore. With ADS 2
+# alone here, it loaded before this mod and its category lists had been copied into its recipes before this
+# mod added to them, so no species was offered a surgery (first run of the pass, 2026-09-25). The first line
+# names this mod's own folder with its own packageId, which the staging treats as an overlay of the mod under
+# test: it is activated here, at the top, and not added a second time. The pass then loads this mod before ADS 2,
+# which is the order About.xml declares with loadBefore and the one the game's own sorting produces.
+#
 # The item is installed on this machine, in the Windows Workshop folder, which the staging reads first, and it is
 # also in the WSL cache (checked 2026-09-25: version 1.3.7, packageId as below).
+nelim.ebbbsrenew   path:EbbbsRenew/Mod
 SamBucher.ADogSaidAnimalProsthetics2   3238353862

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using RimWorks.Pickle;
 using RimWorld;
 using Verse;
@@ -23,6 +24,24 @@ namespace EbbbsRenew.PickleSteps
     [PickleSteps]
     public class EbbbsSteps
     {
+        // ---------------------------------------------------------------- starting up
+
+        /// <summary>
+        /// Waits until the game has finished starting: back at the menu, with no long event running. Pickle's
+        /// own "the main menu is open" gives a step five seconds, and the first scenario of a pass sits
+        /// right at that limit: it took 4.4 s in a plain pass, and 5.2 s with the original mod beside this
+        /// one, whose extra defs and load errors slow the start, which failed the incompatibility pass on its
+        /// first step. Every scenario that starts from the menu says this first, with a deadline that a slow
+        /// start cannot reach.
+        /// </summary>
+        [Given("Ebbbs Renew: the game has finished starting", TimeoutSeconds = 125f)]
+        public async Task GameHasFinishedStarting(PickleContext ctx)
+        {
+            await ctx.WaitUntil(
+                () => Current.ProgramState == ProgramState.Entry && !LongEventHandler.AnyEventNowOrWaiting,
+                120f);
+        }
+
         // ---------------------------------------------------------------- the log
 
         /// <summary>

@@ -27,7 +27,8 @@
 Feature: the declared incompatibility with the original mod is still true
 
   Scenario: the two mods define the same species and the game logs the duplicates
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then mod "Coolie.Ebbbs" is loaded
     And mod "nelim.ebbbsrenew" is loaded
     And Ebbbs Renew: an error or a warning was logged naming "Adding duplicate ThingDef" and "Ebbb"

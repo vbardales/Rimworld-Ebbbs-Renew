@@ -10,7 +10,8 @@
 Feature: the English labels and descriptions reach the loaded definitions
 
   Scenario: the species names and descriptions a player reads
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then Ebbbs Renew: the ThingDef "Ebbb" reads "label" as "ebbb"
     Then Ebbbs Renew: the ThingDef "Ebbb" reads "description" as "Nobody knows what the Ebbbs are, or where they originate from. Scientists have been examining these things for decades. Are they a new species of rodent? Maybe they're a magical being brought to this plane via some greater power? It's a mystery, yet the only thing that's certain, is that they really, really like cheese."
     Then Ebbbs Renew: the ThingDef "Beee" reads "label" as "beee"
@@ -31,7 +32,8 @@ Feature: the English labels and descriptions reach the loaded definitions
     Then Ebbbs Renew: the ThingDef "Thrumebbb" reads "description" as "A gross mockery of the Universe's most graceful creature, the Thrumebbb is an amalgamation of Ebbbs that has somehow gained a semblance of intelligence. It is foul, and reeks of death. Beware, for it does not eat trees."
 
   Scenario: the labels of what the species leave behind
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then Ebbbs Renew: the ThingDef "Filth_BloodEbbb" reads "label" as "blood"
     Then Ebbbs Renew: the ThingDef "Leather_Ebbb" reads "label" as "ebbb leather"
     Then Ebbbs Renew: the ThingDef "Leather_Ebbb" reads "description" as "Tanned, dried, scraped ebbb leather. It feels wrong to touch this..."
@@ -40,7 +42,8 @@ Feature: the English labels and descriptions reach the loaded definitions
     Then Ebbbs Renew: the ThingDef "Ebbb" reads "race.meatLabel" as "ebbb meat"
 
   Scenario: the kinds and their life stages
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then Ebbbs Renew: the PawnKindDef "Ebbb" reads "label" as "ebbb"
     Then Ebbbs Renew: the PawnKindDef "Beee" reads "label" as "beee"
     Then Ebbbs Renew: the PawnKindDef "Ebbbomination" reads "label" as "ebbbomination"
@@ -54,7 +57,8 @@ Feature: the English labels and descriptions reach the loaded definitions
     Then Ebbbs Renew: the PawnKindDef "Thrumebbb" has a life stage whose labelPlural is "thrumebbb calves"
 
   Scenario: the melee attacks in the combat log
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then Ebbbs Renew: the ThingDef "ThrumebbbHorn" has a tool labelled "point"
     Then Ebbbs Renew: the ThingDef "ThrumebbbHorn" has a tool labelled "base"
     Then Ebbbs Renew: the ThingDef "Ebbb" has a tool labelled "left appendage"
@@ -85,7 +89,8 @@ Feature: the English labels and descriptions reach the loaded definitions
     Then Ebbbs Renew: the ThingDef "Thrumebbb" has a tool labelled "head"
 
   Scenario: the body plans in the health tab
-    Given the main menu is open
+    Given Ebbbs Renew: the game has finished starting
+    And the main menu is open
     Then Ebbbs Renew: the BodyDef "Ebbb" reads "label" as "ebbb"
     Then Ebbbs Renew: the BodyDef "Ebbb" has a part labelled "left eye"
     Then Ebbbs Renew: the BodyDef "Ebbb" has a part labelled "right eye"
