@@ -322,8 +322,8 @@ The live GitHub checks initially hit sandbox network/config restrictions, then
 succeeded through authorized read-only execution. No GitHub access blocker remains.
 The recorded five-source upstream rights review is retained for `silent`; no new
 upstream licence/permission is asserted and that historical review was not refreshed.
-The missing LICENSE is justified by the absence of a granted upstream licence;
-inventing a licence for Coolie's content would not satisfy this workflow.
+**Corrected 2026-09-25:** there is a LICENSE, MIT, for the port's own work; it excludes Coolie's content, for which
+none is granted. The earlier line here justified a missing LICENSE by the source's silence, which mixed up the two.
 
 ### Defects, next transition and remaining verification
 
