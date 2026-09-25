@@ -80,6 +80,11 @@ Compare those numbers with what a report says it discovered and played, and read
 counts. A skipped scenario is not a passed one: `05`, `08`, `09` and `10` are skipped in every pass but their own, and
 have to have run in the pass that gives them their condition.
 
+**A pass map ends with a newline.** The staging reads it with `while read`, which stops at a last line that has none: the
+line is read and then dropped. The first maps of P5 and P6 ended on their one mod line without a newline, the staging
+listed 11 mods without either, and both passes skipped their scenarios as "not loaded" (2026-09-25). The launcher's
+own journal shows the staged list ("staged: N mods"), which is where this was found.
+
 **The order in P4.** The staging script activates the mods a pass map names in the order of the map, before the mod under
 test, and does not sort by `loadBefore`. The first run of P4 loaded A Dog Said 2 first and no species was offered a
 surgery. The map now names this mod's own folder on its first line, which the staging treats as an overlay of the mod
