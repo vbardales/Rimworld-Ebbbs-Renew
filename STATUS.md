@@ -16,22 +16,40 @@ dependencies: none
 showcase:     icon and Preview present, both inspected directly on 2026-09-24; in-game review pending
 tested_on:
 automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and injection paths; Pickle step check, 405 step lines all resolved; all rerun 2026-09-25
-manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (26 written in 8 features; P2 and P4 green in their final pass, P1 and P3 to replay) or a justified not-applicable
+manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (32 written in 10 features; passes P1 to P4 green on 2026-09-25, P5 and P6 for the two new patches not played) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - unverified: the final P1 and P3. Final passes of 2026-09-25 (record in docs/runs/2026-09-25.md): P2 French green 9 of 9 (a4d0), P4 A Dog Said 2 green 8 of 8 (d05f), which also proves the native support in a running game. The final P1 (e147) hung: the start-up step waited for the menu, which never comes after a scenario that loaded a save; the step was fixed and the DLL rebuilt. P1 also failed once on an intermittent "Accessing map pawns off main thread" (Pickle defect, six scenarios, all six pass on replay). The first P3 asserted a log line the game does not write; feature 05 now asserts who owns the defs and the original's wildness errors. Both are replayed from the commit that carries this correction, one request each
+  - unverified: the passes on the revision that is delivered. All four are green on 2026-09-25 (P1 15 of 15 with 6 skipped by requirement, P2 9 of 9, P3 2 of 2, P4 8 of 8; docs/runs/2026-09-25.md), on two revisions, and Mod/ is about to change: LICENSE, then the Nocturnal Animals and Better Crossbreeding patches (BACKLOG.md). Play the four passes again once, then tested
   - unverified: how the game's own mod sorting places this mod relative to A Dog Said 2 in a real mod list. The native support itself passed in a running game on 2026-09-25 with this mod staged first (feature 08, 4 of 4), and the staging does not sort by loadBefore, so that part is the game's and is not tested
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
-  - unverified: the incompatibility with the original in a running game (P3, rewritten scenarios, not yet played). The game was seen to log nothing about the two defs of one name and to keep the later mod's copy; the original's wildness errors were seen (nine, in the first P3 log)
-  - to do after the queued P1 and P3 are rendered (Mod/ is frozen): copy LICENSE into Mod/ (byte-identical), point both ATTRIBUTION.md copies and the About.xml description at it, add it to CHANGELOG, then run the validators\n  - feature: the Steam page text is fixed at creation and an update does not resend it, so the paragraph About.xml gained for A Dog Said 2 has to be added to the page by hand
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92
-updated:      2026-09-25, P2 and P4 final green, feature 05 rewritten, P1 and P3 to replay
+updated:      2026-09-25, all four passes green; Mod/ unfrozen for LICENSE and two compatibility patches
 ---
 
 # Ebbbs Renew — status
 
+## The licence, and support for Nocturnal Animals and Better Crossbreeding — 2026-09-25
+
+**Stage unchanged: `done`.** All four passes were green on 2026-09-25 (P1 15 of 15 with 6 skipped by requirement,
+P2 9 of 9, P3 2 of 2, P4 8 of 8; `docs/runs/2026-09-25.md`), but `Mod/` changed afterwards, so `tested` waits for
+the passes on the revision that is delivered.
+
+- **Licence.** `LICENSE` is MIT, for the port's own work, at the root and in `Mod/` (byte-identical), with a scope
+  clause that excludes Coolie's content, for which none is granted. My earlier line, that no `LICENSE` could exist
+  because Coolie states none, confused the two.
+- **Nocturnal Animals (Continued).** `Mod/Patches/NocturnalAnimals.xml`: nine `PatchOperationAddModExtension`, one clock per
+  species, inside a `PatchOperationFindMod`. The name is compared exactly by the game (checked in `ModLister`), so it is pinned
+  in the validator and a rename by its author would show in pass P5.
+- **Better Crossbreeding.** `Mod/Patches/BetterCrossbreeding.xml`: four pairs inside the family, each for both mothers
+  (`canCrossBreedWith`, vanilla, and the mod's own outcomes on the mother's PawnKindDef), guarded the same way. Chosen by me on
+  the owner's delegation; the table and the reasons are in `BACKLOG.md` and in the patch.
+- **Offline.** `Tests/Validate-Mod.ps1` grew from 257 to 389 checks; four broken copies (a clock, the mod name, a pair written for
+  one mother only, a weight) each fail with the intended message. `About.xml`, both `ATTRIBUTION.md` copies (identical, by hash),
+  `CHANGELOG.md` and the README say it. The Pickle suite has features `09` and `10`, four more local steps, two pass maps,
+  and passes P5 and P6; `Check-Steps.ps1` resolves 456 step lines.
+- **Not run.** P5 and P6, and every pass on this revision.
 ## Native support for A Dog Said 2, and the dispatcher — 2026-09-24
 
 **Stage unchanged: `done`.** A change to `Mod/` invalidates the controls it touches, not the others, and each

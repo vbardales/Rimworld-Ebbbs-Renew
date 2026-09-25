@@ -210,6 +210,93 @@ namespace EbbbsRenew.PickleSteps
                 typeName + " '" + defName + "' reads '" + path + "' as '" + actual + "', expected '" + expected + "'");
         }
 
+        // ---------------------------------------------------------------- what the two compatibility patches add
+
+        /// <summary>
+        /// The extension is found by the full name of its class and read by reflection, so this suite has no
+        /// reference to the mod that owns the class: without that mod the class does not exist, and the pass
+        /// that stages it is the only one that plays these steps.
+        /// </summary>
+        private static DefModExtension ExtensionOf(PickleContext ctx, Def def, string className)
+        {
+            DefModExtension extension = def.modExtensions == null
+                ? null
+                : def.modExtensions.FirstOrDefault(e => e != null && e.GetType().FullName == className);
+            ctx.Require(extension != null, def.GetType().Name + " '" + def.defName + "' carries no extension of class '" + className + "'");
+            return extension;
+        }
+
+        /// <summary>A def carries a mod extension of a named class, and one of its fields reads as the text.</summary>
+        [Then("Ebbbs Renew: the {word} {string} carries the extension {string} whose {word} reads {string}")]
+        public void ExtensionReads(PickleContext ctx, string typeName, string defName, string className, string path, string expected)
+        {
+            DefModExtension extension = ExtensionOf(ctx, FindDef(ctx, typeName, defName), className);
+            string actual = Walk(extension, path)?.ToString() ?? "(null)";
+            ctx.Assert(
+                string.Equals(actual, expected, StringComparison.OrdinalIgnoreCase),
+                typeName + " '" + defName + "' extension '" + className + "' reads '" + path + "' as '" + actual + "', expected '" + expected + "'");
+        }
+
+        private static List<string> CanCrossBreedWith(PickleContext ctx, string defName)
+        {
+            ThingDef def = (ThingDef)FindDef(ctx, "ThingDef", defName);
+            ctx.Require(def.race != null, "ThingDef '" + defName + "' has no race");
+            return def.race.canCrossBreedWith == null
+                ? new List<string>()
+                : def.race.canCrossBreedWith.Select(d => d.defName).ToList();
+        }
+
+        [Then("Ebbbs Renew: the ThingDef {string} can cross with {string}")]
+        public void CanCross(PickleContext ctx, string defName, string other)
+        {
+            List<string> list = CanCrossBreedWith(ctx, defName);
+            ctx.Assert(list.Contains(other), "ThingDef '" + defName + "' can cross with [" + string.Join(", ", list) + "], not with '" + other + "'");
+        }
+
+        [Then("Ebbbs Renew: the ThingDef {string} cannot cross with {string}")]
+        public void CannotCross(PickleContext ctx, string defName, string other)
+        {
+            List<string> list = CanCrossBreedWith(ctx, defName);
+            ctx.Assert(!list.Contains(other), "ThingDef '" + defName + "' can cross with '" + other + "', which it should not");
+        }
+
+        /// <summary>
+        /// What Better Crossbreeding will make of the offspring, read off the mother's kind: the outcomes are
+        /// named after the father, and the label is the behaviour, with the weighted kinds for Other.
+        /// </summary>
+        [Then("Ebbbs Renew: the PawnKindDef {string} bred with {string} gives {string}")]
+        public void BredWithGives(PickleContext ctx, string motherName, string fatherName, string expected)
+        {
+            DefModExtension extension = ExtensionOf(ctx, FindDef(ctx, "PawnKindDef", motherName), "DZY.Crossbreeding.Extension");
+            IEnumerable outcomes = Walk(extension, "outcomes") as IEnumerable;
+            ctx.Require(outcomes != null, "the crossbreeding extension of '" + motherName + "' has no outcomes");
+            foreach (object outcome in outcomes)
+            {
+                Def father = Walk(outcome, "kindDef") as Def;
+                if (father == null || father.defName != fatherName)
+                {
+                    continue;
+                }
+
+                string label = Walk(outcome, "behavior")?.ToString() ?? "(null)";
+                if (label == "Other")
+                {
+                    IList kinds = Walk(outcome, "childrenKinds") as IList;
+                    IList weights = Walk(outcome, "childrenWeights") as IList;
+                    ctx.Require(kinds != null && weights != null && kinds.Count == weights.Count, "the Other outcome of '" + motherName + "' has no matching kinds and weights");
+                    for (int i = 0; i < kinds.Count; i++)
+                    {
+                        label += " " + ((Def)kinds[i]).defName + "=" + weights[i];
+                    }
+                }
+
+                ctx.Assert(label == expected, "PawnKindDef '" + motherName + "' bred with '" + fatherName + "' gives '" + label + "', expected '" + expected + "'");
+                return;
+            }
+
+            ctx.Assert(false, "PawnKindDef '" + motherName + "' has no outcome for a father '" + fatherName + "'");
+        }
+
         /// <summary>
         /// The statBases entry itself, not the computed stat. The fault this port exists to fix was a
         /// wildness the game never read: a species without the entry falls back to the stat's default, -1,

@@ -1,0 +1,8 @@
+# Pass "avec-crossbreeding": Better Crossbreeding beside this mod, and nothing else optional.
+#
+# DizzyEevee.BetterCrossbreeding, Workshop 3520675842, supports 1.6 only and depends on Harmony, which every pass
+# stages anyway. No load order is needed: both the vanilla canCrossBreedWith and the mod's extension are read while
+# the game runs. The pass plays 10-better-crossbreeding and 01-the-mod-loads.
+#
+# The item is installed in the Windows Workshop folder, which the staging reads first.
+DizzyEevee.BetterCrossbreeding   3520675842

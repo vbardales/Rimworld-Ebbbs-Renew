@@ -40,6 +40,10 @@ the Japanese and Chinese forms 禁止, 転載, 無断, 二次配布, 不得.
 Silence grants nothing and forbids nothing. This port rests on the Workshop's own custom for
 abandoned mods: named credit, and a takedown on request.
 
+**The licence of the port itself.** The row above is about Coolie's mod. What this port added is its own work and
+is under the MIT licence, in `LICENSE`, which says in its own text that it does not cover Coolie's creatures and
+textures.
+
 ## What the port changed
 
 One line, nine times.
@@ -72,6 +76,19 @@ continuation of A Dog Said... Animal Prosthetics. The patch is written from scra
 mod's three category recipes, `ADS_Cat1` to `ADS_Cat3`, and follows the convention its Workshop page asks other
 mods to follow; nothing from its files is copied. Which species go in which category is this port's decision,
 not Coolie's, and the three lists it adds to are the only thing it touches there.
+
+**Support for [XND] Nocturnal Animals (Continued)**, in `Patches/NocturnalAnimals.xml`. That mod is Mlie's
+continuation (`Mlie.XNDNocturnalAnimals`, [Workshop 2269731409](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409))
+of XeoNovaDan's Nocturnal Animals. The patch is written from scratch and uses only the extension class that mod
+publishes for other mods, `NocturnalAnimals.ExtendedRaceProperties`; nothing from its files is copied. Which clock
+each species gets is this port's decision.
+
+**Support for Better Crossbreeding**, in `Patches/BetterCrossbreeding.xml`. That mod is DizzyEevee's
+(`DizzyEevee.BetterCrossbreeding`, [Workshop 3520675842](https://steamcommunity.com/sharedfiles/filedetails/?id=3520675842)).
+The patch is written from scratch and follows the format of the example that mod ships for other mods; nothing is
+copied. Which species cross, and what each pairing gives, is this port's decision, and it stays inside the family.
+
+Neither is a dependency: each patch is guarded and does nothing without its mod.
 
 ## Where this came from
 

@@ -43,6 +43,20 @@ that mod the patch does nothing. It only works because `About.xml` declares `loa
 copies its category lists into its real recipes in its own last patch, so a name added after that is never
 read. It is an order, not a dependency.
 
+**[XND] Nocturnal Animals (Continued)** is supported natively too. Each species gets a body clock through that mod's
+own extension, the default the player can change per species in its options: the ebbb, beee, ebbbomination and
+thrumebbb are nocturnal, the crebbb is crepuscular, the ebbberration is diurnal, and the bebbbholder, drebbbd and
+goliebbb are cathemeral. The choices follow that mod's own for vanilla animals and each species' description. It is
+one file, `Patches/NocturnalAnimals.xml`, guarded by the mod's name, which the game compares exactly.
+
+**Better Crossbreeding** is supported natively. Four pairs among the nine can breed, each way: ebbb with crebbb,
+ebbb with bebbbholder and crebbb with ebbberration (a coin flip for the kind of each child), and ebbb with drebbbd
+(three ebbbs for one drebbbd). No animal of the base game is involved, and the beee, the ebbbomination, the thrumebbb
+and the goliebbb are paired with nothing. It is one file, `Patches/BetterCrossbreeding.xml`, guarded by the mod's
+name.
+
+Neither is a dependency, and without them their patches do nothing.
+
 ## What changed in the 1.6 update
 
 One line, nine times.
@@ -69,7 +83,7 @@ looking for a refusal rather than for a permission. Silence grants nothing and f
 This port rests on the Workshop's own custom for abandoned mods: named credit, and a takedown on
 request. If Coolie comes back to the ebbbs, or asks for this to be taken down, it comes down.
 
-What I add is mine, and it is under the MIT licence (see [LICENSE](LICENSE)): the 1.6 fix, the Animal Prosthetics 2 patch, the French translation, the tests, the images and the documentation. The licence says in its own text that it does not cover Coolie's creatures and textures, for which none is granted.
+What I add is mine, and it is under the MIT licence (see [LICENSE](LICENSE)): the 1.6 fix, the three compatibility patches, the French translation, the tests, the images and the documentation. The licence says in its own text that it does not cover Coolie's creatures and textures, for which none is granted.
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or
 any other of my mods, including publishing a continuation of it. All credit must be preserved.

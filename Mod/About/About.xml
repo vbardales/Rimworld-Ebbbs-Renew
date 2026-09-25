@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Ebbbs Renew (unofficial)</name>
   <author>Coolie - 1.6 adapted by Nelim</author>
@@ -33,9 +33,15 @@ COMPATIBILITY
 
 Built-in support for A Dog Said... Animal Prosthetics 2: the nine species are placed in its animal categories, so they can receive prosthetics and bionics like the animals of the base game. The ebbb and the bebbbholder get the basic replacements, the crebbb, the ebbberration, the drebbbd and the goliebbb the simple prosthetics as well, and the beee, the ebbbomination and the thrumebbb the bionics too. There is nothing to install and nothing to configure, and without that mod the patch does nothing.
 
+Built-in support for [XND] Nocturnal Animals (Continued): each species gets a body clock, the default you can change per species in that mod's options. The ebbb, the beee, the ebbbomination and the thrumebbb are nocturnal, the crebbb is crepuscular, the ebbberration is diurnal, and the bebbbholder, the drebbbd and the goliebbb are cathemeral.
+
+Built-in support for Better Crossbreeding: four pairs among the ebbbs can now breed with each other - ebbb with crebbb, ebbb with bebbbholder, crebbb with ebbberration, and ebbb with drebbbd, whose litters are mostly ebbbs. No animal of the base game is involved. Neither of these two mods is required, and without them their patches do nothing.
+
 Content mod: removing it mid-save will lose any ebbb already in play, of any size.
 
 The original states no licence anywhere - no file, nothing in its About, nothing in the README it ships, no repository, nothing on its Workshop page. This port therefore rests on the Workshop's own custom for abandoned mods: named credit to the author, and a takedown on request.
+
+What I added - the 1.6 fix, the compatibility patches, the French translation, the tests and the images - is mine and is under the MIT licence (the LICENSE file). That licence does not cover Coolie's creatures and textures, for which none is granted.
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
 

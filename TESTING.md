@@ -42,7 +42,7 @@ the commands, the three-small-requests rule and what each request should play ar
 
 ## Passes
 
-The mod is validated by four passes, and a report has to say which one it is.
+The mod is validated by six passes, and a report has to say which one it is.
 
 | Pass | Mod set | Language | What it proves |
 |---|---|---|---|
@@ -50,17 +50,19 @@ The mod is validated by four passes, and a report has to say which one it is.
 | **P2** | The same set | French, by `-Language French` at staging | What the game holds in French, and that no key falls back to accented developer-mode gibberish. Features `01` and `07`. 9 scenarios |
 | **P3** | P1 plus the original, `Coolie.Ebbbs` | English | Whether the declared incompatibility is still true. The documented symptom is **asserted**, so a green pass means the incompatibility behaves as declared: both mods define the species, the game runs the later mod's copy, and the original still writes the `wildness` that 1.6 rejects (the game logs nothing about the duplicate itself). Feature `05`. 2 scenarios |
 | **P4** | P1 plus A Dog Said... Animal Prosthetics 2, `SamBucher.ADogSaidAnimalProsthetics2`, staged after this mod by the pass map | English | The one optional integration this mod claims: it loads before that mod, and each species is offered the surgeries of its category and none of a higher one. Features `01` and `08`. 8 scenarios |
+| **P5** | P1 plus `[XND] Nocturnal Animals (Continued)`, `Mlie.XNDNocturnalAnimals`, and Harmony | English | Each species carries the body clock decided for it, through that mod's extension class, and nothing logged names the extension. The patch is guarded by the mod's name, which the game compares exactly: a rename by its author turns it off, and this pass is what would say so. Features `01` and `09`. 6 scenarios |
+| **P6** | P1 plus Better Crossbreeding, `DizzyEevee.BetterCrossbreeding`, and Harmony | English | The four pairs are compatible in both directions, each gives what was decided, and the predator, the amalgams and the colossus are paired with nothing. An actual breeding is not exercised: it needs a pair of animals, a long mating delay and that mod's Harmony patches in a colony, and its arithmetic is that mod's. Features `01` and `10`. 8 scenarios |
 
 `loadAfter` names Core and the five official expansions, which the minimal set already carries, so there is
 no pass that stages all of them apart from P1. The one optional mod this mod integrates with is A Dog Said 2,
-and that is P4. M8, "repeat with the available expansions", is covered by every pass, since the minimal set
+and that is P4. Two more, Nocturnal Animals and Better Crossbreeding, are P5 and P6. M8, "repeat with the available expansions", is covered by every pass, since the minimal set
 carries every expansion.
 
 P3 is replayed when the original mod moves, not at every publication: its update is what ages the
 verdict. The original is not in the Windows Workshop folder of this machine, and it was downloaded into the WSL
 cache on 2026-09-25, which is where P3 stages it from. Its packageId, `Coolie.Ebbbs`, is the one `About.xml`
 names, and it matches the `About.xml` of the downloaded item. P4 is replayed when A Dog Said 2 renames its recipes or its
-category lists, which is what its update would change. It is installed here (version 1.3.7, checked 2026-09-25).
+category lists, which is what its update would change. It is installed here (version 1.3.7, checked 2026-09-25). P5 and P6 are replayed when their mod is renamed (the guard compares the name exactly), or changes the extension class it publishes.
 
 ## What only a running game can show
 
@@ -94,7 +96,7 @@ All of them, on the revision that is delivered:
 4. **Every conditional scenario ran.** Each `@requires:<packageId>` had its pass, with the map that
    mounts that mod, and its report was read: suite name and scenario names checked before it is cited,
    because the report folder is shared by the whole machine. A scenario skipped for want of its condition
-   is not a scenario passed. Today the conditional sets are `05`, on `Coolie.Ebbbs`, and `08`, on
+   is not a scenario passed. Today the conditional sets are `05`, on `Coolie.Ebbbs`, `09`, on `Mlie.XNDNocturnalAnimals`, `10`, on `DizzyEevee.BetterCrossbreeding`, and `08`, on
    `SamBucher.ADogSaidAnimalProsthetics2`.
 5. **No manual test left to validate.** Each of M1 to M9 is green as an automated scenario, or is
    listed above as not applicable with its reason. The `@review` captures still get looked at, but that

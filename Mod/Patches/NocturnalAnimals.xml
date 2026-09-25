@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--
+    Native support for [XND] Nocturnal Animals (Continued) (Mlie.XNDNocturnalAnimals).
+
+    That mod reads a DefModExtension on an animal's ThingDef, NocturnalAnimals.ExtendedRaceProperties, whose
+    bodyClock is Diurnal, Nocturnal, Crepuscular or Cathemeral. An animal without it is Diurnal. The value is
+    only the default: the player can change it per species in that mod's options. Its own patches for the
+    animals of the base game add the extension the same way.
+
+    The clocks follow its choices for vanilla animals (rodent-likes and ambushing predators nocturnal, grazing
+    herds crepuscular, animals that fit nothing cathemeral) and what each species' description says. One
+    line per species below, so a change is one word.
+
+    The guard. The class does not exist without that mod, and an extension of an unknown class logs an XML
+    error, so everything runs inside a PatchOperationFindMod. It compares the mod's About name with ==, and
+    it has to be written exactly as that mod's About.xml has it, brackets included. If its author renames
+    it, this patch silently does nothing and the Pickle pass with that mod goes red.
+
+    No load order is needed: the extension is read while the game runs, not copied by a later patch.
+  -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[XND] Nocturnal Animals (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- Ebbb: the small rodent-like one -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Ebbb"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Nocturnal</bodyClock>
+            </li>
+          </value>
+        </li>
+        <!-- Beee: the ebbbs' predator -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Beee"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Nocturnal</bodyClock>
+            </li>
+          </value>
+        </li>
+        <!-- Ebbbomination: a mass of ebbbs, it keeps their habits -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Ebbbomination"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Nocturnal</bodyClock>
+            </li>
+          </value>
+        </li>
+        <!-- Thrumebbb: the same, grown huge -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Thrumebbb"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Nocturnal</bodyClock>
+            </li>
+          </value>
+        </li>
+        <!-- Crebbb: a herd herbivore, like the deer -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Crebbb"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Crepuscular</bodyClock>
+            </li>
+          </value>
+        </li>
+        <!-- Ebbberration: mimics humans, so it keeps theirs -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Ebbberration"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Diurnal</bodyClock>
+            </li>
+          </value>
+        </li>
+        <!-- Bebbbholder: a floating mass of eyes, fits no other clock -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Bebbbholder"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Cathemeral</bodyClock>
+            </li>
+          </value>
+        </li>
+        <!-- Drebbbd: a frenzy, no rhythm -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Drebbbd"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Cathemeral</bodyClock>
+            </li>
+          </value>
+        </li>
+        <!-- Goliebbb: a colossus that devours everything, no schedule -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/ThingDef[defName="Goliebbb"]</xpath>
+          <value>
+            <li Class="NocturnalAnimals.ExtendedRaceProperties">
+              <bodyClock>Cathemeral</bodyClock>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

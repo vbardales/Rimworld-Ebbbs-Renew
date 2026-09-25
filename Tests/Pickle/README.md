@@ -13,11 +13,13 @@ Steam receives whole.
 | `02-the-species-spawn` | minimal, English | each species is generated on the colony map and nothing is logged; one `@review` capture of the nine together |
 | `03-butchering` | minimal, English | butchering an adult of each species leaves the ebbb's meat and leather, and the thrumebbb leaves its horn |
 | `04-save-and-reload` | minimal, English | the nine species come back from a save and a reload, and nothing is logged |
-| `05-original-mod-incompatibility` | `incompat-original` | with `Coolie.Ebbbs` beside it, both mods define the species and the game silently keeps the later one (**being rewritten**: the first version asserted a log line the game does not write, see `docs/runs/2026-09-25.md`) |
+| `05-original-mod-incompatibility` | `incompat-original` | with `Coolie.Ebbbs` beside it, both mods define the species and the game silently keeps the later one (the first version asserted a log line the game does not write, see `docs/runs/2026-09-25.md`; it now asserts who owns the defs and the original's `wildness` errors) |
 | `06-labels-en`, `07-labels-fr` | English pass, French pass | the 104 texts this mod owns, as the loaded definitions hold them in the language the game started in |
 | `08-animal-prosthetics-2` | `avec-ads2` | with A Dog Said 2 beside it, the mod loads before it, and each species is offered the surgeries of its category and none of a higher one |
+| `09-nocturnal-animals` | `avec-na` | with Nocturnal Animals beside it, each species carries the body clock decided for it, and nothing logged names the extension |
+| `10-better-crossbreeding` | `avec-crossbreeding` | with Better Crossbreeding beside it, four pairs are compatible in both directions and give what was decided, and the predator, the amalgams and the colossus are paired with nothing |
 
-Eight features, twenty-five scenarios. `06` and `07` are **generated** by `New-LabelFeatures.ps1` from
+Ten features, thirty-two scenarios. `06` and `07` are **generated** by `New-LabelFeatures.ps1` from
 `../Translation-inventory.json`, which stops on any key it has no shape for, so a new kind of text cannot be
 left out silently. Rerun it after any change to the inventory.
 
@@ -55,19 +57,27 @@ powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/
 # P3, the original mod beside it
 powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P3 incompatibility" -Language English -DepMap wsl-deps.incompat-original.map -Filter '05-original-mod-incompatibility' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p3-incompat
 
+# P5, Nocturnal Animals beside it
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P5 Nocturnal Animals" -Language English -DepMap wsl-deps.avec-na.map -Filter '01-the-mod-loads,09-nocturnal-animals' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p5-nocturnal
+
+# P6, Better Crossbreeding beside it
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P6 Better Crossbreeding" -Language English -DepMap wsl-deps.avec-crossbreeding.map -Filter '01-the-mod-loads,10-better-crossbreeding' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p6-crossbreeding
+
 # P4, A Dog Said 2 beside it
 powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P4 A Dog Said 2" -Language English -DepMap wsl-deps.avec-ads2.map -Filter '01-the-mod-loads,08-animal-prosthetics-2' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p4-ads2
 ```
 
 | Pass | Scenarios it should play | Skipped by requirement |
 |---|---|---|
-| P1, minimal, English | 15: `01` x4, `02` x2, `03` x3, `04`, `06` x5 | `05` (2), `08` (4) |
-| P2, minimal, French | 9: `01` x4, `07` x5 | `05` (2), `08` (4) |
+| P1, minimal, English | 15: `01` x4, `02` x2, `03` x3, `04`, `06` x5 | `05` (2), `08` (4), `09` (2), `10` (4) |
+| P2, minimal, French | 9: `01` x4, `07` x5 | `05` (2), `08` (4), `09` (2), `10` (4) |
 | P3, incompat-original | 2: `05` x2 | none |
 | P4, avec-ads2 | 8: `01` x4, `08` x4 | none |
+| P5, avec-na | 6: `01` x4, `09` x2 | none |
+| P6, avec-crossbreeding | 8: `01` x4, `10` x4 | none |
 
 Compare those numbers with what a report says it discovered and played, and read `exitReason` before the
-counts. A skipped scenario is not a passed one: `05` and `08` are skipped in every pass but their own, and
+counts. A skipped scenario is not a passed one: `05`, `08`, `09` and `10` are skipped in every pass but their own, and
 have to have run in the pass that gives them their condition.
 
 **The order in P4.** The staging script activates the mods a pass map names in the order of the map, before the mod under
@@ -113,18 +123,17 @@ powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1
 
 The build writes the step DLL into `Mod/Pickle/Assemblies/`, which git ignores: rebuild before every run,
 because Pickle loads step DLLs when the game starts. `Check-Steps.ps1` matches every step line against
-Pickle's own vocabulary read from the installed assemblies and against this suite's thirteen steps, and fails
+Pickle's own vocabulary read from the installed assemblies and against this suite's seventeen steps, and fails
 on an undefined or ambiguous one before a ticket is taken. It is static: it proves the text of a step exists,
-not that the step does what the scenario hopes. Checked on 2026-09-25: 405 step lines, all resolved. A
+not that the step does what the scenario hopes. Checked on 2026-09-25: 456 step lines, all resolved. A
 deliberately wrong line was reported as undefined, so the check does bite.
 
 ## Not verified
 
-- **Played once, on 2026-09-24, and not yet green.** P1 and P2 ran (`../../docs/runs/2026-09-24.md`): every
-  scenario that plays passed except two, which failed on lines the game logged about the test companion and
-  not about the mod. The steps and the companion were fixed and the two scenarios are requested again. The
-  passes P3 and P4, and their features `05` and `08`, have not been played at all, and no pass has yet been
-  green as a whole.
+- **Green on 2026-09-25, on two revisions** (`../../docs/runs/2026-09-25.md`): P1 15 of 15 with 6 skipped by
+  requirement, P2 9 of 9, P3 2 of 2, P4 8 of 8. **Not played at all:** P5 and P6 and their features `09` and
+  `10`, added afterwards with the two compatibility patches. The passes are played again together on the
+  revision that is delivered.
 - **Settled by that run, and no longer open:** the species cells `(140..156, 155)` on `test-colony` take a
   pawn each, the butchering step's age setter does reach the last life stage (the thrumebbb left its horn),
   and `Then a "X" exists` counts an animal.

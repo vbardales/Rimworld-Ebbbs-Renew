@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!--
+    Native support for Better Crossbreeding (DizzyEevee.BetterCrossbreeding).
+
+    Two things decide a crossbreed, in two places. canCrossBreedWith, a list of defNames in the animal's
+    ThingDef race, is vanilla 1.6. What the offspring is comes from that mod's extension,
+    DZY.Crossbreeding.Extension, on the mother's PawnKindDef: its outcomes are named after the FATHER's kind,
+    and say Maternal, Paternal, Random (a coin flip per child) or Other (a weighted list of kinds). Only the
+    mother is read, so every pairing is written for both mothers.
+
+    Four pairs, all inside the family, none with an animal of the base game, so nothing outside these nine
+    changes:
+      ebbb x crebbb           Random: the crebbb is the friendly, more docile ebbb, the closest kin
+      ebbb x bebbbholder      Random: the two smallest of the nine, both body size 0.2
+      crebbb x ebbberration   Random: both body size 1, neither a predator
+      ebbb x drebbbd          Other, 3 ebbbs to 1 drebbbd: a drebbbd is an ebbb gone mad, so a mixed
+                              litter is mostly ebbbs and the fierce form stays the rarer one
+    The beee is the ebbbs' predator, and the ebbbomination, the thrumebbb and the goliebbb are amalgams and
+    a colossus, so none of the four is paired. mateMtbHours is left alone.
+
+    The guard. The extension's class does not exist without that mod, so everything, canCrossBreedWith
+    included (which would otherwise change what the species do without it), runs inside a
+    PatchOperationFindMod. It compares the mod's About name with ==: "Better Crossbreeding", exactly. If its
+    author renames it, this patch silently does nothing and the Pickle pass with that mod goes red.
+
+    No load order is needed: both are read while the game runs.
+  -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Better Crossbreeding</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- What each species can cross with (vanilla 1.6 field) -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Ebbb"]/race</xpath>
+          <value>
+            <canCrossBreedWith>
+              <li>Crebbb</li>
+              <li>Bebbbholder</li>
+              <li>Drebbbd</li>
+            </canCrossBreedWith>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Crebbb"]/race</xpath>
+          <value>
+            <canCrossBreedWith>
+              <li>Ebbb</li>
+              <li>Ebbberration</li>
+            </canCrossBreedWith>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Bebbbholder"]/race</xpath>
+          <value>
+            <canCrossBreedWith>
+              <li>Ebbb</li>
+            </canCrossBreedWith>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Ebbberration"]/race</xpath>
+          <value>
+            <canCrossBreedWith>
+              <li>Crebbb</li>
+            </canCrossBreedWith>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Drebbbd"]/race</xpath>
+          <value>
+            <canCrossBreedWith>
+              <li>Ebbb</li>
+            </canCrossBreedWith>
+          </value>
+        </li>
+        <!-- What the offspring is, by mother, named after the father (the mod's extension) -->
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/PawnKindDef[defName="Ebbb"]</xpath>
+          <value>
+            <li Class="DZY.Crossbreeding.Extension">
+              <outcomes>
+                <Crebbb><Random/></Crebbb>
+                <Bebbbholder><Random/></Bebbbholder>
+                <Drebbbd><Other><Ebbb>3</Ebbb><Drebbbd>1</Drebbbd></Other></Drebbbd>
+              </outcomes>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/PawnKindDef[defName="Crebbb"]</xpath>
+          <value>
+            <li Class="DZY.Crossbreeding.Extension">
+              <outcomes>
+                <Ebbb><Random/></Ebbb>
+                <Ebbberration><Random/></Ebbberration>
+              </outcomes>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/PawnKindDef[defName="Bebbbholder"]</xpath>
+          <value>
+            <li Class="DZY.Crossbreeding.Extension">
+              <outcomes>
+                <Ebbb><Random/></Ebbb>
+              </outcomes>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/PawnKindDef[defName="Ebbberration"]</xpath>
+          <value>
+            <li Class="DZY.Crossbreeding.Extension">
+              <outcomes>
+                <Crebbb><Random/></Crebbb>
+              </outcomes>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAddModExtension">
+          <xpath>/Defs/PawnKindDef[defName="Drebbbd"]</xpath>
+          <value>
+            <li Class="DZY.Crossbreeding.Extension">
+              <outcomes>
+                <Ebbb><Other><Ebbb>3</Ebbb><Drebbbd>1</Drebbbd></Other></Ebbb>
+              </outcomes>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

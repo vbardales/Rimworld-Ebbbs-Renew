@@ -1,0 +1,8 @@
+# Pass "avec-na": [XND] Nocturnal Animals (Continued) beside this mod, and nothing else optional.
+#
+# Mlie.XNDNocturnalAnimals, Workshop 2269731409, supports 1.1 to 1.6 and depends on Harmony, which every pass
+# stages anyway. No load order is needed: the extension is read while the game runs. The pass plays
+# 09-nocturnal-animals, which asserts each species carries the clock decided for it, and 01-the-mod-loads.
+#
+# The item is installed in the Windows Workshop folder, which the staging reads first.
+Mlie.XNDNocturnalAnimals   2269731409
