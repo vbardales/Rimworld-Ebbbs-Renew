@@ -129,7 +129,9 @@ deliberately wrong line was reported as undefined, so the check does bite.
   into is XML inheritance as the game documents it, and was not seen. What was checked offline: the patch,
   applied to that mod's own category file from its repository, matches each list exactly once and leaves
   each species in the right lists, and that mod's last patch then copies them to the recipes. Neither the
-  order of two mods in a mod list nor the game's reading of the result was exercised. The item has not been
-  downloaded into the WSL install's Workshop cache.
-- Which recipes the four names in `08` are: they were read from that mod's repository, not from an installed copy,
-  and a rename there fails the scenario at its first step saying the recipe is not loaded.
+  order of two mods in a mod list nor the game's reading of the result was exercised. The item is installed
+  on this machine and in the WSL cache (checked 2026-09-25: version 1.3.7, packageId `SamBucher.ADogSaidAnimalProsthetics2`),
+  so pass P4 can be staged.
+- The recipe names in `08` were checked against the installed copy on 2026-09-25: all five, and the abstract
+  bionic recipe, are defined in its 1.6 files, and its category file is identical to the one from its repository.
+  A rename in a later version fails the scenario at its first step, saying the recipe is not loaded.
