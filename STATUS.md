@@ -24,7 +24,7 @@ remaining:
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
   - unverified: the incompatibility with the original in a running game (P3, rewritten scenarios, not yet played). The game was seen to log nothing about the two defs of one name and to keep the later mod's copy; the original's wildness errors were seen (nine, in the first P3 log)
-  - feature: the Steam page text is fixed at creation and an update does not resend it, so the paragraph About.xml gained for A Dog Said 2 has to be added to the page by hand
+  - to do after the queued P1 and P3 are rendered (Mod/ is frozen): copy LICENSE into Mod/ (byte-identical), point both ATTRIBUTION.md copies and the About.xml description at it, add it to CHANGELOG, then run the validators\n  - feature: the Steam page text is fixed at creation and an update does not resend it, so the paragraph About.xml gained for A Dog Said 2 has to be added to the page by hand
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92
 updated:      2026-09-25, P2 and P4 final green, feature 05 rewritten, P1 and P3 to replay

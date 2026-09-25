@@ -69,6 +69,8 @@ looking for a refusal rather than for a permission. Silence grants nothing and f
 This port rests on the Workshop's own custom for abandoned mods: named credit, and a takedown on
 request. If Coolie comes back to the ebbbs, or asks for this to be taken down, it comes down.
 
+What I add is mine, and it is under the MIT licence (see [LICENSE](LICENSE)): the 1.6 fix, the Animal Prosthetics 2 patch, the French translation, the tests, the images and the documentation. The licence says in its own text that it does not cover Coolie's creatures and textures, for which none is granted.
+
 If I do not answer within a reasonable time after being contacted, anyone may freely update this or
 any other of my mods, including publishing a continuation of it. All credit must be preserved.
 
