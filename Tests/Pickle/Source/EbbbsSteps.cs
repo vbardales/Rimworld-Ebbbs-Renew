@@ -267,7 +267,7 @@ namespace EbbbsRenew.PickleSteps
         [Then("Ebbbs Renew: the PawnKindDef {string} bred with {string} gives {string}")]
         public void BredWithGives(PickleContext ctx, string motherName, string fatherName, string expected)
         {
-            DefModExtension extension = ExtensionOf(ctx, FindDef(ctx, "PawnKindDef", motherName), "DZY.Crossbreeding.Extension");
+            DefModExtension extension = ExtensionOf(ctx, FindDef(ctx, "PawnKindDef", motherName), "DZY.CrossBreeding.Extension");
             IEnumerable outcomes = Walk(extension, "outcomes") as IEnumerable;
             ctx.Require(outcomes != null, "the crossbreeding extension of '" + motherName + "' has no outcomes");
             foreach (object outcome in outcomes)

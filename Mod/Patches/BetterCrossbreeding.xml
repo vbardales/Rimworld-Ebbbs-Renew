@@ -6,7 +6,7 @@
 
     Two things decide a crossbreed, in two places. canCrossBreedWith, a list of defNames in the animal's
     ThingDef race, is vanilla 1.6. What the offspring is comes from that mod's extension,
-    DZY.Crossbreeding.Extension, on the mother's PawnKindDef: its outcomes are named after the FATHER's kind,
+    DZY.CrossBreeding.Extension, on the mother's PawnKindDef: its outcomes are named after the FATHER's kind,
     and say Maternal, Paternal, Random (a coin flip per child) or Other (a weighted list of kinds). Only the
     mother is read, so every pairing is written for both mothers.
 
@@ -81,7 +81,7 @@
         <li Class="PatchOperationAddModExtension">
           <xpath>/Defs/PawnKindDef[defName="Ebbb"]</xpath>
           <value>
-            <li Class="DZY.Crossbreeding.Extension">
+            <li Class="DZY.CrossBreeding.Extension">
               <outcomes>
                 <Crebbb><Random/></Crebbb>
                 <Bebbbholder><Random/></Bebbbholder>
@@ -93,7 +93,7 @@
         <li Class="PatchOperationAddModExtension">
           <xpath>/Defs/PawnKindDef[defName="Crebbb"]</xpath>
           <value>
-            <li Class="DZY.Crossbreeding.Extension">
+            <li Class="DZY.CrossBreeding.Extension">
               <outcomes>
                 <Ebbb><Random/></Ebbb>
                 <Ebbberration><Random/></Ebbberration>
@@ -104,7 +104,7 @@
         <li Class="PatchOperationAddModExtension">
           <xpath>/Defs/PawnKindDef[defName="Bebbbholder"]</xpath>
           <value>
-            <li Class="DZY.Crossbreeding.Extension">
+            <li Class="DZY.CrossBreeding.Extension">
               <outcomes>
                 <Ebbb><Random/></Ebbb>
               </outcomes>
@@ -114,7 +114,7 @@
         <li Class="PatchOperationAddModExtension">
           <xpath>/Defs/PawnKindDef[defName="Ebbberration"]</xpath>
           <value>
-            <li Class="DZY.Crossbreeding.Extension">
+            <li Class="DZY.CrossBreeding.Extension">
               <outcomes>
                 <Crebbb><Random/></Crebbb>
               </outcomes>
@@ -124,7 +124,7 @@
         <li Class="PatchOperationAddModExtension">
           <xpath>/Defs/PawnKindDef[defName="Drebbbd"]</xpath>
           <value>
-            <li Class="DZY.Crossbreeding.Extension">
+            <li Class="DZY.CrossBreeding.Extension">
               <outcomes>
                 <Ebbb><Other><Ebbb>3</Ebbb><Drebbbd>1</Drebbbd></Other></Ebbb>
               </outcomes>

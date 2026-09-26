@@ -50,7 +50,7 @@ copies of the mods, and neither needs C#: each is one guarded XML patch file, li
 - **What it reads, and where.** Two things, in two places:
   1. `canCrossBreedWith`, a list of defNames in the ThingDef's `race`, and `mateMtbHours`. **This one is vanilla 1.6**
      (Core uses it in `Races_Animal_MiscGroup.xml`), not the mod's.
-  2. The mod's own `<li Class="DZY.Crossbreeding.Extension"><outcomes>` on the **mother's PawnKindDef**, which says
+  2. The mod's own `<li Class="DZY.CrossBreeding.Extension"><outcomes>` on the **mother's PawnKindDef**, which says
      what the offspring is: `Maternal`, `Paternal`, `Random` (a coin flip per child) or `Other` (a weighted list of
      kinds). Only the mother is checked, so a pairing has to be written for both sexes to work both ways.
      Without the mod, the game's own rule applies.

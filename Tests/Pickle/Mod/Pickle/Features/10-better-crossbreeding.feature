@@ -60,5 +60,5 @@ Feature: four pairs of species can crossbreed with Better Crossbreeding
   Scenario: nothing logged while the defs loaded names the patch or the mod
     Given Ebbbs Renew: the game has finished starting
     And the main menu is open
-    Then Ebbbs Renew: nothing logged as an error or a warning names "Crossbreeding.Extension"
+    Then Ebbbs Renew: nothing logged as an error or a warning names "CrossBreeding.Extension"
     And Ebbbs Renew: nothing logged as an error or a warning names "nelim.ebbbsrenew"

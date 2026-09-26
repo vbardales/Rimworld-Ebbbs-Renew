@@ -142,7 +142,7 @@ foreach ($op in $extOps) {
     Check ($op.xpath -cmatch '^/Defs/PawnKindDef\[defName="(\w+)"\]$') "Unexpected outcome xpath: $($op.xpath)"
     $mother = $Matches[1]
     $ext = @($op.SelectNodes('value/li'))
-    Check ($ext.Count -eq 1 -and $ext[0].Class -ceq 'DZY.Crossbreeding.Extension') "Wrong extension class for $mother"
+    Check ($ext.Count -eq 1 -and $ext[0].Class -ceq 'DZY.CrossBreeding.Extension') "Wrong extension class for $mother"
     $entries = @($ext[0].SelectNodes('outcomes/*'))
     Check ($canCross.ContainsKey($mother) -and $entries.Count -eq $canCross[$mother].Count) "The outcomes of $mother do not match its canCrossBreedWith"
     foreach ($entry in $entries) {
