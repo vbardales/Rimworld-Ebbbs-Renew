@@ -32,8 +32,10 @@ First release of the 1.6 update of **Ebbbs**, by Coolie.
   `Patches/BetterCrossbreeding.xml`. Neither mod is a dependency.
 - **The MIT licence for the port's own work** (`LICENSE`, in the repository and in the mod folder). It does not cover
   Coolie's creatures and textures, for which none is granted.
-- A Pickle suite in `Tests/Pickle`, eight features and twenty-five scenarios, two passes played once on 2026-09-24 and the others not yet, and the
-  written scope of the in-game checks in `TESTING.md`. Nothing in `Mod/` depends on it.
+- A Pickle suite in `Tests/Pickle`, ten features and thirty-two scenarios. P5 and P6 are green on 2026-09-26,
+  after fixing the Better Crossbreeding extension class name; P1 to P4 were green on 2026-09-24, on an
+  earlier revision, and their replay on the revision delivered here is in progress (`docs/runs/`). The
+  written scope of the in-game checks is in `TESTING.md`. Nothing in `Mod/` depends on this suite.
 
 ### Changed
 
