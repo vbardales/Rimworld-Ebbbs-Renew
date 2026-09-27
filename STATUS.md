@@ -32,6 +32,15 @@ updated:      2026-09-25, P2 and P4 final green, feature 05 rewritten, P1 and P3
 
 # Ebbbs Renew — status
 
+## Note from the CI/CD session — 2026-09-27
+
+The manual publish workflow (`publish-tag.yml`) is now in place (defs-only mod: `--require Defs
+--forbid Assemblies`, no build). **No description source configured**: this repository has
+neither `PUBLICATION.md` nor `Mod/README.template.md` to source a Steam description from.
+`update_description` is left unusable; `build`-free tag/publish/`update_preview`/`update_title`/
+`update_tags` all work as-is. Writing a `PUBLICATION.md` with a `## Steam description` block (the
+project standard) is a separate decision, left here rather than improvised.
+
 ## Native support for A Dog Said 2, and the dispatcher — 2026-09-24
 
 **Stage unchanged: `done`.** A change to `Mod/` invalidates the controls it touches, not the others, and each
