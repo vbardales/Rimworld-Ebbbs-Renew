@@ -16,19 +16,29 @@ dependencies: none
 showcase:     icon and Preview present, both inspected directly on 2026-09-24; in-game review pending
 tested_on:
 automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and injection paths; Pickle step check, 405 step lines all resolved; all rerun 2026-09-25
-manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (32 written in 10 features; passes P1 to P4 green on 2026-09-25, P5 and P6 for the two new patches not played) or a justified not-applicable
+manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (32 written in 10 features; P5 and P6 now green on the fixed revision, see below) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - unverified: the passes on the revision that is delivered. All four are green on 2026-09-25 (P1 15 of 15 with 6 skipped by requirement, P2 9 of 9, P3 2 of 2, P4 8 of 8; docs/runs/2026-09-25.md), on two revisions, and Mod/ is about to change: LICENSE, then the Nocturnal Animals and Better Crossbreeding patches (BACKLOG.md). Play the four passes again once, then tested
+  - unverified: P1-P4 replayed on the revision that carries the Better Crossbreeding fix (b38f4c9) and the run record (6b4e40f). P1 requested (ticket 20260927-102349-582-e6f9); P2-P4 to follow, one request each, before `tested`
   - unverified: how the game's own mod sorting places this mod relative to A Dog Said 2 in a real mod list. The native support itself passed in a running game on 2026-09-25 with this mod staged first (feature 08, 4 of 4), and the staging does not sort by loadBefore, so that part is the game's and is not tested
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92
-updated:      2026-09-25, all four passes green; Mod/ unfrozen for LICENSE and two compatibility patches
+updated:      2026-09-27, P5 and P6 green after fixing the extension class name; P1 replay requested
 ---
 
 # Ebbbs Renew — status
+
+## P5 and P6 green, one bug found and fixed — 2026-09-27
+
+**Stage unchanged: `done`.** P5 (ticket `5d95`) was green first try, 6 of 6. P6 (ticket `e892`) failed one scenario
+of 8: the patch declared the extension class as `DZY.Crossbreeding.Extension`, but the mod's own DLL (decompiled
+with `ilspycmd`) names it `DZY.CrossBreeding.Extension` (capital B). Fixed in the patch, the local step, the
+validator, the feature text and `BACKLOG.md`; the replay (ticket `cd68`, evidence `p6-crossbreeding-3`) is green,
+8 of 8. Both conditional sets (`09`, `10`) are now proven. Record: `docs/runs/2026-09-25.md`.
+
+Next: replay P1 to P4 on this revision (P1 requested, ticket `20260927-102349-582-e6f9`), then `tested`.
 
 ## The licence, and support for Nocturnal Animals and Better Crossbreeding — 2026-09-25
 
