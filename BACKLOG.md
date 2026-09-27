@@ -75,7 +75,9 @@ copies of the mods, and neither needs C#: each is one guarded XML patch file, li
   | Ebbb x Drebbbd | `Other`, weighted 3 ebbb to 1 drebbbd | a drebbbd is an ebbb gone mad, so a mixed litter is mostly ebbbs, and the fierce form stays the rarer one |
 
   That is four pairs and eight outcome entries, and eight `canCrossBreedWith` entries in the guarded patch. It is one
-  file to change afterwards.- **Tests:** a pass with the mod staged, a local step reading `race.canCrossBreedWith` and the outcomes off the
+  file to change afterwards.
+
+- **Tests:** a pass with the mod staged, a local step reading `race.canCrossBreedWith` and the outcomes off the
   defs, and a scenario that breeds a pair and reads the kind of the child, if the game can be made to do it in a
   reasonable time (`mateMtbHours` is long). If it cannot, the def-level assertions are what the pass proves and the
   breeding itself stays a manual check, written down as such.
