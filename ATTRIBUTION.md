@@ -8,7 +8,7 @@ their textures. This repository holds the port to RimWorld 1.6 and nothing else.
 | | |
 |---|---|
 | Mod | Ebbbs |
-| Author | Coolie |
+| Author | Coolie (own collection title "Coolie's Rimworld Mods"; the Steam account itself now displays as `coolziecat`, checked 2026-09-27) |
 | Workshop | [2817264755](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755) |
 | Last version supported | 1.5 |
 | Last updated | 7 July 2024 |
