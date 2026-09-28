@@ -11,7 +11,7 @@ $docs = @($files | ForEach-Object { [xml](Get-Content -LiteralPath $_.FullName -
 $about = ($docs | Where-Object { $_.DocumentElement.LocalName -eq 'ModMetaData' }).ModMetaData
 $url = 'https://github.com/vbardales/Rimworld-Ebbbs-Renew'
 Check ($about.packageId -ceq 'nelim.ebbbs') 'Wrong packageId'
-Check ($about.name -ceq 'Ebbbs Renew (unofficial)') 'Missing unofficial title'
+Check ($about.name -ceq 'Ebbbs (Continued)') 'Wrong title'
 Check ($about.url -ceq $url -and $about.description.Contains($url)) 'Missing GitHub link'
 Check ($about.supportedVersions.li -contains '1.6') 'Missing 1.6 support'
 Check ($about.incompatibleWith.li -contains 'Coolie.Ebbbs') 'Missing upstream incompatibility'

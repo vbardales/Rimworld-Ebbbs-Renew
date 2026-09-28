@@ -3,7 +3,7 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
-mod:          Ebbbs Renew (unofficial)
+mod:          Ebbbs (Continued)
 packageId:    nelim.ebbbs
 repo:         Rimworld-Ebbbs-Renew
 remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
@@ -46,10 +46,16 @@ rather than treat it as a silent, unauthorized continuation. Quote and citation 
 - Corrected the now-false "published without the original author's explicit consent" sentence in
   `README.md`, `Mod/About/About.xml` and `PUBLICATION.md`'s Steam description block, to name the
   authorization instead.
-- **Not yet decided:** whether the `(unofficial)` suffix and the mod's title still fit now that
-  explicit permission exists, versus the convention used for "(Continued)" mods maintained with
-  the original author's blessing. `About.xml`'s `<name>` and the packageId's `(unofficial)`-adjacent
-  naming are untouched pending that decision; nothing here renames anything.
+- **Renamed (owner's decision, same day):** `Ebbbs Renew (unofficial)` -> `Ebbbs (Continued)`,
+  following the community convention for an authorized continuation (`PUBLISHING.md`, "Mod «
+  (Continued) » ou repris"). The opening description line changed from `UNOFFICIAL. ...` to
+  `Original mod by coolziecat. Continued with their explicit permission ...`, in `About.xml`,
+  `README.md` and `PUBLICATION.md`'s Steam description block. `Tests/Pickle/Mod/About/About.xml`'s
+  `displayName` and `Tests/Validate-Mod.ps1`'s title check follow the same rename. The folder, the
+  repository (`Rimworld-Ebbbs-Renew`), the packageId (`nelim.ebbbs`) and every internal "Ebbbs
+  Renew" reference used purely as a project/log identifier (this file's own header, the Pickle
+  steps' `Ebbbs Renew:` log prefix, `WORKSHOP_COMMENTS.md`'s `Covers` registry) are untouched: the
+  rename is the in-game title only.
 - `upstream_mod_remotes: N/A` (frontmatter, added same day): no GitHub link found on the current page,
   the author's profile, or a 2025-06-23 `web.archive.org` snapshot, despite the 2024 comment
   mentioning one was in the description then.

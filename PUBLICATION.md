@@ -32,9 +32,9 @@ page and `About.xml`'s `<description>` from this block; no second copy to keep i
 ## Steam description
 
 ```markdown
-UNOFFICIAL. This is not the original author's own upload, but a continuation made with their explicit
-permission, given in a Steam comment on the original mod's page (see ATTRIBUTION.md). If they contact
-me to request its removal, I undertake to take it down promptly.
+Original mod by coolziecat. Continued with their explicit permission, given in a Steam comment on the
+original mod's page (see ATTRIBUTION.md). If they contact me to request its removal, I undertake to
+take it down promptly.
 
 Nine forms of goo, brought forward to RimWorld 1.6.
 
@@ -254,7 +254,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3806760667
 ```
 Hello DizzyEevee! 🥚
 
-Thank you for Better Crossbreeding: it gave the nine ebbb-family creatures of Ebbbs Renew (unofficial), my
+Thank you for Better Crossbreeding: it gave the nine ebbb-family creatures of Ebbbs (Continued), my
 1.6 update of an old abandoned mod, a way to actually breed into each other instead of just standing next
 to each other looking related. Four pairs, both ways, weighted the way their sizes and temperaments
 suggested to me.
