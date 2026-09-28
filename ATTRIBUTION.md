@@ -12,7 +12,7 @@ their textures. This repository holds the port to RimWorld 1.6 and nothing else.
 | Workshop | [2817264755](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755) |
 | Last version supported | 1.5 |
 | Last updated | 7 July 2024 |
-| Licence | none stated |
+| Licence | no file, but explicit authorization found in a Steam comment (below) |
 
 **Abandoned, not withdrawn.** The item is still on the Workshop and still downloadable; it reached
 1.5 and stopped there, missing 1.6. Nobody else has picked it up: Mlie has no continuation of it, a
@@ -22,23 +22,28 @@ or `Goliebbb`.
 The mod ships `1.3`, `1.4` and `1.5` folders. **The 1.5 one is taken**, which is identical to 1.4 bar
 a single file.
 
-## The licence, looked for in four places, and in a fifth
+## The licence, looked for in four places, and found in a fifth
 
-"None stated" is a verdict, not an absence of checking. A refusal never presents itself as a
-licence, so each place was searched for the refusal rather than for the permission — `prohibit`,
-`forbid`, `do not redistribute`, `no reupload`, `all rights reserved`, `without permission`, and
-the Japanese and Chinese forms 禁止, 転載, 無断, 二次配布, 不得.
+No `LICENSE` or `COPYING` file, nothing about reuse in `About.xml`'s `<description>`, no linked
+repository, nothing about reuse in the Workshop page description, nothing in the `README.md` it
+ships. But the author gave **explicit permission** in a Steam comment on the mod's own page, still
+visible there, replying to a request to update the mod for a newer version:
 
-| Where | What it says |
-|---|---|
-| A `LICENSE` or `COPYING` file in the mod | there is none |
-| The `<description>` of its `About.xml` | nothing about reuse |
-| A linked repository | there is none |
-| The Workshop page description | nothing about reuse |
-| The `README.md` it ships, which most mods do not | nothing about reuse |
+> I do give people permission to do whatever with this mod though, that's why the github link is
+> in the description. If you want em in your game, you're 100% free to update it for 1.5! As for
+> me, I'm definitely just, not gonna touch this mod until I know for certain I have the motivation
+> to make the sprites...
+>
+> — coolziecat, 6 Jul 2024, on
+> [the mod's Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755),
+> checked still visible 2026-09-28
 
-Silence grants nothing and forbids nothing. This port rests on the Workshop's own custom for
-abandoned mods: named credit, and a takedown on request.
+The GitHub link the comment mentions is no longer in the description, and none was found on the
+author's profile or in a 2025-06-23 `web.archive.org` snapshot of the page (checked 2026-09-28); the
+authorization itself does not depend on that link existing. It is broad ("do whatever"), names
+updating the mod specifically, and is unconditional: it covers this 1.6 port and its redistribution.
+This is not a silent, unauthorized continuation; the mod's own Workshop custom of named credit and
+a takedown on request still applies as a courtesy on top of it.
 
 **The licence of the port itself.** The row above is about Coolie's mod. What this port added is its own work and
 is under the MIT licence, in `LICENSE`, which says in its own text that it does not cover Coolie's creatures and

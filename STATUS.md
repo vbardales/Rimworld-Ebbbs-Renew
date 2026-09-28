@@ -10,7 +10,7 @@ remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
 detached:     yes
 stage:        done
-licence:      silent
+licence:      authorized (was silent; see 2026-09-28 entry below)
 licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online in this session
 upstream_mod_remotes: N/A (checked 2026-09-28: no GitHub link on the current Workshop page, the profile,
   or a 2025-06-23 web.archive.org snapshot of the page)
@@ -31,6 +31,28 @@ updated:      2026-09-28, packageId shortened to nelim.ebbbs; all six passes to 
 ---
 
 # Ebbbs Renew — status
+
+## Licence reclassified: `silent` -> `authorized` — 2026-09-28
+
+**Stage unchanged: `done`.** The 2026-09-13 audit below found no licence and no authorization in five
+places (a file, the upstream `About.xml`, its `README.md`, a linked repository, the Workshop
+description) and classified the mod `silent`. Checking the Workshop page itself (not part of that
+audit) turned up a sixth place: a still-visible Steam comment by the author, coolziecat, dated 6 Jul
+2024, replying to a request to update the mod for 1.5: "I do give people permission to do whatever
+with this mod though... If you want em in your game, you're 100% free to update it for 1.5!" This is
+explicit, broad, unconditional authorization, found on the owner's decision (2026-09-28) to reclassify
+rather than treat it as a silent, unauthorized continuation. Quote and citation in `ATTRIBUTION.md`.
+
+- Corrected the now-false "published without the original author's explicit consent" sentence in
+  `README.md`, `Mod/About/About.xml` and `PUBLICATION.md`'s Steam description block, to name the
+  authorization instead.
+- **Not yet decided:** whether the `(unofficial)` suffix and the mod's title still fit now that
+  explicit permission exists, versus the convention used for "(Continued)" mods maintained with
+  the original author's blessing. `About.xml`'s `<name>` and the packageId's `(unofficial)`-adjacent
+  naming are untouched pending that decision; nothing here renames anything.
+- `upstream_mod_remotes: N/A` (frontmatter, added same day): no GitHub link found on the current page,
+  the author's profile, or a 2025-06-23 `web.archive.org` snapshot, despite the 2024 comment
+  mentioning one was in the description then.
 
 ## packageId shortened to `nelim.ebbbs` — 2026-09-28
 

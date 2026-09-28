@@ -32,8 +32,9 @@ page and `About.xml`'s `<description>` from this block; no second copy to keep i
 ## Steam description
 
 ```markdown
-UNOFFICIAL. This mod is published without the original author's explicit consent. If the original
-author contacts me to request its removal, I undertake to take it down promptly.
+UNOFFICIAL. This is not the original author's own upload, but a continuation made with their explicit
+permission, given in a Steam comment on the original mod's page (see ATTRIBUTION.md). If they contact
+me to request its removal, I undertake to take it down promptly.
 
 Nine forms of goo, brought forward to RimWorld 1.6.
 

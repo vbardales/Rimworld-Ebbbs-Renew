@@ -1,6 +1,6 @@
 # Ebbbs Renew (unofficial)
 
-UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
+UNOFFICIAL. This is not the original author's own upload, but a continuation made with their explicit permission, given in a Steam comment on the original mod's page (see ATTRIBUTION.md). If they contact me to request its removal, I undertake to take it down promptly.
 
 Nine forms of goo, brought forward to RimWorld 1.6.
 
@@ -76,11 +76,14 @@ No balance value was changed.
 
 ## Terms
 
-The original **states no licence anywhere** — no file in the mod, nothing in its `About.xml`, nothing in
-the `README.md` it ships, no linked repository, and nothing on its Workshop page, which was read
-looking for a refusal rather than for a permission. Silence grants nothing and forbids nothing.
+The original states no licence anywhere — no file in the mod, nothing in its `About.xml`, nothing in
+the `README.md` it ships, no linked repository, and nothing about reuse in its Workshop page
+description. But its author gave **explicit permission** in a Steam comment on the mod's own page,
+still visible there: "I do give people permission to do whatever with this mod... If you want em in
+your game, you're 100% free to update it for 1.5!" See [ATTRIBUTION.md](ATTRIBUTION.md) for the full
+quote and where it was checked.
 
-This port rests on the Workshop's own custom for abandoned mods: named credit, and a takedown on
+This port also rests on the Workshop's own custom for abandoned mods: named credit, and a takedown on
 request. If Coolie comes back to the ebbbs, or asks for this to be taken down, it comes down.
 
 What I add is mine, and it is under the MIT licence (see [LICENSE](LICENSE)): the 1.6 fix, the three compatibility patches, the French translation, the tests, the images and the documentation. The licence says in its own text that it does not cover Coolie's creatures and textures, for which none is granted.
