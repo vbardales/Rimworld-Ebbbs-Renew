@@ -12,6 +12,8 @@ detached:     yes
 stage:        done
 licence:      silent
 licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online in this session
+upstream_mod_remotes: N/A (checked 2026-09-28: no GitHub link on the current Workshop page, the profile,
+  or a 2025-06-23 web.archive.org snapshot of the page)
 dependencies: none
 showcase:     icon and Preview present, both inspected directly on 2026-09-24; in-game review pending
 tested_on:
