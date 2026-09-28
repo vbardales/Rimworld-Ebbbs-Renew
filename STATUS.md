@@ -96,6 +96,19 @@ the passes on the revision that is delivered.
   `CHANGELOG.md` and the README say it. The Pickle suite has features `09` and `10`, four more local steps, two pass maps,
   and passes P5 and P6; `Check-Steps.ps1` resolves 456 step lines.
 - **Not run.** P5 and P6, and every pass on this revision.
+
+## Note from the CI/CD session — 2026-09-27
+
+The manual publish workflow (`publish-tag.yml`) is now in place (defs-only mod: `--require Defs
+--forbid Assemblies`, no build). **No description source configured**: this repository has
+neither `PUBLICATION.md` nor `Mod/README.template.md` to source a Steam description from.
+`update_description` is left unusable; `build`-free tag/publish/`update_preview`/`update_title`/
+`update_tags` all work as-is. Writing a `PUBLICATION.md` with a `## Steam description` block (the
+project standard) is a separate decision, left here rather than improvised.
+
+**Resolved 2026-09-27/28:** `PUBLICATION.md` now exists, with a `## Steam description` block. The
+`update_description` flag can be turned on for the next dry-run.
+
 ## Native support for A Dog Said 2, and the dispatcher — 2026-09-24
 
 **Stage unchanged: `done`.** A change to `Mod/` invalidates the controls it touches, not the others, and each
