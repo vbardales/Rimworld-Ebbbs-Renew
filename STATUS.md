@@ -11,7 +11,9 @@ visibility:   public
 detached:     yes
 stage:        done
 licence:      authorized (was silent; see 2026-09-28 entry below)
-licence_at:   ATTRIBUTION.md; historical five-source audit, not refreshed online in this session
+licence_at:   ATTRIBUTION.md; historical five-source audit, refreshed online 2026-09-28 (see the
+  reclassification entry below): the Workshop page, the author's profile and a web.archive.org
+  snapshot were checked, and turned up the coolziecat comment
 upstream_mod_remotes: N/A (checked 2026-09-28: no GitHub link on the current Workshop page, the profile,
   or a 2025-06-23 web.archive.org snapshot of the page)
 dependencies: none
