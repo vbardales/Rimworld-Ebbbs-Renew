@@ -31,15 +31,15 @@ Feature: the declared incompatibility with the original mod is still true
     Given Ebbbs Renew: the game has finished starting
     And the main menu is open
     Then mod "Coolie.Ebbbs" is loaded
-    And mod "nelim.ebbbsrenew" is loaded
+    And mod "nelim.ebbbs" is loaded
     And Ebbbs Renew: the mod "Coolie.Ebbbs" defines a ThingDef named "Ebbb"
-    And Ebbbs Renew: the mod "nelim.ebbbsrenew" defines a ThingDef named "Ebbb"
+    And Ebbbs Renew: the mod "nelim.ebbbs" defines a ThingDef named "Ebbb"
     And Ebbbs Renew: the mod "Coolie.Ebbbs" defines a PawnKindDef named "Ebbb"
-    And Ebbbs Renew: the mod "nelim.ebbbsrenew" defines a PawnKindDef named "Ebbb"
-    And Ebbbs Renew: the ThingDef "Ebbb" that the game runs comes from the mod "nelim.ebbbsrenew"
-    And Ebbbs Renew: the PawnKindDef "Ebbb" that the game runs comes from the mod "nelim.ebbbsrenew"
-    And Ebbbs Renew: the ThingDef "Thrumebbb" that the game runs comes from the mod "nelim.ebbbsrenew"
-    And Ebbbs Renew: the PawnKindDef "Thrumebbb" that the game runs comes from the mod "nelim.ebbbsrenew"
+    And Ebbbs Renew: the mod "nelim.ebbbs" defines a PawnKindDef named "Ebbb"
+    And Ebbbs Renew: the ThingDef "Ebbb" that the game runs comes from the mod "nelim.ebbbs"
+    And Ebbbs Renew: the PawnKindDef "Ebbb" that the game runs comes from the mod "nelim.ebbbs"
+    And Ebbbs Renew: the ThingDef "Thrumebbb" that the game runs comes from the mod "nelim.ebbbs"
+    And Ebbbs Renew: the PawnKindDef "Thrumebbb" that the game runs comes from the mod "nelim.ebbbs"
 
   Scenario: the original still writes the wildness that 1.6 rejects
     Given Ebbbs Renew: the game has finished starting

@@ -25,7 +25,7 @@ Feature: four pairs of species can crossbreed with Better Crossbreeding
     Given Ebbbs Renew: the game has finished starting
     And the main menu is open
     Then mod "DizzyEevee.BetterCrossbreeding" is loaded
-    And mod "nelim.ebbbsrenew" is loaded
+    And mod "nelim.ebbbs" is loaded
     And Ebbbs Renew: the ThingDef "Ebbb" can cross with "Crebbb"
     And Ebbbs Renew: the ThingDef "Crebbb" can cross with "Ebbb"
     And Ebbbs Renew: the ThingDef "Ebbb" can cross with "Bebbbholder"
@@ -61,4 +61,4 @@ Feature: four pairs of species can crossbreed with Better Crossbreeding
     Given Ebbbs Renew: the game has finished starting
     And the main menu is open
     Then Ebbbs Renew: nothing logged as an error or a warning names "CrossBreeding.Extension"
-    And Ebbbs Renew: nothing logged as an error or a warning names "nelim.ebbbsrenew"
+    And Ebbbs Renew: nothing logged as an error or a warning names "nelim.ebbbs"

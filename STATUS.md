@@ -4,7 +4,7 @@ translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
 mod:          Ebbbs Renew (unofficial)
-packageId:    nelim.ebbbsrenew
+packageId:    nelim.ebbbs
 repo:         Rimworld-Ebbbs-Renew
 remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
@@ -19,16 +19,20 @@ automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and i
 manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (32 written in 10 features; P5 and P6 now green on the fixed revision, see below) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - unverified: P1-P4 replayed on the revision that carries the Better Crossbreeding fix (b38f4c9) and the run record (6b4e40f). P1 requested (ticket 20260927-102349-582-e6f9); P2-P4 to follow, one request each, before `tested`
+  - unverified: P1 to P6 replayed on the revision that carries the new packageId `nelim.ebbbs` (2026-09-28); the earlier greens were on `nelim.ebbbsrenew`
   - unverified: how the game's own mod sorting places this mod relative to A Dog Said 2 in a real mod list. The native support itself passed in a running game on 2026-09-25 with this mod staged first (feature 08, 4 of 4), and the staging does not sort by loadBefore, so that part is the game's and is not tested
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92
-updated:      2026-09-27, P5 and P6 green after fixing the extension class name; P1 replay requested
+updated:      2026-09-28, packageId shortened to nelim.ebbbs; all six passes to replay on it
 ---
 
 # Ebbbs Renew — status
+
+## packageId shortened to `nelim.ebbbs` — 2026-09-28
+
+**Stage unchanged: `done`.** At the owner's request the `Renew` suffix left the packageId: `nelim.ebbbsrenew` became `nelim.ebbbs` (and the Pickle companion `nelim.ebbbs.pickletests`), in `About.xml`, the features, the ADS2 pass map and the validator. Safe now because the Workshop item `3806760667` is private and was never public: nobody has the old id in a mod list. The folder, the repository, the title and the dispatcher name stay `EbbbsRenew`. P3 (`e7e5`) was green on the old id; that changed `Mod/` and `Tests/`, so P1 to P6 are replayed on the new one (`docs/runs/2026-09-25.md`).
 
 ## P5 and P6 green, one bug found and fixed — 2026-09-27
 
@@ -385,7 +389,7 @@ This file stays at the root, outside the distributable `Mod/` folder.
 ## Identity and scope
 
 - Folder: `C:\Users\nelim\Documents\rimworld\EbbbsRenew`.
-- Mod title: **Ebbbs Renew (unofficial)**; packageId: `nelim.ebbbsrenew`.
+- Mod title: **Ebbbs Renew (unofficial)**; packageId: `nelim.ebbbs`.
 - Remote: https://github.com/vbardales/Rimworld-Ebbbs-Renew.git.
 - Independent local Git repository, with its own `.git` directory, branch `main`.
   `git rev-parse --show-toplevel` resolves to this folder. The parent repository

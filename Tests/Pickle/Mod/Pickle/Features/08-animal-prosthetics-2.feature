@@ -29,8 +29,8 @@ Feature: the species are offered the surgeries of their A Dog Said 2 category
     Given Ebbbs Renew: the game has finished starting
     And the main menu is open
     Then mod "SamBucher.ADogSaidAnimalProsthetics2" is loaded
-    And mod "nelim.ebbbsrenew" is loaded
-    And mod "nelim.ebbbsrenew" loads before "SamBucher.ADogSaidAnimalProsthetics2"
+    And mod "nelim.ebbbs" is loaded
+    And mod "nelim.ebbbs" loads before "SamBucher.ADogSaidAnimalProsthetics2"
 
   Scenario: the two smallest are critters and get the basic replacements only
     Given Ebbbs Renew: the game has finished starting

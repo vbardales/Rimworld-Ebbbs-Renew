@@ -21,7 +21,7 @@ Feature: the species carry the body clock chosen for them in Nocturnal Animals
     Given Ebbbs Renew: the game has finished starting
     And the main menu is open
     Then mod "Mlie.XNDNocturnalAnimals" is loaded
-    And mod "nelim.ebbbsrenew" is loaded
+    And mod "nelim.ebbbs" is loaded
     And Ebbbs Renew: the ThingDef "Ebbb" carries the extension "NocturnalAnimals.ExtendedRaceProperties" whose bodyClock reads "Nocturnal"
     And Ebbbs Renew: the ThingDef "Beee" carries the extension "NocturnalAnimals.ExtendedRaceProperties" whose bodyClock reads "Nocturnal"
     And Ebbbs Renew: the ThingDef "Crebbb" carries the extension "NocturnalAnimals.ExtendedRaceProperties" whose bodyClock reads "Crepuscular"
@@ -36,4 +36,4 @@ Feature: the species carry the body clock chosen for them in Nocturnal Animals
     Given Ebbbs Renew: the game has finished starting
     And the main menu is open
     Then Ebbbs Renew: nothing logged as an error or a warning names "ExtendedRaceProperties"
-    And Ebbbs Renew: nothing logged as an error or a warning names "nelim.ebbbsrenew"
+    And Ebbbs Renew: nothing logged as an error or a warning names "nelim.ebbbs"

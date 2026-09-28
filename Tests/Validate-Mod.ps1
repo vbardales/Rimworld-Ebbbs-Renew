@@ -10,7 +10,7 @@ Check (@($files | Where-Object { $_.FullName -notmatch '[\\/]Languages[\\/]' }).
 $docs = @($files | ForEach-Object { [xml](Get-Content -LiteralPath $_.FullName -Raw) })
 $about = ($docs | Where-Object { $_.DocumentElement.LocalName -eq 'ModMetaData' }).ModMetaData
 $url = 'https://github.com/vbardales/Rimworld-Ebbbs-Renew'
-Check ($about.packageId -ceq 'nelim.ebbbsrenew') 'Wrong packageId'
+Check ($about.packageId -ceq 'nelim.ebbbs') 'Wrong packageId'
 Check ($about.name -ceq 'Ebbbs Renew (unofficial)') 'Missing unofficial title'
 Check ($about.url -ceq $url -and $about.description.Contains($url)) 'Missing GitHub link'
 Check ($about.supportedVersions.li -contains '1.6') 'Missing 1.6 support'

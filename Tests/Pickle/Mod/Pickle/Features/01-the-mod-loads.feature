@@ -16,7 +16,7 @@ Feature: the mod loads clean and defines its nine species
   Scenario: the mod is loaded and its defs exist
     Given Ebbbs Renew: the game has finished starting
     And the main menu is open
-    Then mod "nelim.ebbbsrenew" is loaded
+    Then mod "nelim.ebbbs" is loaded
     And def "Ebbb" of type "ThingDef" exists
     And def "Beee" of type "ThingDef" exists
     And def "Ebbbomination" of type "ThingDef" exists
@@ -59,8 +59,8 @@ Feature: the mod loads clean and defines its nine species
   Scenario: the mod's own identifier appears in no error or warning
     Given Ebbbs Renew: the game has finished starting
     And the main menu is open
-    Then Ebbbs Renew: nothing logged as an error or a warning names "nelim.ebbbsrenew"
-    And no warnings from mod "nelim.ebbbsrenew"
+    Then Ebbbs Renew: nothing logged as an error or a warning names "nelim.ebbbs"
+    And no warnings from mod "nelim.ebbbs"
 
   # The one defect this port exists to fix, in its loaded form. wildness stopped being a field of
   # RaceProperties in 1.6 and became a stat under statBases. The old form is not an error: nothing reads it,

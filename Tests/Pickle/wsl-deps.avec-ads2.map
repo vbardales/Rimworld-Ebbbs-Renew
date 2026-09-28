@@ -19,5 +19,5 @@
 #
 # The item is installed on this machine, in the Windows Workshop folder, which the staging reads first, and it is
 # also in the WSL cache (checked 2026-09-25: version 1.3.7, packageId as below).
-nelim.ebbbsrenew   path:EbbbsRenew/Mod
+nelim.ebbbs   path:EbbbsRenew/Mod
 SamBucher.ADogSaidAnimalProsthetics2   3238353862
