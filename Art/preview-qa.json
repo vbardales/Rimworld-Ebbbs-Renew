@@ -3,7 +3,7 @@
     896,
     504
   ],
-  "bytes": 540016,
+  "bytes": 552103,
   "version": "1.6",
   "fonts": {
     ".strong": [
@@ -19,17 +19,10 @@
         "familyName": "Segoe UI Semibold",
         "postScriptName": "SegoeUI-Semibold",
         "isCustomFont": false,
-        "glyphCount": 5
+        "glyphCount": 11
       }
     ],
-    ".tag": [
-      {
-        "familyName": "Segoe UI",
-        "postScriptName": "SegoeUI",
-        "isCustomFont": false,
-        "glyphCount": 12
-      }
-    ],
+    ".tag": [],
     "p": [
       {
         "familyName": "Segoe UI",
@@ -57,18 +50,18 @@
     ".suffix": {
       "x": 189.453125,
       "y": 66,
-      "width": 89.65625,
+      "width": 161.140625,
       "height": 40
     },
     ".tag": {
       "x": 50,
-      "y": 112.59375,
+      "y": 104.59375,
       "width": 430,
-      "height": 26.390625
+      "height": 0
     },
     "p": {
       "x": 50,
-      "y": 177.984375,
+      "y": 143.59375,
       "width": 430,
       "height": 60.875
     },
@@ -82,8 +75,8 @@
   "minimumContrast": {
     ".strong": 12.047,
     ".suffix": 8.114,
-    ".tag": 7.729,
-    "p": 6.206,
+    ".tag": 8.114,
+    "p": 8.504,
     ".version": 6.674
   },
   "source": "Art/Preview.png",
