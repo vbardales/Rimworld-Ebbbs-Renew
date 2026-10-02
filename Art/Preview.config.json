@@ -1,9 +1,17 @@
 {
-  "title": "Ebbbs (Continued)",
+  "title": "Ebbbs Renew",
   "titleSize": 50,
   "titleParts": [
-    { "text": "Ebbbs", "scale": 1 },
-    { "text": "(Continued)", "scale": 0.65, "font": "ui", "color": "secondary" }
+    {
+      "text": "Ebbbs",
+      "scale": 1
+    },
+    {
+      "text": "(Continued)",
+      "scale": 0.65,
+      "font": "ui",
+      "color": "secondary"
+    }
   ],
   "suffix": "",
   "tag": "",
@@ -13,7 +21,7 @@
   ],
   "layout": "panel",
   "panelAnchor": "top-left",
-  "backgroundFile": "Preview.png",
+  "backgroundFile": "Preview-source.png",
   "backgroundPosition": "center",
   "backgroundSize": "cover",
   "echo": {
@@ -30,7 +38,7 @@
     "flipX": true
   },
   "iconBadge": {
-    "file": "ModIcon-badge.png",
+    "file": "ModIcon-source.png",
     "corner": "bottom-left",
     "width": 180,
     "translate": "-5%, 5%",
@@ -39,5 +47,12 @@
     "veilSize": 275,
     "veilLeft": -55,
     "veilBottom": -61
+  },
+  "palette": {
+    "veil": "#30291F",
+    "inkPrimary": "#F2ECE1",
+    "inkSecondary": "#E5BE84",
+    "accent": "#F47735",
+    "badgeInk": "#17120E"
   }
 }

@@ -1,4 +1,4 @@
-# Ebbbs (Continued)
+# Ebbbs Renew
 
 Original mod by coolziecat. Continued with their explicit permission, given in a Steam comment on the original mod's page (see [ATTRIBUTION.md](ATTRIBUTION.md)). If they contact me to request its removal, I undertake to take it down promptly.
 

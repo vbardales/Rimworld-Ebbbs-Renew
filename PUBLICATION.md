@@ -255,7 +255,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3806760667
 ```
 Hello DizzyEevee! 🥚
 
-Thank you for Better Crossbreeding: it gave the nine ebbb-family creatures of Ebbbs (Continued), my
+Thank you for Better Crossbreeding: it gave the nine ebbb-family creatures of Ebbbs Renew, my
 1.6 update of an old abandoned mod, a way to actually breed into each other instead of just standing next
 to each other looking related. Four pairs, both ways, weighted the way their sizes and temperaments
 suggested to me.

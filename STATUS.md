@@ -3,7 +3,7 @@ localization: complete
 translation_en: complete
 translation_fr: complete
 settings_audit: not_applicable
-mod:          Ebbbs (Continued)
+mod:          Ebbbs Renew
 packageId:    nelim.ebbbs
 repo:         Rimworld-Ebbbs-Renew
 remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
@@ -31,10 +31,14 @@ remaining:
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92
-updated:      2026-09-28, packageId shortened to nelim.ebbbs; all six passes to replay on it
+updated:      2026-10-02, title renamed Ebbbs Renew (owner); all passes to replay
 ---
 
 # Ebbbs Renew — status
+
+## Title set to "Ebbbs Renew" — 2026-10-02
+
+Owner: "Ebbbs (Continued)" did not match the collection standard; the title is `Ebbbs Renew`. `About.xml`, README, PUBLICATION, validator, test companion, FRENCH_REVIEW and `Art/Preview.config.json` follow. `Mod/About/Preview.png` is rendered art and may still show the old title: the owner regenerates it. All passes are replayed on the new revision.
 
 ## French validated by the owner — 2026-10-02
 
@@ -610,3 +614,8 @@ Minimum contrast on rendered backgrounds: title 12.05:1, suffix 8.11:1,
 tag 7.73:1, summary 6.21:1, badge 6.67:1. Entire text rectangles were sampled,
 not only their corners. Evidence: `Art/preview-qa.json`, `Art/preview-background.png`
 and `Art/preview-268.png`. In-game UI review remains pending. No Workshop publication.
+
+
+## Preview source migration — 2026-10-02
+
+Copy, typography, layout and palette are consolidated in `Art/Preview.config.json`. The canonical inputs are `Art/Preview-source.png`, `Art/echo.png` and `Art/ModIcon-source.png`; the shared renderer writes temporary diagnostics under ignored `Art/.render/`. Existing distributed Preview, gallery and ICO outputs were preserved because they were present and coherent; no render was run for this migration. Superseded JSON files and generated QA intermediates were removed. Nothing published.
