@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: complete
 settings_audit: not_applicable
 mod:          Ebbbs (Continued)
 packageId:    nelim.ebbbs
@@ -24,7 +24,7 @@ automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and i
 manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (32 written in 10 features; P5 and P6 now green on the fixed revision, see below) or a justified not-applicable
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 remaining:
-  - unverified: French review by Virginie (TRANSLATIONS.md, gender-agreement rule 2026-09-30); FRENCH_REVIEW.md generated 2026-09-30, 104 rows, no PAWN_gender text in this mod
+  - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
   - unverified: P1 to P6 replayed on the revision that carries the new packageId `nelim.ebbbs` (2026-09-28); the earlier greens were on `nelim.ebbbsrenew`
   - unverified: how the game's own mod sorting places this mod relative to A Dog Said 2 in a real mod list. The native support itself passed in a running game on 2026-09-25 with this mod staged first (feature 08, 4 of 4), and the staging does not sort by loadBefore, so that part is the game's and is not tested
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
@@ -35,6 +35,10 @@ updated:      2026-09-28, packageId shortened to nelim.ebbbs; all six passes to 
 ---
 
 # Ebbbs Renew — status
+
+## French validated by the owner — 2026-10-02
+
+Virginie read FRENCH_REVIEW.md and validated it linguistically after two fixes (ThrumebbbHorn.description, Bebbbholder.description, commit 5e40130). `translation_fr` set to `complete`; FRENCH_REVIEW.md regenerated from that revision.
 
 ## Audit against AUDIT.md (re-read, monorepo `c770fd1e`) — 2026-10-02
 

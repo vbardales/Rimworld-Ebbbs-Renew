@@ -91,3 +91,13 @@ copies of the mods, and neither needs C#: each is one guarded XML patch file, li
   the description and in `ATTRIBUTION.md`, as A Dog Said 2 and the original are.
 - **Unofficial:** neither author is contacted or asked. The patches use only names those mods publish for other mods to
   use.
+
+## Dogs mate (Continued) — examined 2026-10-02, not applicable
+
+`Mlie.DogsMate` (2441132298) enrols a `PawnKindDef` in one of its `Revolus.DogsMate.AnimalGroupDef` groups
+(`1.6/Defs/CompatibleSpecies/*.xml`: Cat, Cheetah, Jaguar, Leopard, Lion, Tiger, Bison, Cow, Giraffe, Camel,
+Elephant, Horse, Pig, Sheep and the rest of the real mammalian taxa). The rule in `PUBLISHING.md` is to follow
+the vanilla analogue of the animal. The nine species are goo with a flesh type and body plans of their own,
+and none has a vanilla analogue in any of those groups, so enrolling one would invent a cross-breeding
+that no group describes. No patch written. The four pairs that do breed are the Better Crossbreeding ones above.
+Revisit only if Mlie adds a group that fits (an amorphous or slime group).
