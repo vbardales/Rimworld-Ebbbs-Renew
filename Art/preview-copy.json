@@ -25,15 +25,15 @@
     "opacity": 1,
     "veil": false,
     "panelTop": 2,
-    "panelRight": 2,
-    "panelWidth": 38,
+    "panelRight": 1,
+    "panelWidth": 27,
     "flipX": true
   },
   "iconBadge": {
     "file": "ModIcon-badge.png",
     "corner": "bottom-left",
     "width": 180,
-    "translate": "-5%, 5%",
+    "translate": "-12.5%, 12.5%",
     "outline": false,
     "veil": "radial",
     "veilSize": 275,
