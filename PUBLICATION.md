@@ -134,10 +134,10 @@ is listed here.
 
 | Order | What it should show | Why there |
 |---|---|---|
-| 1 | The nine species side by side on open ground | The mod's whole content in one frame; the `@review` capture of feature `02` may serve |
-| 2 | A ebbb's information card showing `Wildness` | The exact defect the port exists to fix, and the one thing the log cannot show |
-| 3 | A species offered a prosthetic/bionic recipe with A Dog Said 2 | The one optional integration this mod claims natively |
-| 4 | Two species with a body-clock icon, with Nocturnal Animals | A second optional integration |
+| 1 | The nine species side by side on the studio colony | The mod's whole content in one frame. Scenario "the nine species together in the flower glade" of feature `11`, pass P7; the owner judges the composition |
+| 2 | An ebbb's information card filtered to `Wildness` | The exact defect the port exists to fix, and the one thing the log cannot show. Scenario "the information card of an ebbb, with Wildness" of feature `11`, pass P7 |
+| 3 | A species offered a prosthetic/bionic recipe with A Dog Said 2, its recipe in the surgery menu | The one optional integration this mod claims natively. Needs its own scenario and map, not written |
+| 4 | Two species with a body-clock icon, with Nocturnal Animals | A second optional integration. Needs its own scenario, not written |
 
 The gallery is uploaded by hand (`OPERATIONS.md`): a folder holding only the images to upload, numbered
 `01-`, `02-`... in page order, no old version, no raw capture, no subfolder. It would be

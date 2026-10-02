@@ -18,8 +18,9 @@ Steam receives whole.
 | `08-animal-prosthetics-2` | `avec-ads2` | with A Dog Said 2 beside it, the mod loads before it, and each species is offered the surgeries of its category and none of a higher one |
 | `09-nocturnal-animals` | `avec-na` | with Nocturnal Animals beside it, each species carries the body clock decided for it, and nothing logged names the extension |
 | `10-better-crossbreeding` | `avec-crossbreeding` | with Better Crossbreeding beside it, four pairs are compatible in both directions and give what was decided, and the predator, the amalgams and the colossus are paired with nothing |
+| `11-publication-shots` | `studio` (P7) | the Workshop images, taken on the owner's showcase colony in English: the nine species in a row (image 1) and an ebbb's information card filtered to `Wildness` (image 2). `@review`: nothing is judged by a run, the owner looks at the captures. Skipped in every other pass |
 
-Ten features, thirty-two scenarios. `06` and `07` are **generated** by `New-LabelFeatures.ps1` from
+Eleven features, thirty-four scenarios. `06` and `07` are **generated** by `New-LabelFeatures.ps1` from
 `../Translation-inventory.json`, which stops on any key it has no shape for, so a new kind of text cannot be
 left out silently. Rerun it after any change to the inventory.
 
@@ -65,16 +66,20 @@ powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/
 
 # P4, A Dog Said 2 beside it
 powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P4 A Dog Said 2" -Language English -DepMap wsl-deps.avec-ads2.map -Filter '01-the-mod-loads,08-animal-prosthetics-2' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p4-ads2
+
+# P7, the studio colony: the Workshop images (English; the raw captures are then looked at by the owner)
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P7 studio" -Language English -DepMap wsl-deps.studio.map -Filter '11-publication-shots' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p7-studio
 ```
 
 | Pass | Scenarios it should play | Skipped by requirement |
 |---|---|---|
-| P1, minimal, English | 15: `01` x4, `02` x2, `03` x3, `04`, `06` x5 | `05` (2), `08` (4), `09` (2), `10` (4) |
-| P2, minimal, French | 9: `01` x4, `07` x5 | `05` (2), `08` (4), `09` (2), `10` (4) |
+| P1, minimal, English | 15: `01` x4, `02` x2, `03` x3, `04`, `06` x5 | `05` (2), `08` (4), `09` (2), `10` (4), `11` (2) |
+| P2, minimal, French | 9: `01` x4, `07` x5 | `05` (2), `08` (4), `09` (2), `10` (4), `11` (2) |
 | P3, incompat-original | 2: `05` x2 | none |
 | P4, avec-ads2 | 8: `01` x4, `08` x4 | none |
 | P5, avec-na | 6: `01` x4, `09` x2 | none |
 | P6, avec-crossbreeding | 8: `01` x4, `10` x4 | none |
+| P7, studio | 2: `11` x2 (the nine species, the information card) | all the others, and `11` in every other pass (`@requires` of the PickleTools screenshot packages) |
 
 Compare those numbers with what a report says it discovered and played, and read `exitReason` before the
 counts. A skipped scenario is not a passed one: `05`, `08`, `09` and `10` are skipped in every pass but their own, and
@@ -128,9 +133,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1
 
 The build writes the step DLL into `Mod/Pickle/Assemblies/`, which git ignores: rebuild before every run,
 because Pickle loads step DLLs when the game starts. `Check-Steps.ps1` matches every step line against
-Pickle's own vocabulary read from the installed assemblies and against this suite's seventeen steps, and fails
+Pickle's own vocabulary read from the installed assemblies and against this suite's twenty-four steps, and fails
 on an undefined or ambiguous one before a ticket is taken. It is static: it proves the text of a step exists,
-not that the step does what the scenario hopes. Checked on 2026-09-25: 456 step lines, all resolved. A
+not that the step does what the scenario hopes. Checked on 2026-09-25: 456 step lines, all resolved (2026-10-02, with feature 11: 471 step lines, 24 local patterns, all resolved). A
 deliberately wrong line was reported as undefined, so the check does bite.
 
 ## Not verified

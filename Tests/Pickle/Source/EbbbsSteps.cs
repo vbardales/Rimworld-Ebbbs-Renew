@@ -454,5 +454,146 @@ namespace EbbbsRenew.PickleSteps
                 }
             }
         }
+
+        // ---------------------------------------------------------------- Workshop images
+
+        // What the gallery scenarios spawned, by alias, remembered by thingIDNumber (a reload replaces the objects).
+        private static readonly Dictionary<string, int> Scene = new Dictionary<string, int>();
+        private static readonly string[] NineSpecies =
+            { "Ebbb", "Beee", "Ebbbomination", "Goliebbb", "Ebbberration", "Drebbbd", "Bebbbholder", "Crebbb", "Thrumebbb" };
+        private static IntVec3 RowMiddle = IntVec3.Invalid;
+
+        [BeforeScenario]
+        public void ResetScene(PickleContext ctx)
+        {
+            Scene.Clear();
+            RowMiddle = IntVec3.Invalid;
+        }
+
+        private static Pawn Named(PickleContext ctx, string alias)
+        {
+            int id;
+            ctx.Require(Scene.TryGetValue(alias, out id), "no animal was spawned under the alias '" + alias + "'");
+            Pawn pawn = PawnsFinder.AllMapsWorldAndTemporary_AliveOrDead.FirstOrDefault(p => p.thingIDNumber == id);
+            ctx.Require(pawn != null, "the pawn behind '" + alias + "' no longer exists");
+            return pawn;
+        }
+
+        private static Pawn SpawnAdultPlayerAt(PickleContext ctx, string kindName, IntVec3 around, int radius)
+        {
+            PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindName);
+            ctx.Require(kind != null, "no PawnKindDef named '" + kindName + "' is loaded");
+            Map map = Find.CurrentMap;
+            ctx.Require(Current.Game != null && map != null, "no current map: load the studio fixture first");
+            IntVec3 cell;
+            bool found = CellFinder.TryFindRandomCellNear(
+                around, map, radius,
+                c => c.InBounds(map) && c.Standable(map) && c.GetEdifice(map) == null && c.GetFirstPawn(map) == null,
+                out cell);
+            ctx.Require(found, "no free standable cell was found near " + around);
+            Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
+                kind, Faction.OfPlayer, forceGenerateNewPawn: true,
+                fixedBiologicalAge: kind.RaceProps.lifeStageAges.Last().minAge + 0.01f));
+            GenSpawn.Spawn(pawn, cell, map);
+            pawn.Rotation = Rot4.South;
+            return pawn;
+        }
+
+        [Given("Ebbbs Renew: spawns the player animal {string} as {string} near the cell {int} {int}")]
+        public void SpawnPlayerNear(PickleContext ctx, string alias, string kindName, int x, int z)
+        {
+            Scene[alias] = SpawnAdultPlayerAt(ctx, kindName, new IntVec3(x, 0, z), 3).thingIDNumber;
+        }
+
+        /// <summary>
+        /// The nine adults, one per species, in a row centred on the given cell, each at its own cell (or the
+        /// free cell nearest to it), all facing south. The row's middle is kept for the camera step.
+        /// </summary>
+        [Given("Ebbbs Renew: the nine species stand in a row along the cell {int} {int} with {int} cells between them", TimeoutSeconds = 15f)]
+        public async Task NineInARow(PickleContext ctx, int x, int z, int gap)
+        {
+            int span = gap * (NineSpecies.Length - 1);
+            for (int i = 0; i < NineSpecies.Length; i++)
+            {
+                IntVec3 at = new IntVec3(x - span / 2 + i * gap, 0, z);
+                Scene[NineSpecies[i]] = SpawnAdultPlayerAt(ctx, NineSpecies[i], at, 1).thingIDNumber;
+            }
+
+            RowMiddle = new IntVec3(x, 0, z);
+            Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
+            await ctx.WaitFrames(3);
+        }
+
+        // The size is set every frame for a while: the camera driver's own pan animation can write RootSize
+        // again after a single call (seen in Dalmatians Renew, 2026-09-27). 8 puts roughly 28 cells across a
+        // 16:9 frame, which holds a row of nine spaced three apart; the owner judges the composition.
+        [When("Ebbbs Renew: the camera frames the row of nine", TimeoutSeconds = 15f)]
+        public async Task FrameRow(PickleContext ctx)
+        {
+            ctx.Require(RowMiddle.IsValid, "no row of nine was set up");
+            Find.Selector.ClearSelection();
+            for (int frame = 0; frame < 30; frame++)
+            {
+                Find.CameraDriver.JumpToCurrentMapLoc(RowMiddle);
+                Find.CameraDriver.SetRootSize(8f);
+                await ctx.WaitFrames(1);
+            }
+
+            ctx.Attach("camera root size after framing", Find.CameraDriver.RootSize.ToString("0.00"));
+        }
+
+        // The cursor sits at the screen centre and whatever stands there gets a tooltip over the picture:
+        // centring two cells south of the animal puts it above that point, on bare ground.
+        [When("Ebbbs Renew: centres the camera two cells south of {string}", TimeoutSeconds = 15f)]
+        public async Task CentreCameraSouth(PickleContext ctx, string alias)
+        {
+            Pawn animal = Named(ctx, alias);
+            Find.Selector.ClearSelection();
+            Find.CameraDriver.JumpToCurrentMapLoc(animal.Position + new IntVec3(0, 0, -2));
+            for (int frame = 0; frame < 30; frame++)
+            {
+                Find.CameraDriver.SetRootSize(8f);
+                await ctx.WaitFrames(1);
+            }
+        }
+
+        [When("Ebbbs Renew: opens the information card of {string}", TimeoutSeconds = 15f)]
+        public async Task OpenCard(PickleContext ctx, string alias)
+        {
+            Find.WindowStack.Add(new Dialog_InfoCard(Named(ctx, alias)));
+            await ctx.WaitFrames(5);
+            ctx.Assert(Find.WindowStack.Windows.OfType<Dialog_InfoCard>().Any(), "the information card did not open");
+        }
+
+        private static FieldInfo StatsField(string name)
+        {
+            return typeof(StatsReportUtility).GetField(
+                name, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+        }
+
+        // The card lists some forty stats and the row sought can sit below the fold: the card's own search
+        // box narrows it, and the list is scrolled to its end. Both are static fields of the game's
+        // StatsReportUtility, private in 1.6, so they are reached by reflection.
+        [When("Ebbbs Renew: filters the open information card to {string}", TimeoutSeconds = 15f)]
+        public async Task FilterCard(PickleContext ctx, string text)
+        {
+            ctx.Require(Find.WindowStack.Windows.OfType<Dialog_InfoCard>().Any(), "no information card is open");
+            FieldInfo search = StatsField("quickSearchWidget");
+            FieldInfo scroll = StatsField("scrollPosition");
+            ctx.Require(search != null && scroll != null, "StatsReportUtility no longer has quickSearchWidget or scrollPosition");
+            QuickSearchWidget widget = (QuickSearchWidget)search.GetValue(null);
+            widget.filter.Text = text;
+            scroll.SetValue(null, new UnityEngine.Vector2(0f, 100000f));
+            await ctx.WaitFrames(10);
+        }
+
+        [Then("Ebbbs Renew: the information card of {string} lists the stat {string}")]
+        public void CardLists(PickleContext ctx, string alias, string statName)
+        {
+            StatDef stat = DefDatabase<StatDef>.GetNamedSilentFail(statName);
+            ctx.Require(stat != null, "no StatDef named '" + statName + "'");
+            bool listed = stat.Worker.ShouldShowFor(StatRequest.For(Named(ctx, alias)));
+            ctx.Assert(listed, "the information card of " + alias + " does not list " + statName);
+        }
     }
 }
