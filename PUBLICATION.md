@@ -141,8 +141,9 @@ is listed here.
 | 5 | Two species with a body-clock icon, with Nocturnal Animals | A second optional integration. Needs its own scenario, not written |
 
 The gallery is uploaded by hand (`OPERATIONS.md`): a folder holding only the images to upload, numbered
-`01-`, `02-`... in page order, no old version, no raw capture, no subfolder. It would be
-`Art/Workshop/`, also the workflow's `--gallery-dir` once it exists.
+`01-`, `02-`... in page order, no old version, no raw capture, no subfolder. It is
+`Art/Gallery/` (images numbered `1-`, `2-`, with `0-preview.png` the copy of the Preview), also the
+workflow's `--gallery-dir` once it is configured.
 
 ## Dependencies and DLCs
 
