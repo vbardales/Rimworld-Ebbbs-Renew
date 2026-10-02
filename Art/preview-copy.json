@@ -1,0 +1,43 @@
+{
+  "title": "Ebbbs (Continued)",
+  "titleSize": 50,
+  "titleParts": [
+    { "text": "Ebbbs", "scale": 1 },
+    { "text": "(Continued)", "scale": 0.65, "font": "ui", "color": "secondary" }
+  ],
+  "suffix": "",
+  "tag": "",
+  "copyLines": [
+    "Nine forms of goo, from ankle-high to towering.",
+    "Nobody knows what an ebbb is."
+  ],
+  "layout": "panel",
+  "panelAnchor": "top-left",
+  "backgroundFile": "Preview.png",
+  "backgroundPosition": "center",
+  "backgroundSize": "cover",
+  "echo": {
+    "file": "echo.png",
+    "preSized": true,
+    "color": "var(--accent)",
+    "width": 140,
+    "height": 260,
+    "opacity": 1,
+    "veil": false,
+    "panelTop": 2,
+    "panelRight": 2,
+    "panelWidth": 38,
+    "flipX": true
+  },
+  "iconBadge": {
+    "file": "ModIcon-badge.png",
+    "corner": "bottom-left",
+    "width": 180,
+    "translate": "-5%, 5%",
+    "outline": false,
+    "veil": "radial",
+    "veilSize": 275,
+    "veilLeft": -55,
+    "veilBottom": -61
+  }
+}

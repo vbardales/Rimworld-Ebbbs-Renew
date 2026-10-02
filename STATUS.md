@@ -10,6 +10,7 @@ remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
 detached:     yes
 stage:        done
+workflow_stage: done
 licence:      authorized (was silent; see 2026-09-28 entry below)
 licence_at:   ATTRIBUTION.md; historical five-source audit, refreshed online 2026-09-28 (see the
   reclassification entry below): the Workshop page, the author's profile and a web.archive.org
@@ -34,6 +35,17 @@ updated:      2026-09-28, packageId shortened to nelim.ebbbs; all six passes to 
 ---
 
 # Ebbbs Renew — status
+
+## Audit against AUDIT.md (re-read, monorepo `c770fd1e`) — 2026-10-02
+
+**Retained stage: `done` (`workflow_stage: done`), unchanged.** Revision `3336068`, tree clean. Session title: `ebbbs / done`.
+
+- `done -> tested` still blocked, as before: no `@wip` (checked, none); the four conditional sets are `@requires:` on `Coolie.Ebbbs`, `DizzyEevee.BetterCrossbreeding`, `Mlie.XNDNocturnalAnimals`, `SamBucher.ADogSaidAnimalProsthetics2` and each needs its pass; P1 to P6 are not yet replayed on `nelim.ebbbs`; M1 to M9 are all mapped to a Pickle scenario or justified not-applicable (`TESTING.md`), so no manual test remains once the passes are green. The only report on disk (`p1-english`, 2026-09-29) is 15 passed, 12 skipped by requirement: not enough.
+- `PublishedFileId.txt` exists (`3806760667`), tracked since `04756dd`; `CHANGELOG.md` already opens its published part with `0.1.0`. Nothing to add.
+- `.dds`: none tracked in git (0 of `git ls-files`), `*.dds` already in `.gitignore`; copies stay on disk only.
+- `upstream_mod_remotes`: `N/A`, checked 2026-09-28; unchanged.
+- Evidence: git holds none (`Tests/Pickle/Evidence/` ignored). On disk, `p1-english` cut from 9.5 MB to 0.5 MB: `report.html` and `messages.ndjson` deleted, the one `@review` capture converted to a 1600 px JPEG. Rule for what to keep: `docs/runs/README.md`.
+- Reading record: `docs/PROTOCOLS-READ.md` updated with versions.
 
 ## Translation audit: `translation_fr` reset, `FRENCH_REVIEW.md` generated — 2026-09-30
 

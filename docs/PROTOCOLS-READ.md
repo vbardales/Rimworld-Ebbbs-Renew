@@ -5,7 +5,7 @@ reread for nothing. The rule comes from the dispatcher's `WELCOME.md`, point 5: 
 `AGENTS.md` and `WELCOME.md` at the start of a session and after each compaction of the context, and write
 down the version read. The version of a shared document is **the last commit that touched it**
 (`git log -1 --format='%h %ad' -- <file>`), and `modified, uncommitted` when `git status` shows it changed.
-Every document below was read on 2026-09-25, in full except three: `STYLE_RIMWORLD.md` (lines 1 to 150 and 170
+Every document below was read on 2026-09-25 (AUDIT.md reread 2026-10-02, monorepo `c770fd1e`: unchanged since `90d51374`; PUBLISHING.md moved on 2026-10-02 and is not needed before `prepublished`; STYLE_RIMWORLD.md `f7e23d33`, WORKSHOP_COMMENTS.md `08878789`, PickleTools `b7620cb`, Release-Admin `d5282af`, dispatcher `dcbecf7` have moved and were not reread: not needed at `done`), in full except three: `STYLE_RIMWORLD.md` (lines 1 to 150 and 170
 to 210 of about 300, the rest being the engraved-text and count rules for images), `PickleTools/Docs/steps.md`
 (the first 70 lines, then a search for the steps this suite could use) and `OPERATIONS.md` (all but the
 credentials procedure, lines 109 to 163).
