@@ -39,7 +39,7 @@
 #
 # Raw captures land outside the committed gallery and the finished images are copied into
 # Art/Gallery/ numbered 1-, 2-, 3-; 0-preview.png is already there.
-@review @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.stagedecor@requires:nelim.pickletools.camerazoom
+@review @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.camerazoom
 Feature: images for the Workshop page
 
   Background:
@@ -53,6 +53,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Miel" hair colour is rgb (176, 82, 38)
     And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
     And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (92, 58, 38)
+    And Nelim's Pickle Tools: "Miel" stands at (154, 98) facing South
     And Nelim's Pickle Tools: I place the decor "Table2x2c" at (153, 95)
     And Nelim's Pickle Tools: I place the decor "Stool" at (152, 95)
     And Nelim's Pickle Tools: I place the decor "Stool" at (155, 96)
@@ -77,6 +78,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Miel" hair colour is rgb (176, 82, 38)
     And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
     And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (92, 58, 38)
+    And Nelim's Pickle Tools: "Miel" stands at (154, 98) facing South
     And Nelim's Pickle Tools: I place the decor "Table2x2c" at (153, 95)
     And Nelim's Pickle Tools: I place the decor "Stool" at (152, 95)
     And Nelim's Pickle Tools: I place the decor "Stool" at (155, 96)
