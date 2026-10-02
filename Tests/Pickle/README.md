@@ -18,7 +18,7 @@ Steam receives whole.
 | `08-animal-prosthetics-2` | `avec-ads2` | with A Dog Said 2 beside it, the mod loads before it, and each species is offered the surgeries of its category and none of a higher one |
 | `09-nocturnal-animals` | `avec-na` | with Nocturnal Animals beside it, each species carries the body clock decided for it, and nothing logged names the extension |
 | `10-better-crossbreeding` | `avec-crossbreeding` | with Better Crossbreeding beside it, four pairs are compatible in both directions and give what was decided, and the predator, the amalgams and the colossus are paired with nothing |
-| `11-publication-shots` | `studio` (P7) | the Workshop images, taken on the owner's showcase colony in English: the nine species in a row (image 1) and an ebbb's information card filtered to `Wildness` (image 2). `@review`: nothing is judged by a run, the owner looks at the captures. Skipped in every other pass |
+| `11-publication-shots` | `studio` (P7) | the Workshop images, taken on the owner's showcase colony in English: staged photographs on a story ("Cheese night at the goo pen": a dressed keeper, Miel, a common decor placed then removed for each image): a wide shot of the keeper with the nine species gathered round her (image 1), a close shot of the keeper with an ebbb and a beee (image 2), and, as a plain unstaged capture because it is a menu, an ebbb's information card filtered to `Wildness` (image 3). `@review`: nothing is judged by a run, the owner looks at the captures. Skipped in every other pass |
 
 Eleven features, thirty-four scenarios. `06` and `07` are **generated** by `New-LabelFeatures.ps1` from
 `../Translation-inventory.json`, which stops on any key it has no shape for, so a new kind of text cannot be
@@ -79,7 +79,7 @@ powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/
 | P4, avec-ads2 | 8: `01` x4, `08` x4 | none |
 | P5, avec-na | 6: `01` x4, `09` x2 | none |
 | P6, avec-crossbreeding | 8: `01` x4, `10` x4 | none |
-| P7, studio | 2: `11` x2 (the nine species, the information card) | all the others, and `11` in every other pass (`@requires` of the PickleTools screenshot packages) |
+| P7, studio | 3: `11` x3 (wide shot, close shot, information card) | all the others, and `11` in every other pass (`@requires` of the PickleTools screenshot packages) |
 
 Compare those numbers with what a report says it discovered and played, and read `exitReason` before the
 counts. A skipped scenario is not a passed one: `05`, `08`, `09` and `10` are skipped in every pass but their own, and

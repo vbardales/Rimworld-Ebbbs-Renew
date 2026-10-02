@@ -134,10 +134,11 @@ is listed here.
 
 | Order | What it should show | Why there |
 |---|---|---|
-| 1 | The nine species side by side on the studio colony | The mod's whole content in one frame. Scenario "the nine species together in the flower glade" of feature `11`, pass P7; the owner judges the composition |
-| 2 | An ebbb's information card filtered to `Wildness` | The exact defect the port exists to fix, and the one thing the log cannot show. Scenario "the information card of an ebbb, with Wildness" of feature `11`, pass P7 |
-| 3 | A species offered a prosthetic/bionic recipe with A Dog Said 2, its recipe in the surgery menu | The one optional integration this mod claims natively. Needs its own scenario and map, not written |
-| 4 | Two species with a body-clock icon, with Nocturnal Animals | A second optional integration. Needs its own scenario, not written |
+| 1 | Wide shot: the keeper at her table, the nine species gathered round her (staged: story "Cheese night at the goo pen", dressed keeper, decor placed then removed) | The mod's whole content in one frame. Scenario "wide shot, the keeper at her table with the nine species gathered round her" of feature `11`, pass P7; the owner judges the composition |
+| 2 | Close shot: the keeper with an ebbb and a beee beside her (staged, same decor) | The gentle side of the goo, at a size where the textures read. Scenario "close shot, the keeper with an ebbb and a beee beside her" of feature `11`, pass P7 |
+| 3 | An ebbb's information card filtered to `Wildness` (a menu: plain capture, not staged) | The exact defect the port exists to fix, and the one thing the log cannot show. Scenario "the information card of an ebbb, with Wildness" of feature `11`, pass P7 |
+| 4 | A species offered a prosthetic/bionic recipe with A Dog Said 2, its recipe in the surgery menu | The one optional integration this mod claims natively. Needs its own scenario and map, not written |
+| 5 | Two species with a body-clock icon, with Nocturnal Animals | A second optional integration. Needs its own scenario, not written |
 
 The gallery is uploaded by hand (`OPERATIONS.md`): a folder holding only the images to upload, numbered
 `01-`, `02-`... in page order, no old version, no raw capture, no subfolder. It would be

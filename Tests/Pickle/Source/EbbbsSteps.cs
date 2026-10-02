@@ -461,13 +461,11 @@ namespace EbbbsRenew.PickleSteps
         private static readonly Dictionary<string, int> Scene = new Dictionary<string, int>();
         private static readonly string[] NineSpecies =
             { "Ebbb", "Beee", "Ebbbomination", "Goliebbb", "Ebbberration", "Drebbbd", "Bebbbholder", "Crebbb", "Thrumebbb" };
-        private static IntVec3 RowMiddle = IntVec3.Invalid;
 
         [BeforeScenario]
         public void ResetScene(PickleContext ctx)
         {
             Scene.Clear();
-            RowMiddle = IntVec3.Invalid;
         }
 
         private static Pawn Named(PickleContext ctx, string alias)
@@ -505,41 +503,34 @@ namespace EbbbsRenew.PickleSteps
             Scene[alias] = SpawnAdultPlayerAt(ctx, kindName, new IntVec3(x, 0, z), 3).thingIDNumber;
         }
 
-        /// <summary>
-        /// The nine adults, one per species, in a row centred on the given cell, each at its own cell (or the
-        /// free cell nearest to it), all facing south. The row's middle is kept for the camera step.
-        /// </summary>
-        [Given("Ebbbs Renew: the nine species stand in a row along the cell {int} {int} with {int} cells between them", TimeoutSeconds = 15f)]
-        public async Task NineInARow(PickleContext ctx, int x, int z, int gap)
+        [Given("Ebbbs Renew: spawns the player animal {string} as {string} close to the cell {int} {int}")]
+        public void SpawnPlayerClose(PickleContext ctx, string alias, string kindName, int x, int z)
         {
-            int span = gap * (NineSpecies.Length - 1);
-            for (int i = 0; i < NineSpecies.Length; i++)
-            {
-                IntVec3 at = new IntVec3(x - span / 2 + i * gap, 0, z);
-                Scene[NineSpecies[i]] = SpawnAdultPlayerAt(ctx, NineSpecies[i], at, 1).thingIDNumber;
-            }
-
-            RowMiddle = new IntVec3(x, 0, z);
-            Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
-            await ctx.WaitFrames(3);
+            Scene[alias] = SpawnAdultPlayerAt(ctx, kindName, new IntVec3(x, 0, z), 1).thingIDNumber;
         }
 
-        // The size is set every frame for a while: the camera driver's own pan animation can write RootSize
-        // again after a single call (seen in Dalmatians Renew, 2026-09-27). 8 puts roughly 28 cells across a
-        // 16:9 frame, which holds a row of nine spaced three apart; the owner judges the composition.
-        [When("Ebbbs Renew: the camera frames the row of nine", TimeoutSeconds = 15f)]
-        public async Task FrameRow(PickleContext ctx)
+        /// <summary>
+        /// The nine adults, one per species, spread along the southern half of a circle around the given cell
+        /// (west end, then south, then east end), each at the free cell nearest to its place and turned
+        /// towards the middle. Put the decor down first: the animals then take the free cells around it.
+        /// </summary>
+        [Given("Ebbbs Renew: the nine species gather in a half circle south of the cell {int} {int} at {int} cells", TimeoutSeconds = 15f)]
+        public async Task NineInAHalfCircle(PickleContext ctx, int x, int z, int radius)
         {
-            ctx.Require(RowMiddle.IsValid, "no row of nine was set up");
-            Find.Selector.ClearSelection();
-            for (int frame = 0; frame < 30; frame++)
+            for (int i = 0; i < NineSpecies.Length; i++)
             {
-                Find.CameraDriver.JumpToCurrentMapLoc(RowMiddle);
-                Find.CameraDriver.SetRootSize(8f);
-                await ctx.WaitFrames(1);
+                double angle = Math.PI + Math.PI * i / (NineSpecies.Length - 1);
+                IntVec3 at = new IntVec3(
+                    x + (int)Math.Round(radius * Math.Cos(angle)), 0, z + (int)Math.Round(radius * Math.Sin(angle)));
+                Pawn animal = SpawnAdultPlayerAt(ctx, NineSpecies[i], at, 1);
+                Scene[NineSpecies[i]] = animal.thingIDNumber;
+                int dx = x - animal.Position.x;
+                int dz = z - animal.Position.z;
+                animal.Rotation = Math.Abs(dx) > Math.Abs(dz) ? (dx > 0 ? Rot4.East : Rot4.West) : (dz > 0 ? Rot4.North : Rot4.South);
             }
 
-            ctx.Attach("camera root size after framing", Find.CameraDriver.RootSize.ToString("0.00"));
+            Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
+            await ctx.WaitFrames(3);
         }
 
         // The cursor sits at the screen centre and whatever stands there gets a tooltip over the picture:
