@@ -20,11 +20,11 @@ $descriptions = @{
  Goliebbb='Monstruosité terrifiante, le goliebbb est un colosse instable qui dévore tout sur son passage. Si vous le voyez, il vous a très certainement déjà vu.'
  Ebbberration="L'ebbberration est une aberration de la nature qui imite les humains. L'un de ses appendices s'est transformé en une puissante griffe en forme de faux, capable de trancher l'acier le plus résistant comme du beurre. (Concept original de ReineOfCloves)"
  Drebbbd="Lorsqu'un ebbb devient fou, il se met à fusionner de force et avec violence avec tous les autres ebbbs qu'il croise. Ce phénomène est appelé drebbbd."
- Bebbbholder="Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d'aura dont on ignore la fonction, mais ceux qui sont restés longtemps à proximité d'un bebbbholder ont décrit des sensations de peur et d'effroi."
+ Bebbbholder="Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d'aura dont on ignore la fonction, mais les personnes restées longtemps à proximité d'un bebbbholder ont décrit des sensations de peur et d'effroi."
  Crebbb="Un monstre à trois pattes étonnamment amical. Herbivore, il se nourrit principalement de végétaux, si bien qu'il attaque rarement les gens et se montre généralement plus docile que les autres ebbbs."
  Thrumebbb="Parodie grotesque de la créature la plus gracieuse de l'univers, le thrumebbb est un amalgame d'ebbbs qui a acquis, on ne sait comment, un semblant d'intelligence. Il est répugnant et empeste la mort. Méfiez-vous : il ne mange pas les arbres."
  Leather_Ebbb="Du cuir d'ebbb tanné, séché et raclé. Le toucher provoque une sensation de malaise..."
- ThrumebbbHorn="Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n'est de trophée."
+ ThrumebbbHorn="Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n'est à servir de trophée."
 }
 $names = 'ebbb','beee','crebbb','drebbbd','ebbberration','ebbbomination','goliebbb','thrumebbb','bebbbholder'
 $inventory = [Collections.Generic.List[object]]::new()

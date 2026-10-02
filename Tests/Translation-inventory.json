@@ -318,7 +318,7 @@
     "type": "ThingDef",
     "key": "ThrumebbbHorn.description",
     "english": "A thrumebbb's horn. It's a gloopy mess, constantly oozing disgusting black goo. Useless for anything except for being a trophy.",
-    "french": "Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n'est de trophée.",
+    "french": "Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n'est à servir de trophée.",
     "source": "Mod/Defs/ThingDefs_Items/Items_Resource_Ebbb.xml"
   },
   {
@@ -605,7 +605,7 @@
     "type": "ThingDef",
     "key": "Bebbbholder.description",
     "english": "The Bebbbholder, named after the fictional Beholders due to their floating body and many eyes. These creatures emanate an aura of some kind, it is not sure what the purpose of this aura is, but those in close proximity for an extended amount of time to a Bebbbholder have described sensations of fear and dread.",
-    "french": "Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d'aura dont on ignore la fonction, mais ceux qui sont restés longtemps à proximité d'un bebbbholder ont décrit des sensations de peur et d'effroi.",
+    "french": "Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d'aura dont on ignore la fonction, mais les personnes restées longtemps à proximité d'un bebbbholder ont décrit des sensations de peur et d'effroi.",
     "source": "Mod/Defs/ThingDefs_Races/Races_Ebbb.xml"
   },
   {

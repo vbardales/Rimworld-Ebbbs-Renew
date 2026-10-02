@@ -4,7 +4,7 @@
   <Leather_Ebbb.label>cuir d&apos;ebbb</Leather_Ebbb.label>
   <Leather_Ebbb.description>Du cuir d&apos;ebbb tanné, séché et raclé. Le toucher provoque une sensation de malaise...</Leather_Ebbb.description>
   <ThrumebbbHorn.label>corne de thrumebbb</ThrumebbbHorn.label>
-  <ThrumebbbHorn.description>Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n&apos;est de trophée.</ThrumebbbHorn.description>
+  <ThrumebbbHorn.description>Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n&apos;est à servir de trophée.</ThrumebbbHorn.description>
   <ThrumebbbHorn.tools.point.label>pointe</ThrumebbbHorn.tools.point.label>
   <ThrumebbbHorn.tools.base.label>base</ThrumebbbHorn.tools.base.label>
   <Ebbb.label>ebbb</Ebbb.label>
@@ -39,7 +39,7 @@
   <Drebbbd.tools.right_appendage.label>appendice droit</Drebbbd.tools.right_appendage.label>
   <Drebbbd.tools.head.label>tête</Drebbbd.tools.head.label>
   <Bebbbholder.label>bebbbholder</Bebbbholder.label>
-  <Bebbbholder.description>Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d&apos;aura dont on ignore la fonction, mais ceux qui sont restés longtemps à proximité d&apos;un bebbbholder ont décrit des sensations de peur et d&apos;effroi.</Bebbbholder.description>
+  <Bebbbholder.description>Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d&apos;aura dont on ignore la fonction, mais les personnes restées longtemps à proximité d&apos;un bebbbholder ont décrit des sensations de peur et d&apos;effroi.</Bebbbholder.description>
   <Bebbbholder.tools.tentacles.label>tentacules</Bebbbholder.tools.tentacles.label>
   <Bebbbholder.tools.head.label>tête</Bebbbholder.tools.head.label>
   <Crebbb.label>crebbb</Crebbb.label>

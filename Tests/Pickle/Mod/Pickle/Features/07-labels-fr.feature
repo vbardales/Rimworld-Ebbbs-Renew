@@ -25,7 +25,7 @@ Feature: the French labels and descriptions reach the loaded definitions
     Then Ebbbs Renew: the ThingDef "Drebbbd" reads "label" as "drebbbd"
     Then Ebbbs Renew: the ThingDef "Drebbbd" reads "description" as "Lorsqu'un ebbb devient fou, il se met à fusionner de force et avec violence avec tous les autres ebbbs qu'il croise. Ce phénomène est appelé drebbbd."
     Then Ebbbs Renew: the ThingDef "Bebbbholder" reads "label" as "bebbbholder"
-    Then Ebbbs Renew: the ThingDef "Bebbbholder" reads "description" as "Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d'aura dont on ignore la fonction, mais ceux qui sont restés longtemps à proximité d'un bebbbholder ont décrit des sensations de peur et d'effroi."
+    Then Ebbbs Renew: the ThingDef "Bebbbholder" reads "description" as "Le bebbbholder doit son nom aux beholders de fiction, auxquels il ressemble par son corps flottant et ses nombreux yeux. Ces créatures dégagent une sorte d'aura dont on ignore la fonction, mais les personnes restées longtemps à proximité d'un bebbbholder ont décrit des sensations de peur et d'effroi."
     Then Ebbbs Renew: the ThingDef "Crebbb" reads "label" as "crebbb"
     Then Ebbbs Renew: the ThingDef "Crebbb" reads "description" as "Un monstre à trois pattes étonnamment amical. Herbivore, il se nourrit principalement de végétaux, si bien qu'il attaque rarement les gens et se montre généralement plus docile que les autres ebbbs."
     Then Ebbbs Renew: the ThingDef "Thrumebbb" reads "label" as "thrumebbb"
@@ -38,7 +38,7 @@ Feature: the French labels and descriptions reach the loaded definitions
     Then Ebbbs Renew: the ThingDef "Leather_Ebbb" reads "label" as "cuir d'ebbb"
     Then Ebbbs Renew: the ThingDef "Leather_Ebbb" reads "description" as "Du cuir d'ebbb tanné, séché et raclé. Le toucher provoque une sensation de malaise..."
     Then Ebbbs Renew: the ThingDef "ThrumebbbHorn" reads "label" as "corne de thrumebbb"
-    Then Ebbbs Renew: the ThingDef "ThrumebbbHorn" reads "description" as "Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n'est de trophée."
+    Then Ebbbs Renew: the ThingDef "ThrumebbbHorn" reads "description" as "Une corne de thrumebbb. Cette masse visqueuse suinte sans cesse une glu noire répugnante. Elle ne sert à rien, si ce n'est à servir de trophée."
     Then Ebbbs Renew: the ThingDef "Ebbb" reads "race.meatLabel" as "viande d'ebbb"
 
   Scenario: the kinds and their life stages
