@@ -31,9 +31,9 @@ evidence/
 
 # The Pickle suite's step DLL is built from Tests/Pickle/Source before every run and is not part of the
 # source: Pickle loads it when the game starts, so a stale one tests the previous code. Rebuild, never
-# commit. Its intermediates go to .build/.
+# commit. Its intermediates go to build/.
 Tests/Pickle/Mod/Pickle/Assemblies/
-.build/
+build/
 
 # Reproducible Preview diagnostics generated locally by the shared renderer.
 Art/.render/
