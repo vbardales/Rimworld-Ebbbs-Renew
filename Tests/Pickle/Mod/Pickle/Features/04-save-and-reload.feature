@@ -1,4 +1,4 @@
-# Tests/MANUAL.md M6: the animals survive a save and a reload. Pickle saves the running game, reloads it and
+# Tests/TEST_SCENARIOS.md M6: the animals survive a save and a reload. Pickle saves the running game, reloads it and
 # the scenario carries on, so what is asserted is that the nine species come back from a save file with
 # their defs resolved, and that reading them back logs nothing.
 #

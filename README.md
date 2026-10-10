@@ -104,4 +104,4 @@ English source text and French translations are included. Translation coverage a
 injection paths pass static checks; display in both languages still needs in-game
 validation. The translation audit is recorded in [STATUS.md](STATUS.md).
 
-See [Tests/MANUAL.md](Tests/MANUAL.md) for the manual scenarios and the command to run XML checks. Current results and remaining validation are tracked in [STATUS.md](STATUS.md).
+See [Tests/TEST_SCENARIOS.md](Tests/TEST_SCENARIOS.md) for the manual scenarios and the command to run XML checks. Current results and remaining validation are tracked in [STATUS.md](STATUS.md).

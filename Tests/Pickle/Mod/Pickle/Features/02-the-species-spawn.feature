@@ -1,4 +1,4 @@
-# Tests/MANUAL.md M2, in a loaded map: each of the nine species is generated and stands on it, and
+# Tests/TEST_SCENARIOS.md M2, in a loaded map: each of the nine species is generated and stands on it, and
 # generating them logs nothing. Generating a pawn resolves its graphics for the life stage, its body and its
 # race, which is where a missing texture or a broken body plan shows up as an error.
 #

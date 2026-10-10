@@ -41,7 +41,7 @@ Nine forms of goo, brought forward to RimWorld 1.6.
 **I am not the author of this mod.** All nine creatures are Coolie's; all I did was the work needed to
 make them run on 1.6. Credit goes to them, mistakes in the update are mine.
 
-Original mod: [Ebbbs](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755) — last
+Original mod: [Ebbbs](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755): last
 supporting 1.5, last updated in July 2024. Abandoned, not withdrawn.
 
 ## What the mod does

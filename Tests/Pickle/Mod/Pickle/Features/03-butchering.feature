@@ -1,4 +1,4 @@
-# Tests/MANUAL.md M5, the part a game has to answer: what butchering each species leaves. The step
+# Tests/TEST_SCENARIOS.md M5, the part a game has to answer: what butchering each species leaves. The step
 # (Source/EbbbsSteps.cs) generates an adult of the kind on the loaded map, kills it and asks the game for
 # its butcher products, at an efficiency high enough that a small animal's fractional yield cannot round to
 # nothing. So what is asserted is the wiring, that the meat, the leather and the horn belong to the species,

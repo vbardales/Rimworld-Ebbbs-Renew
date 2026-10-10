@@ -1,4 +1,4 @@
-# The loaded-game half of what Tests/MANUAL.md M1 and M3 ask a person to read from Player.log and from the
+# The loaded-game half of what Tests/TEST_SCENARIOS.md M1 and M3 ask a person to read from Player.log and from the
 # information cards.
 #
 # No save is loaded, on purpose. The errors this mod can produce are logged while the defs load, before any

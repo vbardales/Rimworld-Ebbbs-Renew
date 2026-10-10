@@ -1,7 +1,7 @@
 # Testing — Ebbbs Renew
 
 Nine species, five def files, no assembly, and one patch that only acts beside A Dog Said 2. Everything a file checker can settle is settled
-offline; what remains needs a running game. [`Tests/MANUAL.md`](Tests/MANUAL.md) holds the scenarios
+offline; what remains needs a running game. [`Tests/TEST_SCENARIOS.md`](Tests/TEST_SCENARIOS.md) holds the scenarios
 M1 to M9 as written, and [`Tests/Pickle/`](Tests/Pickle/README.md) holds the ones a running game plays for
 itself. This file says how they get run, and when the mod counts as tested.
 
@@ -67,7 +67,7 @@ category lists, which is what its update would change. It is installed here (ver
 
 ## What only a running game can show
 
-Written on 2026-09-24. Each scenario of `Tests/MANUAL.md` is either a Pickle scenario, replaced by another,
+Written on 2026-09-24. Each scenario of `Tests/TEST_SCENARIOS.md` is either a Pickle scenario, replaced by another,
 or not applicable with its reason. **P1 and P2 were played once on 2026-09-24 (`docs/runs/2026-09-24.md`): everything passed except two scenarios that failed on the test companion's own log lines, which are fixed and requested again. P3 and P4 have not been played.**
 
 | Scenario | Verdict |
