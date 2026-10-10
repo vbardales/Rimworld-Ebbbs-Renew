@@ -127,3 +127,7 @@ Next: replay P1 to P4 on this revision (P1 requested, ticket `20260927-102349-58
 ## Older journal
 
 Sections dated 2026-09-25 and earlier (Nocturnal Animals and Better Crossbreeding, A Dog Said 2, Pickle suite, the 2026-09-24 audit, 2026-09-13 follow-ups): `docs/runs/STATUS-journal-2026-09.md`.
+
+## ModIcon source replaced — 2026-10-11
+
+The owner replaced `Art/ModIcon-source.png` (new signature icon). Derivatives regenerated mechanically: `Preview.config.json` gained `"modIconSource"`, `Render-Preview.cjs` wrote `Mod/About/ModIcon.png` (128 x 128, 11.8 KB), `Mod/About/Preview.png`, `Art/Gallery/0-preview.png` (byte-identical), `Art/ModIcon.ico`, `Art/Preview.ico`. Both images opened and looked at. The seven queued tickets (all unstarted) were cancelled and resubmitted on the commit that carries them. GitHub social preview upload is the owner's (manual).
