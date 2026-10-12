@@ -23,6 +23,8 @@ automated:    PASS - 389 mod checks, 12 XML files; 104 translation entries; offl
 manual_tests: Tests/TEST_SCENARIOS.md - 9 scenarios, each mapped to a green Pickle scenario or a justified not-applicable (TESTING.md)
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
+echo_review_sha: e7562ecedd5d7812afd43b63da3acbd9e70799cf
+social_preview_sha256: ead6d56948b87cb8e3fc1cc063cf3f32624b2e2e06d1771a8e9ce139b4d0e383
 remaining:
   - defect: Tests/Pickle/Source/EbbbsSteps.cs:430 the butcher is `FreeColonists.FirstOrDefault()` and may be null (a step needs `ctx.Require(butcher != null, ...)`). Test code only, green on every pass
   - defect: Tests/Pickle/Source/EbbbsSteps.cs:556 `OpenCard` opens a Dialog_InfoCard nothing closes (an after-scenario hook is missing); only the gallery feature 11 opens it, to be fixed with that rewrite
