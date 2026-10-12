@@ -67,8 +67,8 @@ powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/
 # P4, A Dog Said 2 beside it
 powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P4 A Dog Said 2" -Language English -DepMap wsl-deps.avec-ads2.map -Filter '01-the-mod-loads,08-animal-prosthetics-2' -EvidenceDir Tests/Pickle/Evidence/p4-ads2
 
-# P7, the studio colony: the Workshop images (English; the raw captures are then looked at by the owner)
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P7 studio" -Language English -DepMap wsl-deps.studio.map -Filter '11-publication-shots' -EvidenceDir Tests/Pickle/Evidence/p7-studio
+# P7, the Sanctuary calm zone: the Workshop images (English; the raw captures are then looked at by the owner)
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P7 studio" -Language English -DepMap wsl-deps.sanctuary.map -Filter '11-publication-shots' -EvidenceDir Tests/Pickle/Evidence/p7-studio
 ```
 
 | Pass | Scenarios it should play | Skipped by requirement |
