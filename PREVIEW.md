@@ -8,7 +8,7 @@ Run `node ../scripts/Render-Preview.cjs` from the repository root. The shared re
   ModIcon placement. The title is `Ebbbs Renew`.
 - `Preview-source.png`: the text-free illustration the renderer starts from.
 - `echo-preview.png`: final-size transparent line-art of the tall ebbb, used as the echo.
-- `ModIcon-source.png` and `ModIcon-original.png`: the icon artwork; the delivered icon is
+- `ModIcon-source.png`: the icon artwork; the delivered icon is
   `Mod/About/ModIcon.png`.
 - `Gallery/0-preview.png`: byte-for-byte copy of `Mod/About/Preview.png`. The Workshop gallery
   images are numbered `1-`, `2-` ... in this folder (the staged shots of feature `11`, see
