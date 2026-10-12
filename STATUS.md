@@ -9,7 +9,7 @@ repo:         Rimworld-Ebbbs-Renew
 remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: playTests[1.0.0]
+workflow_stage: shootGallery[1.0.0]
 licence:      authorized (was silent; see 2026-09-28 entry below)
 licence_at:   ATTRIBUTION.md; historical five-source audit, refreshed online 2026-09-28 (see the
   reclassification entry below): the Workshop page, the author's profile and a web.archive.org
@@ -17,24 +17,31 @@ licence_at:   ATTRIBUTION.md; historical five-source audit, refreshed online 202
 upstream_mod_remotes: N/A (checked 2026-09-28: no GitHub link on the current Workshop page, the profile,
   or a 2025-06-23 web.archive.org snapshot of the page)
 dependencies: none
-showcase:     icon and Preview present, both inspected directly on 2026-09-24; in-game review pending
-tested_on:
-automated:    PASS - 257 mod checks, 10 XML files; 104 translation entries and injection paths; Pickle step check, 405 step lines all resolved; all rerun 2026-09-25
-manual_tests: Tests/MANUAL.md - 9 scenarios, none executed. TESTING.md maps each to a Pickle scenario (32 written in 10 features; P5 and P6 now green on the fixed revision, see below) or a justified not-applicable
+showcase:     icon (new source 2026-10-11) and Preview regenerated and inspected directly on 2026-10-11; in-game review pending
+tested_on:    5dcfd0d, 2026-10-11 and 12 (P1 to P6 green; see docs/runs/2026-09-25.md)
+automated:    PASS - 389 mod checks, 12 XML files; 104 translation entries; offline checks rerun 2026-10-11
+manual_tests: Tests/TEST_SCENARIOS.md - 9 scenarios, each mapped to a green Pickle scenario or a justified not-applicable (TESTING.md)
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
+code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
 remaining:
+  - defect: Tests/Pickle/Source/EbbbsSteps.cs:430 the butcher is `FreeColonists.FirstOrDefault()` and may be null (a step needs `ctx.Require(butcher != null, ...)`). Test code only, green on every pass
+  - defect: Tests/Pickle/Source/EbbbsSteps.cs:556 `OpenCard` opens a Dialog_InfoCard nothing closes (an after-scenario hook is missing); only the gallery feature 11 opens it, to be fixed with that rewrite
+  - feature: feature 11 (Workshop gallery shots) fails on a retired fixture `nelim-zen-meadow-studio`; rewrite in SanctuaryBacklot at shootGallery
+  - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
-  - unverified: P1 to P6 replayed on the revision that carries the new packageId `nelim.ebbbs` (2026-09-28); the earlier greens were on `nelim.ebbbsrenew`
-  - unverified: how the game's own mod sorting places this mod relative to A Dog Said 2 in a real mod list. The native support itself passed in a running game on 2026-09-25 with this mod staged first (feature 08, 4 of 4), and the staging does not sort by loadBefore, so that part is the game's and is not tested
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_c111f835-226c-4cb0-8a46-7cea5c6834a8
-updated:      2026-10-11, audited against AUDIT.md: done is playTests[1.0.0]; P1 to P7 to replay on cd3fac4
-protocols_read_sha: a5c7cf48b349ae00e7d28fd643e852dc860dfaf2
+updated:      2026-10-12, playTests done: P1 to P6 green on 5dcfd0d, code review done; now shootGallery[1.0.0]
+protocols_read_sha: 3bb4b9701f253249217d7e830afcd62aa2eb1da9
 ---
 
 # Ebbbs Renew — status
+
+## playTests done, shootGallery next - 2026-10-12
+
+**Previous: `playTests[1.0.0]`. Retained: `shootGallery[1.0.0]`.** 8.c: P1 to P6 green on `5dcfd0d` (P1 15, P2 9, P3 2, P4 8, P5 6, P6 8 played; skips are `@requires` sets with their own pass; all four conditional sets played). 8.d: P1 `@review` capture opened at full size, nine silhouettes on open sand. 8.e: no `@wip`. 8.m: reviewed by a read-only reviewer over `Mod/Patches`, `About.xml` and `EbbbsSteps.cs`: no defect in the mod, two test-code risks consigned in `remaining`; its two questions (packageIds and FindMod names) are answered by the green P3, P4, P5 and P6. `code_review_sha` set. Protocols re-read after `a5c7cf4` (AGENTS, AUDIT, GALLERY, PICKLE, PUBLISHING, STYLE, TRANSLATIONS diffs). Declared: local scripts to Audit workflow (3 rows validated in `scripts/LOCAL_SCRIPTS.md`), publication scripts to CI/CD, 26 local steps to NPT. Feature 11 is rewritten at this stage (fixture retired).
 
 ## Audit against the 15-state AUDIT.md — 2026-10-11
 

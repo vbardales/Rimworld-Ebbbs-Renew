@@ -50,25 +50,25 @@ and the dispatcher wakes the session by message at `START`, `END` and `RUN_DONE`
 $sha = git -C EbbbsRenew rev-parse --short HEAD   # goes in every label: a request carries no SHA of its own
 
 # P1, minimal, English
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P1 minimal English" -Language English -Filter 'Ebbbs Renew - Pickle tests,!@fr-only' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p1-english
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P1 minimal English" -Language English -Filter 'Ebbbs Renew - Pickle tests,!@fr-only' -EvidenceDir Tests/Pickle/Evidence/p1-english
 
 # P2, minimal, French: no map to load, so no @save
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P2 minimal French" -Language French -Filter 'Ebbbs Renew - Pickle tests,!@en-only,!@save' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p2-french
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P2 minimal French" -Language French -Filter 'Ebbbs Renew - Pickle tests,!@en-only,!@save' -EvidenceDir Tests/Pickle/Evidence/p2-french
 
 # P3, the original mod beside it
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P3 incompatibility" -Language English -DepMap wsl-deps.incompat-original.map -Filter '05-original-mod-incompatibility' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p3-incompat
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P3 incompatibility" -Language English -DepMap wsl-deps.incompat-original.map -Filter '05-original-mod-incompatibility' -EvidenceDir Tests/Pickle/Evidence/p3-incompat
 
 # P5, Nocturnal Animals beside it
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P5 Nocturnal Animals" -Language English -DepMap wsl-deps.avec-na.map -Filter '01-the-mod-loads,09-nocturnal-animals' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p5-nocturnal
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P5 Nocturnal Animals" -Language English -DepMap wsl-deps.avec-na.map -Filter '01-the-mod-loads,09-nocturnal-animals' -EvidenceDir Tests/Pickle/Evidence/p5-nocturnal
 
 # P6, Better Crossbreeding beside it
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P6 Better Crossbreeding" -Language English -DepMap wsl-deps.avec-crossbreeding.map -Filter '01-the-mod-loads,10-better-crossbreeding' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p6-crossbreeding
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P6 Better Crossbreeding" -Language English -DepMap wsl-deps.avec-crossbreeding.map -Filter '01-the-mod-loads,10-better-crossbreeding' -EvidenceDir Tests/Pickle/Evidence/p6-crossbreeding
 
 # P4, A Dog Said 2 beside it
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P4 A Dog Said 2" -Language English -DepMap wsl-deps.avec-ads2.map -Filter '01-the-mod-loads,08-animal-prosthetics-2' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p4-ads2
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P4 A Dog Said 2" -Language English -DepMap wsl-deps.avec-ads2.map -Filter '01-the-mod-loads,08-animal-prosthetics-2' -EvidenceDir Tests/Pickle/Evidence/p4-ads2
 
 # P7, the studio colony: the Workshop images (English; the raw captures are then looked at by the owner)
-powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P7 studio" -Language English -DepMap wsl-deps.studio.map -Filter '11-publication-shots' -EvidenceDir EbbbsRenew/Tests/Pickle/Evidence/p7-studio
+powershell.exe -ExecutionPolicy Bypass -File Rimworld-Ticket-Dispatcher/scripts/Submit-PickleRun.ps1 -Mod EbbbsRenew -Owner local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 -Label "EbbbsRenew local_97069b1a-bbbd-4ae6-9bf1-337ff49bcc92 $sha P7 studio" -Language English -DepMap wsl-deps.studio.map -Filter '11-publication-shots' -EvidenceDir Tests/Pickle/Evidence/p7-studio
 ```
 
 | Pass | Scenarios it should play | Skipped by requirement |
