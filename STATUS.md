@@ -26,16 +26,14 @@ code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
 echo_review_sha: e7562ecedd5d7812afd43b63da3acbd9e70799cf
 social_preview_sha256: ead6d56948b87cb8e3fc1cc063cf3f32624b2e2e06d1771a8e9ce139b4d0e383
 remaining:
-  - defect: Tests/Pickle/Source/EbbbsSteps.cs:430 the butcher is `FreeColonists.FirstOrDefault()` and may be null (a step needs `ctx.Require(butcher != null, ...)`). Test code only, green on every pass
-  - defect: Tests/Pickle/Source/EbbbsSteps.cs:556 `OpenCard` opens a Dialog_InfoCard nothing closes (an after-scenario hook is missing); only the gallery feature 11 opens it, to be fixed with that rewrite
-  - feature: feature 11 (Workshop gallery shots) fails on a retired fixture `nelim-zen-meadow-studio`; rewrite in SanctuaryBacklot at shootGallery
+  - feature: feature 11 (Workshop gallery shots) rewritten for SanctuaryBacklot; P7 ticket 20261013-110838-549-176c on 6a56fb9 owed, captures to judge
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
-session:      local_c111f835-226c-4cb0-8a46-7cea5c6834a8
-updated:      2026-10-12, playTests done: P1 to P6 green on 5dcfd0d, code review done; now shootGallery[1.0.0]
+session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
+updated:      2026-10-13, shootGallery[1.0.0]: version WARNs fixed, test-code defects fixed (6a56fb9), P7 filed
 protocols_read_sha: 5e7c922c02ef44b3ee1357f59dde11a7da5e66f6
 ---
 
