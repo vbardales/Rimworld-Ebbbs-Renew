@@ -36,10 +36,10 @@ Original mod by coolziecat. Continued with their explicit permission, given in a
 original mod's page (see ATTRIBUTION.md). If they contact me to request its removal, I undertake to
 take it down promptly.
 
-Nine forms of goo, brought forward to RimWorld 1.6.
+Nine forms of goo, brought forward to the latest RimWorld version.
 
 **I am not the author of this mod.** All nine creatures are Coolie's; all I did was the work needed to
-make them run on 1.6. Credit goes to them, mistakes in the update are mine.
+make them run on the latest RimWorld version. Credit goes to them, mistakes in the update are mine.
 
 Original mod: [Ebbbs](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755): last
 supporting 1.5, last updated in July 2024. Abandoned, not withdrawn.
@@ -82,10 +82,10 @@ goliebbb are paired with nothing.
 
 None of the three is a dependency, and without them their patches do nothing.
 
-## What changed in the 1.6 update
+## What changed in the update
 
 One line, nine times: `wildness` moved to `<Wildness>` under `statBases`. It stopped being a field of
-`RaceProperties` in 1.6 and became a StatDef; the old form is not an error, it is simply never read, and
+`RaceProperties` in the latest RimWorld version and became a StatDef; the old form is not an error, it is simply never read, and
 the stat's default sits outside the range the game uses, so every one of the nine tamed for almost
 nothing. No balance value was changed.
 
@@ -93,7 +93,7 @@ nothing. No balance value was changed.
 
 The original states no licence anywhere. This port rests on the Workshop's own custom for abandoned mods:
 named credit, and a takedown on request. What I add is mine, under the MIT licence (see the repository's
-`LICENSE`): the 1.6 fix, the three compatibility patches, the French translation, the tests, the images and
+`LICENSE`): the wildness fix, the three compatibility patches, the French translation, the tests, the images and
 the documentation. It does not cover Coolie's creatures and textures, for which none is granted.
 
 ## If I go quiet
@@ -113,8 +113,8 @@ Written with the help of Claude (Anthropic).
 - **Mlie**, for continuing **XeoNovaDan**'s
   [[XND] Nocturnal Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409).
 - **DizzyEevee**, for [Better Crossbreeding](https://steamcommunity.com/sharedfiles/filedetails/?id=3520675842).
-- **Pickle** and **RimLogging**, the test tools this mod's suite runs on — development only, never a
-  dependency of the mod you are downloading.
+- **Pickle** and **RimLogging**, the test tools this mod's suite runs on (development only, never a
+  dependency of the mod you are downloading).
 
 Full check and detail in `ATTRIBUTION.md`.
 
@@ -240,7 +240,7 @@ last line, to post **only after item 3806760667 is public**.
 ```
 Hello Coolie! 🧪
 
-Thank you for the ebbbs — nine forms of goo that nobody can quite explain is exactly the kind of strange
+Thank you for the ebbbs: nine forms of goo that nobody can quite explain is exactly the kind of strange
 I want wandering my colony, and I could not let them stay stuck on 1.5. I brought them forward as Ebbbs
 Renew (unofficial): your nine creatures, their stats and their textures are unchanged, the taming defect
 1.6 introduced is fixed, and I added native support for two crossbreeding/behaviour mods plus French.

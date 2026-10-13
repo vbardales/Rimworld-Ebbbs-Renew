@@ -7,47 +7,93 @@
     <li>1.6</li>
   </supportedVersions>
   <url>https://github.com/vbardales/Rimworld-Ebbbs-Renew</url>
-  <description>Original mod by coolziecat. Continued with their explicit permission, given in a Steam comment on the original mod's page (see ATTRIBUTION.md). If they contact me to request its removal, I undertake to take it down promptly.
+  <description>Original mod by coolziecat. Continued with their explicit permission, given in a Steam comment on the
+original mod's page (see ATTRIBUTION.md). If they contact me to request its removal, I undertake to
+take it down promptly.
 
-Nine forms of goo, brought forward to RimWorld 1.6. Nobody knows what an ebbb is. They really, really like cheese.
+Nine forms of goo, brought forward to the latest RimWorld version.
 
-I am not the author of this mod. All nine creatures are Coolie's; all I did was the work needed to make them run on 1.6. Credit goes to them, mistakes in the update are mine. If they come back to it, or ask me to take this down, it comes down.
+I am not the author of this mod. All nine creatures are Coolie's; all I did was the work needed to
+make them run on the latest RimWorld version. Credit goes to them, mistakes in the update are mine.
 
-Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755 - last supporting 1.5, last updated in July 2024. Abandoned, not withdrawn.
+Original mod: Ebbbs (https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755): last
+supporting 1.5, last updated in July 2024. Abandoned, not withdrawn.
 
-WHAT IT ADDS
+What the mod does
 
-Nine creatures: the ebbb, the beee, the crebbb, the drebbbd, the ebbberration, the ebbbomination, the goliebbb, the thrumebbb and the bebbbholder. Body sizes run from 0.2 to 4, market values from 10 to 2000, and trainability from Intermediate to Advanced.
+Nine creatures: ebbb, beee, crebbb, drebbbd, ebbberration, ebbbomination,
+goliebbb, thrumebbb, bebbbholder. Body sizes from 0.2 to 4, market values from 10 to 2000,
+trainability from Intermediate to Advanced.
 
-They come with a flesh type of their own, their own body plan, their own blood, ebbb leather, and a horn off the thrumebbb.
+They bring a flesh type of their own, their own body plan, their own blood, ebbb leather, and a horn off
+the thrumebbb.
 
-WHAT CHANGED IN THE 1.6 UPDATE
+Nobody knows what an ebbb is. The mod's own description says scientists have been at it for decades. The
+one certainty is that they really, really like cheese.
 
-One line, nine times. Wildness stopped being a field of RaceProperties in 1.6 and became a StatDef declared under statBases. The old form is not an error, it is simply never read, and the stat defaults to -1, outside the range the game uses - so every one of the nine tamed for almost nothing, whether it was written at 0.4 or at 1.
-
-The author had already moved the ebbb's colour variants to vanilla alternateGraphics in their own 1.5 update, so only the leftover SkinSet file of the old system had to go, which nothing referenced any more.
-
-Goliebbb also now displays as goliebbb instead of ebbb, matching its PawnKindDef. No balance value was changed.
-
-COMPATIBILITY
-
-Built-in support for A Dog Said... Animal Prosthetics 2: the nine species are placed in its animal categories, so they can receive prosthetics and bionics like the animals of the base game. The ebbb and the bebbbholder get the basic replacements, the crebbb, the ebbberration, the drebbbd and the goliebbb the simple prosthetics as well, and the beee, the ebbbomination and the thrumebbb the bionics too. There is nothing to install and nothing to configure, and without that mod the patch does nothing.
-
-Built-in support for [XND] Nocturnal Animals (Continued): each species gets a body clock, the default you can change per species in that mod's options. The ebbb, the beee, the ebbbomination and the thrumebbb are nocturnal, the crebbb is crepuscular, the ebbberration is diurnal, and the bebbbholder, the drebbbd and the goliebbb are cathemeral.
-
-Built-in support for Better Crossbreeding: four pairs among the ebbbs can now breed with each other - ebbb with crebbb, ebbb with bebbbholder, crebbb with ebbberration, and ebbb with drebbbd, whose litters are mostly ebbbs. No animal of the base game is involved. Neither of these two mods is required, and without them their patches do nothing.
+No DLC required. No Harmony, no framework, no dependency of any kind.
 
 Content mod: removing it mid-save will lose any ebbb already in play, of any size.
 
-The original states no licence anywhere - no file, nothing in its About, nothing in the README it ships, no repository, nothing on its Workshop page. This port therefore rests on the Workshop's own custom for abandoned mods: named credit to the author, and a takedown on request.
+Compatibility
 
-What I added - the 1.6 fix, the compatibility patches, the French translation, the tests and the images - is mine and is under the MIT licence (the LICENSE file). That licence does not cover Coolie's creatures and textures, for which none is granted.
+A Dog Said... Animal Prosthetics 2 (https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862)
+is supported natively, with nothing to install or configure. The nine species are sorted into its three
+cumulative categories the way its own lists sort vanilla animals: the ebbb and the bebbbholder get the
+basic replacements, the crebbb, the ebbberration, the drebbbd and the goliebbb the simple prosthetics as
+well, and the beee, the ebbbomination and the thrumebbb the bionics too.
 
-If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+[XND] Nocturnal Animals (Continued) (https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409)
+is supported natively too. Each species gets a body clock through that mod's own extension, changeable per
+species in its options: the ebbb, the beee, the ebbbomination and the thrumebbb are nocturnal, the crebbb
+is crepuscular, the ebbberration is diurnal, and the bebbbholder, the drebbbd and the goliebbb are
+cathemeral.
 
-The update work was done with the help of an AI assistant (Claude, by Anthropic).
+Better Crossbreeding (https://steamcommunity.com/sharedfiles/filedetails/?id=3520675842) is supported
+natively. Four pairs among the nine can breed, each way: ebbb with crebbb, ebbb with bebbbholder and crebbb
+with ebbberration (a coin flip for the kind of each child), and ebbb with drebbbd (three ebbbs for one
+drebbbd). No animal of the base game is involved, and the beee, the ebbbomination, the thrumebbb and the
+goliebbb are paired with nothing.
 
-[url=https://github.com/vbardales/Rimworld-Ebbbs-Renew]Source code on GitHub[/url]</description>
+None of the three is a dependency, and without them their patches do nothing.
+
+What changed in the update
+
+One line, nine times: wildness moved to &lt;Wildness&gt; under statBases. It stopped being a field of
+RaceProperties in the latest RimWorld version and became a StatDef; the old form is not an error, it is simply never read, and
+the stat's default sits outside the range the game uses, so every one of the nine tamed for almost
+nothing. No balance value was changed.
+
+Terms
+
+The original states no licence anywhere. This port rests on the Workshop's own custom for abandoned mods:
+named credit, and a takedown on request. What I add is mine, under the MIT licence (see the repository's
+LICENSE): the wildness fix, the three compatibility patches, the French translation, the tests, the images and
+the documentation. It does not cover Coolie's creatures and textures, for which none is granted.
+
+If I go quiet
+
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any
+other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+AI-generated
+
+Written with the help of Claude (Anthropic).
+
+Thanks
+
+- Coolie, for the original Ebbbs (https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755):
+  all nine creatures and their textures are theirs.
+- SamBucher, for A Dog Said... Animal Prosthetics 2 (https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862).
+- Mlie, for continuing XeoNovaDan's
+  [XND] Nocturnal Animals (https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409).
+- DizzyEevee, for Better Crossbreeding (https://steamcommunity.com/sharedfiles/filedetails/?id=3520675842).
+- Pickle and RimLogging, the test tools this mod's suite runs on (development only, never a
+  dependency of the mod you are downloading).
+
+Full check and detail in ATTRIBUTION.md.
+
+Source code on GitHub (https://github.com/vbardales/Rimworld-Ebbbs-Renew)</description>
   <!-- The source mod defines the same defNames as this port. RimWorld does not refuse two mods that do and
        logs nothing (only a duplicate inside one mod is an error): the def of the mod loaded later silently
        replaces the earlier one, so which species you get depends on load order, and the source mod still

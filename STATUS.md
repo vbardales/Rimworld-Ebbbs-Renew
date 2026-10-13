@@ -36,7 +36,7 @@ remaining:
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_c111f835-226c-4cb0-8a46-7cea5c6834a8
 updated:      2026-10-12, playTests done: P1 to P6 green on 5dcfd0d, code review done; now shootGallery[1.0.0]
-protocols_read_sha: 3bb4b9701f253249217d7e830afcd62aa2eb1da9
+protocols_read_sha: 5e7c922c02ef44b3ee1357f59dde11a7da5e66f6
 ---
 
 # Ebbbs Renew — status
