@@ -121,3 +121,4 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: screenshot mode is enabled around the open windows
     Then I take a screenshot "Workshop page, the information card"
     And Nelim's Pickle Tools: screenshot mode is disabled
+    When Ebbbs Renew: closes the information card

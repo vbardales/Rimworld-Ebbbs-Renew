@@ -428,6 +428,7 @@ namespace EbbbsRenew.PickleSteps
 
             Thing butchered = (Thing)pawn.Corpse ?? pawn;
             Pawn butcher = map.mapPawns.FreeColonists.FirstOrDefault();
+            ctx.Require(butcher != null, "no free colonist to butcher with");
             List<Thing> products = butchered.ButcherProducts(butcher, 100f).ToList();
             try
             {
@@ -554,6 +555,16 @@ namespace EbbbsRenew.PickleSteps
             Find.WindowStack.Add(new Dialog_InfoCard(Named(ctx, alias)));
             await ctx.WaitFrames(5);
             ctx.Assert(Find.WindowStack.Windows.OfType<Dialog_InfoCard>().Any(), "the information card did not open");
+        }
+
+        [When("Ebbbs Renew: closes the information card", TimeoutSeconds = 15f)]
+        public async Task CloseCard(PickleContext ctx)
+        {
+            foreach (Dialog_InfoCard card in Find.WindowStack.Windows.OfType<Dialog_InfoCard>().ToList())
+            {
+                card.Close();
+            }
+            await ctx.WaitFrames(5);
         }
 
         private static FieldInfo StatsField(string name)
