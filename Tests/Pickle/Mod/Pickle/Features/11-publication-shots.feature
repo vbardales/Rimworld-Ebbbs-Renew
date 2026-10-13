@@ -55,8 +55,8 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
-    And Nelim's Pickle Tools: I place the decor "StandingLamp" at (196, 190)
-    And Nelim's Pickle Tools: the decor "StandingLamp" at (196, 190) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 190)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 188)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 190)
     And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 188)
@@ -89,8 +89,8 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
-    And Nelim's Pickle Tools: I place the decor "StandingLamp" at (196, 190)
-    And Nelim's Pickle Tools: the decor "StandingLamp" at (196, 190) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 190)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 188)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 190)
     And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 188)
