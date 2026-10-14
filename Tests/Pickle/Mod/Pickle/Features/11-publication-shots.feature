@@ -44,14 +44,6 @@ Feature: images for the Workshop page
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: all animals are removed
-    And a colonist "Miel" exists
-    And Nelim's Pickle Tools: "Miel" body type is Female
-    And Nelim's Pickle Tools: "Miel" hairstyle is "Flowy"
-    And Nelim's Pickle Tools: "Miel" hair colour is rgb (176, 82, 38)
-    And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
-    And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (92, 58, 38)
-    And Nelim's Pickle Tools: "Miel" stands at (200, 189) facing South
-    And Nelim's Pickle Tools: "Miel" facial expression is "SocialRelax"
     And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
@@ -61,8 +53,16 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 190)
     And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 188)
     And Nelim's Pickle Tools: I place the decor "Campfire" at (195, 185)
-    And Ebbbs Renew: the nine species gather in a half circle south of the cell 199 186 at 6 cells
     And Nelim's Pickle Tools: I let 60 ticks pass
+    And a colonist "Miel" exists
+    And Nelim's Pickle Tools: "Miel" body type is Female
+    And Nelim's Pickle Tools: "Miel" hairstyle is "Flowy"
+    And Nelim's Pickle Tools: "Miel" hair colour is rgb (176, 82, 38)
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (92, 58, 38)
+    And Nelim's Pickle Tools: "Miel" stands at (200, 189) facing South
+    And Nelim's Pickle Tools: "Miel" facial expression is "SocialRelax"
+    And Ebbbs Renew: the nine species gather in a half circle south of the cell 199 186 at 3 cells
     And Nelim's Pickle Tools: time is paused for the capture
     When Nelim's Pickle Tools: I frame the cell (200, 185) at zoom 8
     And Nelim's Pickle Tools: the map is shown alone for a capture
@@ -78,14 +78,6 @@ Feature: images for the Workshop page
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: all animals are removed
-    And a colonist "Miel" exists
-    And Nelim's Pickle Tools: "Miel" body type is Female
-    And Nelim's Pickle Tools: "Miel" hairstyle is "Flowy"
-    And Nelim's Pickle Tools: "Miel" hair colour is rgb (176, 82, 38)
-    And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
-    And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (92, 58, 38)
-    And Nelim's Pickle Tools: "Miel" stands at (200, 189) facing South
-    And Nelim's Pickle Tools: "Miel" facial expression is "SocialRelax"
     And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
@@ -95,9 +87,17 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 190)
     And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 188)
     And Nelim's Pickle Tools: I place the decor "Campfire" at (195, 185)
+    And Nelim's Pickle Tools: I let 60 ticks pass
+    And a colonist "Miel" exists
+    And Nelim's Pickle Tools: "Miel" body type is Female
+    And Nelim's Pickle Tools: "Miel" hairstyle is "Flowy"
+    And Nelim's Pickle Tools: "Miel" hair colour is rgb (176, 82, 38)
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (92, 58, 38)
+    And Nelim's Pickle Tools: "Miel" stands at (200, 189) facing South
+    And Nelim's Pickle Tools: "Miel" facial expression is "SocialRelax"
     And Ebbbs Renew: spawns the player animal "Ebbb1" as "Ebbb" close to the cell 198 189
     And Ebbbs Renew: spawns the player animal "Beee1" as "Beee" close to the cell 202 189
-    And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: time is paused for the capture
     When Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 4.5
     And Nelim's Pickle Tools: the map is shown alone for a capture
