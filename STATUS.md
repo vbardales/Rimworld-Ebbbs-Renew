@@ -26,14 +26,14 @@ code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
 echo_review_sha: e7562ecedd5d7812afd43b63da3acbd9e70799cf
 social_preview_sha256: ead6d56948b87cb8e3fc1cc063cf3f32624b2e2e06d1771a8e9ce139b4d0e383
 remaining:
-  - feature: gallery candidates 1 to 3 in Art/Gallery (P7 green: tickets 9980 and 07e5), opened and judged by the session; the owner accepts or refuses, then reindex, drop `candidate`, table in PUBLICATION.md
+  - feature: gallery candidates 1 to 3 in Art/Gallery (P7 green: tickets b6db and 5dee, evidence p7-gallery-4, -5 and -2), opened and judged by the session; the owner accepts or refuses, then reindex, drop `candidate`, table in PUBLICATION.md
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
-updated:      2026-10-15, shootGallery[1.0.0]: P7 green, three gallery candidates await the owner
+updated:      2026-10-15, shootGallery[1.0.0]: P7 green, three gallery candidates (1, 2, 3) await the owner
 protocols_read_sha: 23f263539905e7d5a57ecaf3f85c29c92dc4b10d
 ---
 
