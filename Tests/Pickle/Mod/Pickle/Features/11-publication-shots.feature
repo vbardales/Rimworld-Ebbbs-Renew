@@ -56,7 +56,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" stands at (200, 189) facing South
     And Nelim's Sanctuary: Nelim has her own face
-    And Ebbbs Renew: the nine species gather in a half circle south of the cell 199 186 at 3 cells
+    And Ebbbs Renew: the nine species gather in a half circle south of the cell 199 186 at 4 cells
     And Nelim's Pickle Tools: time is paused for the capture
     When Nelim's Pickle Tools: I frame the cell (200, 185) at zoom 8
     And Nelim's Pickle Tools: the map is shown alone for a capture
