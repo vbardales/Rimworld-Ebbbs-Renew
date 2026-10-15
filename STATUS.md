@@ -23,10 +23,9 @@ automated:    PASS - 389 mod checks, 12 XML files; 104 translation entries; offl
 manual_tests: Tests/TEST_SCENARIOS.md - 9 scenarios, each mapped to a green Pickle scenario or a justified not-applicable (TESTING.md)
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
-echo_review_sha: e7562ecedd5d7812afd43b63da3acbd9e70799cf
-social_preview_sha256: ead6d56948b87cb8e3fc1cc063cf3f32624b2e2e06d1771a8e9ce139b4d0e383
+echo_review_sha: 9cfb169551489aec52dba289ed69ad43faae5c38
+social_preview_sha256: 30a8f6caa9c144f5bd9b15bb3de44745ca5fb36b67afdc619273560f2a312378
 remaining:
-  - feature: mountPreview: the echo is provisional (echo-preview.png) and the gallery now has images: redo echo-source.png from the gallery, clear echo_review_sha, validate it (AUDIT 9.f)
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
@@ -40,6 +39,8 @@ protocols_read_sha: 6eeb289af92096fa3a7ee40825e3b5221030873d
 # Ebbbs Renew — status
 
 ## shootGallery done, mountPreview next - 2026-10-15
+
+Echo decision: redone from the gallery (`Art/echo-source.png`, an ebbb line-art; `Art/Preview.config.json` `echo.file` follows, flipX dropped), Preview and `0-` copy regenerated, opened at full size: the echo reads in the empty panel area. `echo_review_sha` and `social_preview_sha256` set; the new `Preview.png` must be uploaded as the GitHub social preview by the owner (manual). Gallery images are being replayed (P7, ticket be71): if an accepted image changes, this echo is reviewed again.
 
 **Previous: `shootGallery[1.0.0]`. Retained: `mountPreview[1.0.0]`.** Gallery accepted by the owner: `Art/Gallery/` holds `0-preview.png` and three images (P7 green, tickets b6db and 5dee, Nelim as protagonist, animals facing the camera). | Order | File | Shows |: 1 `1-keeper-and-nine.png` wide shot, 2 `2-keeper-ebbb-beee.png` close shot, 3 `3-wildness-card.png` the Wildness information card (taken on the exhibition zone; a "-height" zone of the Sanctuary would crop better, accepted as is). No ADS2 or Nocturnal Animals image: no scenario, left for a later version. `Mod/` changed since `code_review_sha` only in the `About.xml` description, read by the session.
 
