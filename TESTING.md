@@ -1,4 +1,4 @@
-# Testing — Ebbbs Renew
+# Testing, Ebbbs Renew
 
 Nine species, five def files, no assembly, and one patch that only acts beside A Dog Said 2. Everything a file checker can settle is settled
 offline; what remains needs a running game. [`Tests/TEST_SCENARIOS.md`](Tests/TEST_SCENARIOS.md) holds the scenarios

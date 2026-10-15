@@ -92,7 +92,7 @@ copies of the mods, and neither needs C#: each is one guarded XML patch file, li
 - **Unofficial:** neither author is contacted or asked. The patches use only names those mods publish for other mods to
   use.
 
-## Dogs mate (Continued) — examined 2026-10-02, not applicable
+## Dogs mate (Continued), examined 2026-10-02, not applicable
 
 `Mlie.DogsMate` (2441132298) enrols a `PawnKindDef` in one of its `Revolus.DogsMate.AnimalGroupDef` groups
 (`1.6/Defs/CompatibleSpecies/*.xml`: Cat, Cheetah, Jaguar, Leopard, Lion, Tiger, Bison, Cow, Giraffe, Camel,

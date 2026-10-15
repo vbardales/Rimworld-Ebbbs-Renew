@@ -7,7 +7,7 @@ Nine forms of goo, brought forward to RimWorld 1.6.
 **I am not the author of this mod.** All nine creatures are Coolie's; all I did was the work needed to
 make them run on 1.6. Credit goes to them, mistakes in the update are mine.
 
-Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755 — last supporting 1.5,
+Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755, last supporting 1.5,
 last updated in July 2024. Abandoned, not withdrawn.
 
 ## What the mod does
@@ -63,7 +63,7 @@ One line, nine times.
 
 - **`wildness` moved to `<Wildness>` under `statBases`, on all nine.** It stopped being a field of
   `RaceProperties` in 1.6 and became a StatDef. The old form is not an error, it is simply never read,
-  and the stat's default is `-1` — outside the range the game uses, so every one of them tamed for
+  and the stat's default is `-1`, outside the range the game uses, so every one of them tamed for
   almost nothing, whether written at 0.4 or at 1.
 
 Coolie had already moved the ebbb's colour variants to vanilla
@@ -76,7 +76,7 @@ No balance value was changed.
 
 ## Terms
 
-The original states no licence anywhere — no file in the mod, nothing in its `About.xml`, nothing in
+The original states no licence anywhere, no file in the mod, nothing in its `About.xml`, nothing in
 the `README.md` it ships, no linked repository, and nothing about reuse in its Workshop page
 description. But its author gave **explicit permission** in a Steam comment on the mod's own page,
 still visible there: "I do give people permission to do whatever with this mod... If you want em in
@@ -93,7 +93,7 @@ any other of my mods, including publishing a continuation of it. All credit must
 
 ## Credits
 
-- **Coolie** — the mod, all nine creatures, and their textures.
+- **Coolie**, the mod, all nine creatures, and their textures.
 - 1.6 update by Nelim. Written with the help of Claude (Anthropic).
 
 See [ATTRIBUTION.md](ATTRIBUTION.md) for the licence check and the port in detail.

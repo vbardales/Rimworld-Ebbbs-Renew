@@ -4,7 +4,7 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
-## [1.0.0] — unreleased
+## [1.0.0], unreleased
 
 The icon and Preview are already installed. The Workshop item exists since 0.1.0, so 1.0.0 is an
 update: after final in-game validation it goes out through the CI, which tags `v1.0.0` and creates
@@ -45,7 +45,7 @@ First release of the 1.6 update of **Ebbbs**, by Coolie.
 
 - **`wildness` moved to `<Wildness>` under `statBases`, on all nine creatures.** It stopped being a
   field of `RaceProperties` in 1.6 and became a StatDef. The old form is not an error, it is simply
-  never read, and the stat's default is `-1` — outside the range the game uses, so every one of the
+  never read, and the stat's default is `-1`, outside the range the game uses, so every one of the
   nine tamed for almost nothing, whether written at 0.4 or at 1.
 
 ### Removed
@@ -64,7 +64,7 @@ The defs come from the original mod's `1.5` folder. No balance value was changed
 
 - Goliebbb ThingDef label corrected from `ebbb` to `goliebbb` on 2026-09-13, matching its PawnKindDef. DefNames are unchanged.
 
-## [0.1.0] — 2026-09-23
+## [0.1.0], 2026-09-23
 
 - Creation of a `publishIdFile` (`About/PublishedFileId.txt`). This first upload exists only to
   create the Workshop item, which Steam creates private, and to obtain that file. It does not make

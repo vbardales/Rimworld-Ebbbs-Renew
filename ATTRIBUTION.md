@@ -1,4 +1,4 @@
-# Ebbbs — where the content comes from, and what had to be changed
+# Ebbbs, where the content comes from, and what had to be changed
 
 Everything in this mod is **Coolie's** work: the nine creatures, their flesh type, their body plan,
 their textures. This repository holds the port to RimWorld 1.6 and nothing else.
@@ -34,7 +34,7 @@ visible there, replying to a request to update the mod for a newer version:
 > me, I'm definitely just, not gonna touch this mod until I know for certain I have the motivation
 > to make the sprites...
 >
-> — coolziecat, 6 Jul 2024, on
+> coolziecat, 6 Jul 2024, on
 > [the mod's Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755),
 > checked still visible 2026-09-28
 
