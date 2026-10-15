@@ -525,9 +525,7 @@ namespace EbbbsRenew.PickleSteps
                     x + (int)Math.Round(radius * Math.Cos(angle)), 0, z + (int)Math.Round(radius * Math.Sin(angle)));
                 Pawn animal = SpawnAdultPlayerAt(ctx, NineSpecies[i], at, 1);
                 Scene[NineSpecies[i]] = animal.thingIDNumber;
-                int dx = x - animal.Position.x;
-                int dz = z - animal.Position.z;
-                animal.Rotation = Math.Abs(dx) > Math.Abs(dz) ? (dx > 0 ? Rot4.East : Rot4.West) : (dz > 0 ? Rot4.North : Rot4.South);
+                animal.Rotation = Rot4.South; // faces the camera: the owner wants animals seen from the front (GALLERY.md, 2026-10-14)
             }
 
             Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
