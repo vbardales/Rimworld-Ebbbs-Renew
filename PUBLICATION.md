@@ -128,7 +128,7 @@ Full check and detail in `ATTRIBUTION.md`.
 
 ## Screenshots, in this order
 
-**Not settled.** No Workshop screenshot has been chosen or produced. Steam shows the first one large
+**Three candidates, awaiting the owner (2026-10-15).** `Art/Gallery/1-candidate-keeper-and-nine.png`, `2-candidate-keeper-ebbb-beee.png`, `3-candidate-wildness-card.png` (P7, evidence `p7-gallery-3` and `p7-gallery-2`); rows 4 and 5 have no scenario and stay out of this release. Steam shows the first one large
 under the Preview, so it must be the most demonstrative, and every image is opened and looked at before it
 is listed here.
 
