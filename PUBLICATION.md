@@ -128,17 +128,15 @@ Full check and detail in `ATTRIBUTION.md`.
 
 ## Screenshots, in this order
 
-**Three candidates, awaiting the owner (2026-10-15).** `Art/Gallery/1-candidate-keeper-and-nine.png`, `2-candidate-keeper-ebbb-beee.png`, `3-candidate-wildness-card.png` (P7, evidence `p7-gallery-3` and `p7-gallery-2`); rows 4 and 5 have no scenario and stay out of this release. Steam shows the first one large
-under the Preview, so it must be the most demonstrative, and every image is opened and looked at before it
-is listed here.
+**Gallery accepted by the owner (2026-10-15): three images, played in the Sanctuary (P7), Nelim as protagonist.** Files `Art/Gallery/1-keeper-and-nine.png`, `2-keeper-ebbb-beee.png`, `3-wildness-card.png`. Steam shows the first one large under the Preview, so it is the most demonstrative, and every image was opened and looked at.
 
 | Order | What it should show | Why there |
 |---|---|---|
-| 1 | Wide shot: the keeper at her table, the nine species gathered round her (staged: story "Cheese night at the goo pen", dressed keeper, decor placed then removed) | The mod's whole content in one frame. Scenario "wide shot, the keeper at her table with the nine species gathered round her" of feature `11`, pass P7; the owner judges the composition |
-| 2 | Close shot: the keeper with an ebbb and a beee beside her (staged, same decor) | The gentle side of the goo, at a size where the textures read. Scenario "close shot, the keeper with an ebbb and a beee beside her" of feature `11`, pass P7 |
+| 1 | Wide shot: Nelim at her table, the nine species gathered round her, facing the camera (staged, story "Cheese night in the clearing") | The mod's whole content in one frame. Scenario "wide shot, the keeper at her table with the nine species gathered round her" of feature `11`, pass P7; the owner judges the composition |
+| 2 | Close shot: Nelim with an ebbb and a beee beside her (staged, same decor) | The gentle side of the goo, at a size where the textures read. Scenario "close shot, the keeper with an ebbb and a beee beside her" of feature `11`, pass P7 |
 | 3 | An ebbb's information card filtered to `Wildness` (a menu: plain capture, not staged) | The exact defect the port exists to fix, and the one thing the log cannot show. Scenario "the information card of an ebbb, with Wildness" of feature `11`, pass P7 |
-| 4 | A species offered a prosthetic/bionic recipe with A Dog Said 2, its recipe in the surgery menu | The one optional integration this mod claims natively. Needs its own scenario and map, not written |
-| 5 | Two species with a body-clock icon, with Nocturnal Animals | A second optional integration. Needs its own scenario, not written |
+
+Not in this release: a prosthetics recipe with A Dog Said 2 and a body-clock icon with Nocturnal Animals have no scenario; they may join a later version. Image 3 was taken on the exhibition zone and would crop better on a "-height" zone of the Sanctuary (owner remark, 2026-10-15); accepted as it is.
 
 The gallery is uploaded by hand (`OPERATIONS.md`): a folder holding only the images to upload, numbered
 `01-`, `02-`... in page order, no old version, no raw capture, no subfolder. It is

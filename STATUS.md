@@ -9,7 +9,7 @@ repo:         Rimworld-Ebbbs-Renew
 remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: shootGallery[1.0.0]
+workflow_stage: mountPreview[1.0.0]
 licence:      authorized (was silent; see 2026-09-28 entry below)
 licence_at:   ATTRIBUTION.md; historical five-source audit, refreshed online 2026-09-28 (see the
   reclassification entry below): the Workshop page, the author's profile and a web.archive.org
@@ -26,18 +26,22 @@ code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
 echo_review_sha: e7562ecedd5d7812afd43b63da3acbd9e70799cf
 social_preview_sha256: ead6d56948b87cb8e3fc1cc063cf3f32624b2e2e06d1771a8e9ce139b4d0e383
 remaining:
-  - feature: gallery candidates 1 to 3 in Art/Gallery (P7 green: tickets b6db and 5dee, evidence p7-gallery-4, -5 and -2), opened and judged by the session; the owner accepts or refuses, then reindex, drop `candidate`, table in PUBLICATION.md
+  - feature: mountPreview: the echo is provisional (echo-preview.png) and the gallery now has images: redo echo-source.png from the gallery, clear echo_review_sha, validate it (AUDIT 9.f)
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
-updated:      2026-10-15, shootGallery[1.0.0]: P7 green, three gallery candidates (1, 2, 3) await the owner
-protocols_read_sha: 23f263539905e7d5a57ecaf3f85c29c92dc4b10d
+updated:      2026-10-15, gallery accepted by the owner (3 images), now mountPreview[1.0.0]
+protocols_read_sha: 6eeb289af92096fa3a7ee40825e3b5221030873d
 ---
 
 # Ebbbs Renew — status
+
+## shootGallery done, mountPreview next - 2026-10-15
+
+**Previous: `shootGallery[1.0.0]`. Retained: `mountPreview[1.0.0]`.** Gallery accepted by the owner: `Art/Gallery/` holds `0-preview.png` and three images (P7 green, tickets b6db and 5dee, Nelim as protagonist, animals facing the camera). | Order | File | Shows |: 1 `1-keeper-and-nine.png` wide shot, 2 `2-keeper-ebbb-beee.png` close shot, 3 `3-wildness-card.png` the Wildness information card (taken on the exhibition zone; a "-height" zone of the Sanctuary would crop better, accepted as is). No ADS2 or Nocturnal Animals image: no scenario, left for a later version. `Mod/` changed since `code_review_sha` only in the `About.xml` description, read by the session.
 
 ## playTests done, shootGallery next - 2026-10-12
 
