@@ -32,10 +32,14 @@ remaining:
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
-updated:      2026-10-15, gallery accepted by the owner (3 images), now mountPreview[1.0.0]
+updated:      2026-10-17, French reread and validated by the owner
 protocols_read_sha: c283fedfcc80166d175245f9553ab4095716c1fa
 ---
 # Ebbbs Renew, status
+
+## French re-validated, 2026-10-17
+
+Virginie reread FRENCH_REVIEW.md after three ChatGPT review rounds and validated (`translation_fr` stays `complete`). Fixes applied: Goliebbb and Thrumebbb descriptions without addressing the player, ThrumebbbHorn wording, Crebbb `nutrition` typo, PUBLICATION/CHANGELOG wording. Last commit: `87d3f81`. `code_review_sha` stale (Mod/ text changes), reviewed at `prepareRelease`.
 
 ## shootGallery done, mountPreview next - 2026-10-15
 
