@@ -38,6 +38,10 @@ protocols_read_sha: c283fedfcc80166d175245f9553ab4095716c1fa
 ---
 # Ebbbs Renew, status
 
+## Gallery image 1 rework in flight, 2026-10-17
+
+Owner asked to rework the gallery. Image 1 judged weak (nine scattered at the edge of the lit square, Nelim tiny, guests not visible). Feature 11 wide shot tightened (`0010074`: zoom 6 on (200, 186), half circle 3 cells). Ticket `20261017-233911-150-6716` (filter `11-publication-shots::wide shot`, evidence `Tests/Pickle/Evidence/p7-wide-rework`) waits. Next: open capture, verdict, replace `Art/Gallery-clean/1-*`, re-subtitle, re-review echo.
+
 ## Gallery subtitles, 2026-10-17
 
 Images 1 and 2 subtitled with `scripts/Add-Subtitle.ps1` (lines in `PUBLICATION.md`, section "Gallery subtitles"); clean originals in `Art/Gallery-clean/`. Both opened: line readable, one line, hides no subject. Image 3 (interface card) and `0-` have none. Scene content unchanged, echo (`Art/echo-source.png`) reviewed again against the subtitled images: still fits, `echo_review_sha` moved to `14c20b2`.
