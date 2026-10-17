@@ -143,6 +143,15 @@ in page order, no old version, no raw capture, no subfolder. It is `Art/Gallery/
 byte copy of the Preview, kept at index 0 by `PUBLISHING.md`, not a fourth screenshot) then the three accepted
 images `1-`, `2-`, `3-`. It is also the workflow's `--gallery-dir` once it is configured.
 
+## Gallery subtitles
+
+One English line burnt into the bottom of each scene without an interface window (`GALLERY.md`, "Sous-titres"). The clean originals are in `Art/Gallery-clean/`; `Art/Gallery/` holds the subtitled images that get uploaded. Image 3 is an interface card and `0-` is the Preview copy: neither has a subtitle.
+
+| Index | File | Line |
+|---|---|---|
+| 1 | `1-keeper-and-nine.png` | Cheese night in the clearing: Nelim and all nine ebbbs round the table. |
+| 2 | `2-keeper-ebbb-beee.png` | Up close, an ebbb and a beee keep Nelim company. |
+
 ## Dependencies and DLCs
 
 **No DLC is required, and no mod.** `supportedVersions` declares 1.6 only.

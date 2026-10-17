@@ -38,6 +38,10 @@ protocols_read_sha: c283fedfcc80166d175245f9553ab4095716c1fa
 ---
 # Ebbbs Renew, status
 
+## Gallery subtitles, 2026-10-17
+
+Images 1 and 2 subtitled with `scripts/Add-Subtitle.ps1` (lines in `PUBLICATION.md`, section "Gallery subtitles"); clean originals in `Art/Gallery-clean/`. Both opened: line readable, one line, hides no subject. Image 3 (interface card) and `0-` have none. The scene content is unchanged, so the echo review stands.
+
 ## French re-validated, 2026-10-17
 
 Virginie reread FRENCH_REVIEW.md after three ChatGPT review rounds and validated (`translation_fr` stays `complete`). Fixes applied: Goliebbb and Thrumebbb descriptions without addressing the player, ThrumebbbHorn wording, Crebbb `nutrition` typo, PUBLICATION/CHANGELOG wording. Last commit: `87d3f81`. Owner also validated PUBLICATION.md and CHANGELOG.md at that commit (`publication_changelog_review_sha`). `code_review_sha` stale (Mod/ text changes), reviewed at `prepareRelease`.
