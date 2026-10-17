@@ -11,7 +11,8 @@
 # lands on. Nelim keeps her own hair, face and eyes (they are the fixture's identity); she wears a mustard
 # collar shirt, brown trousers and a deep-red knitted cap. Her guests are dressed for the same table: Tomi
 # (afro, teal shirt, sand trousers) and Sori (bob, plum shirt, grey trousers). All smile calmly (SocialRelax).
-#   1. 17h, golden dusk. Wide shot: Nelim at the table with the jug, her guests on the stools, the nine species
+#   1. 17h, golden dusk. Wide shot, tightened after the owner's review of 2026-10-17 (frame 21 x 12 cells on (200, 186),
+#      half circle of radius 3 cells, so that the nine really gather round the table and Nelim is not tiny): Nelim at the table with the jug, her guests on the stools, the nine species
 #      arriving in a half circle, all facing the camera (the whole content of the mod).
 #   2. 19h, the lamp and the fire lit. Close shot: Nelim with an ebbb and a beee
 #      beside her, a jug in her hands (the gentle side of the goo).
@@ -73,9 +74,9 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Sori" wears "Apparel_Pants" dyed rgb (110, 110, 115)
     And Nelim's Pickle Tools: "Sori" stands at (201, 187) facing West
     And Nelim's Pickle Tools: "Sori" facial expression is "SocialRelax"
-    And Ebbbs Renew: the nine species gather in a half circle south of the cell 199 186 at 4 cells
+    And Ebbbs Renew: the nine species gather in a half circle south of the cell 199 186 at 3 cells
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 185) at zoom 8
+    When Nelim's Pickle Tools: I frame the cell (200, 186) at zoom 6
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim and the nine species"
     When Nelim's Pickle Tools: the interface is shown again
