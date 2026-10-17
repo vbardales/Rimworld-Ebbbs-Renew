@@ -478,7 +478,7 @@ namespace EbbbsRenew.PickleSteps
             return pawn;
         }
 
-        private static Pawn SpawnAdultPlayerAt(PickleContext ctx, string kindName, IntVec3 around, int radius)
+        private static Pawn SpawnAdultPlayerAt(PickleContext ctx, string kindName, IntVec3 around, int radius, int lifeStage = -1)
         {
             PawnKindDef kind = DefDatabase<PawnKindDef>.GetNamedSilentFail(kindName);
             ctx.Require(kind != null, "no PawnKindDef named '" + kindName + "' is loaded");
@@ -492,7 +492,7 @@ namespace EbbbsRenew.PickleSteps
             ctx.Require(found, "no free standable cell was found near " + around);
             Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
                 kind, Faction.OfPlayer, forceGenerateNewPawn: true,
-                fixedBiologicalAge: kind.RaceProps.lifeStageAges.Last().minAge + 0.01f));
+                fixedBiologicalAge: (lifeStage < 0 ? kind.RaceProps.lifeStageAges.Last() : kind.RaceProps.lifeStageAges[Math.Min(lifeStage, kind.RaceProps.lifeStageAges.Count - 1)]).minAge + 0.01f));
             GenSpawn.Spawn(pawn, cell, map);
             pawn.Rotation = Rot4.South;
             return pawn;
@@ -508,6 +508,13 @@ namespace EbbbsRenew.PickleSteps
         public void SpawnPlayerClose(PickleContext ctx, string alias, string kindName, int x, int z)
         {
             Scene[alias] = SpawnAdultPlayerAt(ctx, kindName, new IntVec3(x, 0, z), 1).thingIDNumber;
+        }
+
+        /// <summary>One animal at a given life stage (0 = baby, 1 = juvenile, 2 = adult), for a picture of the ages side by side.</summary>
+        [Given("Ebbbs Renew: spawns the player animal {string} as {string} at life stage {int} close to the cell {int} {int}")]
+        public void SpawnPlayerAtStage(PickleContext ctx, string alias, string kindName, int lifeStage, int x, int z)
+        {
+            Scene[alias] = SpawnAdultPlayerAt(ctx, kindName, new IntVec3(x, 0, z), 1, lifeStage).thingIDNumber;
         }
 
         /// <summary>

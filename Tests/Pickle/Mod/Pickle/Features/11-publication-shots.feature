@@ -14,9 +14,13 @@
 #   1. 17h, golden dusk. Wide shot, tightened after the owner's review of 2026-10-17 (frame 21 x 12 cells on (200, 186),
 #      half circle of radius 3 cells, so that the nine really gather round the table and Nelim is not tiny): Nelim at the table with the jug, her guests on the stools, the nine species
 #      arriving in a half circle, all facing the camera (the whole content of the mod).
-#   2. 19h, the lamp and the fire lit. Close shot: Nelim with an ebbb and a beee
+#   2. 18h, the lamp and the fire lit, the thrumebbb (the star of the mod, drawn 4.8 cells wide) arrives.
+#      Portrait: Nelim with the thrumebbb seen from the front, a jug in her hands.
+#   3. 19h, the lamp and the fire lit. Close shot: Nelim with an ebbb and a beee
 #      beside her, a jug in her hands (the gentle side of the goo).
-#   3. A MENU: the information card of an ebbb showing Wildness, a plain capture on the full-screen-window
+#   4. 20h, night. The ebbb family: one ebbb as a baby, a juvenile and an adult side by side with a crebbb
+#      behind them, Nelim watching (the ages and the colour variants of the ebbb).
+#   5. A MENU: the information card of an ebbb showing Wildness, a plain capture on the full-screen-window
 #      backdrop `window-backdrop-for-height`, cropped on the sides (GALLERY.md).
 #
 #   - Pass: wsl-deps.sanctuary.map, English. Every other pass skips this feature.
@@ -25,7 +29,7 @@
 #     her, the guests on the stools, the lamp, the pots and the shelf at the sides, the fire south-west.
 #   - Not here: the A Dog Said 2 recipe and the Nocturnal Animals clock need other maps and other passes.
 #
-# Raw captures land outside the committed gallery; the finished images go to Art/Gallery/ numbered 1-, 2-, 3-.
+# Raw captures land outside the committed gallery; the finished images go to Art/Gallery/ numbered 1- to 5- (subtitles on 1 to 4, none on the card).
 @review @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.clearscreen
 Feature: images for the Workshop page
 
@@ -83,6 +87,37 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: the decor is removed
     And Nelim's Pickle Tools: "Nelim" gets back the clothes it had
 
+  Scenario: portrait, Nelim and the thrumebbb
+    Given I set the hour to 18
+    And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the colonists are sent to the map corner
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 190)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 190)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 190) is lit
+    And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 187)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 187)
+    And Nelim's Pickle Tools: I place the decor "Campfire" at (195, 185)
+    And Nelim's Pickle Tools: the decor "Campfire" at (195, 185) is lit
+    And Nelim's Pickle Tools: I let 60 ticks pass
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (92, 58, 38)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (140, 30, 40)
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 189) facing South
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"    And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
+    And Ebbbs Renew: spawns the player animal "Thrumebbb1" as "Thrumebbb" close to the cell 200 185
+    And Nelim's Pickle Tools: time is paused for the capture
+    When Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 5.5
+    And Nelim's Pickle Tools: the map is shown alone for a capture
+    Then I take a screenshot "Workshop page, Nelim and the thrumebbb"
+    When Nelim's Pickle Tools: the interface is shown again
+    And Nelim's Pickle Tools: the decor is removed
+    And Nelim's Pickle Tools: "Nelim" gets back the clothes it had
+
   Scenario: close shot, Nelim with an ebbb and a beee beside her
     Given I set the hour to 19
     And I set the weather to "Clear"
@@ -115,6 +150,37 @@ Feature: images for the Workshop page
     When Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 4.5
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim with an ebbb and a beee"
+    When Nelim's Pickle Tools: the interface is shown again
+    And Nelim's Pickle Tools: the decor is removed
+    And Nelim's Pickle Tools: "Nelim" gets back the clothes it had
+
+  Scenario: the ebbb family, three ages side by side
+    Given I set the hour to 20
+    And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the colonists are sent to the map corner
+    And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 190)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
+    And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 187)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 187)
+    And Nelim's Pickle Tools: I place the decor "Campfire" at (204, 185)
+    And Nelim's Pickle Tools: the decor "Campfire" at (204, 185) is lit
+    And Nelim's Pickle Tools: I let 60 ticks pass
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (92, 58, 38)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (140, 30, 40)
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 189) facing South
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"    And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 198 187
+    And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 200 187
+    And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 202 187
+    And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 200 184
+    And Nelim's Pickle Tools: time is paused for the capture
+    When Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4.5
+    And Nelim's Pickle Tools: the map is shown alone for a capture
+    Then I take a screenshot "Workshop page, the ebbb family"
     When Nelim's Pickle Tools: the interface is shown again
     And Nelim's Pickle Tools: the decor is removed
     And Nelim's Pickle Tools: "Nelim" gets back the clothes it had
