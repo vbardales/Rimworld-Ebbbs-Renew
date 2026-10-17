@@ -41,6 +41,7 @@ protocols_read_sha: c283fedfcc80166d175245f9553ab4095716c1fa
 ## Gallery image 1 rework in flight, 2026-10-17
 
 Owner asked to rework the gallery. Image 1 judged weak (nine scattered at the edge of the lit square, Nelim tiny, guests not visible). Feature 11 wide shot tightened (`0010074`: zoom 6 on (200, 186), half circle 3 cells). Ticket `20261017-233911-150-6716` (filter `11-publication-shots::wide shot`, evidence `Tests/Pickle/Evidence/p7-wide-rework`) waits. 1.7 diagnostic filed too: ticket `20261017-234127-872-810c` (P1 minimal English, `-Game /home/nelim/rimworld17`, evidence `Tests/Pickle/Evidence/p1-english-17`); `tested_1_7` recorded at its `RUN_DONE`. The third-party passes (P3 to P6) are not filed for 1.7: they depend on those mods' own 1.7 support.
+Gallery concept moved to five images (owner OK 2026-10-17, `c0b163a`): 1 wide 17h, 2 thrumebbb portrait 18h (new), 3 close shot 19h (current 2), 4 ebbb family at three life stages 20h (new), 5 Wildness card (current 3). Ticket `20261017-234519-746-5987` (evidence `Tests/Pickle/Evidence/p7-new-shots`) plays the two new scenarios. Renumber and re-subtitle once accepted.
 Next: open capture, verdict, replace `Art/Gallery-clean/1-*`, re-subtitle, re-review echo.
 
 ## Gallery subtitles, 2026-10-17
