@@ -22,6 +22,7 @@ tested_on:    5dcfd0d, 2026-10-11 and 12 (P1 to P6 green; see docs/runs/2026-09-
 automated:    PASS - 389 mod checks, 12 XML files; 104 translation entries; offline checks rerun 2026-10-11
 manual_tests: Tests/TEST_SCENARIOS.md - 9 scenarios, each mapped to a green Pickle scenario or a justified not-applicable (TESTING.md)
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
+publication_changelog_review_sha: 87d3f81446ab952e4fbf2289390218a0d2a2b694
 code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
 echo_review_sha: 9cfb169551489aec52dba289ed69ad43faae5c38
 social_preview_sha256: 30a8f6caa9c144f5bd9b15bb3de44745ca5fb36b67afdc619273560f2a312378
@@ -39,7 +40,7 @@ protocols_read_sha: c283fedfcc80166d175245f9553ab4095716c1fa
 
 ## French re-validated, 2026-10-17
 
-Virginie reread FRENCH_REVIEW.md after three ChatGPT review rounds and validated (`translation_fr` stays `complete`). Fixes applied: Goliebbb and Thrumebbb descriptions without addressing the player, ThrumebbbHorn wording, Crebbb `nutrition` typo, PUBLICATION/CHANGELOG wording. Last commit: `87d3f81`. `code_review_sha` stale (Mod/ text changes), reviewed at `prepareRelease`.
+Virginie reread FRENCH_REVIEW.md after three ChatGPT review rounds and validated (`translation_fr` stays `complete`). Fixes applied: Goliebbb and Thrumebbb descriptions without addressing the player, ThrumebbbHorn wording, Crebbb `nutrition` typo, PUBLICATION/CHANGELOG wording. Last commit: `87d3f81`. Owner also validated PUBLICATION.md and CHANGELOG.md at that commit (`publication_changelog_review_sha`). `code_review_sha` stale (Mod/ text changes), reviewed at `prepareRelease`.
 
 ## shootGallery done, mountPreview next - 2026-10-15
 
