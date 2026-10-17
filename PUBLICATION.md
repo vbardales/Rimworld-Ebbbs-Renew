@@ -50,7 +50,7 @@ Nine creatures: **ebbb**, **beee**, **crebbb**, **drebbbd**, **ebbberration**, *
 **goliebbb**, **thrumebbb**, **bebbbholder**. Body sizes from 0.2 to 4, market values from 10 to 2000,
 trainability from Intermediate to Advanced.
 
-They bring a flesh type of their own, their own body plan, their own blood, ebbb leather, and a horn off
+They bring a flesh type of their own, their own body plan, their own blood, ebbb leather, and a horn from
 the thrumebbb.
 
 Nobody knows what an ebbb is. The mod's own description says scientists have been at it for decades. The
@@ -211,7 +211,7 @@ replay, the gallery is done and the owner's manual validations are made.
 
 - Scenario that failed and was replayed green (2026-09-26): P6's "what each pairing gives, by mother",
   wrong extension-class name (`DZY.Crossbreeding.Extension` written, `DZY.CrossBreeding.Extension` real),
-  fixed and rejoued green (ticket `cd68`).
+  fixed and replayed green (ticket `cd68`).
 - **The rollback target is not chosen.** The only earlier upload is the private `0.1.0` prepublication of
   2026-09-23, made from the folder as it stood then and not from a tagged commit, so it cannot be
   reproduced. The first real target is the SHA of the `1.0.0` that passes its dry-run, written here at
