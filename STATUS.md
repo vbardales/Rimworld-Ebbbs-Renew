@@ -24,7 +24,7 @@ manual_tests: Tests/TEST_SCENARIOS.md - 9 scenarios, each mapped to a green Pick
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 publication_changelog_review_sha: 87d3f81446ab952e4fbf2289390218a0d2a2b694
 code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
-echo_review_sha: 9cfb169551489aec52dba289ed69ad43faae5c38
+echo_review_sha: 14c20b25a19bcf9a70dce5af3dce5ac9a9c8e576
 social_preview_sha256: 30a8f6caa9c144f5bd9b15bb3de44745ca5fb36b67afdc619273560f2a312378
 remaining:
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
@@ -40,7 +40,7 @@ protocols_read_sha: c283fedfcc80166d175245f9553ab4095716c1fa
 
 ## Gallery subtitles, 2026-10-17
 
-Images 1 and 2 subtitled with `scripts/Add-Subtitle.ps1` (lines in `PUBLICATION.md`, section "Gallery subtitles"); clean originals in `Art/Gallery-clean/`. Both opened: line readable, one line, hides no subject. Image 3 (interface card) and `0-` have none. The scene content is unchanged, so the echo review stands.
+Images 1 and 2 subtitled with `scripts/Add-Subtitle.ps1` (lines in `PUBLICATION.md`, section "Gallery subtitles"); clean originals in `Art/Gallery-clean/`. Both opened: line readable, one line, hides no subject. Image 3 (interface card) and `0-` have none. Scene content unchanged, echo (`Art/echo-source.png`) reviewed again against the subtitled images: still fits, `echo_review_sha` moved to `14c20b2`.
 
 ## French re-validated, 2026-10-17
 
