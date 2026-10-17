@@ -33,7 +33,7 @@ remaining:
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
 updated:      2026-10-15, gallery accepted by the owner (3 images), now mountPreview[1.0.0]
-protocols_read_sha: 6eeb289af92096fa3a7ee40825e3b5221030873d
+protocols_read_sha: c283fedfcc80166d175245f9553ab4095716c1fa
 ---
 
 # Ebbbs Renew, status
