@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ============================================================ -->
 	<ThingDef ParentName="EbbbBase">
@@ -862,7 +862,7 @@
 	<ThingDef ParentName="EbbbBase">
 		<defName>Crebbb</defName>
 		<label>crebbb</label>
-		<description>A 3-legged monster that is surprisingly friendly. As a herbivore, its main source of nutritian is plantlife, as such it rarely attacks people and is generally more docile than the other Ebbbs.</description>
+		<description>A 3-legged monster that is surprisingly friendly. As a herbivore, its main source of nutrition is plantlife, as such it rarely attacks people and is generally more docile than the other Ebbbs.</description>
 		<statBases>
 		  <Wildness>0.2</Wildness>
 			<MoveSpeed>2</MoveSpeed>

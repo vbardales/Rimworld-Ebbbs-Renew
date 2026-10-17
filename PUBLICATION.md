@@ -18,7 +18,7 @@ Not restated from `AUDIT.md`; only what is specific to this mod.
   Better Crossbreeding patches. P5 and P6 are green (`docs/runs/2026-09-25.md`); P1's replay is in flight.
 - Long French text fit and Preview/icon appearance in the game UI: `TESTING.md` says these need a
   person, not automated.
-- The gallery does not exist (see below).
+- The Steam gallery is not uploaded yet: the three images are accepted (see below).
 - The rollback target is not chosen (see "Fail fast").
 - No dry-run of the publish workflow has run.
 - The page still carries the description `0.1.0` sent. `update_description=true` is what corrects it.
@@ -38,7 +38,7 @@ take it down promptly.
 
 Nine forms of goo, brought forward to the latest RimWorld version.
 
-**I am not the author of this mod.** All nine creatures are Coolie's; all I did was the work needed to
+**I am not the author of this mod.** All nine creatures are Coolie's creations; I only did the work needed to
 make them run on the latest RimWorld version. Credit goes to them, mistakes in the update are mine.
 
 Original mod: [Ebbbs](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755): last
@@ -65,8 +65,8 @@ Content mod: removing it mid-save will lose any ebbb already in play, of any siz
 **[A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862)**
 is supported natively, with nothing to install or configure. The nine species are sorted into its three
 cumulative categories the way its own lists sort vanilla animals: the ebbb and the bebbbholder get the
-basic replacements, the crebbb, the ebbberration, the drebbbd and the goliebbb the simple prosthetics as
-well, and the beee, the ebbbomination and the thrumebbb the bionics too.
+basic replacements, the crebbb, the ebbberration, the drebbbd and the goliebbb get the simple prosthetics as
+well, and the beee, the ebbbomination and the thrumebbb get the bionics too.
 
 **[[XND] Nocturnal Animals (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2269731409)**
 is supported natively too. Each species gets a body clock through that mod's own extension, changeable per
@@ -172,8 +172,8 @@ among the things a `publish` does not skip without saying which. This is a propo
 ## Mature content checkboxes
 
 **None of them.** The mod adds nine goo creatures; the images are a Preview and an icon of the creatures
-themselves. The Workshop screenshots are not produced yet; each must be opened before this answer is
-final.
+themselves. The three Workshop screenshots are accepted but not uploaded yet; the answer is final once the uploaded
+images have been opened.
 
 ## Steam change notes
 
@@ -190,7 +190,7 @@ First release. Port of Coolie's "Ebbbs" to RimWorld 1.6.
 [list]
 [*]Nine goo creatures, brought forward from the abandoned 1.5 version: ebbb, beee, crebbb, drebbbd, ebbberration, ebbbomination, goliebbb, thrumebbb, bebbbholder.
 [*]The taming defect RimWorld 1.6 introduced (wildness moved to a StatDef and silently stopped being read) is fixed on all nine.
-[*]Native support for A Dog Said... Animal Prosthetics 2: each species offered the surgeries of its category.
+[*]Native support for A Dog Said... Animal Prosthetics 2: each species offers the surgeries of its category.
 [*]Native support for [XND] Nocturnal Animals (Continued): each species carries its own body clock.
 [*]Native support for Better Crossbreeding: four pairs can crossbreed within the family.
 [*]English and French.

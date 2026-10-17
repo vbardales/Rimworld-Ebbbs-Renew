@@ -24,7 +24,7 @@
   <Ebbbomination.tools.right_appendage.label>appendice droit</Ebbbomination.tools.right_appendage.label>
   <Ebbbomination.tools.head.label>tête</Ebbbomination.tools.head.label>
   <Goliebbb.label>goliebbb</Goliebbb.label>
-  <Goliebbb.description>Monstruosité terrifiante, le goliebbb est un colosse instable qui dévore tout sur son passage. Si vous le voyez, il vous a très certainement déjà vu.</Goliebbb.description>
+  <Goliebbb.description>Monstruosité terrifiante, le goliebbb est un colosse instable qui dévore tout sur son passage. Le voir signifie très certainement avoir déjà été repéré par lui.</Goliebbb.description>
   <Goliebbb.tools.left_appendage.label>appendice gauche</Goliebbb.tools.left_appendage.label>
   <Goliebbb.tools.right_appendage.label>appendice droit</Goliebbb.tools.right_appendage.label>
   <Goliebbb.tools.head.label>tête</Goliebbb.tools.head.label>
@@ -47,7 +47,7 @@
   <Crebbb.tools.front_legs.label>pattes avant</Crebbb.tools.front_legs.label>
   <Crebbb.tools.head.label>tête</Crebbb.tools.head.label>
   <Thrumebbb.label>thrumebbb</Thrumebbb.label>
-  <Thrumebbb.description>Parodie grotesque de la créature la plus gracieuse de l&apos;univers, le thrumebbb est un amalgame d&apos;ebbbs qui a acquis, on ne sait comment, un semblant d&apos;intelligence. Il est répugnant et empeste la mort. Méfiez-vous : il ne mange pas les arbres.</Thrumebbb.description>
+  <Thrumebbb.description>Parodie grotesque de la créature la plus gracieuse de l&apos;univers, le thrumebbb est un amalgame d&apos;ebbbs qui a acquis, on ne sait comment, un semblant d&apos;intelligence. Il est répugnant et empeste la mort. Prudence : il ne mange pas les arbres.</Thrumebbb.description>
   <Thrumebbb.tools.horn.label>corne</Thrumebbb.tools.horn.label>
   <Thrumebbb.tools.left_foot.label>pied gauche</Thrumebbb.tools.left_foot.label>
   <Thrumebbb.tools.right_foot.label>pied droit</Thrumebbb.tools.right_foot.label>

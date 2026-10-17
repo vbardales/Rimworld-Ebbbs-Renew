@@ -17,11 +17,11 @@ First release of the 1.6 update of **Ebbbs**, by Coolie.
 - **Native support for A Dog Said... Animal Prosthetics 2** (`SamBucher.ADogSaidAnimalProsthetics2`). The
   nine species are added to its three cumulative animal categories, so they can receive prosthetics and
   bionics: the ebbb and the bebbbholder get the basic replacements, the crebbb, the ebbberration, the drebbbd
-  and the goliebbb the simple prosthetics as well, and the beee, the ebbbomination and the thrumebbb the
+  and the goliebbb get the simple prosthetics as well, and the beee, the ebbbomination and the thrumebbb get the
   bionics too. It is one guarded patch, `Patches/AnimalProsthetics2.xml`, which does nothing without that
   mod, and `About.xml` declares `loadBefore` for it, because that mod copies its category lists into its real
   recipes in its own last patch and a name added afterwards is never read. It is an order, not a dependency.
-  The Steam page text is not re-sent by an update: the paragraph `About.xml` gained has to be added by hand.
+  The Steam page text is not re-sent by an update: the paragraph added to `About.xml` has to be added by hand.
 - **Native support for [XND] Nocturnal Animals (Continued)** (`Mlie.XNDNocturnalAnimals`). Each species gets a body
   clock through that mod's own extension: the ebbb, the beee, the ebbbomination and the thrumebbb nocturnal, the crebbb
   crepuscular, the ebbberration diurnal, the bebbbholder, the drebbbd and the goliebbb cathemeral. The player can still change
