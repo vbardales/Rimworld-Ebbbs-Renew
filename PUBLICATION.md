@@ -139,9 +139,9 @@ Full check and detail in `ATTRIBUTION.md`.
 Not in this release: a prosthetics recipe with A Dog Said 2 and a body-clock icon with Nocturnal Animals have no scenario; they may join a later version. Image 3 was taken on the exhibition zone and would crop better on a "-height" zone of the Sanctuary (owner remark, 2026-10-15); accepted as it is.
 
 The gallery is uploaded by hand (`OPERATIONS.md`): a folder holding only the images to upload, numbered
-`01-`, `02-`... in page order, no old version, no raw capture, no subfolder. It is
-`Art/Gallery/` (images numbered `1-`, `2-`, with `0-preview.png` the copy of the Preview), also the
-workflow's `--gallery-dir` once it is configured.
+in page order, no old version, no raw capture, no subfolder. It is `Art/Gallery/`: `0-preview.png` (the
+byte copy of the Preview, kept at index 0 by `PUBLISHING.md`, not a fourth screenshot) then the three accepted
+images `1-`, `2-`, `3-`. It is also the workflow's `--gallery-dir` once it is configured.
 
 ## Dependencies and DLCs
 

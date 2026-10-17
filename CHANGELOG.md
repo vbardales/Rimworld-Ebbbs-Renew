@@ -23,8 +23,8 @@ First release of the 1.6 update of **Ebbbs**, by Coolie.
   recipes in its own last patch and a name added afterwards is never read. It is an order, not a dependency.
   The Steam page text is not re-sent by an update: the paragraph added to `About.xml` has to be added by hand.
 - **Native support for [XND] Nocturnal Animals (Continued)** (`Mlie.XNDNocturnalAnimals`). Each species gets a body
-  clock through that mod's own extension: the ebbb, the beee, the ebbbomination and the thrumebbb nocturnal, the crebbb
-  crepuscular, the ebbberration diurnal, the bebbbholder, the drebbbd and the goliebbb cathemeral. The player can still change
+  clock through that mod's own extension: the ebbb, the beee, the ebbbomination and the thrumebbb are nocturnal, the crebbb
+  is crepuscular, the ebbberration is diurnal, the bebbbholder, the drebbbd and the goliebbb are cathemeral. The player can still change
   it per species in that mod's options. One guarded patch, `Patches/NocturnalAnimals.xml`, which does nothing without it.
 - **Native support for Better Crossbreeding** (`DizzyEevee.BetterCrossbreeding`). Four pairs among the nine can breed:
   ebbb with crebbb, ebbb with bebbbholder and crebbb with ebbberration (a coin flip for each child's kind), and ebbb with
