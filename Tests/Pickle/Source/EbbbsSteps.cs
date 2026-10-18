@@ -528,11 +528,13 @@ namespace EbbbsRenew.PickleSteps
             for (int i = 0; i < NineSpecies.Length; i++)
             {
                 double angle = Math.PI + Math.PI * i / (NineSpecies.Length - 1);
+                // Staggered depth: every other animal stands one cell nearer the middle, so the nine read as a crowd round the table, not a row.
+                int ring = (i % 2 == 1) ? Math.Max(1, radius - 1) : radius;
                 IntVec3 at = new IntVec3(
-                    x + (int)Math.Round(radius * Math.Cos(angle)), 0, z + (int)Math.Round(radius * Math.Sin(angle)));
+                    x + (int)Math.Round(ring * Math.Cos(angle)), 0, z + (int)Math.Round(ring * Math.Sin(angle)));
                 Pawn animal = SpawnAdultPlayerAt(ctx, NineSpecies[i], at, 1);
                 Scene[NineSpecies[i]] = animal.thingIDNumber;
-                animal.Rotation = Rot4.South; // faces the camera: the owner wants animals seen from the front (GALLERY.md, 2026-10-14)
+                animal.Rotation = i == 2 ? Rot4.East : (i == 6 ? Rot4.West : Rot4.South); // most face the camera (GALLERY.md, 2026-10-14); two look across at the table
             }
 
             Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;

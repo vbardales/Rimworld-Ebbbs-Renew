@@ -42,13 +42,15 @@ protocols_read_sha: bde324699b1b844b8b097ba0703df79f6d2dc746
 
 Owner rule via Audit: every scene scored 4 or more before it is played. `workflow_stage: shootGallery[1.0.0]`. Shotlist (header of `11-publication-shots.feature`, estimates in its "SHOTLIST ESTIMATE" block):
 
-| # | Shot | Hour | Score | Main risk | Action |
-|---|---|---|---|---|---|
-| 1 | wide, Nelim and the nine | 17h | 4 | nine not all facing camera | rework ticket 6716 waits |
-| 2 | thrumebbb portrait | 18h | 4 | animal turns away, crop | zoom 5.5 to 4.5, merged line fixed |
-| 3 | ebbb and beee close | 19h | 4 | animals not front | accepted earlier, kept |
-| 4 | ebbb family, three ages | 20h | 4 | life-stage step unproven, dark | merged line fixed, 2nd lamp |
-| 5 | Wildness card | menu | 4 | crop | retake on window-backdrop-for-height |
+| # | Shot, outfit (colours) | Hour | Score a-k | Risk and plan |
+|---|---|---|---|---|
+| 1 | wide, jug carried; mustard shirt, brown trousers, red cap; staggered nine, guests seated | 17h | 4 | overlap or crop: radius 3 two depths, retake radius 4 |
+| 2 | thrumebbb portrait, jug held out; teal jacket, cream trousers | 18h | 4 | turns away or crops: zoom 4.5, spawn 4 cells away |
+| 3 | ebbb and beee close, jug offered; rose shirt, charcoal trousers, sand hat | 19h | 4 | not front: spawn facing South, retake |
+| 4 | ebbb family 3 ages, watching; cream shirt, indigo duster | 20h | 4 | dark, life-stage step unproven: 2 lamps + fire, drop scene if step fails |
+| 5 | Wildness card, interface | menu | not scored | set aside (owner rule) |
+
+Audit read of 2026-10-18 answered: outfit per scene, own decor per scene, action per scene, risk with plan in the header (a to k). Tickets 6716 and 5987 started on the earlier tree: judge their captures against this table, refile what differs.
 
 Lowest 3 before rework (2 and 4); captures under 4 to redo: old 1 and old card. New images stay candidates; the published gallery is replaced only with Virginie's OK. Ticket 5987 (new shots) played the pre-fix feature: refile.
 
