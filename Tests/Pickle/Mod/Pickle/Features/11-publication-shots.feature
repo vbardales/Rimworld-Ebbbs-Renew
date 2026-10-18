@@ -9,7 +9,7 @@
 # share the little table with her, a lamp and a fire are lit, and the evening goes from golden dusk to night.
 # Dressing: warm, saturated cloth against creatures that are black goo, so that the creatures are what the eye
 # lands on. Nelim keeps her own hair, face and eyes (they are the fixture's identity); in scene 1 she wears a mustard
-# collar shirt, brown trousers and a deep-red knitted cap; every other scene has its own outfit (SHOTLIST below). Her guests are dressed for the same table: Tomi
+# collar shirt, brown trousers and no hat (hat rule, 2026-10-18: no hat, so no hair-under-hat mod needed); every other scene has its own outfit (SHOTLIST below). Her guests are dressed for the same table: Tomi
 # (afro, teal shirt, sand trousers) and Sori (bob, plum shirt, grey trousers). All smile calmly (SocialRelax).
 #   1. 17h, golden dusk. Wide shot, tightened after the owner's review of 2026-10-17 (frame 21 x 12 cells on (200, 186),
 #      half circle of radius 3 cells, so that the nine really gather round the table and Nelim is not tiny): Nelim at the table with the jug, her guests on the stools, the nine species
@@ -32,7 +32,7 @@
 # SHOTLIST, scored against GALLERY.md "Shotlist : criteres d'une scene a 4/5" (a to k), 2026-10-18. Story (k) is the THE STORY block above:
 # one evening, Nelim brings the milk, dusk to night, each scene an episode, hour per scene (rhythm: 17h, 18h, 19h, 20h, clear weather every time).
 # All scenes: place calm-zone (a), Nelim keeps her own bun and face (the fixture's identity), expression SocialRelax, guests Tomi/Sori only in 1.
-#   1 (17h, wide, score 4). EPISODE: she arrives with the jug and the nine come to her. Outfit (d): mustard CollarShirt rgb 222,170,60, brown Pants, red Tuque.
+#   1 (17h, wide, score 4). EPISODE: she arrives with the jug and the nine come to her. Outfit (d): mustard CollarShirt rgb 222,170,60, brown Pants.
 #     Action (e): carries Milk toward the table. Decor (b): Table2x2c, 2 Stools, Milk, TorchLamp lit, 2 PlantPots, Shelf, Campfire lit (195,185), removed after.
 #     Living (c): nine species, staggered in two depths and two looking across at the table (step changed, not a row facing front, i); Tomi and Sori seated.
 #     Composition (f): zoom 6 on (200,186), animals fill the lower half, table off-centre. Subject (g): the whole offer, nine species. Mod (j): all nine.
@@ -41,7 +41,7 @@
 #     Action: holds the jug out at arm's length, one step nearer (200,188). Decor: 2 TorchLamps lit (196,190) (204,190), 2 PlantPots, Campfire lit (204,185), no table.
 #     Living: thrumebbb seen from the front at (200,185) (the series' front animal). Composition: zoom 4.5 on (200,187), it fills the top, Nelim small below.
 #     Subject: the thrumebbb, 4.8 cells wide. Mod: its horn and size. RISK + PLAN: it turns away or crops; plan: zoom 4.5 (was 5.5), spawn 4 cells from her, reshoot facing South.
-#   3 (19h, close, score 4). EPISODE: the gentle side, an ebbb and a beee settle beside her. Outfit: dusty-rose BasicShirt rgb 200,100,120, charcoal Pants rgb 60,62,70, sand CowboyHat rgb 215,190,140.
+#   3 (19h, close, score 4). EPISODE: the gentle side, an ebbb and a beee settle beside her. Outfit: dusty-rose BasicShirt rgb 200,100,120, charcoal Pants rgb 60,62,70.
 #     Action: offers the jug between them. Decor: Stool, Milk on the ground (198-199,188), TorchLamp lit (203,190), 2 PlantPots, Campfire lit (196,186), removed after.
 #     Living: ebbb and beee at her sides. Composition: zoom 4.5 on (200,188), tight, animals framing her either side. Subject: how gentle the goo is. Mod: two species, cheese-milk theme.
 #     RISK + PLAN: animals not facing front; plan: they spawn facing South (previous capture accepted); retake if a profile.
@@ -80,7 +80,6 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (92, 58, 38)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Tuque" dyed rgb (140, 30, 40)
     And Nelim's Pickle Tools: "Nelim" stands at (200, 189) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
@@ -159,7 +158,6 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (200, 100, 120)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 62, 70)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CowboyHat" dyed rgb (215, 190, 140)
     And Nelim's Pickle Tools: "Nelim" stands at (200, 189) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"

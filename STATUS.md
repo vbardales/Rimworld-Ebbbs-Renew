@@ -44,9 +44,9 @@ Owner rule via Audit: every scene scored 4 or more before it is played. `workflo
 
 | # | Shot, outfit (colours) | Hour | Score a-k | Risk and plan |
 |---|---|---|---|---|
-| 1 | wide, jug carried; mustard shirt, brown trousers, red cap; staggered nine, guests seated | 17h | 4 | overlap or crop: radius 3 two depths, retake radius 4 |
+| 1 | wide, jug carried; mustard shirt, brown trousers; staggered nine, guests seated | 17h | 4 | overlap or crop: radius 3 two depths, retake radius 4 |
 | 2 | thrumebbb portrait, jug held out; teal jacket, cream trousers | 18h | 4 | turns away or crops: zoom 4.5, spawn 4 cells away |
-| 3 | ebbb and beee close, jug offered; rose shirt, charcoal trousers, sand hat | 19h | 4 | not front: spawn facing South, retake |
+| 3 | ebbb and beee close, jug offered; rose shirt, charcoal trousers | 19h | 4 | not front: spawn facing South, retake |
 | 4 | ebbb family 3 ages, watching; cream shirt, indigo duster | 20h | 4 | dark, life-stage step unproven: 2 lamps + fire, drop scene if step fails |
 | 5 | Wildness card, interface | menu | not scored | set aside (owner rule) |
 
