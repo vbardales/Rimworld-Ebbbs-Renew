@@ -9,7 +9,7 @@ repo:         Rimworld-Ebbbs-Renew
 remote:       https://github.com/vbardales/Rimworld-Ebbbs-Renew.git
 visibility:   public
 detached:     yes
-workflow_stage: mountPreview[1.0.0]
+workflow_stage: shootGallery[1.0.0]
 licence:      authorized (was silent; see 2026-09-28 entry below)
 licence_at:   ATTRIBUTION.md; historical five-source audit, refreshed online 2026-09-28 (see the
   reclassification entry below): the Workshop page, the author's profile and a web.archive.org
@@ -37,6 +37,20 @@ updated:      2026-10-17, French reread and validated by the owner
 protocols_read_sha: c283fedfcc80166d175245f9553ab4095716c1fa
 ---
 # Ebbbs Renew, status
+**Status, 2026-10-13: 1.0.0 published and public; 1.1.0 prepared, not published.** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
+## Gallery reopened, 2026-10-18
+
+Owner rule via Audit: every scene scored 4 or more before it is played. `workflow_stage: shootGallery[1.0.0]`. Shotlist (header of `11-publication-shots.feature`, estimates in its "SHOTLIST ESTIMATE" block):
+
+| # | Shot | Hour | Score | Main risk | Action |
+|---|---|---|---|---|---|
+| 1 | wide, Nelim and the nine | 17h | 4 | nine not all facing camera | rework ticket 6716 waits |
+| 2 | thrumebbb portrait | 18h | 4 | animal turns away, crop | zoom 5.5 to 4.5, merged line fixed |
+| 3 | ebbb and beee close | 19h | 4 | animals not front | accepted earlier, kept |
+| 4 | ebbb family, three ages | 20h | 4 | life-stage step unproven, dark | merged line fixed, 2nd lamp |
+| 5 | Wildness card | menu | 4 | crop | retake on window-backdrop-for-height |
+
+Lowest 3 before rework (2 and 4); captures under 4 to redo: old 1 and old card. New images stay candidates; the published gallery is replaced only with Virginie's OK. Ticket 5987 (new shots) played the pre-fix feature: refile.
 
 ## Gallery image 1 rework in flight, 2026-10-17
 
