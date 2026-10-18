@@ -34,10 +34,16 @@ remaining:
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
 updated:      2026-10-17, French reread and validated by the owner
-protocols_read_sha: bde324699b1b844b8b097ba0703df79f6d2dc746
+protocols_read_sha: d6fb9fab25c8a5f6db73f5603f047ea46fd4f266
 ---
 # Ebbbs Renew, status
 **Status, 2026-10-13: 1.0.0 published and public; 1.1.0 prepared, not published.** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
+## Tickets read, 2026-10-18
+
+- `6716` wide rework: launcher error (`rm ... Directory not empty` in Mods staging), no report; refiled in the new ticket below.
+- `5987` new shots: 2 of 2 passed, captures opened and REFUSED on the old tree: portrait, Nelim hidden behind the jug and tiny (zoom 4.5 too wide); family, baby a dot, crebbb cropped at the top, Nelim and animals scattered. Fixes: zoom 3.5 and 3, Nelim at (200,190), crebbb at (203,189). The thrumebbb itself reads well, front view, kept.
+- `810c` 1.7 diagnostic (P1, English): 14 passed, 1 failed, 17 skipped (requirements). Failure: `the English labels and descriptions reach the loaded definitions`, step `the main menu is open` timed out after 5 s (a game or harness timing, not a mod def). `tested_1_7` stays unrecorded until that scenario is replayed alone once.
+- `bfda` card retake: `no free standable cell was found near (90, 0, 140)` (bamboo). The accepted `3-wildness-card.png` stays: interface window, set aside by the owner rule (not scored).
 ## Gallery reopened, 2026-10-18
 
 Owner rule via Audit: every scene scored 4 or more before it is played. `workflow_stage: shootGallery[1.0.0]`. Shotlist (header of `11-publication-shots.feature`, estimates in its "SHOTLIST ESTIMATE" block):
