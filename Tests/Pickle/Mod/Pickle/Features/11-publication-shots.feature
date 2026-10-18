@@ -3,7 +3,7 @@
 # Every gallery capture is a staged photograph, the menus excepted. One story for the series, one common
 # place, and for each image a subject whose every detail suits what it shows.
 #
-# THE STORY: "Milk night in the clearing". The ebbbs like cheese, and cheese starts as milk. At the end of the
+# THE STORY: "Milk night in the clearing" (one Saturday in the Sanctuary, 17h to 20h, one hour of game time between scenes, clear sky; each scene is the next episode: arrival, the star arrives, a quiet moment, the night family). The ebbbs like cheese, and cheese starts as milk. At the end of the
 # afternoon Nelim, the protagonist (owner rule 2026-10-14), carries the evening's milk to her nine goo animals
 # in the cream clearing of the Sanctuary (`calm-zone`, a bare 11 x 9 square ringed with flowers). Two guests
 # share the little table with her, a lamp and a fire are lit, and the evening goes from golden dusk to night.
