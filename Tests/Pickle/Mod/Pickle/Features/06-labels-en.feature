@@ -27,7 +27,7 @@ Feature: the English labels and descriptions reach the loaded definitions
     Then Ebbbs Renew: the ThingDef "Bebbbholder" reads "label" as "bebbbholder"
     Then Ebbbs Renew: the ThingDef "Bebbbholder" reads "description" as "The Bebbbholder, named after the fictional Beholders due to their floating body and many eyes. These creatures emanate an aura of some kind, it is not sure what the purpose of this aura is, but those in close proximity for an extended amount of time to a Bebbbholder have described sensations of fear and dread."
     Then Ebbbs Renew: the ThingDef "Crebbb" reads "label" as "crebbb"
-    Then Ebbbs Renew: the ThingDef "Crebbb" reads "description" as "A 3-legged monster that is surprisingly friendly. As a herbivore, its main source of nutritian is plantlife, as such it rarely attacks people and is generally more docile than the other Ebbbs."
+    Then Ebbbs Renew: the ThingDef "Crebbb" reads "description" as "A 3-legged monster that is surprisingly friendly. As a herbivore, its main source of nutrition is plantlife, as such it rarely attacks people and is generally more docile than the other Ebbbs."
     Then Ebbbs Renew: the ThingDef "Thrumebbb" reads "label" as "thrumebbb"
     Then Ebbbs Renew: the ThingDef "Thrumebbb" reads "description" as "A gross mockery of the Universe's most graceful creature, the Thrumebbb is an amalgamation of Ebbbs that has somehow gained a semblance of intelligence. It is foul, and reeks of death. Beware, for it does not eat trees."
 

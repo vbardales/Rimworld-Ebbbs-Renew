@@ -38,11 +38,11 @@
 #     Composition (f): zoom 6 on (200,186), animals fill the lower half, table off-centre. Subject (g): the whole offer, nine species. Mod (j): all nine.
 #     RISK + PLAN (h): nine overlap or leave frame; plan: radius 3 with two depths, check the capture, retake with radius 4 if cropped.
 #   2 (18h, portrait, score 4). EPISODE: the thrumebbb, star of the mod, comes out at dusk. Outfit: teal Jacket rgb 30,110,120, cream Pants rgb 235,225,200, no hat.
-#     Action: holds the jug out at arm's length, one step nearer (200,188). Decor: 2 TorchLamps lit (196,190) (204,190), 2 PlantPots, Campfire lit (204,185), no table.
+#     Action: stands one step nearer (200,188), empty hands, the jug set down at (201,188) so the jacket shows (the jug hid her torso on the first retake). Decor: 2 TorchLamps lit (196,190) (204,190), 2 PlantPots, Campfire lit (204,185), no table.
 #     Living: thrumebbb seen from the front at (200,185) (the series' front animal). Composition: zoom 3.5 on (200,187), it fills the middle, Nelim and her jacket above.
 #     Subject: the thrumebbb, 4.8 cells wide. Mod: its horn and size. RISK + PLAN: it turns away or crops; plan: zoom 3.5 (4.5 left Nelim tiny behind the jug), spawn 4 cells from her, reshoot facing South.
 #   3 (19h, close, score 4). EPISODE: the gentle side, an ebbb and a beee settle beside her. Outfit: dusty-rose BasicShirt rgb 200,100,120, charcoal Pants rgb 60,62,70.
-#     Action: offers the jug between them. Decor: Stool, Milk on the ground (198-199,188), TorchLamp lit (203,190), 2 PlantPots, Campfire lit (196,186), removed after.
+#     Action: stands between them, jug on the ground at (199,188), zoom 3.5 (4.5 was too wide, the beee drifted away: spawned at 202,188 now). Decor: Stool, Milk on the ground (198-199,188), TorchLamp lit (203,190), 2 PlantPots, Campfire lit (196,186), removed after.
 #     Living: ebbb and beee at her sides. Composition: zoom 4.5 on (200,188), tight, animals framing her either side. Subject: how gentle the goo is. Mod: two species, cheese-milk theme.
 #     RISK + PLAN: animals not facing front; plan: they spawn facing South (previous capture accepted); retake if a profile.
 #   4 (20h night, family, score 4). EPISODE: night falls, the family is out: baby, juvenile and adult ebbb side by side, a crebbb at her shoulder. Outfit: cream BasicShirt rgb 245,235,210 under an indigo Duster rgb 60,50,130, no hat, no jug.
@@ -69,7 +69,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
-    And Nelim's Pickle Tools: I place the decor "Milk" at (199, 187)
+    And Nelim's Pickle Tools: I place the decor "Milk" at (198, 188)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 190)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 188)
@@ -122,6 +122,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 190) is lit
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 187)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 187)
+    And Nelim's Pickle Tools: I place the decor "Milk" at (201, 188)
     And Nelim's Pickle Tools: I place the decor "Campfire" at (204, 185)
     And Nelim's Pickle Tools: the decor "Campfire" at (204, 185) is lit
     And Nelim's Pickle Tools: I let 60 ticks pass
@@ -130,7 +131,6 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Nelim" stands at (200, 188) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
-    And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
     And Ebbbs Renew: spawns the player animal "Thrumebbb1" as "Thrumebbb" close to the cell 200 185
     And Nelim's Pickle Tools: time is paused for the capture
     When Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.5
@@ -161,11 +161,10 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Nelim" stands at (200, 189) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
-    And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
     And Ebbbs Renew: spawns the player animal "Ebbb1" as "Ebbb" close to the cell 198 189
-    And Ebbbs Renew: spawns the player animal "Beee1" as "Beee" close to the cell 202 189
+    And Ebbbs Renew: spawns the player animal "Beee1" as "Beee" close to the cell 202 188
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 4.5
+    When Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.5
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim with an ebbb and a beee"
     When Nelim's Pickle Tools: the interface is shown again
@@ -197,7 +196,7 @@ Feature: images for the Workshop page
     And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 202 187
     And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 203 189
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3
+    When Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.5
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, the ebbb family"
     When Nelim's Pickle Tools: the interface is shown again

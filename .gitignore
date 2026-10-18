@@ -37,3 +37,7 @@ build/
 
 # Reproducible Preview diagnostics generated locally by the shared renderer.
 Art/.render/
+
+# Pickle runs land here, minified proofs go to Evidence/ (AGENTS.md, Test evidence)
+Tests/Pickle/Inbox/
+Tests/Pickle/Parked/
