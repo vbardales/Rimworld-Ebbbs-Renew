@@ -38,6 +38,10 @@ protocols_read_sha: d6fb9fab25c8a5f6db73f5603f047ea46fd4f266
 ---
 # Ebbbs Renew, status
 **Status, 2026-10-13: 1.0.0 published and public; 1.1.0 prepared, not published.** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
+## Evidence migrated, 2026-10-19
+
+Inbox model applied: `Tests/Pickle/Evidence/` holds only `p3-incompat`, `p4-ads2` (trimmed to 4), `p5-nocturnal`, `p6-crossbreeding` (trimmed to 3), each with `RELEASE.md` (60 KB). Old reds and archive folders deleted; nothing parked. Waiting: `20261019-152414-653-0731` (gallery scenes 1 to 4, `Tests/Pickle/Inbox/p7-gallery-redo-3`) and `20261019-152415-221-7a0f` (1.7 English labels, `p1-labels-17-3`). The last two runs of each kind left no report (RAM stall and no-report exit 1), so `tested_1_7` and the new captures are still unknown.
+
 ## Tickets read, 2026-10-18
 
 - `6716` wide rework: launcher error (`rm ... Directory not empty` in Mods staging), no report; refiled in the new ticket below.
