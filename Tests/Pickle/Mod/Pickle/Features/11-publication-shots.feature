@@ -85,6 +85,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
     And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
     And a colonist "Tomi" exists
+    And Nelim's Pickle Tools: "Tomi" gender is male
     And Nelim's Pickle Tools: "Tomi" body type is Male
     And Nelim's Pickle Tools: "Tomi" hairstyle is "Afro"
     And Nelim's Pickle Tools: "Tomi" hair colour is rgb (40, 28, 24)
@@ -93,6 +94,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Tomi" stands at (198, 186) facing East
     And Nelim's Pickle Tools: "Tomi" facial expression is "SocialRelax"
     And a colonist "Sori" exists
+    And Nelim's Pickle Tools: "Sori" gender is female
     And Nelim's Pickle Tools: "Sori" body type is Female
     And Nelim's Pickle Tools: "Sori" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Sori" hair colour is rgb (120, 70, 40)
