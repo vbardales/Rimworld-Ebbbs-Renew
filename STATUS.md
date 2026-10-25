@@ -46,6 +46,12 @@ protocols_read_sha: 62717d6c088af66129f3b032a5c173b9c1e2581e
 
 Owner changed `Art/Preview.config.json` (panel/icon schema, `echo.file: echo-preview.png`, `echo-source.png` retired). `Render-Preview.cjs` rerun, Preview opened (title, summary, rule, `1.6` badge, echo in panel, nothing clipped), `0-preview.png` byte copy. Owner validated the echo; `echo_review_sha` and `social_preview_sha256` updated, new `Preview.png` uploaded as GitHub social preview via Chrome (shown in Settings, General).
 
+## Gallery retake state, 2026-10-25
+
+Tomi and Sori replaced by Soren and Miel (NSB daily looks, not validated in LOOKS-VALIDATION.md; owner authorised in chat; outfits and expressions are suggestions, default smile). Tickets: close shot and family `20261025-145724-452-4fe3` (`Inbox/p7-gallery-redo-5`); wide shot `20261025-150012-965-b249` (`Inbox/p7-gallery-redo-6`, map `Tests/Pickle/wsl-deps.gallery-looks.map` = sanctuary map plus Roo hair and tattoo mods, loading unverified). Cancelled: 0db0, 4a5f, 778a. Plan rating 4.0, 4.5, 4.5, 4.0 (mean 4.25): e weak everywhere (static poses), j weak on 1 and 4.
+Waiting on NPT: ticket 1071 proves the job and advance steps (`I advance the paused game by exactly N ticks`, forced jobs for pawns and animals); step `the animal "X" is forced into the job "Ingest" on the item "Milk" at (x, z)` built, not played. NPT tells this session when 1071 is read. Zoom floor is 2: the baby ebbb needs a tighter crop on the capture.
+Next: at RUN_DONE of 4fe3 and b249 open the captures, verdict first, then reindex, subtitle from `Art/Gallery-clean`, replace the published gallery only with the owner's OK. The accepted portrait of e7fd stays in `Inbox/p7-gallery-redo-4` until then.
+
 ## Evidence migrated, 2026-10-19
 
 Inbox model applied: `Tests/Pickle/Evidence/` holds only `p3-incompat`, `p4-ads2` (trimmed to 4), `p5-nocturnal`, `p6-crossbreeding` (trimmed to 3), each with `RELEASE.md` (67 KB); `Inbox/` empty, no `Parked/`, nothing of this mod left in `pickle-reports-archive/`. 2026-10-20 triage: `p1-labels-17-3` (1.7 labels, killed 137, no report) deleted; `p7-gallery-redo-3` (OOM-killed at 4 GB, 2 of 3 scenarios green, wide shot red: `Tomi` is Female so body type Male refused) deleted, cause fixed in feature 11 (`gender is male` / `female` before body type). Waiting: ticket `20261019-203822-218-e7fd` (gallery scenes 1 to 4, `Tests/Pickle/Inbox/p7-gallery-redo-4`). The 1.7 labels diagnostic (`tested_1_7`) is still unknown and must be refiled.
