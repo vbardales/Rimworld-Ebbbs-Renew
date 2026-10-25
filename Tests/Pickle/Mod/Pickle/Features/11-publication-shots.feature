@@ -49,6 +49,12 @@
 #     Action: stands behind them, watching, arms free. Decor: 2 TorchLamps lit, Shelf (204,188), Campfire lit (196,185). Living: three ages, crebbb at (203,190).
 #     Composition: zoom 3 on (200,188) (smaller number = tighter), warm light; the first capture at 4.5 left the baby a dot and cropped the crebbb. Subject: the ages and colours of the ebbb. Mod: life stages, variants.
 #     RISK + PLAN: night too dark, life-stage step unproven; plan: two lamps plus fire, read the capture, hour 19 if dark; if the step fails the scene is dropped, not faked.
+#   RETAKE 2026-10-25 (ticket e7fd read: wide shot step timeout, 2 and 3 and 4 opened). 2 portrait ACCEPTED as candidate. 3 close REFUSED
+#     (cast scattered 3 cells apart, Nelim small at the top, empty sand): now zoom 3 on (200,189), Nelim (200,190), ebbb (198,189) and beee (202,189)
+#     at her sides, Milk jug on the ground (200,188) between them, Stool (197,187); estimate 4, risk the beee drifting (spawned adjacent, retake if it leaves).
+#     4 family REFUSED (Nelim cropped at the top, baby a dot, shelf behind the crebbb): now zoom 3 on (200,189), baby (199,188), juvenile (200,188), adult (201,188)
+#     in a tight row, crebbb at her shoulder (202,190), Shelf moved out to (205,186); estimate 4, risk the baby still small and the crebbb cropped; plan: retake at zoom 2.6 if so.
+#     1 wide: step timeout 40 s on the frame (game timing), same text replayed alone.
 #   5 interface card (Wildness) on window-backdrop-for-height: set aside by the owner rule, not scored.
 #   Front animal on the series (c): scene 2 (thrumebbb) and 3, with 1 mostly front.
 #
@@ -149,8 +155,8 @@ Feature: images for the Workshop page
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I place the decor "Stool" at (198, 188)
-    And Nelim's Pickle Tools: I place the decor "Milk" at (199, 188)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (197, 187)
+    And Nelim's Pickle Tools: I place the decor "Milk" at (200, 188)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (203, 190)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (203, 190) is lit
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 187)
@@ -160,13 +166,13 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (200, 100, 120)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 62, 70)
-    And Nelim's Pickle Tools: "Nelim" stands at (200, 189) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 190) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
     And Ebbbs Renew: spawns the player animal "Ebbb1" as "Ebbb" close to the cell 198 189
-    And Ebbbs Renew: spawns the player animal "Beee1" as "Beee" close to the cell 202 188
+    And Ebbbs Renew: spawns the player animal "Beee1" as "Beee" close to the cell 202 189
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.5
+    When Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 3
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim with an ebbb and a beee"
     When Nelim's Pickle Tools: the interface is shown again
@@ -184,7 +190,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 190)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 190) is lit
-    And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 188)
+    And Nelim's Pickle Tools: I place the decor "Shelf" at (205, 186)
     And Nelim's Pickle Tools: I place the decor "Campfire" at (196, 185)
     And Nelim's Pickle Tools: the decor "Campfire" at (196, 185) is lit
     And Nelim's Pickle Tools: I let 60 ticks pass
@@ -193,12 +199,12 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Nelim" stands at (200, 190) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
-    And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 198 187
-    And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 200 187
-    And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 202 187
-    And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 203 189
+    And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 199 188
+    And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 200 188
+    And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 201 188
+    And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 202 190
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 188) at zoom 3.5
+    When Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 3
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, the ebbb family"
     When Nelim's Pickle Tools: the interface is shown again
