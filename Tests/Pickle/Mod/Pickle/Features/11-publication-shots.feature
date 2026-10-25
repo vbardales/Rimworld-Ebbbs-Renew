@@ -9,8 +9,8 @@
 # share the little table with her, a lamp and a fire are lit, and the evening goes from golden dusk to night.
 # Dressing: warm, saturated cloth against creatures that are black goo, so that the creatures are what the eye
 # lands on. Nelim keeps her own hair, face and eyes (they are the fixture's identity); in scene 1 she wears a mustard
-# collar shirt, brown trousers and no hat (hat rule, 2026-10-18: no hat, so no hair-under-hat mod needed); every other scene has its own outfit (SHOTLIST below). Her guests are dressed for the same table: Tomi
-# (afro, teal shirt, sand trousers) and Sori (bob, plum shirt, grey trousers). All smile calmly (SocialRelax).
+# collar shirt, brown trousers and no hat (hat rule, 2026-10-18: no hat, so no hair-under-hat mod needed); every other scene has its own outfit (SHOTLIST below). Her guests are dressed for the same table: Soren (daily look)
+# and Miel (daily look), the two NSB colonists, authorised by the owner on 2026-10-25 although their looks are not validated in LOOKS-VALIDATION.md. They smile calmly.
 #   1. 17h, golden dusk. Wide shot, tightened after the owner's review of 2026-10-17 (frame 21 x 12 cells on (200, 186),
 #      half circle of radius 3 cells, so that the nine really gather round the table and Nelim is not tiny): Nelim at the table with the jug, her guests on the stools, the nine species
 #      arriving in a half circle, all facing the camera (the whole content of the mod).
@@ -31,10 +31,10 @@
 #
 # SHOTLIST, scored against GALLERY.md "Shotlist : criteres d'une scene a 4/5" (a to k), 2026-10-18. Story (k) is the THE STORY block above:
 # one evening, Nelim brings the milk, dusk to night, each scene an episode, hour per scene (rhythm: 17h, 18h, 19h, 20h, clear weather every time).
-# All scenes: place calm-zone (a), Nelim keeps her own bun and face (the fixture's identity), expression SocialRelax, guests Tomi/Sori only in 1.
+# All scenes: place calm-zone (a), Nelim keeps her own bun and face (the fixture's identity), expression SocialRelax, guests Soren/Miel only in 1.
 #   1 (17h, wide, score 4). EPISODE: she arrives with the jug and the nine come to her. Outfit (d): mustard CollarShirt rgb 222,170,60, brown Pants.
 #     Action (e): carries Milk toward the table. Decor (b): Table2x2c, 2 Stools, Milk, TorchLamp lit, 2 PlantPots, Shelf, Campfire lit (195,185), removed after.
-#     Living (c): nine species, staggered in two depths and two looking across at the table (step changed, not a row facing front, i); Tomi and Sori seated.
+#     Living (c): nine species, staggered in two depths and two looking across at the table (step changed, not a row facing front, i); Soren and Miel seated.
 #     Composition (f): zoom 6 on (200,186), animals fill the lower half, table off-centre. Subject (g): the whole offer, nine species. Mod (j): all nine.
 #     RISK + PLAN (h): nine overlap or leave frame; plan: radius 3 with two depths, check the capture, retake with radius 4 if cropped.
 #   2 (18h, portrait, score 4). EPISODE: the thrumebbb, star of the mod, comes out at dusk. Outfit: teal Jacket rgb 30,110,120, cream Pants rgb 235,225,200, no hat.
@@ -99,24 +99,46 @@ Feature: images for the Workshop page
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
     And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
-    And a colonist "Tomi" exists
-    And Nelim's Pickle Tools: "Tomi" gender is male
-    And Nelim's Pickle Tools: "Tomi" body type is Male
-    And Nelim's Pickle Tools: "Tomi" hairstyle is "Afro"
-    And Nelim's Pickle Tools: "Tomi" hair colour is rgb (40, 28, 24)
-    And Nelim's Pickle Tools: "Tomi" wears "Apparel_CollarShirt" dyed rgb (40, 130, 140)
-    And Nelim's Pickle Tools: "Tomi" wears "Apparel_Pants" dyed rgb (200, 175, 120)
-    And Nelim's Pickle Tools: "Tomi" stands at (198, 186) facing East
-    And Nelim's Pickle Tools: "Tomi" facial expression is "SocialRelax"
-    And a colonist "Sori" exists
-    And Nelim's Pickle Tools: "Sori" gender is female
-    And Nelim's Pickle Tools: "Sori" body type is Female
-    And Nelim's Pickle Tools: "Sori" hairstyle is "Bob"
-    And Nelim's Pickle Tools: "Sori" hair colour is rgb (120, 70, 40)
-    And Nelim's Pickle Tools: "Sori" wears "Apparel_CollarShirt" dyed rgb (110, 40, 90)
-    And Nelim's Pickle Tools: "Sori" wears "Apparel_Pants" dyed rgb (110, 110, 115)
-    And Nelim's Pickle Tools: "Sori" stands at (201, 187) facing West
-    And Nelim's Pickle Tools: "Sori" facial expression is "SocialRelax"
+    And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Soren" gender is Male
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageNormal"
+    And Nelim's Pickle Tools: "Soren" hair colour is rgb (40, 28, 22)
+    And Nelim's Pickle Tools: "Soren" skin colour is rgb (236, 204, 184)
+    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_SkyBlue"
+    And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Soren" face tattoo is "none"
+    And Nelim's Pickle Tools: "Soren" body tattoo is "none"
+    And Nelim's Pickle Tools: "Soren" wears "Apparel_CollarShirt" dyed rgb (110, 130, 150)
+    And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants" dyed rgb (110, 80, 55)
+    And Nelim's Pickle Tools: "Soren" wears "Apparel_Jacket" dyed rgb (184, 115, 51)
+    And Nelim's Pickle Tools: "Soren" face kit is "calm"
+    And Nelim's Pickle Tools: "Soren" mouth is "MouthLittle"
+    And Nelim's Pickle Tools: "Soren" brows are "MonoScarredBrows"
+    And Nelim's Pickle Tools: "Soren" lids are "LidSimple"
+    And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
+    And Nelim's Pickle Tools: "Soren" face is held neutral
+    And Nelim's Pickle Tools: "Soren" facial expression is "normal+moodCheerful"
+    And Nelim's Pickle Tools: "Soren" stands at (198, 186) facing East
+    And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Miel" gender is Female
+    And Nelim's Pickle Tools: "Miel" head type is "Female_AverageNormal"
+    And Nelim's Pickle Tools: "Miel" hair colour is rgb (40, 26, 20)
+    And Nelim's Pickle Tools: "Miel" skin colour is rgb (166, 112, 62)
+    And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Golden"
+    And Nelim's Pickle Tools: "Miel" hairstyle is "Roo_Royal_NaturalcurlsHD"
+    And Nelim's Pickle Tools: "Miel" face tattoo is "none"
+    And Nelim's Pickle Tools: "Miel" body tattoo is "STribalTat_Body_SacredGrass"
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (196, 150, 80)
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants" dyed rgb (140, 160, 120)
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_Jacket" dyed rgb (120, 84, 52)
+    And Nelim's Pickle Tools: "Miel" face kit is "smile"
+    And Nelim's Pickle Tools: "Miel" mouth is "MouthClassicSmile"
+    And Nelim's Pickle Tools: "Miel" brows are "BrowTriangle"
+    And Nelim's Pickle Tools: "Miel" lids are "LidFlirty"
+    And Nelim's Pickle Tools: "Miel" eyeballs are "Empathetic"
+    And Nelim's Pickle Tools: "Miel" face is held neutral
+    And Nelim's Pickle Tools: "Miel" facial expression is "normal+moodCheerful"
+    And Nelim's Pickle Tools: "Miel" stands at (201, 187) facing West
     And Ebbbs Renew: the nine species gather in a half circle south of the cell 199 186 at 3 cells
     And Nelim's Pickle Tools: time is paused for the capture
     When Nelim's Pickle Tools: I frame the cell (200, 186) at zoom 6
