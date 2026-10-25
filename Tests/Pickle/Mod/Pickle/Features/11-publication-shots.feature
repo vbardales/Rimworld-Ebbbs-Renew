@@ -55,6 +55,15 @@
 #     4 family REFUSED (Nelim cropped at the top, baby a dot, shelf behind the crebbb): now zoom 3 on (200,189), baby (199,188), juvenile (200,188), adult (201,188)
 #     in a tight row, crebbb at her shoulder (202,190), Shelf moved out to (205,186); estimate 4, risk the baby still small and the crebbb cropped; plan: retake at zoom 2.6 if so.
 #     1 wide: step timeout 40 s on the frame (game timing), same text replayed alone.
+#   OUTFIT CONTINUITY (d, 2026-10-25): one Saturday, Nelim changes with the hour and the story says so: mustard work shirt for the dusk chores (1), teal jacket when
+#     the air cools at 18h (2), rose shirt for the quiet hour by the fire (3), cream shirt under the indigo duster for the night (4). Colours stay warm against black goo.
+#   INSTANT AND HOW IT IS OBTAINED (e, 2026-10-25), game paused by `time is paused for the capture`:
+#     1 just after she walked in with the jug: `carries the item Milk`, nine gathered half circle, guests turned toward her, paused on that tick.
+#     2 just after she set the jug down to look up at the thrumebbb: Milk decor at (201,188), thrumebbb spawned 3 cells away facing South.
+#     3 just after she set the jug between them, the ebbb leans in and the beee comes close: Milk at (200,188), both spawned adjacent.
+#     4 (changed) the baby has just come to the jug she holds out to it: `carries the item Milk` before the capture, baby, juvenile, adult in a row in front of her.
+#   READABILITY AT 268 PX (j): 1 and 4 are checked on the capture shrunk to 268 px; the baby of 4 and Nelim of 1 stay small, a known weak point, accepted by the plan (the ages are the subject of 4).
+#   Estimate after this pass: 1: 4.0 (e static, j weak), 2: 4.5, 3: 4.5, 4: 4.5 (j weak). Mean 4.4.
 #   5 interface card (Wildness) on window-backdrop-for-height: set aside by the owner rule, not scored.
 #   Front animal on the series (c): scene 2 (thrumebbb) and 3, with 1 mostly front.
 #
@@ -199,6 +208,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Nelim" stands at (200, 190) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
+    And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
     And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 199 188
     And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 200 188
     And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 201 188
