@@ -24,8 +24,8 @@ manual_tests: Tests/TEST_SCENARIOS.md - 9 scenarios, each mapped to a green Pick
 workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, never made public
 publication_changelog_review_sha: 87d3f81446ab952e4fbf2289390218a0d2a2b694
 code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
-echo_review_sha: 14c20b25a19bcf9a70dce5af3dce5ac9a9c8e576
-social_preview_sha256: 30a8f6caa9c144f5bd9b15bb3de44745ca5fb36b67afdc619273560f2a312378
+echo_review_sha: 625a5537b0a047297013a7c09df17578f86532d3
+social_preview_sha256: 827eea5757a40d75f3cdc28102f35e63f1f6f6415c0b1a2a4a802b23fa53e504
 remaining:
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
@@ -34,10 +34,18 @@ remaining:
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
 updated:      2026-10-17, French reread and validated by the owner
-protocols_read_sha: 440425ae0c9b0bdcfee16bfcb1b34fade15f0031
+protocols_read_sha: 62717d6c088af66129f3b032a5c173b9c1e2581e
 ---
 # Ebbbs Renew, status
 **Status, 2026-10-13: 1.0.0 published and public; 1.1.0 prepared, not published.** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
+## Ticket e7fd read, 2026-10-25
+
+`20261019-203822-218-e7fd` (`Tests/Pickle/Inbox/p7-gallery-redo-4`): 3 passed, 1 failed. Wide shot failed: step `I frame the cell (200, 186) at zoom 6` timed out after 40 s (game or harness timing, not a mod def); replay it alone. Captures opened: portrait (thrumebbb front, jug, fire, torches) kept as candidate; close shot REFUSED (ebbb, beee, table and jug scattered, Nelim small at the top, not close); family REFUSED (Nelim cropped at the top edge, babies are dots, cast scattered). Inbox folder stays until the wide shot and the two refusals are replayed. Working tree carries uncommitted `Art/echo-source.png` deletion and `scripts/Build-French.ps1` deletion, not made by this session: owner to confirm.
+
+## Preview regenerated and echo validated, 2026-10-25
+
+Owner changed `Art/Preview.config.json` (panel/icon schema, `echo.file: echo-preview.png`, `echo-source.png` retired). `Render-Preview.cjs` rerun, Preview opened (title, summary, rule, `1.6` badge, echo in panel, nothing clipped), `0-preview.png` byte copy. Owner validated the echo; `echo_review_sha` and `social_preview_sha256` updated, new `Preview.png` uploaded as GitHub social preview via Chrome (shown in Settings, General).
+
 ## Evidence migrated, 2026-10-19
 
 Inbox model applied: `Tests/Pickle/Evidence/` holds only `p3-incompat`, `p4-ads2` (trimmed to 4), `p5-nocturnal`, `p6-crossbreeding` (trimmed to 3), each with `RELEASE.md` (67 KB); `Inbox/` empty, no `Parked/`, nothing of this mod left in `pickle-reports-archive/`. 2026-10-20 triage: `p1-labels-17-3` (1.7 labels, killed 137, no report) deleted; `p7-gallery-redo-3` (OOM-killed at 4 GB, 2 of 3 scenarios green, wide shot red: `Tomi` is Female so body type Male refused) deleted, cause fixed in feature 11 (`gender is male` / `female` before body type). Waiting: ticket `20261019-203822-218-e7fd` (gallery scenes 1 to 4, `Tests/Pickle/Inbox/p7-gallery-redo-4`). The 1.7 labels diagnostic (`tested_1_7`) is still unknown and must be refiled.
