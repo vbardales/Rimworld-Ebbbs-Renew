@@ -172,3 +172,5 @@ Owner replaced `Art/ModIcon-source.png` (new signature icon). Derivatives regene
 
 2026-11-02 resume: ticket 4fe3 (close shot and family, `Inbox/p7-gallery-redo-5`) ended exit 11 after 12 s, nothing launched: WSL stopped answering (`wsl --shutdown`, then relaunch). No evidence folder. Must be refiled; b249 verdict (wide shot refused) unchanged. `protocols_read_sha` refreshed.
 2026-11-02: Inbox sorted (redo-4 portrait kept as Evidence/p7-gallery-portrait, redo-4 and redo-6 deleted); local Check-Steps.ps1 removed for shared scripts/Check-Steps.ps1 (green, 632 lines); no local script over 15 KB.
+
+2026-11-02: close shot and family refiled: ticket 20261102-211300-244-f6fe (filter close shot + the ebbb family, map wsl-deps.gallery-looks.map, evidence Tests/Pickle/Inbox/p7-gallery-redo-7, tree 5ca9de3). 4fe3 was infra (WSL). Wide shot still to retake (tighter crop, nine species, guests seated).
