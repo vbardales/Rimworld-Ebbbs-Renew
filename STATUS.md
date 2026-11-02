@@ -178,3 +178,16 @@ Owner replaced `Art/ModIcon-source.png` (new signature icon). Derivatives regene
 2026-11-02 wide shot reframe (feature 11, not yet played): decor Campfire moved to (194, 189) off the animals' west end; nine gather around (200, 187) at radius 4 (was (199, 186) at 3); frame now `I frame the cells (192, 181) to (208, 192) filling 90 percent of the screen` (was zoom 6 on (200, 186)). Seating step requested from NPT via TM; guests still stand until it exists. Wide shot waits on f6fe, then is filed alone.
 
 2026-11-02 shotlist scene 1 (wide) reworked, Opus director pass kept in part (see feature 11 header). Plan rating (rate-gallery, plan only): 1: 3.5 (e, f, j weak; header f now fixed), 2: 4.5, 3: 4.0 (zoom lines contradict, to align), 4: 4.0 (jug contradiction, to align); mean 4.0. Scene 1 below 4: do not file until the seating step exists and the header is rescored.
+
+## Shotlist, 2026-11-02 (feature 11 header holds the full lines)
+
+Story k: "Milk night in the clearing", Saturday 17h to 20h, calm-zone, one hour per scene, Clear; wide, portrait, close, family; opens at 17h, closes at night. ok. Interface card (Wildness, window-backdrop-for-height) set aside.
+
+| # | a | b | c | d | e | f | g | j | est | risk |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 wide | calm-zone 17h Clear | Table2x2c, 2 Stool, Milk, TorchLamp, 2 PlantPot, Shelf, Campfire (194,189) | nine species, half circle (200,187) r4 | mustard CollarShirt, brown Pants, smile; Soren, Miel seated | carries Milk, guests seated; instant: pours first cup, nine wait | rectangle (192,182)-(207,191) 90% | whole offer, nine species | all nine, humans larger at 16 x 10 | 4.0 | seated pose unverified (step places pawn, no sitting job); pour not scripted |
+| 2 portrait | 18h Clear | 2 TorchLamp, 2 PlantPot, Campfire, Milk | thrumebbb front | teal Jacket, cream Pants | set the jug down, looks up | zoom 3.5 (200,187) | thrumebbb | horn, size | 4.5 | gaze not scripted |
+| 3 close | 19h Clear | Stool, Milk, TorchLamp, 2 PlantPot, Campfire | ebbb, beee both sides | rose BasicShirt, charcoal Pants | jug set between them, they lean in | zoom 3 (200,189) | gentle goo | two species tight | 4.5 | beee may drift; lean not scripted |
+| 4 family | 20h night | 2 TorchLamp, Shelf, Campfire | baby, juvenile, adult ebbb, crebbb | cream BasicShirt, indigo Duster | holds jug out to the baby | zoom 3 (200,189) | ages and colours | baby a dot at 268 px | 4.0 | baby small, crebbb cropped |
+
+Header contradictions fixed today (scenes 3 and 4). Estimates are plan scores; real verdicts to be added after f6fe and the wide shot run (wide shot refused on b249).
