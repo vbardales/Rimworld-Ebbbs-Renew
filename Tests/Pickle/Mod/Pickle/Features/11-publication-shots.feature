@@ -90,8 +90,8 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 188)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 190)
     And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 188)
-    And Nelim's Pickle Tools: I place the decor "Campfire" at (195, 185)
-    And Nelim's Pickle Tools: the decor "Campfire" at (195, 185) is lit
+    And Nelim's Pickle Tools: I place the decor "Campfire" at (194, 189)
+    And Nelim's Pickle Tools: the decor "Campfire" at (194, 189) is lit
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (92, 58, 38)
@@ -139,9 +139,9 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Miel" face is held neutral
     And Nelim's Pickle Tools: "Miel" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: "Miel" stands at (201, 187) facing West
-    And Ebbbs Renew: the nine species gather in a half circle south of the cell 199 186 at 3 cells
+    And Ebbbs Renew: the nine species gather in a half circle south of the cell 200 187 at 4 cells
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 186) at zoom 6
+    When Nelim's Pickle Tools: I frame the cells (192, 181) to (208, 192) filling 90 percent of the screen
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim and the nine species"
     When Nelim's Pickle Tools: the interface is shown again

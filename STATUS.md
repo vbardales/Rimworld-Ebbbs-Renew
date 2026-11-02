@@ -174,3 +174,5 @@ Owner replaced `Art/ModIcon-source.png` (new signature icon). Derivatives regene
 2026-11-02: Inbox sorted (redo-4 portrait kept as Evidence/p7-gallery-portrait, redo-4 and redo-6 deleted); local Check-Steps.ps1 removed for shared scripts/Check-Steps.ps1 (green, 632 lines); no local script over 15 KB.
 
 2026-11-02: close shot and family refiled: ticket 20261102-211300-244-f6fe (filter close shot + the ebbb family, map wsl-deps.gallery-looks.map, evidence Tests/Pickle/Inbox/p7-gallery-redo-7, tree 5ca9de3). 4fe3 was infra (WSL). Wide shot still to retake (tighter crop, nine species, guests seated).
+
+2026-11-02 wide shot reframe (feature 11, not yet played): decor Campfire moved to (194, 189) off the animals' west end; nine gather around (200, 187) at radius 4 (was (199, 186) at 3); frame now `I frame the cells (192, 181) to (208, 192) filling 90 percent of the screen` (was zoom 6 on (200, 186)). Seating step requested from NPT via TM; guests still stand until it exists. Wide shot waits on f6fe, then is filed alone.
