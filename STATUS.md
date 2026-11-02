@@ -194,3 +194,5 @@ Story k: "Milk night in the clearing", Saturday 17h to 20h, calm-zone, one hour 
 Header contradictions fixed today (scenes 3 and 4). Estimates are plan scores; real verdicts to be added after f6fe and the wide shot run (wide shot refused on b249).
 
 2026-11-02 NPT: `sits on the building` fixed in 2aa6f93 (starts a long Wait job on the seat; vanilla 1.6 has no sitting pose, "seated" = standing on the seat cell, chair drawn under). Test ticket 65b3 is NPT's. Wide shot waits for 65b3 green, then is filed alone after f6fe is read. Stools are already placed before the guests sit in feature 11.
+
+2026-11-02: NPT seat test 65b3 green (2aa6f93). Wide shot filed alone: ticket 20261102-223122-823-e616 (filter 11-publication-shots::wide shot, map wsl-deps.gallery-looks.map, evidence Tests/Pickle/Inbox/p7-gallery-redo-8, tree 4c77536). f6fe still queued. Read both at RUN_DONE: verdict each capture; check guests drawn seated, all nine in frame.
