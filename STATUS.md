@@ -191,3 +191,5 @@ Story k: "Milk night in the clearing", Saturday 17h to 20h, calm-zone, one hour 
 | 4 family | 20h night | 2 TorchLamp, Shelf (205,186), Campfire | baby, juvenile, adult ebbb, crebbb | cream BasicShirt, indigo Duster | holds jug out to the baby | zoom 2.6 (200,189) | ages and colours | baby a dot at 268 px | 4.0 | baby small, crebbb cropped |
 
 Header contradictions fixed today (scenes 3 and 4). Estimates are plan scores; real verdicts to be added after f6fe and the wide shot run (wide shot refused on b249).
+
+2026-11-02 NPT: `sits on the building` fixed in 2aa6f93 (starts a long Wait job on the seat; vanilla 1.6 has no sitting pose, "seated" = standing on the seat cell, chair drawn under). Test ticket 65b3 is NPT's. Wide shot waits for 65b3 green, then is filed alone after f6fe is read. Stools are already placed before the guests sit in feature 11.
