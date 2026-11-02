@@ -46,14 +46,14 @@
 #     Living: ebbb and beee at her sides. Composition: zoom 3 on (200,189), tight, animals framing her either side. Subject: how gentle the goo is. Mod: two species, cheese-milk theme.
 #     RISK + PLAN: animals not facing front; plan: they spawn facing South (previous capture accepted); retake if a profile.
 #   4 (20h night, family, score 4). EPISODE: night falls, the family is out: baby, juvenile and adult ebbb side by side, a crebbb at her shoulder. Outfit: cream BasicShirt rgb 245,235,210 under an indigo Duster rgb 60,50,130, no hat, carries the Milk jug.
-#     Action: stands behind them holding the jug out to the baby. Decor: 2 TorchLamps lit, Shelf (204,188), Campfire lit (196,185). Living: three ages, crebbb at (203,190).
-#     Composition: zoom 3 on (200,188) (smaller number = tighter), warm light; the first capture at 4.5 left the baby a dot and cropped the crebbb. Subject: the ages and colours of the ebbb. Mod: life stages, variants.
+#     Action: stands behind them holding the jug out to the baby. Decor: 2 TorchLamps lit, Shelf (205,186), Campfire lit (196,185). Living: three ages, crebbb at (203,190).
+#     Composition: zoom 2.6 on (200,189) (smaller number = tighter), warm light; the first capture at 4.5 left the baby a dot and cropped the crebbb. Subject: the ages and colours of the ebbb. Mod: life stages, variants.
 #     RISK + PLAN: night too dark, life-stage step unproven; plan: two lamps plus fire, read the capture, hour 19 if dark; if the step fails the scene is dropped, not faked.
 #   RETAKE 2026-10-25 (ticket e7fd read: wide shot step timeout, 2 and 3 and 4 opened). 2 portrait ACCEPTED as candidate. 3 close REFUSED
 #     (cast scattered 3 cells apart, Nelim small at the top, empty sand): now zoom 3 on (200,189), Nelim (200,190), ebbb (198,189) and beee (202,189)
 #     at her sides, Milk jug on the ground (200,188) between them, Stool (197,187); estimate 4, risk the beee drifting (spawned adjacent, retake if it leaves).
 #     4 family REFUSED (Nelim cropped at the top, baby a dot, shelf behind the crebbb): now zoom 3 on (200,189), baby (199,188), juvenile (200,188), adult (201,188)
-#     in a tight row, crebbb at her shoulder (202,190), Shelf moved out to (205,186); estimate 4, risk the baby still small and the crebbb cropped; plan: retake at zoom 2.6 if so.
+#     in a tight row, crebbb at her shoulder (202,190), Shelf moved out to (205,186); estimate 4, risk the baby still small and the crebbb cropped; plan: retake at zoom 2.6 if so. 2026-11-02: plan B taken as the default, zoom 2.6 (9 x 5 cells) so the baby is larger at 268 px; instant obtained by `carries the item Milk` plus the baby spawned adjacent to her at (199,188) facing her.
 #     1 wide: step timeout 40 s on the frame (game timing), same text replayed alone.
 #   OUTFIT CONTINUITY (d, 2026-10-25): one Saturday, Nelim changes with the hour and the story says so: mustard work shirt for the dusk chores (1), teal jacket when
 #     the air cools at 18h (2), rose shirt for the quiet hour by the fire (3), cream shirt under the indigo duster for the night (4). Colours stay warm against black goo.
@@ -236,7 +236,7 @@ Feature: images for the Workshop page
     And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 201 188
     And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 202 190
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 3
+    When Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 2.6
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, the ebbb family"
     When Nelim's Pickle Tools: the interface is shown again
