@@ -30,7 +30,7 @@ For the Pickle suite, before a ticket is taken (details in [`Tests/Pickle/README
 
 ```powershell
 dotnet build Tests/Pickle/Source/EbbbsRenew.PickleSteps.csproj -c Release
-powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-Steps.ps1 -Mod EbbbsRenew
 ```
 
 The step checker passed on 2026-09-24: 377 step lines, each resolving to exactly one step. It proves that

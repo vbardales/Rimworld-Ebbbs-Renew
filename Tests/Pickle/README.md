@@ -128,11 +128,11 @@ text fits its window is not asserted, see `../../TESTING.md`.
 
 ```powershell
 dotnet build Tests/Pickle/Source/EbbbsRenew.PickleSteps.csproj -c Release
-powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Pickle/Check-Steps.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Check-Steps.ps1 -Mod EbbbsRenew
 ```
 
 The build writes the step DLL into `Mod/Pickle/Assemblies/`, which git ignores: rebuild before every run,
-because Pickle loads step DLLs when the game starts. `Check-Steps.ps1` matches every step line against
+because Pickle loads step DLLs when the game starts. The shared `scripts/Check-Steps.ps1` (protocols root) matches every step line against
 Pickle's own vocabulary read from the installed assemblies and against this suite's twenty-four steps, and fails
 on an undefined or ambiguous one before a ticket is taken. It is static: it proves the text of a step exists,
 not that the step does what the scenario hopes. Checked on 2026-09-25: 456 step lines, all resolved (2026-10-02, with feature 11: 471 step lines, 24 local patterns, all resolved). A

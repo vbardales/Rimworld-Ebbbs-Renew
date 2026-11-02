@@ -17,7 +17,7 @@
     <Def>.corePart. ... .customLabel              a body part of that label exists
     <Def>.lifeStages.<handle>.label | labelPlural a life stage of that value exists
 
-  Rerun it after any change to the inventory, then Check-Steps.ps1.
+  Rerun it after any change to the inventory, then the shared scripts/Check-Steps.ps1.
 
 .EXAMPLE
   powershell -NoProfile -ExecutionPolicy Bypass -File Tests/Pickle/New-LabelFeatures.ps1
