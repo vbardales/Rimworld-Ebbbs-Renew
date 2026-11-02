@@ -11,8 +11,8 @@
 # lands on. Nelim keeps her own hair, face and eyes (they are the fixture's identity); in scene 1 she wears a mustard
 # collar shirt, brown trousers and no hat (hat rule, 2026-10-18: no hat, so no hair-under-hat mod needed); every other scene has its own outfit (SHOTLIST below). Her guests are dressed for the same table: Soren (daily look)
 # and Miel (daily look), the two NSB colonists, authorised by the owner on 2026-10-25 although their looks are not validated in LOOKS-VALIDATION.md. They smile calmly.
-#   1. 17h, golden dusk. Wide shot, tightened after the owner's review of 2026-10-17 (frame 21 x 12 cells on (200, 186),
-#      half circle of radius 3 cells, so that the nine really gather round the table and Nelim is not tiny): Nelim at the table with the jug, her guests on the stools, the nine species
+#   1. 17h, golden dusk. Wide shot, tightened after the owner's review of 2026-10-17 (frame (192,182)-(207,191), 16 x 10 cells,
+#      half circle of radius 4 cells round (200, 187), so that the nine really gather round the table and Nelim is not tiny): Nelim at the table with the jug, her guests on the stools, the nine species
 #      arriving in a half circle, all facing the camera (the whole content of the mod).
 #   2. 18h, the lamp and the fire lit, the thrumebbb (the star of the mod, drawn 4.8 cells wide) arrives.
 #      Portrait: Nelim with the thrumebbb seen from the front, a jug in her hands.
@@ -36,7 +36,7 @@
 #     Action (e): carries Milk toward the table. Decor (b): Table2x2c, 2 Stools, Milk, TorchLamp lit, 2 PlantPots, Shelf, Campfire lit (195,185), removed after.
 #     Living (c): nine species, staggered in two depths and two looking across at the table (step changed, not a row facing front, i); Soren and Miel seated.
 #     Composition (f): rectangle (192,182)-(207,191) filling 90 percent of the screen (16 x 10 cells, was zoom 6 on (200,186), which cropped the nine), table off-centre. Subject (g): the whole offer, nine species. Mod (j): all nine. Opus director pass 2026-11-02 kept: tighter 16:9 rectangle, Nelim at (200,188) behind the table, guests face each other (Soren East, Miel West); not kept: explicit animal coordinates (the half circle step places them, radius 4 round (200,187)).
-#     RISK + PLAN (h): guests cannot sit until NPT builds a seating step (asked via TM 2026-11-02): scene waits for it, guests are never faked. INSTANT (e): Nelim has just come back from the fire and leans to pour the first cup for Soren while the nine wait, eyes on the jug; paused on that tick.
+#     RISK + PLAN (h): guests sit through `sits on the building "Stool" at (x, z)` (NPT, ColonistRace StagingSteps.cs:469, 2026-11-02); it places the pawn on the stool cell and starts no sitting job, so whether a seated pose is drawn is unverified: read the capture, ask NPT for a held-job variant if they still stand. INSTANT (e): Nelim has just come back from the fire and leans to pour the first cup for Soren while the nine wait, eyes on the jug; paused on that tick.
 #   2 (18h, portrait, score 4). EPISODE: the thrumebbb, star of the mod, comes out at dusk. Outfit: teal Jacket rgb 30,110,120, cream Pants rgb 235,225,200, no hat.
 #     Action: stands one step nearer (200,188), empty hands, the jug set down at (201,188) so the jacket shows (the jug hid her torso on the first retake). Decor: 2 TorchLamps lit (196,190) (204,190), 2 PlantPots, Campfire lit (204,185), no table.
 #     Living: thrumebbb seen from the front at (200,185) (the series' front animal). Composition: zoom 3.5 on (200,187), it fills the middle, Nelim and her jacket above.
@@ -62,7 +62,7 @@
 #     2 just after she set the jug down to look up at the thrumebbb: Milk decor at (201,188), thrumebbb spawned 3 cells away facing South.
 #     3 just after she set the jug between them, the ebbb leans in and the beee comes close: Milk at (200,188), both spawned adjacent.
 #     4 (changed) the baby has just come to the jug she holds out to it: `carries the item Milk` before the capture, baby, juvenile, adult in a row in front of her.
-#   READABILITY AT 268 PX (j): 1 and 4 are checked on the capture shrunk to 268 px; the baby of 4 and Nelim of 1 stay small, a known weak point, accepted by the plan (the ages are the subject of 4).
+#   READABILITY AT 268 PX (j): 1 and 4 are checked on the capture shrunk to 268 px; scene 1 now frames 16 x 10 cells so Nelim and the guests are larger; the baby of 4 stays small, a known weak point (the ages are the subject of 4).
 #   Estimate after this pass: 1: 4.0 (e static, j weak), 2: 4.5, 3: 4.5, 4: 4.5 (j weak). Mean 4.4.
 #   5 interface card (Wildness) on window-backdrop-for-height: set aside by the owner rule, not scored.
 #   Front animal on the series (c): scene 2 (thrumebbb) and 3, with 1 mostly front.
@@ -118,7 +118,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Soren" eyeballs are "EyeThin"
     And Nelim's Pickle Tools: "Soren" face is held neutral
     And Nelim's Pickle Tools: "Soren" facial expression is "normal+moodCheerful"
-    And Nelim's Pickle Tools: "Soren" stands at (198, 186) facing East
+    And Nelim's Pickle Tools: "Soren" sits on the building "Stool" at (198, 186)
     And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Miel" gender is Female
     And Nelim's Pickle Tools: "Miel" head type is "Female_AverageNormal"
@@ -138,7 +138,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Miel" eyeballs are "Empathetic"
     And Nelim's Pickle Tools: "Miel" face is held neutral
     And Nelim's Pickle Tools: "Miel" facial expression is "normal+moodCheerful"
-    And Nelim's Pickle Tools: "Miel" stands at (201, 187) facing West
+    And Nelim's Pickle Tools: "Miel" sits on the building "Stool" at (201, 187)
     And Ebbbs Renew: the nine species gather in a half circle south of the cell 200 187 at 4 cells
     And Nelim's Pickle Tools: time is paused for the capture
     When Nelim's Pickle Tools: I frame the cells (192, 182) to (207, 191) filling 90 percent of the screen
