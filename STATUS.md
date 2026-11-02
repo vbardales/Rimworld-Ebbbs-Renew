@@ -27,6 +27,7 @@ code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
 echo_review_sha: 625a5537b0a047297013a7c09df17578f86532d3
 social_preview_sha256: 827eea5757a40d75f3cdc28102f35e63f1f6f6415c0b1a2a4a802b23fa53e504
 remaining:
+  - gallery: ticket f6fe (close shot + family, Inbox/p7-gallery-redo-7) pending, read at RUN_DONE and verdict each capture; wide shot to file alone after NPT test ticket 65b3 (seating step) is green; then reindex, subtitles, owner OK before replacing the published gallery; portrait candidate in Evidence/p7-gallery-portrait
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
