@@ -42,11 +42,11 @@
 #     Living: thrumebbb seen from the front at (200,185) (the series' front animal). Composition: zoom 3.5 on (200,187), it fills the middle, Nelim and her jacket above.
 #     Subject: the thrumebbb, 4.8 cells wide. Mod: its horn and size. RISK + PLAN: it turns away or crops; plan: zoom 3.5 (4.5 left Nelim tiny behind the jug), spawn 4 cells from her, reshoot facing South.
 #   3 (19h, close, score 4). EPISODE: the gentle side, an ebbb and a beee settle beside her. Outfit: dusty-rose BasicShirt rgb 200,100,120, charcoal Pants rgb 60,62,70.
-#     Action: stands between them, jug on the ground at (199,188), zoom 3.5 (4.5 was too wide, the beee drifted away: spawned at 202,188 now). Decor: Stool, Milk on the ground (198-199,188), TorchLamp lit (203,190), 2 PlantPots, Campfire lit (196,186), removed after.
-#     Living: ebbb and beee at her sides. Composition: zoom 4.5 on (200,188), tight, animals framing her either side. Subject: how gentle the goo is. Mod: two species, cheese-milk theme.
+#     Action: stands between them, Milk jug on the ground (200,188), ebbb (198,189) and beee (202,189) spawned adjacent. Decor: Stool, Milk on the ground (198-199,188), TorchLamp lit (203,190), 2 PlantPots, Campfire lit (196,186), removed after.
+#     Living: ebbb and beee at her sides. Composition: zoom 3 on (200,189), tight, animals framing her either side. Subject: how gentle the goo is. Mod: two species, cheese-milk theme.
 #     RISK + PLAN: animals not facing front; plan: they spawn facing South (previous capture accepted); retake if a profile.
-#   4 (20h night, family, score 4). EPISODE: night falls, the family is out: baby, juvenile and adult ebbb side by side, a crebbb at her shoulder. Outfit: cream BasicShirt rgb 245,235,210 under an indigo Duster rgb 60,50,130, no hat, no jug.
-#     Action: stands behind them, watching, arms free. Decor: 2 TorchLamps lit, Shelf (204,188), Campfire lit (196,185). Living: three ages, crebbb at (203,190).
+#   4 (20h night, family, score 4). EPISODE: night falls, the family is out: baby, juvenile and adult ebbb side by side, a crebbb at her shoulder. Outfit: cream BasicShirt rgb 245,235,210 under an indigo Duster rgb 60,50,130, no hat, carries the Milk jug.
+#     Action: stands behind them holding the jug out to the baby. Decor: 2 TorchLamps lit, Shelf (204,188), Campfire lit (196,185). Living: three ages, crebbb at (203,190).
 #     Composition: zoom 3 on (200,188) (smaller number = tighter), warm light; the first capture at 4.5 left the baby a dot and cropped the crebbb. Subject: the ages and colours of the ebbb. Mod: life stages, variants.
 #     RISK + PLAN: night too dark, life-stage step unproven; plan: two lamps plus fire, read the capture, hour 19 if dark; if the step fails the scene is dropped, not faked.
 #   RETAKE 2026-10-25 (ticket e7fd read: wide shot step timeout, 2 and 3 and 4 opened). 2 portrait ACCEPTED as candidate. 3 close REFUSED
