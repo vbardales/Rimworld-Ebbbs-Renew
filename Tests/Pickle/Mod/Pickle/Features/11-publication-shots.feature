@@ -35,8 +35,8 @@
 #   1 (17h, wide, score 4). EPISODE: she arrives with the jug and the nine come to her. Outfit (d): mustard CollarShirt rgb 222,170,60, brown Pants.
 #     Action (e): carries Milk toward the table. Decor (b): Table2x2c, 2 Stools, Milk, TorchLamp lit, 2 PlantPots, Shelf, Campfire lit (195,185), removed after.
 #     Living (c): nine species, staggered in two depths and two looking across at the table (step changed, not a row facing front, i); Soren and Miel seated.
-#     Composition (f): zoom 6 on (200,186), animals fill the lower half, table off-centre. Subject (g): the whole offer, nine species. Mod (j): all nine.
-#     RISK + PLAN (h): nine overlap or leave frame; plan: radius 3 with two depths, check the capture, retake with radius 4 if cropped.
+#     Composition (f): rectangle (192,182)-(207,191) filling 90 percent of the screen (16 x 10 cells, was zoom 6 on (200,186), which cropped the nine), table off-centre. Subject (g): the whole offer, nine species. Mod (j): all nine. Opus director pass 2026-11-02 kept: tighter 16:9 rectangle, Nelim at (200,188) behind the table, guests face each other (Soren East, Miel West); not kept: explicit animal coordinates (the half circle step places them, radius 4 round (200,187)).
+#     RISK + PLAN (h): guests cannot sit until NPT builds a seating step (asked via TM 2026-11-02): scene waits for it, guests are never faked. INSTANT (e): Nelim has just come back from the fire and leans to pour the first cup for Soren while the nine wait, eyes on the jug; paused on that tick.
 #   2 (18h, portrait, score 4). EPISODE: the thrumebbb, star of the mod, comes out at dusk. Outfit: teal Jacket rgb 30,110,120, cream Pants rgb 235,225,200, no hat.
 #     Action: stands one step nearer (200,188), empty hands, the jug set down at (201,188) so the jacket shows (the jug hid her torso on the first retake). Decor: 2 TorchLamps lit (196,190) (204,190), 2 PlantPots, Campfire lit (204,185), no table.
 #     Living: thrumebbb seen from the front at (200,185) (the series' front animal). Composition: zoom 3.5 on (200,187), it fills the middle, Nelim and her jacket above.
@@ -95,7 +95,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (92, 58, 38)
-    And Nelim's Pickle Tools: "Nelim" stands at (200, 189) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 188) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
     And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
@@ -141,7 +141,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Miel" stands at (201, 187) facing West
     And Ebbbs Renew: the nine species gather in a half circle south of the cell 200 187 at 4 cells
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cells (192, 181) to (208, 192) filling 90 percent of the screen
+    When Nelim's Pickle Tools: I frame the cells (192, 182) to (207, 191) filling 90 percent of the screen
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim and the nine species"
     When Nelim's Pickle Tools: the interface is shown again
