@@ -53,7 +53,7 @@
 #     (cast scattered 3 cells apart, Nelim small at the top, empty sand): now zoom 3 on (200,189), Nelim (200,190), ebbb (198,189) and beee (202,189)
 #     at her sides, Milk jug on the ground (200,188) between them, Stool (197,187); estimate 4, risk the beee drifting (spawned adjacent, retake if it leaves).
 #     4 family REFUSED (Nelim cropped at the top, baby a dot, shelf behind the crebbb): now zoom 3 on (200,189), baby (199,188), juvenile (200,188), adult (201,188)
-#     in a tight row, crebbb at her shoulder (202,190), Shelf moved out to (205,186); estimate 4, risk the baby still small and the crebbb cropped; plan: retake at zoom 2.6 if so. 2026-11-02: plan B taken as the default, zoom 2.6 (9 x 5 cells) so the baby is larger at 268 px; instant obtained by `carries the item Milk` plus the baby spawned adjacent to her at (199,188) facing her.
+#     in a tight row, crebbb at her shoulder (202,190), Shelf moved out to (205,186); estimate 4, risk the baby still small and the crebbb cropped; plan: retake at zoom 2.6 if so. 2026-11-02: plan B taken as the default, zoom 2.6 (9 x 5 cells) so the baby is larger at 268 px; instant obtained by `carries the item Milk` plus the baby spawned adjacent to her at (199,188) (its facing is not scripted).
 #     1 wide: step timeout 40 s on the frame (game timing), same text replayed alone.
 #   OUTFIT CONTINUITY (d, 2026-10-25): one Saturday, Nelim changes with the hour and the story says so: mustard work shirt for the dusk chores (1), teal jacket when
 #     the air cools at 18h (2), rose shirt for the quiet hour by the fire (3), cream shirt under the indigo duster for the night (4). Colours stay warm against black goo.
