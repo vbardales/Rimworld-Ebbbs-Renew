@@ -25,7 +25,7 @@ workshop:     3806760667 - 0.1.0 pre-publication of 2026-09-23, private item, ne
 publication_changelog_review_sha: 87d3f81446ab952e4fbf2289390218a0d2a2b694
 code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
 echo_review_sha: 625a5537b0a047297013a7c09df17578f86532d3
-social_preview_sha256: 827eea5757a40d75f3cdc28102f35e63f1f6f6415c0b1a2a4a802b23fa53e504
+social_preview_sha256: fd03c155cb5fa2ce8aa81880bb55aff6d9818b272640b931da3886998e039a03
 remaining:
   - gallery: ticket f6fe (close shot + family, Inbox/p7-gallery-redo-7) pending, read at RUN_DONE and verdict each capture; wide shot to file alone after NPT test ticket 65b3 (seating step) is green; then reindex, subtitles, owner OK before replacing the published gallery; portrait candidate in Evidence/p7-gallery-portrait
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
@@ -35,7 +35,7 @@ remaining:
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
 updated:      2026-10-17, French reread and validated by the owner
-protocols_read_sha: 5ebdd5bf0854413626432a9873694bffaed51495
+protocols_read_sha: 41d262941096aae0bf063c8599109ddf0165c55d
 ---
 # Ebbbs Renew, status
 **Status, 2026-10-13: 1.0.0 published and public; 1.1.0 prepared, not published.** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
@@ -196,3 +196,5 @@ Header contradictions fixed today (scenes 3 and 4). Estimates are plan scores; r
 2026-11-02 NPT: `sits on the building` fixed in 2aa6f93 (starts a long Wait job on the seat; vanilla 1.6 has no sitting pose, "seated" = standing on the seat cell, chair drawn under). Test ticket 65b3 is NPT's. Wide shot waits for 65b3 green, then is filed alone after f6fe is read. Stools are already placed before the guests sit in feature 11.
 
 2026-11-02: NPT seat test 65b3 green (2aa6f93). Wide shot filed alone: ticket 20261102-223122-823-e616 (filter 11-publication-shots::wide shot, map wsl-deps.gallery-looks.map, evidence Tests/Pickle/Inbox/p7-gallery-redo-8, tree 4c77536). f6fe still queued. Read both at RUN_DONE: verdict each capture; check guests drawn seated, all nine in frame.
+
+2026-11-03 resume: Preview rerendered (echo.width/height removed, color default accent), opened: echo in panel, nothing clipped, no overlap with title. social_preview_sha256 updated; new Preview.png to upload as GitHub social preview (owner, manual). f6fe and e616 still queued. protocols_read_sha refreshed.
