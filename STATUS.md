@@ -27,6 +27,7 @@ code_review_sha: 3c6fea13d3d3ff2b2af1d43119d5b96ffcebdf60
 echo_review_sha: 625a5537b0a047297013a7c09df17578f86532d3
 social_preview_sha256: fd03c155cb5fa2ce8aa81880bb55aff6d9818b272640b931da3886998e039a03
 remaining:
+  - social preview: owner to upload Mod/About/Preview.png to GitHub (Settings, General), deferred 2026-11-03 (hash in social_preview_sha256)
   - gallery: ticket f6fe (close shot + family, Inbox/p7-gallery-redo-7) pending, read at RUN_DONE and verdict each capture; wide shot to file alone after NPT test ticket 65b3 (seating step) is green; then reindex, subtitles, owner OK before replacing the published gallery; portrait candidate in Evidence/p7-gallery-portrait
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
