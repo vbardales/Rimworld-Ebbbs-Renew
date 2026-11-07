@@ -1,31 +1,15 @@
 {
   "panel": {
     "title": "Ebbbs Renew",
-    "titleSize": 50,
     "titleParts": [
-      {
-        "text": "Ebbbs",
-        "scale": 1
-      },
-      {
-        "text": "Renew",
-        "scale": 0.65,
-        "font": "ui",
-        "color": "secondary"
-      }
+      { "text": "Ebbbs" },
+      { "text": "Renew", "suffix": true }
     ],
-    "copyLines": [
-      "Nine forms of goo, from ankle-high to towering.",
-      "Nobody knows what an ebbb is."
-    ]
+    "description": "Nine forms of goo, from ankle-high to towering. Nobody knows what an ebbb is."
   },
-  "backgroundFile": "Preview-source.png",
-  "echo": {
-    "file": "echo-preview.png"
-  },
-  "icon": {
-    "file": "ModIcon-source.png"
-  },
+  "background": { "file": "Preview-source.png" },
+  "echo": { "file": "echo-preview.png" },
+  "icon": { "file": "ModIcon-source.png" },
   "palette": {
     "veil": "#30291F",
     "inkPrimary": "#F2ECE1",
