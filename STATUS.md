@@ -28,7 +28,7 @@ echo_review_sha: 625a5537b0a047297013a7c09df17578f86532d3
 social_preview_sha256: fd03c155cb5fa2ce8aa81880bb55aff6d9818b272640b931da3886998e039a03
 remaining:
   - social preview: owner to upload Mod/About/Preview.png to GitHub (Settings, General), deferred 2026-11-03 (hash in social_preview_sha256)
-  - gallery: ticket f6fe (close shot + family, Inbox/p7-gallery-redo-7) pending, read at RUN_DONE and verdict each capture; wide shot to file alone after NPT test ticket 65b3 (seating step) is green; then reindex, subtitles, owner OK before replacing the published gallery; portrait candidate in Evidence/p7-gallery-portrait
+  - gallery: tickets f6fe and e616 READ 2026-11-08, all captures REFUSED (see 2026-11-08 entry); redo the plan against GALLERY.md rules of 2026-11-07 (decor, story in the image, 4 scores), score-gallery to 5 per scene, fix close-shot cell clash (PlantPot (197,187) vs Stool), refile; portrait candidate in Evidence/p7-gallery-portrait
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
@@ -36,10 +36,12 @@ remaining:
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
 updated:      2026-10-17, French reread and validated by the owner
-protocols_read_sha: 41d262941096aae0bf063c8599109ddf0165c55d
+protocols_read_sha: e50928000bb957ac07098875d03ff6097b1637de
 ---
 # Ebbbs Renew, status
 **Status, 2026-10-13: 1.0.0 published and public; 1.1.0 prepared, not published.** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
+2026-11-08 resume: f6fe (redo-7-1) and e616 (redo-8) read, Inbox emptied (refused runs deleted). e616 wide: passed, REFUSED: two animals cropped at the bottom edge, Nelim small at left, bare table and sand, decor too thin (b weak), story unreadable without the header (g weak). f6fe family: passed, REFUSED: empty ground, Nelim cropped at the top, baby a dot, cast scattered. f6fe close shot: failed, `the cell (197, 187) already holds Stool` (PlantPot clash). Preview rerendered after Preview.config.json schema change, opened, committed 7c0bf88. protocols_read_sha refreshed (GALLERY.md 2026-11-07/08 rules read: one review at the end, 4 scores under 4 = REDO, rewriting a scene deletes its old captures). `FRENCH_REVIEW.md` rename to TRANSLATION_REVIEW.md (Make-TranslationReview.ps1) still to do.
+
 ## Ticket e7fd read, 2026-10-25
 
 `20261019-203822-218-e7fd` (`Tests/Pickle/Inbox/p7-gallery-redo-4`): 3 passed, 1 failed. Wide shot failed: step `I frame the cell (200, 186) at zoom 6` timed out after 40 s (game or harness timing, not a mod def); replay it alone. Captures opened: portrait (thrumebbb front, jug, fire, torches) kept as candidate; close shot REFUSED (ebbb, beee, table and jug scattered, Nelim small at the top, not close); family REFUSED (Nelim cropped at the top edge, babies are dots, cast scattered). Retake filed: ticket `20261025-145545-682-4a5f` (replaces cancelled 0db0; wide, close, family, family now holds the jug; evidence `Tests/Pickle/Inbox/p7-gallery-redo-5`; shotlist estimate 4 for each, risks in the feature header; no Opus director pass, retake only). Inbox folder stays until the wide shot and the two refusals are replayed. Working tree carries uncommitted `Art/echo-source.png` deletion and `scripts/Build-French.ps1` deletion, not made by this session: owner to confirm.
