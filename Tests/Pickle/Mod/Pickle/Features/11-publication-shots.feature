@@ -1,71 +1,71 @@
 # Images for the Workshop page, played in Nelim's Sanctuary Backlot (GALLERY.md).
 #
-# Every gallery capture is a staged photograph, the menus excepted. One story for the series, one common
-# place, and for each image a subject whose every detail suits what it shows.
+# Every gallery capture is a staged photograph, the menu excepted. One story, one place, one fixed set of decor
+# that stays the same from one image to the next (same table, same deck, same fire, same lamps, same pots), so the
+# four images read as one evening in one clearing, and for each image a subject whose every detail suits it.
 #
-# THE STORY: "Milk night in the clearing" (one Saturday in the Sanctuary, 17h to 20h, one hour of game time between scenes, clear sky; each scene is the next episode: arrival, the star arrives, a quiet moment, the night family). The ebbbs like cheese, and cheese starts as milk. At the end of the
-# afternoon Nelim, the protagonist (owner rule 2026-10-14), carries the evening's milk to her nine goo animals
-# in the cream clearing of the Sanctuary (`calm-zone`, a bare 11 x 9 square ringed with flowers). Two guests
-# share the little table with her, a lamp and a fire are lit, and the evening goes from golden dusk to night.
-# Dressing: warm, saturated cloth against creatures that are black goo, so that the creatures are what the eye
-# lands on. Nelim keeps her own hair, face and eyes (they are the fixture's identity); in scene 1 she wears a mustard
-# collar shirt, brown trousers and no hat (hat rule, 2026-10-18: no hat, so no hair-under-hat mod needed); every other scene has its own outfit (SHOTLIST below). Her guests are dressed for the same table: Soren (daily look)
-# and Miel (daily look), the two NSB colonists, authorised by the owner on 2026-10-25 although their looks are not validated in LOOKS-VALIDATION.md. They smile calmly.
-#   1. 17h, golden dusk. Wide shot, tightened after the owner's review of 2026-10-17 (frame (192,182)-(207,191), 16 x 10 cells,
-#      half circle of radius 4 cells round (200, 187), so that the nine really gather round the table and Nelim is not tiny): Nelim at the table with the jug, her guests on the stools, the nine species
-#      arriving in a half circle, all facing the camera (the whole content of the mod).
-#   2. 18h, the lamp and the fire lit, the thrumebbb (the star of the mod, drawn 4.8 cells wide) arrives.
-#      Portrait: Nelim with the thrumebbb seen from the front, a jug in her hands.
-#   3. 19h, the lamp and the fire lit. Close shot: Nelim with an ebbb and a beee
-#      beside her, a jug in her hands (the gentle side of the goo).
-#   4. 20h, night. The ebbb family: one ebbb as a baby, a juvenile and an adult side by side with a crebbb
-#      behind them, Nelim watching (the ages and the colour variants of the ebbb).
-#   5. A MENU: the information card of an ebbb showing Wildness, a plain capture on the full-screen-window
-#      backdrop `window-backdrop-for-height`, cropped on the sides (GALLERY.md).
+# THE STORY: "Milk night in the clearing". One Saturday in the Sanctuary, 17h to 20h, one hour of game time between
+# scenes, clear sky. The ebbbs like cheese, and cheese starts as milk. Nelim, the protagonist (owner rule 2026-10-14),
+# brings the evening's milk to her goo animals in the cream clearing (`calm-zone`, free zone validated by the owner
+# on 2026-11-07, decor ours and removed after each shot). Two guests share the little table with her: Soren and Miel,
+# the two NSB colonists (daily looks, authorised by the owner on 2026-10-25, looks not validated in LOOKS-VALIDATION.md).
+# Everyone smiles calmly. The evening goes from golden dusk to night and the guests leave before the last image: the
+# stools are empty in the closing shot. Warm saturated cloth against creatures that are black goo, so the creatures are
+# what the eye lands on. Nelim keeps her own face and eyes; no hat (hat rule 2026-10-18). Outfit continuity (d): she changes
+# with the hour, as the story says: mustard work shirt for the dusk chores, teal jacket when the air cools, rose shirt for the
+# quiet hour by the fire, cream shirt under the indigo duster for the night.
 #
-#   - Pass: wsl-deps.sanctuary.map, English. Every other pass skips this feature.
+# THE FIXED SET (b, same cells in every scene, laid and removed per scene): a plank deck (floor WoodPlankFloor from (197, 185)
+# to (202, 188)) under the table Table2x2c at (199, 186) with stools at (198, 186) and (201, 187); TorchLamp lit at (196, 190)
+# and (204, 190); Campfire lit at (196, 189); daylily PlantPots (pot holding Plant_Daylily fully grown) at (196, 187) and (204, 188);
+# SculptureSmall at (195, 184); Shelf at (204, 186). Light sources inside every frame, ground never bare, plants alive.
+#
+#   1. 17h, golden dusk, wide shot, score target 5. EPISODE: she reaches the table with the jug and the nine turn toward her.
+#         Place calm-zone, Clear, 60 ticks of set-up then the hour holds. Composition (f): frame (193, 181) to (207, 190) filling 90 percent
+#         of the screen (15 x 10 cells, nobody cropped, feet at z 181), table off-centre, nine in a half circle at 3 cells south of the
+#         cell 200 185 so they sit in front of the table; thrumebbb placed last at the east end of the arc. Living (c): nine species facing the camera.
+#         Pawns (d): Nelim at (200, 188) facing South behind the table, Apparel_CollarShirt rgb (222, 170, 60), Apparel_Pants rgb (92, 58, 38),
+#         own bun, SocialRelax smile, carries Milk; Soren on the stool (198, 186), Apparel_CollarShirt rgb (110, 130, 150),
+#         Apparel_Pants, Apparel_Jacket, hair Roo_HD_Hair_Tidy, mouth MouthLittle; Miel on the stool (201, 187),
+#         Apparel_CollarShirt rgb (196, 150, 80), Apparel_Pants, Apparel_Jacket, hair Roo_Royal_NaturalcurlsHD, mouth MouthClassicSmile.
+#         Action (e): INSTANT: she has just reached the table with the jug, her guests are already seated, the nine have just come round her.
+#         Obtained by `carries the item "Milk"`, `sits on the building "Stool"` for each guest, the half circle step, then `time is paused for the capture`. Subject (g):
+#         the whole offer, nine goo species gathering round a lamplit table. Mod (j): all nine, readable at 268 px because the frame is 15 cells wide.
+#         Why the jug is not on the table: a decor item cannot share the cell of the table and a carried item draws as a small box, so the pose tells the milk.
+#
+#   2. 18h, dusk, portrait, score target 5. EPISODE: the big one comes for its share (the thrumebbb stood at the back of the arc in image 1).
+#         Same set, guests gone, Nelim at (202, 187) facing West holding Milk out, Apparel_Jacket rgb (30, 110, 120), Apparel_Pants rgb (235, 225, 200),
+#         SocialRelax smile. The thrumebbb stands at (199, 185) facing South, the front animal of the series, turned toward her.
+#         Action (e): INSTANT: she has just held the jug out and the thrumebbb has just turned to her. Obtained by `carries the item "Milk"`,
+#         `stands at (202, 187) facing West`, `the animal stands at (199, 185) facing South`, then `time is paused for the capture`.
+#         Composition (f): zoom 4 on the cell (200, 187), the thrumebbb a third of the frame, lamps (196, 190) and (204, 190) and the fire (196, 189) in frame.
+#         Subject (g): Nelim holds the jug out to the thrumebbb, the star of the mod. Mod (j): its horn and size (4.8 cells wide).
+#
+#   3. 19h, deep dusk, close shot, score target 5. EPISODE: a quiet moment by the fire, an ebbb and a beee settle near the jug.
+#         Same set, Nelim at (200, 190) facing South looking down, Apparel_BasicShirt rgb (200, 100, 120), Apparel_Pants rgb (60, 62, 70), SocialRelax smile.
+#         Milk jug on the ground at (200, 188); ebbb at (199, 188) at the jug facing South, beee at (202, 190) at her side facing South.
+#         Action (e): INSTANT: she has just set the jug down and looks at the ebbb that bends to it while the beee comes to her side. Obtained by the Milk
+#         decor on the ground, `stands at (200, 190) facing South`, each animal `stands at` its cell `facing South`, then `time is paused for the capture`.
+#         Composition (f): zoom 3.5 on the cell (200, 189), medium, stool (198, 186) and fire (196, 189) in frame, warm light on the cream sand.
+#         Subject (g): how gentle the goo is. Mod (j): two species (ebbb, beee).
+#
+#   4. 20h, night, family, score target 5. EPISODE: night falls, the guests have gone (empty stools at the bottom of the frame), the ebbb family comes out.
+#         Same set, Nelim at (200, 190) facing South carrying Milk held out, Apparel_BasicShirt rgb (245, 235, 210), Apparel_Duster rgb (60, 50, 130), SocialRelax smile.
+#         Baby ebbb at (200, 189) at her feet (life stage 0), juvenile at (198, 188) (stage 1), adult at (202, 188) (stage 2), crebbb at (203, 190) by the lamp,
+#         all facing South, a triangle round her, not a row. Action (e): INSTANT: she has just held the jug out and the baby has just come to it. Obtained by
+#         `carries the item "Milk"`, each animal `stands at` its cell `facing South`, then `time is paused for the capture`. Composition (f): zoom 2.8 on the cell (200, 189), the tightest of the series, lamps (196, 190) and
+#         (204, 190) and the fire (196, 189) in frame. Subject (g): the three ages of the ebbb and the crebbb, one family. Mod (j): life stages and colours.
+#
+#   5. A MENU (interface, not scored): the information card of an ebbb showing Wildness, plain capture on `window-backdrop-for-height`, cropped on the sides.
+#
+#   - Pass: wsl-deps.gallery-looks.map, English. Every other pass skips this feature.
 #   - There is no cheese mod loaded: the only dairy the game has is Milk, which is what Nelim carries.
-#   - The clearing is x 195-205, z 183-191. The keeper stands at (200, 189) facing South; the table is south of
-#     her, the guests on the stools, the lamp, the pots and the shelf at the sides, the fire south-west.
+#   - The clearing is x 195-205, z 183-191. Facing of every animal is set by the step `the animal "X" stands at (x, z) facing South` after the pause.
+#   - RISK + PLAN (h, not scored): the nine overlap in the arc (thrumebbb is 4.8 wide): placed last, read the capture, widen to 4 cells only if two animals
+#     hide each other. Night too dark in 4: two lamps and the fire in frame, 19h light if the capture is black (step `the light of the map is lifted to
+#     at least {float}` exists at NPT, compiled not played). Baby small at 268 px: zoom 2.8 and the baby at her feet.
+#   - SHOTLIST ESTIMATE: set by score-gallery in STATUS.md, "Gallery rework 2026-11-08".
 #   - Not here: the A Dog Said 2 recipe and the Nocturnal Animals clock need other maps and other passes.
-#
-# SHOTLIST, scored against GALLERY.md "Shotlist : criteres d'une scene a 4/5" (a to k), 2026-10-18. Story (k) is the THE STORY block above:
-# one evening, Nelim brings the milk, dusk to night, each scene an episode, hour per scene (rhythm: 17h, 18h, 19h, 20h, clear weather every time).
-# All scenes: place calm-zone (a), Nelim keeps her own bun and face (the fixture's identity), expression SocialRelax, guests Soren/Miel only in 1.
-#   1 (17h, wide, score 4). EPISODE: she arrives with the jug and the nine come to her. Outfit (d): mustard CollarShirt rgb 222,170,60, brown Pants.
-#     Action (e): carries Milk toward the table. Decor (b): Table2x2c, 2 Stools, Milk, TorchLamp lit, 2 PlantPots, Shelf, Campfire lit (195,185), removed after.
-#     Living (c): nine species, staggered in two depths and two looking across at the table (step changed, not a row facing front, i); Soren and Miel seated.
-#     Composition (f): rectangle (192,182)-(207,191) filling 90 percent of the screen (16 x 10 cells, was zoom 6 on (200,186), which cropped the nine), table off-centre. Subject (g): the whole offer, nine species. Mod (j): all nine. Opus director pass 2026-11-02 kept: tighter 16:9 rectangle, Nelim at (200,188) behind the table, guests face each other (Soren East, Miel West); not kept: explicit animal coordinates (the half circle step places them, radius 4 round (200,187)).
-#     RISK + PLAN (h): guests sit through `sits on the building "Stool" at (x, z)` (NPT, ColonistRace StagingSteps.cs:469, 2026-11-02); it places the pawn on the stool cell and starts no sitting job, so whether a seated pose is drawn is unverified: read the capture, ask NPT for a held-job variant if they still stand. INSTANT (e): Nelim has just come back from the fire and leans to pour the first cup for Soren while the nine wait, eyes on the jug; paused on that tick.
-#   2 (18h, portrait, score 4). EPISODE: the thrumebbb, star of the mod, comes out at dusk. Outfit: teal Jacket rgb 30,110,120, cream Pants rgb 235,225,200, no hat.
-#     Action: stands one step nearer (200,188), empty hands, the jug set down at (201,188) so the jacket shows (the jug hid her torso on the first retake). Decor: 2 TorchLamps lit (196,190) (204,190), 2 PlantPots, Campfire lit (204,185), no table.
-#     Living: thrumebbb seen from the front at (200,185) (the series' front animal). Composition: zoom 3.5 on (200,187), it fills the middle, Nelim and her jacket above.
-#     Subject: the thrumebbb, 4.8 cells wide. Mod: its horn and size. RISK + PLAN: it turns away or crops; plan: zoom 3.5 (4.5 left Nelim tiny behind the jug), spawn 4 cells from her, reshoot facing South.
-#   3 (19h, close, score 4). EPISODE: the gentle side, an ebbb and a beee settle beside her. Outfit: dusty-rose BasicShirt rgb 200,100,120, charcoal Pants rgb 60,62,70.
-#     Action: stands between them, Milk jug on the ground (200,188), ebbb (198,189) and beee (202,189) spawned adjacent. Decor: Stool, Milk on the ground (198-199,188), TorchLamp lit (203,190), 2 PlantPots, Campfire lit (196,186), removed after.
-#     Living: ebbb and beee at her sides. Composition: zoom 3 on (200,189), tight, animals framing her either side. Subject: how gentle the goo is. Mod: two species, cheese-milk theme.
-#     RISK + PLAN: animals not facing front; plan: they spawn facing South (previous capture accepted); retake if a profile.
-#   4 (20h night, family, score 4). EPISODE: night falls, the family is out: baby, juvenile and adult ebbb side by side, a crebbb at her shoulder. Outfit: cream BasicShirt rgb 245,235,210 under an indigo Duster rgb 60,50,130, no hat, carries the Milk jug.
-#     Action: stands behind them holding the jug out to the baby. Decor: 2 TorchLamps lit, Shelf (205,186), Campfire lit (196,185). Living: three ages, crebbb at (203,190).
-#     Composition: zoom 2.6 on (200,189) (smaller number = tighter), warm light; the first capture at 4.5 left the baby a dot and cropped the crebbb. Subject: the ages and colours of the ebbb. Mod: life stages, variants.
-#     RISK + PLAN: night too dark, life-stage step unproven; plan: two lamps plus fire, read the capture, hour 19 if dark; if the step fails the scene is dropped, not faked.
-#   RETAKE 2026-10-25 (ticket e7fd read: wide shot step timeout, 2 and 3 and 4 opened). 2 portrait ACCEPTED as candidate. 3 close REFUSED
-#     (cast scattered 3 cells apart, Nelim small at the top, empty sand): now zoom 3 on (200,189), Nelim (200,190), ebbb (198,189) and beee (202,189)
-#     at her sides, Milk jug on the ground (200,188) between them, Stool (197,187); estimate 4, risk the beee drifting (spawned adjacent, retake if it leaves).
-#     4 family REFUSED (Nelim cropped at the top, baby a dot, shelf behind the crebbb): now zoom 3 on (200,189), baby (199,188), juvenile (200,188), adult (201,188)
-#     in a tight row, crebbb at her shoulder (202,190), Shelf moved out to (205,186); estimate 4, risk the baby still small and the crebbb cropped; plan: retake at zoom 2.6 if so. 2026-11-02: plan B taken as the default, zoom 2.6 (9 x 5 cells) so the baby is larger at 268 px; instant obtained by `carries the item Milk` plus the baby spawned adjacent to her at (199,188) (its facing is not scripted).
-#     1 wide: step timeout 40 s on the frame (game timing), same text replayed alone.
-#   OUTFIT CONTINUITY (d, 2026-10-25): one Saturday, Nelim changes with the hour and the story says so: mustard work shirt for the dusk chores (1), teal jacket when
-#     the air cools at 18h (2), rose shirt for the quiet hour by the fire (3), cream shirt under the indigo duster for the night (4). Colours stay warm against black goo.
-#   INSTANT AND HOW IT IS OBTAINED (e, 2026-10-25), game paused by `time is paused for the capture`:
-#     1 just after she walked in with the jug: `carries the item Milk`, nine gathered half circle, guests turned toward her, paused on that tick.
-#     2 just after she set the jug down to look up at the thrumebbb: Milk decor at (201,188), thrumebbb spawned 3 cells away facing South.
-#     3 just after she set the jug between them, the ebbb leans in and the beee comes close: Milk at (200,188), both spawned adjacent.
-#     4 (changed) the baby has just come to the jug she holds out to it: `carries the item Milk` before the capture, baby, juvenile, adult in a row in front of her.
-#   READABILITY AT 268 PX (j): 1 and 4 are checked on the capture shrunk to 268 px; scene 1 now frames 16 x 10 cells so Nelim and the guests are larger; the baby of 4 stays small, a known weak point (the ages are the subject of 4).
-#   Estimate after this pass: 1: 4.0 (e static, j weak), 2: 4.5, 3: 4.5, 4: 4.5 (j weak). Mean 4.4.
-#   5 interface card (Wildness) on window-backdrop-for-height: set aside by the owner rule, not scored.
-#   Front animal on the series (c): scene 2 (thrumebbb) and 3, with 1 mostly front.
 #
 # Raw captures land outside the committed gallery; the finished images go to Art/Gallery/ numbered 1- to 5- (subtitles on 1 to 4, none on the card).
 @review @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotmode @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.clearscreen
@@ -74,24 +74,27 @@ Feature: images for the Workshop page
   Background:
     Given the save "Nelims-tribe" is loaded
 
-  Scenario: wide shot, Nelim at her table with her guests and the nine species gathered round her
+  Scenario: wide shot, Nelim reaches her table with her guests and the nine species gather round her
     Given I set the hour to 17
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the colonists are sent to the map corner
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I lay the floor "WoodPlankFloor" from (197, 185) to (202, 188)
     And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
-    And Nelim's Pickle Tools: I place the decor "Milk" at (198, 188)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 190)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 188)
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 190)
-    And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 188)
-    And Nelim's Pickle Tools: I place the decor "Campfire" at (194, 189)
-    And Nelim's Pickle Tools: the decor "Campfire" at (194, 189) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 190)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 190) is lit
+    And Nelim's Pickle Tools: I place the decor "Campfire" at (196, 189)
+    And Nelim's Pickle Tools: the decor "Campfire" at (196, 189) is lit
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (196, 187)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (204, 188)
+    And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (195, 184)
+    And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 186)
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (222, 170, 60)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (92, 58, 38)
@@ -139,40 +142,47 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Miel" face is held neutral
     And Nelim's Pickle Tools: "Miel" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: "Miel" sits on the building "Stool" at (201, 187)
-    And Ebbbs Renew: the nine species gather in a half circle south of the cell 200 187 at 4 cells
+    And Ebbbs Renew: the nine species gather in a half circle south of the cell 200 185 at 3 cells
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cells (192, 182) to (207, 191) filling 90 percent of the screen
+    When Nelim's Pickle Tools: I frame the cells (193, 181) to (207, 190) filling 90 percent of the screen
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim and the nine species"
     When Nelim's Pickle Tools: the interface is shown again
     And Nelim's Pickle Tools: the decor is removed
     And Nelim's Pickle Tools: "Nelim" gets back the clothes it had
 
-  Scenario: portrait, Nelim and the thrumebbb
+  Scenario: portrait, Nelim holds the jug out to the thrumebbb
     Given I set the hour to 18
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the colonists are sent to the map corner
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I lay the floor "WoodPlankFloor" from (197, 185) to (202, 188)
+    And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 190)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 190)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 190) is lit
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 187)
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 187)
-    And Nelim's Pickle Tools: I place the decor "Milk" at (201, 188)
-    And Nelim's Pickle Tools: I place the decor "Campfire" at (204, 185)
-    And Nelim's Pickle Tools: the decor "Campfire" at (204, 185) is lit
+    And Nelim's Pickle Tools: I place the decor "Campfire" at (196, 189)
+    And Nelim's Pickle Tools: the decor "Campfire" at (196, 189) is lit
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (196, 187)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (204, 188)
+    And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (195, 184)
+    And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 186)
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (30, 110, 120)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (235, 225, 200)
-    And Nelim's Pickle Tools: "Nelim" stands at (200, 188) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (202, 187) facing West
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
-    And Ebbbs Renew: spawns the player animal "Thrumebbb1" as "Thrumebbb" close to the cell 200 185
+    And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
+    And Ebbbs Renew: spawns the player animal "Thrumebbb1" as "Thrumebbb" close to the cell 199 185
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.5
+    And Nelim's Pickle Tools: the animal "Thrumebbb1" stands at (199, 185) facing South
+    When Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 4
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim and the thrumebbb"
     When Nelim's Pickle Tools: the interface is shown again
@@ -186,44 +196,60 @@ Feature: images for the Workshop page
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I place the decor "Stool" at (197, 187)
+    And Nelim's Pickle Tools: I lay the floor "WoodPlankFloor" from (197, 185) to (202, 188)
+    And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 190)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 190)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 190) is lit
+    And Nelim's Pickle Tools: I place the decor "Campfire" at (196, 189)
+    And Nelim's Pickle Tools: the decor "Campfire" at (196, 189) is lit
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (196, 187)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (204, 188)
+    And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (195, 184)
+    And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 186)
     And Nelim's Pickle Tools: I place the decor "Milk" at (200, 188)
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (203, 190)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (203, 190) is lit
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (197, 187)
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (203, 188)
-    And Nelim's Pickle Tools: I place the decor "Campfire" at (196, 186)
-    And Nelim's Pickle Tools: the decor "Campfire" at (196, 186) is lit
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (200, 100, 120)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 62, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (200, 190) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
-    And Ebbbs Renew: spawns the player animal "Ebbb1" as "Ebbb" close to the cell 198 189
-    And Ebbbs Renew: spawns the player animal "Beee1" as "Beee" close to the cell 202 189
+    And Ebbbs Renew: spawns the player animal "Ebbb1" as "Ebbb" close to the cell 199 188
+    And Ebbbs Renew: spawns the player animal "Beee1" as "Beee" close to the cell 202 190
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 3
+    And Nelim's Pickle Tools: the animal "Ebbb1" stands at (199, 188) facing South
+    And Nelim's Pickle Tools: the animal "Beee1" stands at (202, 190) facing South
+    When Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 3.5
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim with an ebbb and a beee"
     When Nelim's Pickle Tools: the interface is shown again
     And Nelim's Pickle Tools: the decor is removed
     And Nelim's Pickle Tools: "Nelim" gets back the clothes it had
 
-  Scenario: the ebbb family, three ages side by side
+  Scenario: the ebbb family, three ages round Nelim
     Given I set the hour to 20
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the colonists are sent to the map corner
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: all animals are removed
+    And Nelim's Pickle Tools: I lay the floor "WoodPlankFloor" from (197, 185) to (202, 188)
+    And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (196, 190)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (196, 190) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (204, 190)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (204, 190) is lit
-    And Nelim's Pickle Tools: I place the decor "Shelf" at (205, 186)
-    And Nelim's Pickle Tools: I place the decor "Campfire" at (196, 185)
-    And Nelim's Pickle Tools: the decor "Campfire" at (196, 185) is lit
+    And Nelim's Pickle Tools: I place the decor "Campfire" at (196, 189)
+    And Nelim's Pickle Tools: the decor "Campfire" at (196, 189) is lit
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (196, 187)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (204, 188)
+    And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (195, 184)
+    And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 186)
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (245, 235, 210)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Duster" dyed rgb (60, 50, 130)
@@ -231,12 +257,16 @@ Feature: images for the Workshop page
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
     And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
-    And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 199 188
-    And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 200 188
-    And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 201 188
-    And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 202 190
+    And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 200 189
+    And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 198 188
+    And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 202 188
+    And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 203 190
     And Nelim's Pickle Tools: time is paused for the capture
-    When Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 2.6
+    And Nelim's Pickle Tools: the animal "EbbbBaby" stands at (200, 189) facing South
+    And Nelim's Pickle Tools: the animal "EbbbJuvenile" stands at (198, 188) facing South
+    And Nelim's Pickle Tools: the animal "EbbbAdult" stands at (202, 188) facing South
+    And Nelim's Pickle Tools: the animal "Crebbb1" stands at (203, 190) facing South
+    When Nelim's Pickle Tools: I frame the cell (200, 189) at zoom 2.8
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, the ebbb family"
     When Nelim's Pickle Tools: the interface is shown again

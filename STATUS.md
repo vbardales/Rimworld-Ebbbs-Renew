@@ -28,7 +28,7 @@ echo_review_sha: 625a5537b0a047297013a7c09df17578f86532d3
 social_preview_sha256: fd03c155cb5fa2ce8aa81880bb55aff6d9818b272640b931da3886998e039a03
 remaining:
   - social preview: owner to upload Mod/About/Preview.png to GitHub (Settings, General), deferred 2026-11-03 (hash in social_preview_sha256)
-  - gallery: tickets f6fe and e616 READ 2026-11-08, all captures REFUSED (see 2026-11-08 entry); redo the plan against GALLERY.md rules of 2026-11-07 (decor, story in the image, 4 scores), score-gallery to 5 per scene, fix close-shot cell clash (PlantPot (197,187) vs Stool), refile; portrait candidate in Evidence/p7-gallery-portrait
+  - gallery: shotlist and feature 11 rewritten 2026-11-08 (see "Gallery rework 2026-11-08"), plan 5 on each scene, old captures 1 and 2 and the old portrait deleted; next: rate-gallery (map, tickets), refile the four scenes in one ticket on auto runner, read captures, one review by the owner at the end
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
@@ -43,6 +43,19 @@ protocols_read_sha: a95086f2b1c3b3d1df3d0bb4b62e789ea0561c85
 2026-11-08 resume: f6fe (redo-7-1) and e616 (redo-8) read, Inbox emptied (refused runs deleted). e616 wide: passed, REFUSED: two animals cropped at the bottom edge, Nelim small at left, bare table and sand, decor too thin (b weak), story unreadable without the header (g weak). f6fe family: passed, REFUSED: empty ground, Nelim cropped at the top, baby a dot, cast scattered. f6fe close shot: failed, `the cell (197, 187) already holds Stool` (PlantPot clash). Preview rerendered after Preview.config.json schema change, opened, committed 7c0bf88. protocols_read_sha refreshed (GALLERY.md 2026-11-07/08 rules read: one review at the end, 4 scores under 4 = REDO, rewriting a scene deletes its old captures). `FRENCH_REVIEW.md` rename to TRANSLATION_REVIEW.md (Make-TranslationReview.ps1) still to do.
 
 2026-11-08 rework PLAN (write-shotlist started, nothing written to the feature yet): keep calm-zone (free zone, decor ours) but dense decor (floor `WoodPlankFloor` under the table, Milk on the table, 3 TorchLamp lit, Campfire, Shelf, SculptureSmall, daylily PlantPots fully grown); wide: half circle r3 round (200,188), frame (191,181)-(209,192) so nobody is cropped; close: move Stool to (196,189), pots (197,186) and (203,188) (clash at (197,187)); family: Nelim (200,191), animals z189, frame centre (200,190), lamps inside the 9x5 frame; portrait: densify like the others. Then Opus director pass (one call), score-gallery to 5, Check-ShotlistVsScenario, git rm old captures Art/Gallery{,-clean}/1-* and 2-*, refile via rate-gallery.
+
+## Gallery rework 2026-11-08 (write-shotlist, no capture yet: rating the plan)
+
+Opus director pass (one call). Kept: one fixed set for the four scenes (same table, deck, fire, lamps, pots; fire moved inside the clearing to (196, 189)); arc of the nine centred on the cell 200 185 at 3 cells, frame (193, 181) to (207, 190) (15 x 10, not 19 x 12); no jug on the table (cell clash, a carried item draws as a box); thrumebbb scene 2 reworded "the big one comes for its share", Nelim facing West holding the jug out; scene 3 asymmetric (ebbb at the jug, beee at her side); scene 4 triangle round Nelim at zoom 2.8, empty stools as closing image; animals faced by `the animal "X" stands at (x, z) facing South`. Not kept: asking NPT for an item-on-table step (optional, later). The close-shot clash is gone (pots now at (196, 187) and (204, 188), stool at (198, 186)).
+
+| # | a | b | c | d | e | f | g | j | plan |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 wide 17h | calm-zone, Clear, 60 ticks | deck, Table2x2c, 2 Stool, 2 TorchLamp, Campfire, 2 daylily pots, SculptureSmall, Shelf | nine species, daylilies | Nelim mustard, Soren, Miel, smiles | arrives with Milk, guests seated, paused | 15 x 10 frame | nine gather round a lamplit table | all nine at 15 cells wide | 5 |
+| 2 portrait 18h | same, Clear | same set | thrumebbb front | teal Jacket, cream Pants, smile | holds Milk out, it turns | zoom 4 on (200, 187) | jug held to the star | horn, 4.8 cells | 5 |
+| 3 close 19h | same, Clear | same set, Milk on ground | ebbb, beee front | rose BasicShirt, charcoal Pants | jug set down, ebbb bends, beee comes | zoom 3.5 on (200, 189) | the goo is gentle | two species | 5 |
+| 4 family 20h | same, Clear | same set, empty stools | three ages, crebbb | cream shirt, indigo Duster | holds jug to the baby | zoom 2.8 on (200, 189) | one family, three ages | stages, colours | 5 |
+
+k (series): one story, wide 15 cells, medium zoom 4 and 3.5, close 2.8, opening sets the clearing, closing is the night with empty stools: ok. Not verified: that `the animal "X" stands at` finds animals spawned by `Ebbbs Renew: spawns the player animal` (short name), that the half circle at 3 cells keeps the thrumebbb off the table, that the night is lit enough. Verdict column (REDO or candidate) stays empty until captures exist.
 
 ## NSB, sync of 2026-11-08 (sync-nsb-npt)
 
