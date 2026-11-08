@@ -44,6 +44,42 @@ protocols_read_sha: a95086f2b1c3b3d1df3d0bb4b62e789ea0561c85
 
 2026-11-08 rework PLAN (write-shotlist started, nothing written to the feature yet): keep calm-zone (free zone, decor ours) but dense decor (floor `WoodPlankFloor` under the table, Milk on the table, 3 TorchLamp lit, Campfire, Shelf, SculptureSmall, daylily PlantPots fully grown); wide: half circle r3 round (200,188), frame (191,181)-(209,192) so nobody is cropped; close: move Stool to (196,189), pots (197,186) and (203,188) (clash at (197,187)); family: Nelim (200,191), animals z189, frame centre (200,190), lamps inside the 9x5 frame; portrait: densify like the others. Then Opus director pass (one call), score-gallery to 5, Check-ShotlistVsScenario, git rm old captures Art/Gallery{,-clean}/1-* and 2-*, refile via rate-gallery.
 
+## NSB, sync of 2026-11-08 (sync-nsb-npt)
+
+Places read: 2026-11-08 (calm-zone lines of SANCTUAIRE-LIEUX.md and EMBELLISSEMENT-LIEUX.md, VALIDE.md). Tribe read: 2026-11-08 (VALIDE.md, CATALOGUE-ANIMAUX.md, LOOKS-VALIDATION.md lines on Miel and Soren; the *-PROFIL.md files were not opened). Steps read: 2026-11-08 (PickleTools docs/steps.md diff since 0444dfc, 2026-11-07).
+
+Rules said back (owner, 2026-11-05 and 2026-11-07): all of NSB is free; a colonist or domestic animal outside NSB needs express validation; colonist properties change only with validation; every outfit is free; every animal the mod ships must be in the gallery (the mod's own animals need no validation).
+
+Changed in NSB since the plan of 2026-11-08: only validations (VALIDE.md) and decor of other places; `calm-zone` unchanged (validated free zone 2026-11-07, "decor around, not inside" is the NSB rule for its own decor, ours is placed for the shot and removed). Nothing in the shotlist or feature moved: no cell, name or defName of ours changed. New NPT steps that could serve a shot, none adopted yet: `the light of the map is dimmed to at most {float}` and `is lifted to at least {float}` (scene 4 night, COMPILED NOT PLAYED, ask NPT before relying on it), `the building {string} at (x, z) is put out` (lamps and campfire off or on). Left alone: `lies asleep in the bed`, StageDecor zone steps, `made of` placement (no use here).
+
+| Place | Shots | Changes made for the gallery | Last read |
+|---|---|---|---|
+| `calm-zone` (200, 187), `calm-zone-close` not used | 1 to 4 | decor ours (Table2x2c, Stools, TorchLamps, Campfire, Shelf, PlantPots, Milk, WoodPlankFloor planned), removed after; hour 17h to 20h, Clear | 2026-11-08 |
+
+| Colonist | Shots | Outfit per shot | Last read of profile | Exceptions |
+|---|---|---|---|---|
+| Nelim | 1 to 4 | 1 mustard CollarShirt, brown Pants; 2 teal Jacket, cream Pants; 3 dusty-rose BasicShirt, charcoal Pants; 4 cream BasicShirt, indigo Duster (all free, rule 4; none is a validated NSB look) | not opened (VALIDE.md 2026-11-08) | none; smile is scene freedom |
+| Soren | 1 | daily look (validated 2026-11-05, WDI caveat) | not opened (VALIDE.md 2026-11-08) | none |
+| Miel | 1 | daily look; NSB: all her photos to redo, waiting for the Female Thin body, looks not validated; risk: body Female, NSB validated bodies for Male only | not opened (LOOKS-VALIDATION.md, VALIDE.md 2026-11-08) | in NSB, so free; played as roster says, no property changed; owner authorised on 2026-10-25 in chat for the gallery |
+
+| Animal | Shots | Outfit | Last read | Exceptions |
+|---|---|---|---|---|
+| none from NSB (no Shogun, Yuki, Atticus or Rain in the shotlist) | - | - | 2026-11-08 | none |
+
+| Included animal (rule 5) | Shot(s) |
+|---|---|
+| Ebbb | 1, 3, 4 (baby, juvenile, adult) |
+| Beee | 1, 3 |
+| Crebbb | 1, 4 |
+| Thrumebbb | 1, 2 |
+| Ebbbomination | 1 (nine species step) |
+| Goliebbb | 1 (nine species step) |
+| Ebbberration | 1 (nine species step) |
+| Drebbbd | 1 (nine species step) |
+| Bebbbholder | 1 (nine species step) |
+
+No MISSING row. Built from the nine `ThingDef`s of `Mod/Defs/ThingDefs_Races/Races_Ebbb.xml`. The five species of shot 1 only are small at the scale of the wide frame: the rework plan keeps all nine in frame.
+
 ## Ticket e7fd read, 2026-10-25
 
 `20261019-203822-218-e7fd` (`Tests/Pickle/Inbox/p7-gallery-redo-4`): 3 passed, 1 failed. Wide shot failed: step `I frame the cell (200, 186) at zoom 6` timed out after 40 s (game or harness timing, not a mod def); replay it alone. Captures opened: portrait (thrumebbb front, jug, fire, torches) kept as candidate; close shot REFUSED (ebbb, beee, table and jug scattered, Nelim small at the top, not close); family REFUSED (Nelim cropped at the top edge, babies are dots, cast scattered). Retake filed: ticket `20261025-145545-682-4a5f` (replaces cancelled 0db0; wide, close, family, family now holds the jug; evidence `Tests/Pickle/Inbox/p7-gallery-redo-5`; shotlist estimate 4 for each, risks in the feature header; no Opus director pass, retake only). Inbox folder stays until the wide shot and the two refusals are replayed. Working tree carries uncommitted `Art/echo-source.png` deletion and `scripts/Build-French.ps1` deletion, not made by this session: owner to confirm.
