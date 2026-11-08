@@ -28,6 +28,7 @@ echo_review_sha: 625a5537b0a047297013a7c09df17578f86532d3
 social_preview_sha256: fd03c155cb5fa2ce8aa81880bb55aff6d9818b272640b931da3886998e039a03
 remaining:
   - social preview: owner to upload Mod/About/Preview.png to GitHub (Settings, General), deferred 2026-11-03 (hash in social_preview_sha256)
+  - gallery ticket 20261108-212455-284-f3aa filed 2026-11-08 on f936e91 (4 story scenes, map wsl-deps.gallery-looks.map, evidence Tests/Pickle/Inbox/p7-gallery-redo-9); at RUN_DONE open each capture, score-gallery, REDO or candidate
   - gallery: shotlist and feature 11 rewritten 2026-11-08 (see "Gallery rework 2026-11-08"), plan 5 on each scene, old captures 1 and 2 and the old portrait deleted; next: rate-gallery (map, tickets), refile the four scenes in one ticket on auto runner, read captures, one review by the owner at the end
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
