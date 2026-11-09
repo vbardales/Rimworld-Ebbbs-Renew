@@ -29,6 +29,7 @@ social_preview_sha256: fd03c155cb5fa2ce8aa81880bb55aff6d9818b272640b931da3886998
 remaining:
   - social preview: owner to upload Mod/About/Preview.png to GitHub (Settings, General), deferred 2026-11-03 (hash in social_preview_sha256)
   - gallery ticket f3aa read 2026-11-08 (1 passed, 3 failed). Wide capture REFUSED (REDO): Nelim small at the left by the fire, the jug reads as a barrel, seated guests show their backs, two animals cropped at the bottom edge, about 7 of 9 species visible, cast scattered; redo-9 deleted. Portrait, close, family failed in 29 s: `no spawned pawn named or numbered 'Thrumebbb1'` (alias was only in the local Scene map, not the pawn name); fixed in 5c91580 (spawned animal takes the alias as its name). Refiled those three: ticket 20261108-220723-054-d1c3 (evidence Tests/Pickle/Inbox/p7-gallery-redo-10, map wsl-deps.gallery-looks.map). Wide shot to recompose after d1c3 is read (lower frame so animals are not cropped, Nelim nearer the table, then refile alone)
+  - gallery ticket d1c3 read 2026-11-09: 0 of 3 passed, same `no spawned pawn named or numbered` error. Cause: the git-ignored step DLL `Mod/Pickle/Assemblies/EbbbsRenew.PickleSteps.dll` was stale (built 2026-10-17), so fix 5c91580 never ran. DLL rebuilt 2026-11-09 23:54 (Check-Steps green); redo-10 deleted; refile portrait, close, family, then recompose and file the wide shot. Rebuild the DLL after every edit of `Tests/Pickle/Source/` before a ticket
   - gallery: shotlist and feature 11 rewritten 2026-11-08 (see "Gallery rework 2026-11-08"), plan 5 on each scene, old captures 1 and 2 and the old portrait deleted; next: rate-gallery (map, tickets), refile the four scenes in one ticket on auto runner, read captures, one review by the owner at the end
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
@@ -37,7 +38,7 @@ remaining:
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
 session:      local_4dabc8d0-f966-4200-86c1-1de86349a7e8
 updated:      2026-10-17, French reread and validated by the owner
-protocols_read_sha: a95086f2b1c3b3d1df3d0bb4b62e789ea0561c85
+protocols_read_sha: 239c919636c8198d41382e67de2b112138b844e7
 ---
 # Ebbbs Renew, status
 **Status, 2026-10-13: 1.0.0 published and public; 1.1.0 prepared, not published.** The item (`PublishedFileId.txt` 3811289805) was created private on 2026-10-01 (0.1.0 prepublication), `1.0.0` went out through the CI on 2026-10-13 (run 38409430019, tag `v1.0.0`) and was made public by the owner the same day. `1.1.0` (the 1.7 Steam tag and the new header image) has a green dry-run (run 38414526235 on `414de05`) and waits for the owner's go and her approval of `steam-production`. The workflow stage is `publish[1.1.0]` (see `STATUS.md`).
@@ -60,7 +61,9 @@ k (series): one story, wide 15 cells, medium zoom 4 and 3.5, close 2.8, opening 
 
 ## NSB, sync of 2026-11-08 (sync-nsb-npt)
 
-Places read: 2026-11-08 (calm-zone lines of SANCTUAIRE-LIEUX.md and EMBELLISSEMENT-LIEUX.md, VALIDE.md). Tribe read: 2026-11-08 (VALIDE.md, CATALOGUE-ANIMAUX.md, LOOKS-VALIDATION.md lines on Miel and Soren; the *-PROFIL.md files were not opened). Steps read: 2026-11-08 (PickleTools docs/steps.md diff since 0444dfc, 2026-11-07).
+Places read: 2026-11-09 (SANCTUAIRE-LIEUX.md diff, VALIDE.md diff; `calm-zone` still validated free zone). Tribe read: 2026-11-09 (NSB-ROSTER.md diff: only Quill eyes; Nelim, Soren, Miel untouched; the *-PROFIL.md files were not opened). Steps read: 2026-11-09 (PickleTools docs/steps.md since 2026-11-08: Beauty2 mouth offset, carries X made of Y, drawing skipped for a class, flecks not thrown, no flee, point-framing; none serves a shot here).
+
+Re-sync 2026-11-09 (NSB cc61d17, NPT d4ed94e): NSB finished the redecoration and copied the fixture `Nelims-tribe-decor-mods-z3.rws` to its `Mod/Pickle/Fixtures`; `Nelims-tribe.rws` (old Sanctuary) stays until NSB repoints its scenarios. Our scenarios use `wsl-deps.gallery-looks.map`, not that fixture: no change to shotlist, feature or map. Nothing else of ours moved.
 
 Re-sync 2026-11-08 (after 849d289 of NSB, b6808f0 of NPT): NSB changed only VALIDE.md (gravel-yard validated, workshops and right-bank refused, left-bank telescope order) and other places in SANCTUAIRE-LIEUX.md; `calm-zone` untouched. NPT added `the light of the map is refreshed` (When, recompute glow after the hour is set while paused); `dimmed to at most` unchanged, COMPILED NOT PLAYED. Nothing in shotlist or feature changed; the refresh step may serve scene 4 (night), ask NPT before relying on it.
 
