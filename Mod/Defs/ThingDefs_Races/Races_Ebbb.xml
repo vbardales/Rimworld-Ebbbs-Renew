@@ -765,7 +765,7 @@
 	<ThingDef ParentName="EbbbBase">
 		<defName>Bebbbholder</defName>
 		<label>bebbbholder</label>
-		<description>The Bebbbholder, named after the fictional Beholders due to their floating body and many eyes. These creatures emanate some kind of aura. Its purpose is unclear, but those who have remained near a Bebbbholder for an extended period have described sensations of fear and dread.</description>
+		<description>The Bebbbholder is named after the fictional Beholders because of its floating body and many eyes. It emanates some kind of aura. Its purpose is unclear, but those who have remained near a Bebbbholder for an extended period have described sensations of fear and dread.</description>
 		<statBases>
 		  <Wildness>0.7</Wildness>
 			<MoveSpeed>3</MoveSpeed>
@@ -973,7 +973,7 @@
 	<ThingDef ParentName="EbbbBase">
 		<defName>Thrumebbb</defName>
 		<label>thrumebbb</label>
-		<description>A gross mockery of the Universe's most graceful creature, the Thrumebbb is an amalgamation of Ebbbs that has somehow gained a semblance of intelligence. It is foul, and reeks of death. Beware, for it does not eat trees.</description>
+		<description>A gross mockery of the universe's most graceful creature, the Thrumebbb is an amalgamation of Ebbbs that has somehow gained a semblance of intelligence. It is foul, and reeks of death. Beware, for it does not eat trees.</description>
 		<statBases>
 		  <Wildness>1</Wildness>
 			<MoveSpeed>3.6</MoveSpeed>

@@ -180,7 +180,7 @@ among the things a `publish` does not skip without saying which. This is a propo
 ## Mature content checkboxes
 
 **None of them.** The mod adds nine goo creatures; the images are a Preview and an icon of the creatures
-themselves. The three Workshop screenshots are accepted but not uploaded yet; the answer is final once the uploaded
+themselves. The Workshop screenshots are not uploaded yet; the answer is final once the uploaded
 images have been opened.
 
 ## Steam change notes
