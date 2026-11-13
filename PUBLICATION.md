@@ -136,12 +136,12 @@ Full check and detail in `ATTRIBUTION.md`.
 | 2 | Close shot: Nelim with an ebbb and a beee beside her (staged, same decor) | The gentle side of the goo, at a size where the textures read. Scenario "close shot, the keeper with an ebbb and a beee beside her" of feature `11`, pass P7 |
 | 3 | An ebbb's information card filtered to `Wildness` (a menu: plain capture, not staged) | The exact defect the port exists to fix, and the one thing the log cannot show. Scenario "the information card of an ebbb, with Wildness" of feature `11`, pass P7 |
 
-Not in this release: a prosthetics recipe with A Dog Said 2 and a body-clock icon with Nocturnal Animals have no scenario; they may join a later version. Image 3 was taken on the exhibition zone and would crop better on a "-height" zone of the Sanctuary (owner remark, 2026-10-15); accepted as it is.
+Not in this release: a prosthetics recipe with A Dog Said 2 and a body-clock icon with Nocturnal Animals have no scenario; they may join a later version. Image 3 was taken on the exhibition zone and would crop better on a "-height" zone of the Sanctuary (owner remark, 2026-10-15); it stays as it is, set aside from scoring.
 
 The gallery is uploaded by hand (`OPERATIONS.md`): a folder holding only the images to upload, numbered
 in page order, no old version, no raw capture, no subfolder. It is `Art/Gallery/`: `0-preview.png` (the
-byte copy of the Preview, kept at index 0 by `PUBLISHING.md`, not a fourth screenshot) then the accepted
-images, numbered `1-` onward. It is also the workflow's `--gallery-dir` once it is configured.
+byte copy of the Preview, kept at index 0 by `PUBLISHING.md`, not a fourth screenshot) then the images accepted later
+numbered `1-` onward. It is also the workflow's `--gallery-dir` once it is configured.
 
 ## Gallery subtitles
 

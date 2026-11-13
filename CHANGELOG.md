@@ -46,7 +46,7 @@ First release of the 1.6 update of **Ebbbs**, by Coolie.
 - **`wildness` moved to `<Wildness>` under `statBases`, on all nine creatures.** It stopped being a
   field of `RaceProperties` in 1.6 and became a StatDef. The old form is not an error, it is simply
   never read, and the stat's default is `-1`, outside the range the game uses, so every one of the
-  nine tamed for almost nothing, whether written at 0.4 or at 1.
+  nine could be tamed for almost nothing, whether written at 0.4 or at 1.
 
 ### Removed
 
