@@ -17,7 +17,7 @@ Nine creatures: **ebbb**, **beee**, **crebbb**, **drebbbd**, **ebbberration**,
 values from 10 to 2000, trainability from Intermediate to Advanced.
 
 They bring a **flesh type of their own**, their own body plan, their own blood, **ebbb leather**, and a
-**horn** off the thrumebbb.
+**thrumebbb horn**.
 
 Nobody knows what an ebbb is. The mod's own description says scientists have been at it for decades.
 The one certainty is that they really, really like cheese.

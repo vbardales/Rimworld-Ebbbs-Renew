@@ -35,6 +35,7 @@ remaining:
   - gallery: shotlist and feature 11 rewritten 2026-11-08 (see "Gallery rework 2026-11-08"), plan 5 on each scene, old captures 1 and 2 and the old portrait deleted; next: rate-gallery (map, tickets), refile the four scenes in one ticket on auto runner, read captures, one review by the owner at the end
   - feature: Pickle step `the load of the mod {string} is clean` (PickleTools, pending) may replace the local load check of 01; verify coverage first
   - unverified: Dogs mate (Continued) examined 2026-10-02 and not applicable, no analogue group (BACKLOG.md); no conditional set for it
+  - count note 2026-11-13: French has 104 injected entries (BodyDef 41, PawnKindDef 11, ThingDef 52), the review header says 90 keys because it counts label and description of each Def only; same texts, different perimeter, CHANGELOG "104" stays
   - unverified: whether a long French text fits or clips in a window. Not automated, see TESTING.md, so it needs a person
   - unverified: Preview and icon appearance in the game UI
 maintainer:   Claude Code - responsible for this repository and STATUS.md (previously Codex)
