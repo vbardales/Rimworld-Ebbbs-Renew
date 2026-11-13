@@ -4,7 +4,7 @@
 	<ThingDef ParentName="EbbbBase">
 		<defName>Ebbb</defName>
 		<label>ebbb</label>
-		<description>Nobody knows what the Ebbbs are, or where they originate from. Scientists have been examining these things for decades. Are they a new species of rodent? Maybe they're a magical being brought to this plane via some greater power? It's a mystery, yet the only thing that's certain is that they really, really like cheese.</description>
+		<description>Nobody knows what the Ebbbs are, or where they originate from. Scientists have been examining these things for decades. Are they a new species of rodent? Maybe they're magical beings brought to this plane via some greater power? It's a mystery, yet the only thing that's certain is that they really, really like cheese.</description>
 		<statBases>
 		  <Wildness>0.7</Wildness>
 			<MoveSpeed>6</MoveSpeed>
