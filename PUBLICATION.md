@@ -41,8 +41,7 @@ Nine forms of goo, brought forward to the latest RimWorld version.
 Ebbberration is credited to ReineOfCloves in the game; I only did the work needed to
 make them run on the latest RimWorld version. Credit goes to them, mistakes in the update are mine.
 
-Original mod: [Ebbbs](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755): last
-to support 1.5, last updated in July 2024. Abandoned, not withdrawn.
+Original mod: [Ebbbs](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755): last updated for RimWorld 1.5 in July 2024. Abandoned, not withdrawn.
 
 ## What the mod does
 
@@ -63,7 +62,7 @@ Content mod: removing it mid-save will lose any ebbb already in play, of any siz
 
 **[A Dog Said... Animal Prosthetics 2](https://steamcommunity.com/sharedfiles/filedetails/?id=3238353862)**
 is supported natively, with nothing to install or configure. The nine species are sorted into its three
-cumulative categories the way its own lists sort vanilla animals: the ebbb and the bebbbholder get the
+cumulative categories the same way its own lists sort vanilla animals: the ebbb and the bebbbholder get the
 basic replacements, the crebbb, the ebbberration, the drebbbd and the goliebbb get the simple prosthetics as
 well, and the beee, the ebbbomination and the thrumebbb get the bionics too.
 
@@ -123,7 +122,7 @@ Full check and detail in `ATTRIBUTION.md`.
 ## Images
 
 - **Preview** (`Mod/About/Preview.png`) and **ModIcon** (`Mod/About/ModIcon.png`): already installed since
-  0.1.0, checked in `STATUS.md`. This session generates and touches neither.
+  0.1.0, checked in `STATUS.md`. This session neither generates nor modifies them.
 
 ## Screenshots, in this order
 
