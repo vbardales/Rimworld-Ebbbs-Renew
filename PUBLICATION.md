@@ -6,19 +6,18 @@ first real release, and for whoever takes the mod over.
 **Status: drafted, 2026-09-27.** Workshop item `3806760667` was created as a private item by the `0.1.0`
 prepublication of 2026-09-23 and its `PublishedFileId.txt` is committed and pushed. No Git tag and no
 GitHub release exist, and none is made by hand: the CI creates them after a successful upload. Nothing
-below has been posted or pasted anywhere. The stage is `done`, not `prepublished` (see `STATUS.md`):
-P1 to P6 are being replayed on the revision that carries the licence and the two new patches before that
-move.
+below has been posted or pasted anywhere. The stage is now `shootGallery[1.0.0]` (see `STATUS.md`):
+P1 to P6 are green on `5dcfd0d` (2026-10-11 and 12), the gallery is being redone.
 
 ## What blocks the publication
 
 Not restated from `AUDIT.md`; only what is specific to this mod.
 
-- P1 to P4 have not yet been replayed on the revision that carries `LICENSE` and the Nocturnal Animals /
-  Better Crossbreeding patches. P5 and P6 are green (`docs/runs/2026-09-25.md`); P1's replay is in flight.
+- P1 to P6 are green on the revision that carries `LICENSE` and the Nocturnal Animals /
+  Better Crossbreeding patches (`STATUS.md`, `docs/runs/2026-09-25.md`).
 - Long French text fit and Preview/icon appearance in the game UI: `TESTING.md` says these need a
   person, not automated.
-- The Steam gallery is not uploaded yet: the three images are accepted (see below).
+- The Steam gallery is not uploaded yet: its scenes are being redone and no capture is accepted yet (see below).
 - The rollback target is not chosen (see "Fail fast").
 - No dry-run of the publish workflow has run.
 - The page still carries the description sent with `0.1.0`. `update_description=true` is what corrects it.
@@ -38,11 +37,12 @@ take it down promptly.
 
 Nine forms of goo, brought forward to the latest RimWorld version.
 
-**I am not the author of this mod.** All nine creatures are Coolie's creations; I only did the work needed to
+**I am not the author of this mod.** All nine creatures come from Coolie's mod, and the original design of the
+Ebbberration is credited to ReineOfCloves in the game; I only did the work needed to
 make them run on the latest RimWorld version. Credit goes to them, mistakes in the update are mine.
 
 Original mod: [Ebbbs](https://steamcommunity.com/sharedfiles/filedetails/?id=2817264755): last
-supporting 1.5, last updated in July 2024. Abandoned, not withdrawn.
+to support 1.5, last updated in July 2024. Abandoned, not withdrawn.
 
 ## What the mod does
 
@@ -128,7 +128,7 @@ Full check and detail in `ATTRIBUTION.md`.
 
 ## Screenshots, in this order
 
-**Gallery accepted by the owner (2026-10-15): three images, played in the Sanctuary (P7), Nelim as protagonist.** Files `Art/Gallery/1-keeper-and-nine.png`, `2-keeper-ebbb-beee.png`, `3-wildness-card.png`. Steam shows the first one large under the Preview, so it is the most demonstrative, and every image was opened and looked at.
+**Gallery being redone (2026-11-13): four scenes played in the Sanctuary (P7), Nelim as protagonist; no capture is accepted yet.** The earlier images 1 and 2 were deleted when the scenes were rewritten (2026-11-08). The only file kept in `Art/Gallery/` besides `0-preview.png` is `3-wildness-card.png` (interface card, set aside from scoring). The table below is the plan of the first accepted gallery, to be rewritten with the new shotlist (`STATUS.md`) once the captures are accepted.
 
 | Order | What it should show | Why there |
 |---|---|---|
@@ -140,8 +140,8 @@ Not in this release: a prosthetics recipe with A Dog Said 2 and a body-clock ico
 
 The gallery is uploaded by hand (`OPERATIONS.md`): a folder holding only the images to upload, numbered
 in page order, no old version, no raw capture, no subfolder. It is `Art/Gallery/`: `0-preview.png` (the
-byte copy of the Preview, kept at index 0 by `PUBLISHING.md`, not a fourth screenshot) then the three accepted
-images `1-`, `2-`, `3-`. It is also the workflow's `--gallery-dir` once it is configured.
+byte copy of the Preview, kept at index 0 by `PUBLISHING.md`, not a fourth screenshot) then the accepted
+images, numbered `1-` onward. It is also the workflow's `--gallery-dir` once it is configured.
 
 ## Gallery subtitles
 
@@ -149,8 +149,7 @@ One English line burnt into the bottom of each scene without an interface window
 
 | Index | File | Line |
 |---|---|---|
-| 1 | `1-keeper-and-nine.png` | Cheese night in the clearing: Nelim and all nine ebbbs round the table. |
-| 2 | `2-keeper-ebbb-beee.png` | Up close, an ebbb and a beee keep Nelim company. |
+| - | none yet | The old lines for images 1 and 2 were removed with their deleted captures (2026-11-08); new lines are written once the new captures are accepted. |
 
 ## Dependencies and DLCs
 

@@ -150,7 +150,7 @@
 	<ThingDef ParentName="EbbbBase">
 		<defName>Beee</defName>
 		<label>beee</label>
-		<description>The Beees, natural predators of the Ebbbs. Their hats are cool.</description>
+		<description>The Beees are the natural predators of the Ebbbs. Their hats are cool.</description>
 		<statBases>
 		  <Wildness>0.8</Wildness>
 			<MoveSpeed>4</MoveSpeed>
