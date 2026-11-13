@@ -263,3 +263,7 @@ Header contradictions fixed today (scenes 3 and 4). Estimates are plan scores; r
 2026-11-02: NPT seat test 65b3 green (2aa6f93). Wide shot filed alone: ticket 20261102-223122-823-e616 (filter 11-publication-shots::wide shot, map wsl-deps.gallery-looks.map, evidence Tests/Pickle/Inbox/p7-gallery-redo-8, tree 4c77536). f6fe still queued. Read both at RUN_DONE: verdict each capture; check guests drawn seated, all nine in frame.
 
 2026-11-03 resume: Preview rerendered (echo.width/height removed, color default accent), opened: echo in panel, nothing clipped, no overlap with title. social_preview_sha256 updated; new Preview.png to upload as GitHub social preview (owner, manual). f6fe and e616 still queued. protocols_read_sha refreshed.
+
+## Ecosystem
+
+2026-11-13: `ECOSYSTEM?` sent to PiI. PiI answer (partial, no `docs/inventory/ecosystem-steam/EbbbsRenew.md` yet, PiI queue cut for the night by the owner): only the original Ebbbs 2817264755 shares defs; "Ebbboids Race addons" 2820653350 and 2822152667 (2022, need HAR + Ebbbs) are addons of the original. Full search (duplicates, forks, replacements, patches, retextures, translations) still to come: resend the request on 2026-11-14.
