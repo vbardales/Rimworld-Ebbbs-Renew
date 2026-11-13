@@ -3,7 +3,7 @@
 What the Workshop page needs and the rest of the repository does not hold. It serves twice: for the
 first real release, and for whoever takes the mod over.
 
-**Status: drafted, 2026-09-27.** Workshop item `3806760667` was created private by the `0.1.0`
+**Status: drafted, 2026-09-27.** Workshop item `3806760667` was created as a private item by the `0.1.0`
 prepublication of 2026-09-23 and its `PublishedFileId.txt` is committed and pushed. No Git tag and no
 GitHub release exist, and none is made by hand: the CI creates them after a successful upload. Nothing
 below has been posted or pasted anywhere. The stage is `done`, not `prepublished` (see `STATUS.md`):
@@ -21,7 +21,7 @@ Not restated from `AUDIT.md`; only what is specific to this mod.
 - The Steam gallery is not uploaded yet: the three images are accepted (see below).
 - The rollback target is not chosen (see "Fail fast").
 - No dry-run of the publish workflow has run.
-- The page still carries the description `0.1.0` sent. `update_description=true` is what corrects it.
+- The page still carries the description sent with `0.1.0`. `update_description=true` is what corrects it.
 
 ## Description
 
@@ -86,7 +86,7 @@ None of the three is a dependency, and without them their patches do nothing.
 
 One line, nine times: `wildness` moved to `<Wildness>` under `statBases`. It stopped being a field of
 `RaceProperties` in the latest RimWorld version and became a StatDef; the old form is not an error, it is simply never read, and
-the stat's default sits outside the range the game uses, so every one of the nine tamed for almost
+the stat's default sits outside the range the game uses, so each of the nine could be tamed for almost
 nothing. No balance value was changed.
 
 ## Terms
@@ -247,7 +247,7 @@ last line, to post **only after item 3806760667 is public**.
 ```
 Hello Coolie! 🧪
 
-Thank you for the ebbbs: nine forms of goo that nobody can quite explain is exactly the kind of strange
+Thank you for the ebbbs: nine forms of goo that nobody can quite explain are exactly the kind of strange
 I want wandering my colony, and I could not let them stay stuck on 1.5. I brought them forward as Ebbbs
 Renew (unofficial): your nine creatures, their stats and their textures are unchanged, the taming defect
 1.6 introduced is fixed, and I added native support for two crossbreeding/behaviour mods plus French.
@@ -264,7 +264,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3806760667
 Hello DizzyEevee! 🥚
 
 Thank you for Better Crossbreeding: it gave the nine ebbb-family creatures of Ebbbs Renew, my
-1.6 update of an old abandoned mod, a way to actually breed into each other instead of just standing next
+1.6 update of an old abandoned mod, a way to breed with one another instead of just standing next
 to each other looking related. Four pairs, both ways, weighted the way their sizes and temperaments
 suggested to me.
 

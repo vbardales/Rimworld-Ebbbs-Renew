@@ -61,7 +61,7 @@ What changed in the update
 
 One line, nine times: wildness moved to &lt;Wildness&gt; under statBases. It stopped being a field of
 RaceProperties in the latest RimWorld version and became a StatDef; the old form is not an error, it is simply never read, and
-the stat's default sits outside the range the game uses, so every one of the nine tamed for almost
+the stat's default sits outside the range the game uses, so each of the nine could be tamed for almost
 nothing. No balance value was changed.
 
 Terms

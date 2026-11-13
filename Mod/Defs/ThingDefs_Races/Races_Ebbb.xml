@@ -4,7 +4,7 @@
 	<ThingDef ParentName="EbbbBase">
 		<defName>Ebbb</defName>
 		<label>ebbb</label>
-		<description>Nobody knows what the Ebbbs are, or where they originate from. Scientists have been examining these things for decades. Are they a new species of rodent? Maybe they're a magical being brought to this plane via some greater power? It's a mystery, yet the only thing that's certain, is that they really, really like cheese.</description>
+		<description>Nobody knows what the Ebbbs are, or where they originate from. Scientists have been examining these things for decades. Are they a new species of rodent? Maybe they're a magical being brought to this plane via some greater power? It's a mystery, yet the only thing that's certain is that they really, really like cheese.</description>
 		<statBases>
 		  <Wildness>0.7</Wildness>
 			<MoveSpeed>6</MoveSpeed>
@@ -765,7 +765,7 @@
 	<ThingDef ParentName="EbbbBase">
 		<defName>Bebbbholder</defName>
 		<label>bebbbholder</label>
-		<description>The Bebbbholder, named after the fictional Beholders due to their floating body and many eyes. These creatures emanate an aura of some kind, it is not sure what the purpose of this aura is, but those in close proximity for an extended amount of time to a Bebbbholder have described sensations of fear and dread.</description>
+		<description>The Bebbbholder, named after the fictional Beholders due to their floating body and many eyes. These creatures emanate some kind of aura. Its purpose is unclear, but those who have remained near a Bebbbholder for an extended period have described sensations of fear and dread.</description>
 		<statBases>
 		  <Wildness>0.7</Wildness>
 			<MoveSpeed>3</MoveSpeed>
@@ -862,7 +862,7 @@
 	<ThingDef ParentName="EbbbBase">
 		<defName>Crebbb</defName>
 		<label>crebbb</label>
-		<description>A 3-legged monster that is surprisingly friendly. As a herbivore, its main source of nutrition is plantlife, as such it rarely attacks people and is generally more docile than the other Ebbbs.</description>
+		<description>A 3-legged monster that is surprisingly friendly. As a herbivore, its main source of nutrition is plants; as such, it rarely attacks people and is generally more docile than the other Ebbbs.</description>
 		<statBases>
 		  <Wildness>0.2</Wildness>
 			<MoveSpeed>2</MoveSpeed>
