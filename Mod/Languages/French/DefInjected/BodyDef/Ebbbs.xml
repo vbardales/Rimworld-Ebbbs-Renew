@@ -20,8 +20,8 @@
   <Ebbbomination.corePart.parts.right_shoulder.customLabel>épaule droite</Ebbbomination.corePart.parts.right_shoulder.customLabel>
   <Ebbbomination.corePart.parts.right_shoulder.parts.right_tentacle.customLabel>tentacule droit</Ebbbomination.corePart.parts.right_shoulder.parts.right_tentacle.customLabel>
   <Ebbbomination.corePart.parts.right_shoulder.parts.right_tentacle.parts.right_appendage.customLabel>appendice droit</Ebbbomination.corePart.parts.right_shoulder.parts.right_tentacle.parts.right_appendage.customLabel>
-  <Ebbbomination.corePart.parts.left_tentacle_cluster.customLabel>faisceau de tentacules gauche</Ebbbomination.corePart.parts.left_tentacle_cluster.customLabel>
-  <Ebbbomination.corePart.parts.right_tentacle_cluster.customLabel>faisceau de tentacules droit</Ebbbomination.corePart.parts.right_tentacle_cluster.customLabel>
+  <Ebbbomination.corePart.parts.left_tentacle_cluster.customLabel>faisceau gauche de tentacules</Ebbbomination.corePart.parts.left_tentacle_cluster.customLabel>
+  <Ebbbomination.corePart.parts.right_tentacle_cluster.customLabel>faisceau droit de tentacules</Ebbbomination.corePart.parts.right_tentacle_cluster.customLabel>
   <Ebbberration.label>ebbberration</Ebbberration.label>
   <Ebbberration.corePart.parts.Neck.parts.Head.parts.eye.customLabel>œil</Ebbberration.corePart.parts.Neck.parts.Head.parts.eye.customLabel>
   <Ebbberration.corePart.parts.left_shoulder.customLabel>épaule gauche</Ebbberration.corePart.parts.left_shoulder.customLabel>
@@ -34,8 +34,8 @@
   <Ebbberration.corePart.parts.right_leg.customLabel>patte droite</Ebbberration.corePart.parts.right_leg.customLabel>
   <Bebbbholder.label>tyrebbbœil</Bebbbholder.label>
   <Bebbbholder.corePart.parts.Head.parts.eye.customLabel>œil</Bebbbholder.corePart.parts.Head.parts.eye.customLabel>
-  <Bebbbholder.corePart.parts.left_tentacle_cluster.customLabel>faisceau de tentacules gauche</Bebbbholder.corePart.parts.left_tentacle_cluster.customLabel>
-  <Bebbbholder.corePart.parts.right_tentacle_cluster.customLabel>faisceau de tentacules droit</Bebbbholder.corePart.parts.right_tentacle_cluster.customLabel>
+  <Bebbbholder.corePart.parts.left_tentacle_cluster.customLabel>faisceau gauche de tentacules</Bebbbholder.corePart.parts.left_tentacle_cluster.customLabel>
+  <Bebbbholder.corePart.parts.right_tentacle_cluster.customLabel>faisceau droit de tentacules</Bebbbholder.corePart.parts.right_tentacle_cluster.customLabel>
   <Crebbb.label>crebbb</Crebbb.label>
   <Crebbb.corePart.parts.Neck.parts.Head.parts.eye.customLabel>œil</Crebbb.corePart.parts.Neck.parts.Head.parts.eye.customLabel>
   <Crebbb.corePart.parts.left_leg.customLabel>patte gauche</Crebbb.corePart.parts.left_leg.customLabel>

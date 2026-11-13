@@ -153,7 +153,7 @@ One English line burnt into the bottom of each scene without an interface window
 
 ## Dependencies and DLCs
 
-**No DLC is required, and no mod.** `supportedVersions` declares 1.6 only.
+**No DLC or mod is required.** `supportedVersions` declares 1.6 only.
 
 | Declared | Identifier | Actually required |
 |---|---|---|
