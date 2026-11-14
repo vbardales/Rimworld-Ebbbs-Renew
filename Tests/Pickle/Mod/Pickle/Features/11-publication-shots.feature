@@ -11,7 +11,7 @@
 # the two NSB colonists (daily looks, authorised by the owner on 2026-10-25, looks not validated in LOOKS-VALIDATION.md).
 # Everyone smiles calmly. The evening goes from golden dusk to night and the guests leave before the last image: the
 # stools are empty in the closing shot. Warm saturated cloth against creatures that are black goo, so the creatures are
-# what the eye lands on. Nelim keeps her own face and eyes; no hat (hat rule 2026-10-18). Outfit continuity (d): she changes
+# what the eye lands on. Nelim keeps her own face, eyes and own bun in all four scenes; no hat (hat rule 2026-10-18). Outfit continuity (d): she changes
 # with the hour, as the story says: mustard work shirt for the dusk chores, teal jacket when the air cools, rose shirt for the
 # quiet hour by the fire, cream shirt under the indigo duster for the night.
 #
@@ -30,7 +30,8 @@
 #         Apparel_CollarShirt rgb (196, 150, 80), Apparel_Pants, Apparel_Jacket, hair Roo_Royal_NaturalcurlsHD, mouth MouthClassicSmile.
 #         Action (e): INSTANT: she has just reached the table with the jug, her guests are already seated, the nine have just come round her.
 #         Obtained by `carries the item "Milk"`, `sits on the building "Stool"` for each guest, the half circle step, then `time is paused for the capture`. Subject (g):
-#         the whole offer, nine goo species gathering round a lamplit table. Mod (j): all nine, readable at 268 px because the frame is 15 cells wide.
+#         the whole offer, read in the image alone: she stands behind the lamplit table with the jug in her hands, two guests sit at it, and nine goo species
+#         all face her and close in. Mod (j): all nine, readable at 268 px because the frame is 15 cells wide.
 #         Why the jug is not on the table: a decor item cannot share the cell of the table and a carried item draws as a small box, so the pose tells the milk.
 #
 #   2. 18h, dusk, portrait, score target 5. EPISODE: the big one comes for its share (the thrumebbb stood at the back of the arc in image 1).

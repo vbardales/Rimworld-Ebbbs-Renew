@@ -275,3 +275,14 @@ Header contradictions fixed today (scenes 3 and 4). Estimates are plan scores; r
 ## Shotlist revision 2026-11-14 (write-shotlist after f268; plan score not rerun yet)
 
 Lessons of f268 (captures read 2026-11-13): close shot and family refused because the group was spread over 3 to 4 cells and the frame was about 19 cells wide, Nelim cropped at the top of the family frame. Changes in feature 11 (header and scenarios, drift check green): scene 3 close: Nelim (200, 189), ebbb (199, 188), beee (201, 188), Milk (200, 188), frame (200, 189) at zoom 2.4 (was 3.5, group within two cells); scene 4 family: Nelim (200, 190), baby (200, 189), juvenile (199, 188), adult (201, 188), crebbb (202, 190), frame (200, 190) at zoom 2.4 (was (200, 189) at 2.8). Portrait kept (candidate, parked in `Tests/Pickle/Parked/p7-gallery-redo-11`). Wide shot unchanged since the 2026-11-08 rewrite (frame (193, 181) to (207, 190)), not played since. Before any ticket: run `score-gallery` on the plan (each scene back to 5), then file the four scenes in one ticket on the auto runner. Possible helper to ask NPT about: the ScreenshotStudio step keeping animals out of an area (b0ed59a).
+
+## Plan score 2026-11-14 (score-gallery, no capture yet: rating the plan)
+
+| # | a | b | c | d | e | f | g | j | plan |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 wide 17h | ok | ok | ok | ok | ok | ok | ok (fixed: jug, table, guests, nine facing her, read in the image) | ok | 5 |
+| 2 portrait 18h | ok | ok | ok | ok | ok | ok | ok | ok | 5 |
+| 3 close 19h | ok | ok | ok | ok | ok | ok | ok | ok | 5 |
+| 4 family 20h | ok | ok | ok | ok | ok | ok | ok | ok | 5 |
+
+Fixed before the score: scene 1 g (story only readable through the header), d (own bun stated for all four scenes). k (series): ok, wide / medium / close / tightest, opening sets the clearing, closing is the night with empty stools. Steps checked in `PickleTools/docs/steps.md`: animal stands at facing, sits on the building, carries the item, time is paused for the capture, lay the floor, decor is lit, all animals are removed: all exist. Drift check OK. Not verified: that zoom 2.4 frames the groups as planned, wide shot never played since the 2026-11-08 rewrite. Verdict column stays empty until captures exist.
