@@ -51,11 +51,11 @@
 #         Subject (g): how gentle the goo is. Mod (j): two species (ebbb, beee).
 #
 #   4. 20h, night, family, score target 5. EPISODE: night falls, the guests have gone (empty stools at the bottom of the frame), the ebbb family comes out.
-#         Same set, Nelim at (200, 190) facing South carrying Milk held out, Apparel_BasicShirt rgb (245, 235, 210), Apparel_Duster rgb (60, 50, 130), SocialRelax smile.
-#         Baby ebbb at (200, 189) at her feet (life stage 0), juvenile at (199, 188) (stage 1), adult at (201, 188) (stage 2), crebbb at (202, 190),
+#         Same set, Nelim at (198, 190) facing South carrying Milk held out, Apparel_BasicShirt rgb (245, 235, 210), Apparel_Duster rgb (60, 50, 130), SocialRelax smile.
+#         Baby ebbb at (198, 189) at her feet (life stage 0), juvenile at (199, 189) (stage 1), adult at (199, 190) (stage 2), crebbb at (197, 190),
 #         all facing South, a triangle round her, not a row. Action (e): INSTANT: she has just held the jug out and the baby has just come to it. Obtained by
-#         `carries the item "Milk"`, each animal `stands at` its cell `facing South`, then `time is paused for the capture`. Composition (f): frame (196, 187) to (204, 191) filling 90 percent (9 x 5 cells, centre (200, 189)), the tightest of the series, lamps (196, 190) and
-#         (204, 190) and the fire (196, 189) in frame. Subject (g): the three ages of the ebbb and the crebbb, one family. Mod (j): life stages and colours.
+#         `carries the item "Milk"`, each animal `stands at` its cell `facing South`, then `time is paused for the capture`. Composition (f): frame (196, 188) to (200, 191) filling 90 percent (5 x 4 cells, centre (198, 189)), the tightest of the series, the lamp (196, 190) and
+#         the fire (196, 189) in frame, warm light on the group. Subject (g): the three ages of the ebbb and the crebbb, one family. Mod (j): life stages and colours.
 #
 #   5. A MENU (interface, not scored): the information card of an ebbb showing Wildness, plain capture on `window-backdrop-for-height`, cropped on the sides.
 #
@@ -257,18 +257,18 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Duster" dyed rgb (60, 50, 130)
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
-    And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 200 189
-    And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 199 188
-    And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 201 188
-    And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 202 190
+    And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 198 189
+    And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 199 189
+    And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 199 190
+    And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 197 190
     And Nelim's Pickle Tools: time is paused for the capture
-    And Nelim's Pickle Tools: "Nelim" stands at (200, 190) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (198, 190) facing South
     And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
-    And Nelim's Pickle Tools: the animal "EbbbBaby" stands at (200, 189) facing South
-    And Nelim's Pickle Tools: the animal "EbbbJuvenile" stands at (199, 188) facing South
-    And Nelim's Pickle Tools: the animal "EbbbAdult" stands at (201, 188) facing South
-    And Nelim's Pickle Tools: the animal "Crebbb1" stands at (202, 190) facing South
-    When Nelim's Pickle Tools: I frame the cells (196, 187) to (204, 191) filling 90 percent of the screen
+    And Nelim's Pickle Tools: the animal "EbbbBaby" stands at (198, 189) facing South
+    And Nelim's Pickle Tools: the animal "EbbbJuvenile" stands at (199, 189) facing South
+    And Nelim's Pickle Tools: the animal "EbbbAdult" stands at (199, 190) facing South
+    And Nelim's Pickle Tools: the animal "Crebbb1" stands at (197, 190) facing South
+    When Nelim's Pickle Tools: I frame the cells (196, 188) to (200, 191) filling 90 percent of the screen
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, the ebbb family"
     When Nelim's Pickle Tools: the interface is shown again

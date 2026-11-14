@@ -294,3 +294,7 @@ Verdicts on the captures (director read, no score-gallery table yet): 1 wide RED
 ## Run 2edb read 2026-11-14 (gallery-13, 2 passed)
 
 Wide: Nelim now behind the table, smiling, guests seated, nine gathered, dense decor; but the jug lay on the ground by the fire (she lost it when placed after the pause): understanding below 4, REDO. Family: framing centred, animals on their cells, but no jug in her hands, baby a dot at 9 x 7 cells: REDO. Fix in feature 11: the single `carries the item "Milk"` now comes right after the post-pause `stands at` (wide, family), family frame (196, 187) to (204, 191) (9 x 5, about 190 px per cell). Refiled as ticket below.
+
+## Run 4b1c read 2026-11-14 (gallery-14, 2 passed)
+
+Wide: candidate (kept in `Tests/Pickle/Parked/gallery-14-wide/wide.png`): Nelim behind the table with the jug, guests seated, nine gathered, dense decor; the jug hides her mouth, the animals cluster instead of a half circle (partly). Family: REDO, baby a dot, group spread, top half bare sand. Recomposed: group tight round Nelim (198, 190), baby (198, 189), juvenile (199, 189), adult (199, 190), crebbb (197, 190), frame (196, 188) to (200, 191) (5 x 4, about 240 px per cell), lamp (196, 190) and fire (196, 189) in frame. Refiled family alone. Open risk: at 268 px the baby may still read small (criterion j).
