@@ -54,7 +54,7 @@
 #         Same set, Nelim at (200, 190) facing South carrying Milk held out, Apparel_BasicShirt rgb (245, 235, 210), Apparel_Duster rgb (60, 50, 130), SocialRelax smile.
 #         Baby ebbb at (200, 189) at her feet (life stage 0), juvenile at (199, 188) (stage 1), adult at (201, 188) (stage 2), crebbb at (202, 190),
 #         all facing South, a triangle round her, not a row. Action (e): INSTANT: she has just held the jug out and the baby has just come to it. Obtained by
-#         `carries the item "Milk"`, each animal `stands at` its cell `facing South`, then `time is paused for the capture`. Composition (f): zoom 2.4 on the cell (200, 190), the tightest of the series, lamps (196, 190) and
+#         `carries the item "Milk"`, each animal `stands at` its cell `facing South`, then `time is paused for the capture`. Composition (f): frame (196, 186) to (204, 192) filling 90 percent (9 x 7 cells, centre (200, 189)), the tightest of the series, lamps (196, 190) and
 #         (204, 190) and the fire (196, 189) in frame. Subject (g): the three ages of the ebbb and the crebbb, one family. Mod (j): life stages and colours.
 #
 #   5. A MENU (interface, not scored): the information card of an ebbb showing Wildness, plain capture on `window-backdrop-for-height`, cropped on the sides.
@@ -145,6 +145,7 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: "Miel" sits on the building "Stool" at (201, 187)
     And Ebbbs Renew: the nine species gather in a half circle south of the cell 200 185 at 3 cells
     And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 188) facing South
     When Nelim's Pickle Tools: I frame the cells (193, 181) to (207, 190) filling 90 percent of the screen
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, Nelim and the nine species"
@@ -254,7 +255,6 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (245, 235, 210)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Duster" dyed rgb (60, 50, 130)
-    And Nelim's Pickle Tools: "Nelim" stands at (200, 190) facing South
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
     And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
@@ -263,11 +263,12 @@ Feature: images for the Workshop page
     And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 201 188
     And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 202 190
     And Nelim's Pickle Tools: time is paused for the capture
+    And Nelim's Pickle Tools: "Nelim" stands at (200, 190) facing South
     And Nelim's Pickle Tools: the animal "EbbbBaby" stands at (200, 189) facing South
     And Nelim's Pickle Tools: the animal "EbbbJuvenile" stands at (199, 188) facing South
     And Nelim's Pickle Tools: the animal "EbbbAdult" stands at (201, 188) facing South
     And Nelim's Pickle Tools: the animal "Crebbb1" stands at (202, 190) facing South
-    When Nelim's Pickle Tools: I frame the cell (200, 190) at zoom 2.4
+    When Nelim's Pickle Tools: I frame the cells (196, 186) to (204, 192) filling 90 percent of the screen
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, the ebbb family"
     When Nelim's Pickle Tools: the interface is shown again
