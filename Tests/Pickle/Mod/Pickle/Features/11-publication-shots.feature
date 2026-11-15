@@ -55,7 +55,7 @@
 #         Baby ebbb at (198, 189) at her feet (life stage 0), juvenile at (199, 189) (stage 1), adult at (199, 190) (stage 2), crebbb at (197, 190),
 #         all facing South, a triangle round her, not a row. Action (e): INSTANT: she has just held the jug out and the baby has just come to it. Obtained by
 #         `carries the item "Milk"`, each animal `stands at` its cell `facing South`, then `time is paused for the capture`. Composition (f): frame (196, 188) to (200, 191) filling 90 percent (5 x 4 cells, centre (198, 189)), the tightest of the series, the lamp (196, 190) and
-#         the fire (196, 189) in frame, warm light on the group. Subject (g): the three ages of the ebbb and the crebbb, one family. Mod (j): life stages and colours.
+#         the fire (196, 189) in frame, warm light on the group. Subject (g): the three ages of the ebbb and the crebbb, one family. Mod (j): life stages and colours. Family-only decor (b, the frame is mostly sand on its east side): two more daylily PlantPots (Plant_Daylily fully grown) at (200, 188) and (200, 191), removed with the rest.
 #
 #   5. A MENU (interface, not scored): the information card of an ebbb showing Wildness, plain capture on `window-backdrop-for-height`, cropped on the sides.
 #
@@ -252,6 +252,8 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (204, 188)
     And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (195, 184)
     And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 186)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (200, 188)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (200, 191)
     And Nelim's Pickle Tools: I let 60 ticks pass
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (245, 235, 210)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Duster" dyed rgb (60, 50, 130)

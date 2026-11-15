@@ -298,3 +298,7 @@ Wide: Nelim now behind the table, smiling, guests seated, nine gathered, dense d
 ## Run 4b1c read 2026-11-14 (gallery-14, 2 passed)
 
 Wide: candidate (kept in `Tests/Pickle/Parked/gallery-14-wide/wide.png`): Nelim behind the table with the jug, guests seated, nine gathered, dense decor; the jug hides her mouth, the animals cluster instead of a half circle (partly). Family: REDO, baby a dot, group spread, top half bare sand. Recomposed: group tight round Nelim (198, 190), baby (198, 189), juvenile (199, 189), adult (199, 190), crebbb (197, 190), frame (196, 188) to (200, 191) (5 x 4, about 240 px per cell), lamp (196, 190) and fire (196, 189) in frame. Refiled family alone. Open risk: at 268 px the baby may still read small (criterion j).
+
+## Run 312f read 2026-11-15 (gallery-15, passed)
+
+Family: composition now right (Nelim with the jug, crebbb by the fire, baby, juvenile and adult in three sizes, lamp and fire in frame), but the east half of the frame is bare sand (decoration under 4): REDO. Added two family-only daylily PlantPots at (200, 188) and (200, 191) (header and scenario, drift check OK). Refiled. Open: the baby is still a small dot at 268 px (criterion j); if it stays so, accept the limit or tell Virginie. Candidates so far: wide (`Parked/gallery-14-wide`), close (`Parked/gallery-12-close`), portrait (`Parked/p7-gallery-redo-11`).
