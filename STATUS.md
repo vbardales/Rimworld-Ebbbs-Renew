@@ -302,3 +302,7 @@ Wide: candidate (kept in `Tests/Pickle/Parked/gallery-14-wide/wide.png`): Nelim 
 ## Run 312f read 2026-11-15 (gallery-15, passed)
 
 Family: composition now right (Nelim with the jug, crebbb by the fire, baby, juvenile and adult in three sizes, lamp and fire in frame), but the east half of the frame is bare sand (decoration under 4): REDO. Added two family-only daylily PlantPots at (200, 188) and (200, 191) (header and scenario, drift check OK). Refiled. Open: the baby is still a small dot at 268 px (criterion j); if it stays so, accept the limit or tell Virginie. Candidates so far: wide (`Parked/gallery-14-wide`), close (`Parked/gallery-12-close`), portrait (`Parked/p7-gallery-redo-11`).
+
+## Open at the clear, 2026-11-15
+
+Ticket fec4 (family alone, `Tests/Pickle/Inbox/gallery-16`) waits; the TM wakes the session with RUN_DONE. Then: read the family (decoration and criterion j at 268 px), run `score-gallery` on the four captures (wide `Parked/gallery-14-wide`, close `Parked/gallery-12-close`, portrait `Parked/p7-gallery-redo-11`, family new), move candidates to `Art/Gallery-clean/` (under 2 MB), write the four subtitles in PUBLICATION.md, burn with `Add-Subtitle.ps1`, one review message for Virginie. Not yet done: settings-card capture rework not needed (3-wildness-card accepted). To fix at prepareRelease: 1.0.0 published vs CHANGELOG unreleased, PUBLICATION.md stale lines. New TM rules 2026-11-14: DLC names by sense, translations of the original (PiI found none, original has no Languages folder).
