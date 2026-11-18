@@ -50,12 +50,17 @@
 #         Composition (f): zoom 2.4 on the cell (200, 189), tight (all three within two cells), stool (198, 186) and fire (196, 189) in frame, warm light on the cream sand.
 #         Subject (g): how gentle the goo is. Mod (j): two species (ebbb, beee).
 #
-#   4. 20h, night, family, score target 5. EPISODE: night falls, the guests have gone (empty stools at the bottom of the frame), the ebbb family comes out.
-#         Same set, Nelim at (198, 190) facing South carrying Milk held out, Apparel_BasicShirt rgb (245, 235, 210), Apparel_Duster rgb (60, 50, 130), SocialRelax smile.
-#         Baby ebbb at (198, 189) at her feet (life stage 0), juvenile at (199, 189) (stage 1), adult at (199, 190) (stage 2), crebbb at (197, 190),
-#         all facing South, a triangle round her, not a row. Action (e): INSTANT: she has just held the jug out and the baby has just come to it. Obtained by
-#         `carries the item "Milk"`, each animal `stands at` its cell `facing South`, then `time is paused for the capture`. Composition (f): frame (196, 188) to (200, 191) filling 90 percent (5 x 4 cells, centre (198, 189)), the tightest of the series, the lamp (196, 190) and
-#         the fire (196, 189) in frame, warm light on the group. Subject (g): the three ages of the ebbb and the crebbb, one family. Mod (j): life stages and colours. Family-only decor (b, the frame is mostly sand on its east side): two more daylily PlantPots (Plant_Daylily fully grown) at (200, 188) and (200, 191), removed with the rest.
+#   4. 20h, night, family, score target 5. EPISODE: night falls, the guests have gone (empty stools at the bottom of the frame), the ebbb family comes out to the milk.
+#         Same set, floor laid wider (WoodPlankFloor (197, 185) to (202, 191)) so every animal stands on light planks in the glow. Map light dimmed to at most 0.55
+#         after the hour is set (night, step `the light of the map is dimmed to at most {float}`), lamps and fire stay lit and warm on the group.
+#         Nelim at (198, 190) facing South, hands free (nothing carried, so her smile and her outfit show), Apparel_Pants rgb (60, 62, 70), Apparel_BasicShirt rgb (245, 235, 210), Apparel_Duster rgb (60, 50, 130),
+#         SocialRelax smile, looking down at the row. Milk jug on the ground at (196, 188) (decor, same jug as scenes 1 to 3). Size ladder in one row at z 189, all
+#         facing South so every white eye shows: baby ebbb (197, 189) at the jug (life stage 0), juvenile (198, 189) (stage 1), adult (199, 189) (stage 2), crebbb (200, 189).
+#         Action (e): INSTANT: she has just set the jug down and the baby has just reached it, the others close in behind. Obtained by the Milk decor on the ground,
+#         `stands at (198, 190) facing South`, each animal `stands at` its cell `facing South` after the pause, then `time is paused for the capture`.
+#         Composition (f): tighter than the last run (0a64 and b495 left the baby at 4 px at 268 px). NPT: the frame rectangle sets the zoom, no crop. `I frame the cells (197, 188) to (199, 190) filling 90 percent` (3 x 3 cells) shows about 6 x 3.3 cells at 1920 x 1080,#         x 195 to 201, z 187.3 to 190.7, with the lamp (196, 190), the fire (196, 189) and the Milk jug (196, 188) at the left edge. The table and the empty stools leave the frame: the night and the family carry the closing image. Each animal is held on its cell by `the animal "X" faces South` right after its `stands at` (NPT: otherwise it wanders).#         Subject (g): the three ages of the ebbb and the crebbb, one family at the milk. Mod (j): life stages and colours, the baby readable at 268 px (read the 1920 x 1080 PNG of the Inbox).
+#         Family-only decor (b): one more daylily PlantPot (Plant_Daylily fully grown) at (201, 191) for the east side; the earlier draft pot beside the row is dropped (it crowded the row).
+#         Director pass (Opus, 2026-11-15): kept stools in frame, 16:9 crop, table half in frame, Nelim facing South, jug beside the baby not under it, size ladder facing South, animals on lit planks, same jug, drop the pot beside the row. Not kept: a real Ingest job on the baby and cups on the table (no step known, ask NPT if the capture reads as posed).
 #
 #   5. A MENU (interface, not scored): the information card of an ebbb showing Wildness, plain capture on `window-backdrop-for-height`, cropped on the sides.
 #
@@ -238,7 +243,7 @@ Feature: images for the Workshop page
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: all animals are removed
-    And Nelim's Pickle Tools: I lay the floor "WoodPlankFloor" from (197, 185) to (202, 188)
+    And Nelim's Pickle Tools: I lay the floor "WoodPlankFloor" from (197, 185) to (202, 191)
     And Nelim's Pickle Tools: I place the decor "Table2x2c" at (199, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (198, 186)
     And Nelim's Pickle Tools: I place the decor "Stool" at (201, 187)
@@ -252,25 +257,30 @@ Feature: images for the Workshop page
     And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (204, 188)
     And Nelim's Pickle Tools: I place the decor "SculptureSmall" at (195, 184)
     And Nelim's Pickle Tools: I place the decor "Shelf" at (204, 186)
-    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (200, 188)
-    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (200, 191)
+    And Nelim's Pickle Tools: I place the decor "Milk" at (196, 188)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" holding "Plant_Daylily" fully grown at (201, 191)
     And Nelim's Pickle Tools: I let 60 ticks pass
+    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.55
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 62, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (245, 235, 210)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Duster" dyed rgb (60, 50, 130)
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" facial expression is "SocialRelax"
-    And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 198 189
-    And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 199 189
-    And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 199 190
-    And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 197 190
+    And Ebbbs Renew: spawns the player animal "EbbbBaby" as "Ebbb" at life stage 0 close to the cell 197 189
+    And Ebbbs Renew: spawns the player animal "EbbbJuvenile" as "Ebbb" at life stage 1 close to the cell 198 189
+    And Ebbbs Renew: spawns the player animal "EbbbAdult" as "Ebbb" at life stage 2 close to the cell 199 189
+    And Ebbbs Renew: spawns the player animal "Crebbb1" as "Crebbb" close to the cell 200 189
     And Nelim's Pickle Tools: time is paused for the capture
     And Nelim's Pickle Tools: "Nelim" stands at (198, 190) facing South
-    And Nelim's Pickle Tools: "Nelim" carries the item "Milk"
-    And Nelim's Pickle Tools: the animal "EbbbBaby" stands at (198, 189) facing South
-    And Nelim's Pickle Tools: the animal "EbbbJuvenile" stands at (199, 189) facing South
-    And Nelim's Pickle Tools: the animal "EbbbAdult" stands at (199, 190) facing South
-    And Nelim's Pickle Tools: the animal "Crebbb1" stands at (197, 190) facing South
-    When Nelim's Pickle Tools: I frame the cells (196, 188) to (200, 191) filling 90 percent of the screen
+    And Nelim's Pickle Tools: the animal "EbbbBaby" stands at (197, 189) facing South
+    And Nelim's Pickle Tools: the animal "EbbbJuvenile" stands at (198, 189) facing South
+    And Nelim's Pickle Tools: the animal "EbbbAdult" stands at (199, 189) facing South
+    And Nelim's Pickle Tools: the animal "Crebbb1" stands at (200, 189) facing South
+    And Nelim's Pickle Tools: the animal "EbbbBaby" faces South
+    And Nelim's Pickle Tools: the animal "EbbbJuvenile" faces South
+    And Nelim's Pickle Tools: the animal "EbbbAdult" faces South
+    And Nelim's Pickle Tools: the animal "Crebbb1" faces South
+    When Nelim's Pickle Tools: I frame the cells (197, 188) to (199, 190) filling 90 percent of the screen
     And Nelim's Pickle Tools: the map is shown alone for a capture
     Then I take a screenshot "Workshop page, the ebbb family"
     When Nelim's Pickle Tools: the interface is shown again
